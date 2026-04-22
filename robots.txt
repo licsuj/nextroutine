@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block admin or internal paths if added in future
+Disallow: /admin/
+Disallow: /api/
+
+# Sitemap reference
+Sitemap: https://nextroutine.com/sitemap.xml

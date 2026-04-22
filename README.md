@@ -1,203 +1,230 @@
-# nextroutine.com
+# NextRoutine — nextroutine.com
 
-AI-personalized fitness and daily routine builder. Built with Next.js 15, TypeScript, and CSS Modules.
+Build your morning routine and beat phone addiction. Science-backed habit programs, weekly newsletter, and AI-powered routine builder.
 
-## Stack
+## 🗂 Project Structure
 
-- **Framework**: Next.js 15 (App Router)
-- **Language**: TypeScript
-- **Styling**: CSS Modules + Google Fonts (Instrument Serif + DM Sans)
-- **Deployment**: Vercel
-
----
-
-## Local development
-
-```bash
-npm install
-npm run dev
+```
+nextroutine/
+├── index.html              # Homepage
+├── morning-routine.html    # Morning Routine hub page
+├── screen-time.html        # Screen Time Reset hub page
+├── newsletter.html         # Newsletter landing page
+├── pricing.html            # Pricing page
+├── privacy.html            # Privacy Policy (GDPR)
+├── terms.html              # Terms of Service
+├── 404.html                # Custom 404 page
+├── blog/
+│   └── index.html          # Blog index with category filter
+├── css/
+│   └── style.css           # Complete design system
+├── js/
+│   └── main.js             # All interactions & animations
+├── assets/                 # Images, icons (add your own)
+├── site.webmanifest        # PWA manifest
+├── robots.txt              # SEO: allow all + sitemap reference
+├── sitemap.xml             # All pages with priorities
+├── vercel.json             # Hosting config (clean URLs, headers, 404)
+└── README.md               # This file
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+## 🚀 Deployment (Vercel — Recommended)
 
----
+### Option 1: GitHub → Vercel (recommended)
 
-## Deploy to Vercel (step by step)
+1. Create a new GitHub repository
+2. Push this entire folder to the repository:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial NextRoutine deploy"
+   git branch -M main
+   git remote add origin https://github.com/YOUR_USERNAME/nextroutine.git
+   git push -u origin main
+   ```
+3. Go to [vercel.com](https://vercel.com) → New Project → Import your GitHub repo
+4. Framework preset: **Other** (no build step needed)
+5. Click Deploy — done in ~30 seconds
 
-### Option A — Vercel CLI (fastest)
+### Option 2: Drag & Drop (fastest)
+
+1. Go to [vercel.com/new](https://vercel.com/new)
+2. Drag the entire `nextroutine/` folder onto the Vercel upload area
+3. Done
+
+### Option 3: Vercel CLI
 
 ```bash
-# 1. Install Vercel CLI
-npm i -g vercel
-
-# 2. From the project root
-vercel
-
-# Follow prompts:
-# - Link to existing project? No
-# - Project name: nextroutine
-# - Directory: ./
-# - Override settings? No
-
-# 3. Deploy to production
+npm install -g vercel
+cd nextroutine/
 vercel --prod
 ```
 
-### Option B — GitHub + Vercel dashboard
+## 🌐 Custom Domain Setup (Vercel)
 
-```bash
-# 1. Initialise git
-git init
-git add .
-git commit -m "feat: initial landing page"
+1. In Vercel project → Settings → Domains
+2. Add `nextroutine.com` and `www.nextroutine.com`
+3. Follow Vercel's DNS instructions (usually add A record + CNAME at your registrar)
+4. SSL certificate is automatic — no setup needed
 
-# 2. Create GitHub repo (requires GitHub CLI)
-gh repo create nextroutine --public --source=. --remote=origin --push
+## 🔧 Before Launch — Configuration Checklist
 
-# Without GitHub CLI:
-# - Create repo at github.com/new
-# - Then:
-git remote add origin https://github.com/YOUR_USERNAME/nextroutine.git
-git branch -M main
-git push -u origin main
+### 1. Google Analytics 4
+Replace the placeholder in `js/main.js`:
+```javascript
+// Find this line:
+const GA_ID = 'G-XXXXXXXXXX';
+// Replace with your actual GA4 Measurement ID:
+const GA_ID = 'G-YOUR_ACTUAL_ID';
 ```
 
-Then:
-1. Go to [vercel.com](https://vercel.com) → **Add New Project**
-2. Import your `nextroutine` GitHub repo
-3. Vercel auto-detects Next.js — click **Deploy**
-4. Add your custom domain `nextroutine.com` under **Settings → Domains**
+### 2. Email Service Provider (Newsletter)
+In `js/main.js`, find the email form handler and replace the mock `setTimeout` with your ESP endpoint:
 
----
-
-## Environment variables
-
-Add these in Vercel dashboard under **Settings → Environment Variables** (or in `.env.local` locally):
-
-```bash
-# AI backend (when you wire up the routine generator)
-ANTHROPIC_API_KEY=sk-ant-...
-
-# Email provider — Beehiiv
-BEEHIIV_API_KEY=...
-BEEHIIV_PUBLICATION_ID=...
-
-# Payments — Stripe
-STRIPE_SECRET_KEY=sk_...
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_...
-
-# Analytics (optional)
-NEXT_PUBLIC_POSTHOG_KEY=phc_...
-NEXT_PUBLIC_POSTHOG_HOST=https://app.posthog.com
-```
-
----
-
-## Project structure
-
-```
-src/
-├── app/
-│   ├── layout.tsx        # Root layout + metadata/OG
-│   └── page.tsx          # Assembles all sections
-├── components/
-│   ├── Nav.tsx            # Sticky nav with scroll blur
-│   ├── Hero.tsx           # Animated hero + ticker
-│   ├── ValueProps.tsx     # Three-column value props
-│   ├── HowItWorks.tsx     # Four-step grid
-│   ├── Testimonials.tsx   # Dark testimonials section
-│   ├── Pricing.tsx        # Free vs Pro cards
-│   ├── FAQ.tsx            # Accordion FAQ
-│   ├── EmailCapture.tsx   # Newsletter capture form
-│   ├── FinalCTA.tsx       # Interactive goal selector + CTA
-│   └── Footer.tsx         # Footer with links
-└── styles/
-    └── globals.css        # Design tokens + base styles
-```
-
----
-
-## Wiring up the AI routine generator
-
-In `FinalCTA.tsx`, replace the mock submit handler with a real API call:
-
-```ts
-// src/app/api/generate/route.ts
-import Anthropic from "@anthropic-ai/sdk";
-
-const client = new Anthropic();
-
-export async function POST(req: Request) {
-  const { goal, time, equipment, injuries } = await req.json();
-
-  const message = await client.messages.create({
-    model: "claude-sonnet-4-20250514",
-    max_tokens: 1024,
-    messages: [
-      {
-        role: "user",
-        content: `Generate a personalized 7-day routine for someone with:
-- Goal: ${goal}
-- Daily time available: ${time}
-- Equipment: ${equipment || "none"}
-- Injuries or limitations: ${injuries || "none"}
-
-Format as a structured weekly plan with daily breakdown, duration, and brief reasoning.`,
-      },
-    ],
-  });
-
-  return Response.json({ routine: message.content[0] });
-}
-```
-
-Then in `FinalCTA.tsx`:
-```ts
-const res = await fetch("/api/generate", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ goal, time }),
+**ConvertKit example:**
+```javascript
+await fetch('https://api.convertkit.com/v3/forms/YOUR_FORM_ID/subscribe', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ api_key: 'YOUR_PUBLIC_API_KEY', email: input.value })
 });
-const { routine } = await res.json();
 ```
 
----
+**Mailchimp example:**
+```javascript
+// Use Mailchimp's embedded form action URL
+await fetch('https://YOUR_LIST.us1.list-manage.com/subscribe/post-json', {
+  method: 'POST',
+  body: new URLSearchParams({ EMAIL: input.value, u: 'YOUR_U', id: 'YOUR_ID' })
+});
+```
 
-## Wiring up the email form
+### 3. Stripe Payment Links
+Replace all Stripe placeholder links in `pricing.html` and `index.html`:
 
-In `EmailCapture.tsx`, replace the mock with a real Beehiiv API call:
+```html
+<!-- Replace these: -->
+href="https://buy.stripe.com/REPLACE_PRO_MONTHLY"
+href="https://buy.stripe.com/REPLACE_PRO_ANNUAL"
+href="https://buy.stripe.com/REPLACE_PROPLUS_MONTHLY"
+href="https://buy.stripe.com/REPLACE_PROPLUS_ANNUAL"
 
-```ts
-// src/app/api/subscribe/route.ts
-export async function POST(req: Request) {
-  const { email } = await req.json();
+<!-- With your actual Stripe payment links from:
+     dashboard.stripe.com → Payment Links → Create link -->
+```
 
-  const res = await fetch(
-    `https://api.beehiiv.com/v2/publications/${process.env.BEEHIIV_PUBLICATION_ID}/subscriptions`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.BEEHIIV_API_KEY}`,
-      },
-      body: JSON.stringify({ email, reactivate_existing: false }),
-    }
-  );
+### 4. Subscriber Count
+Update the social proof number across all pages:
+- Search for `12,000+` and replace with your actual count
+- In `index.html`, `newsletter.html`, and nav badges
 
-  if (!res.ok) return Response.json({ error: "Failed" }, { status: 500 });
-  return Response.json({ success: true });
+### 5. Social Media Handles
+Replace `nextroutine` in footer social links:
+```html
+href="https://twitter.com/nextroutine"    <!-- Your Twitter/X handle -->
+href="https://instagram.com/nextroutine"  <!-- Your Instagram handle -->
+```
+
+### 6. OG Images (Social Sharing)
+Add real images to `/assets/`:
+- `og-home.jpg` (1200×630px) — homepage social card
+- `og-morning.jpg` (1200×630px) — morning routine page
+- `og-screen-time.jpg` (1200×630px) — screen time page
+- `og-newsletter.jpg` (1200×630px) — newsletter page
+- `og-pricing.jpg` (1200×630px) — pricing page
+- `og-blog.jpg` (1200×630px) — blog index
+
+### 7. PWA Icons (Optional)
+Add to `/assets/`:
+- `icon-192.png` (192×192px) — app icon
+- `icon-512.png` (512×512px) — app icon
+
+### 8. Sitemap — Update Domain
+The sitemap already uses `nextroutine.com`. If your domain is different, do a find-and-replace in `sitemap.xml`.
+
+### 9. Legal Pages — Company Details
+In `privacy.html` and `terms.html`, add your actual company name and address if operating as a registered business.
+
+## 📧 Email Form Integration
+
+All email forms use the class `.email-form`. The JS handler in `main.js` is pre-wired and ready — just swap the fetch endpoint.
+
+Forms submit on `Enter` key and button click. Success state is handled automatically (form hides, success message shows).
+
+## 🎨 Design System
+
+All design tokens are CSS custom properties in `css/style.css`:
+
+```css
+:root {
+  --bg:           #0A0A0F;   /* page background */
+  --violet:       #7C3AED;   /* primary accent */
+  --emerald:      #10B981;   /* secondary accent */
+  --amber:        #F59E0B;   /* urgency/warning */
+  /* ... full system documented in style.css */
 }
 ```
 
+## 📊 SEO
+
+Each page includes:
+- Unique title + meta description (keyword-first)
+- Open Graph + Twitter Card tags
+- JSON-LD schema markup (WebSite, Article, FAQPage, Product, Blog)
+- Canonical URLs + hreflang
+- Breadcrumb navigation on inner pages
+- Semantic HTML with proper heading hierarchy
+
+Target keyword clusters are naturally embedded throughout all page copy.
+
+## 🔐 Security
+
+`vercel.json` includes production-ready security headers:
+- `X-Frame-Options: SAMEORIGIN`
+- `X-Content-Type-Options: nosniff`
+- `X-XSS-Protection: 1; mode=block`
+- `Referrer-Policy: strict-origin-when-cross-origin`
+- `Strict-Transport-Security` (HSTS)
+- `Content-Security-Policy` (customise as needed)
+
+## 🍪 Cookie Consent (GDPR)
+
+The cookie banner is pre-built and GDPR-compliant:
+- Shown to all users on first visit
+- Stores preference in `localStorage` (`nr_cookie_consent`)
+- Google Analytics only loads after `'accepted'` is stored
+- Decline prevents any analytics loading
+
+## ⚡ Performance
+
+- Zero JS frameworks or build tools
+- Google Fonts with `preconnect` for fastest load
+- All JS deferred (`defer` attribute)
+- Static assets cached for 1 year via `vercel.json` headers
+- IntersectionObserver for scroll animations (no jank)
+- No render-blocking resources
+
+## 📱 Responsive Breakpoints
+
+| Breakpoint | Width |
+|------------|-------|
+| Mobile     | 320px+ |
+| Tablet     | 768px+ |
+| Desktop    | 1024px+ |
+| Wide       | 1440px+ |
+
+## 🔗 Affiliate Setup
+
+Affiliate links are pre-labelled `"Our Pick"` or `"Recommended"` in affiliate cards. All external links use `rel="nofollow noopener"`.
+
+To add new affiliate products, duplicate any `.affiliate-card` block and update the icon, title, description, and link.
+
+## 📞 Contact
+
+- General: hello@nextroutine.com
+- Privacy/GDPR: privacy@nextroutine.com
+- Website: nextroutine.com
+
 ---
 
-## Customisation checklist
-
-- [ ] Replace placeholder testimonials with real user quotes
-- [ ] Update subscriber count in `EmailCapture.tsx` (`1,200+`)
-- [ ] Wire up Anthropic API for live routine generation
-- [ ] Wire up Beehiiv/ConvertKit for email capture
-- [ ] Add Stripe for Pro subscription payments
-- [ ] Add PostHog or Plausible for analytics
-- [ ] Add `/privacy` and `/terms` pages
-- [ ] Connect `nextroutine.com` domain in Vercel dashboard
+Built with pure HTML5, CSS3, and vanilla JavaScript. Zero dependencies. Deployable anywhere.
