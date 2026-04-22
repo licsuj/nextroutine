@@ -8,7 +8,7 @@
 }
 
 .header {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .label {
@@ -39,7 +39,7 @@
   border: 1px solid var(--border);
   border-radius: 1rem;
   overflow: hidden;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
 }
 
 .step {

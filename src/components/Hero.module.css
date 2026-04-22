@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 8rem 1.5rem 4rem;
+  padding: 6rem 1.5rem 4rem;
   position: relative;
   overflow: hidden;
   opacity: 0;
@@ -70,7 +70,7 @@
 .sub {
   font-size: clamp(1.05rem, 2vw, 1.2rem);
   color: var(--ink-muted);
-  max-width: 520px;
+  max-width: 460px;
   margin-bottom: 2.5rem;
   animation: fadeUp 0.7s 0.45s ease both;
   font-weight: 300;

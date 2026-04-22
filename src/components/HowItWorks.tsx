@@ -19,7 +19,7 @@ const steps = [
   {
     step: "4",
     title: "Progress week by week",
-    body: "Upgrade to Pro and your routine evolves automatically. Week two is harder than week one — the way it should be.",
+    body: "Your routine gets smarter every week — harder, more tailored, and built around how you're actually progressing.",
   },
 ];
 
