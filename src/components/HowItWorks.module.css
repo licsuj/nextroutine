@@ -1,0 +1,116 @@
+.section {
+  padding: var(--section-pad) 1.5rem;
+}
+
+.inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 4rem;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  max-width: 560px;
+  line-height: 1.15;
+}
+
+.heading em {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 4rem;
+}
+
+.step {
+  background: var(--paper);
+  padding: 2.5rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  transition: background 0.2s;
+}
+
+.step:hover {
+  background: var(--accent-pale);
+}
+
+.stepContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.stepNum {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--border-strong);
+  font-style: italic;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 2rem;
+}
+
+.stepTitle {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.01em;
+}
+
+.stepBody {
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.cta {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.9rem 2rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.15s;
+  margin-bottom: 0.75rem;
+}
+
+.btn:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
+.note {
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+}
+
+@media (max-width: 768px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}
