@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import styles from "../privacy/legal.module.css";
+import styles from "@/styles/legal.module.css";
 
 export const metadata: Metadata = {
   title: "Terms of Service — Next Routine",
