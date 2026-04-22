@@ -1,39 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Primary Meta -->
-  <title>NextRoutine — Build Your Morning Routine & Beat Phone Addiction</title>
-  <meta name="description" content="Build a powerful morning routine and reclaim your attention from endless scrolling. Free weekly newsletter, AI routine builder, and pro habit programs. Start free today.">
+  <title>NextRoutine — Morning Routine & Phone Addiction Help</title>
+  <meta name="description" content="Build a powerful morning routine and beat phone addiction. Free newsletter, AI habit builder, and pro programs. Join 12,000+ subscribers. Start free today.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://nextroutine.com/">
   <meta name="theme-color" content="#7C3AED">
-  <link rel="hreflang" href="https://nextroutine.com/" hreflang="en">
+  <link rel="alternate" hreflang="en" href="https://nextroutine.com/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon-192.png">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="NextRoutine">
-  <meta property="og:title" content="NextRoutine — Build Your Morning Routine & Beat Phone Addiction">
-  <meta property="og:description" content="Build a powerful morning routine and reclaim your attention from endless scrolling. Free weekly newsletter and pro habit programs.">
+  <meta property="og:title" content="NextRoutine — Morning Routine & Phone Addiction Help">
+  <meta property="og:description" content="Build a powerful morning routine and beat phone addiction. Free newsletter and pro habit programs. Join 12,000+ subscribers.">
   <meta property="og:url" content="https://nextroutine.com/">
   <meta property="og:image" content="https://nextroutine.com/assets/og-home.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="NextRoutine — Build Your Morning Routine & Beat Phone Addiction">
-  <meta name="twitter:description" content="Build a powerful morning routine and reclaim your attention from endless scrolling. Start free.">
+  <meta name="twitter:site" content="@nextroutine">
+  <meta name="twitter:title" content="NextRoutine — Morning Routine & Phone Addiction Help">
+  <meta name="twitter:description" content="Build a powerful morning routine and beat phone addiction. Free newsletter. Start free.">
   <meta name="twitter:image" content="https://nextroutine.com/assets/og-home.jpg">
 
-  <!-- Preconnect -->
+  <!-- Preconnect + DNS prefetch -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
 
-  <!-- Fonts -->
+  <!-- Fonts — preload critical weight -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 
   <!-- CSS -->
+  <link rel="preload" as="style" href="css/style.css">
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Manifest -->
@@ -61,10 +73,43 @@
         "@id": "https://nextroutine.com/#organization",
         "name": "NextRoutine",
         "url": "https://nextroutine.com/",
-        "logo": "https://nextroutine.com/assets/logo.png",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://nextroutine.com/assets/favicon.svg",
+          "width": 32,
+          "height": 32
+        },
         "sameAs": [
           "https://twitter.com/nextroutine",
           "https://instagram.com/nextroutine"
+        ]
+      },
+      {
+        "@type": "Product",
+        "name": "NextRoutine",
+        "description": "Morning routine builder and screen time reset program",
+        "url": "https://nextroutine.com/",
+        "brand": { "@type": "Brand", "name": "NextRoutine" },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "847",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "author": { "@type": "Person", "name": "Sarah C." },
+            "reviewBody": "NextRoutine is the first thing that helped me actually stick to a morning routine for more than a week. The screen time tie-in is genius."
+          },
+          {
+            "@type": "Review",
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "author": { "@type": "Person", "name": "James M." },
+            "reviewBody": "My screen time dropped from 6.5 hours to 2.1 hours a day in three weeks. I just had something better to do with my mornings."
+          }
         ]
       }
     ]

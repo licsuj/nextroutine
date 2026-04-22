@@ -51,6 +51,14 @@
   </url>
 
   <url>
+    <loc>https://nextroutine.com/about</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextroutine.com/about"/>
+  </url>
+
+  <url>
     <loc>https://nextroutine.com/privacy</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>yearly</changefreq>
