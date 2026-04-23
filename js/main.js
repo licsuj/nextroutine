@@ -329,14 +329,38 @@ function loadAnalytics() {
 (function initCTAPulse() {
   const primaryBtns = $$('.btn-primary');
   primaryBtns.forEach(btn => {
-    let pulseInterval;
+    btn.addEventListener('mouseenter', () => {});
+    btn.addEventListener('mouseleave', () => {});
+  });
+})();
 
-    btn.addEventListener('mouseenter', () => {
-      clearInterval(pulseInterval);
+/* ── Sticky Mobile CTA Bar ── */
+(function initStickyCTA() {
+  const bar = $('#sticky-cta');
+  if (!bar) return;
+
+  const hero = $('.hero') || $('#hero');
+  if (!hero) return;
+
+  // Add padding to body on mobile
+  if (window.innerWidth <= 640) {
+    document.body.classList.add('has-sticky-cta');
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      // Show bar when hero is no longer visible
+      bar.classList.toggle('visible', !entry.isIntersecting);
     });
+  }, { threshold: 0.1 });
 
-    btn.addEventListener('mouseleave', () => {
-      // Nothing needed — CSS handles hover
+  observer.observe(hero);
+
+  // Hide bar if user submits any email form
+  $$('.email-form').forEach(form => {
+    form.addEventListener('submit', () => {
+      bar.classList.remove('visible');
+      document.body.classList.remove('has-sticky-cta');
     });
   });
 })();
