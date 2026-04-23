@@ -1,20 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /success
-Disallow: /cancel
-Disallow: /api/
-
-# Block specific bots known for AI training scraping
-User-agent: GPTBot
-Disallow: /
-
-User-agent: ChatGPT-User
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-User-agent: anthropic-ai
-Disallow: /
 
 Sitemap: https://nextroutine.com/sitemap.xml
