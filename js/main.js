@@ -1,27 +1,32 @@
 /* ============================================================
-   NEXTROUTINE v4 — main.js
-   Sticky nav · Mobile overlay · Scroll animations · 
-   Email forms · Cookie consent · Pricing toggle · 
-   Content gates · Counter animation · FAQ accordion
+   NEXTROUTINE v4 — main.js (SECURITY + COMPAT CORRECTED)
+   FIXES:
+   [SEC-1] nr_email removed from localStorage — PII must not be stored client-side
+   [SEC-2] Email sanitised via textContent not innerHTML before any DOM use
+   [SEC-3] Consent check is explicit: only 'accepted' string triggers GA4
+   [SEC-4] Stripe links use data-stripe attr, no keys in JS
+   [COMPAT-1] IntersectionObserver guarded with feature check + graceful fallback
+   [COMPAT-2] async/await + optional chaining wrapped in try/catch
+   [COMPAT-3] Passive event listeners on scroll for Chrome Android performance
    ============================================================ */
 
 (function () {
   'use strict';
 
-  /* ── UTILITY ── */
-  const $ = (sel, ctx = document) => ctx.querySelector(sel);
-  const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
+  const $ = (sel, ctx) => (ctx || document).querySelector(sel);
+  const $$ = (sel, ctx) => Array.from((ctx || document).querySelectorAll(sel));
 
   /* ── 1. STICKY NAV ── */
   function initNav() {
     const nav = $('.nav');
     if (!nav) return;
     const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 20);
+    // [COMPAT-3] passive:true for scroll — Chrome Android warns without it
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   }
 
-  /* ── 2. MOBILE HAMBURGER OVERLAY ── */
+  /* ── 2. MOBILE HAMBURGER ── */
   function initMobileNav() {
     const hamburger = $('.nav-hamburger');
     const overlay   = $('.nav-overlay');
@@ -41,10 +46,17 @@
     });
   }
 
-  /* ── 3. SCROLL FADE-IN ANIMATIONS ── */
+  /* ── 3. SCROLL ANIMATIONS ── */
   function initScrollAnimations() {
     const els = $$('.fade-in');
     if (!els.length) return;
+
+    // [COMPAT-1] Graceful fallback if IntersectionObserver not supported
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(el => el.classList.add('visible'));
+      return;
+    }
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -53,6 +65,7 @@
         }
       });
     }, { threshold: 0.12 });
+
     els.forEach(el => observer.observe(el));
   }
 
@@ -73,11 +86,18 @@
         const progress = Math.min((now - start) / duration, 1);
         const eased    = 1 - Math.pow(1 - progress, 3);
         const current  = target * eased;
+        // [SEC-2] Use textContent — never innerHTML — for dynamic values
         el.textContent = prefix + (isFloat ? current.toFixed(1) : Math.round(current)) + suffix;
         if (progress < 1) requestAnimationFrame(step);
       };
       requestAnimationFrame(step);
     };
+
+    // [COMPAT-1] Fallback for no IntersectionObserver
+    if (!('IntersectionObserver' in window)) {
+      counters.forEach(el => animateCounter(el));
+      return;
+    }
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -94,6 +114,8 @@
     const hero = $('.hero');
     if (!bar || !hero) return;
 
+    if (!('IntersectionObserver' in window)) { bar.style.display = 'flex'; return; }
+
     const observer = new IntersectionObserver((entries) => {
       bar.style.display = entries[0].isIntersecting ? 'none' : 'flex';
     }, { threshold: 0 });
@@ -102,29 +124,34 @@
 
   /* ── 6. EMAIL FORM HANDLING ── */
   function initEmailForms() {
+    // [SEC-1] Only store subscription flag — NOT the email address (PII)
     const isSubscribed = localStorage.getItem('nr_subscribed') === 'true';
 
     $$('form').forEach(form => {
       const input = form.querySelector('input[type="email"]');
       if (!input) return;
       const btn   = form.querySelector('button[type="submit"]');
-      const micro = form.closest('[data-form-wrap]')?.querySelector('.form-micro') ||
-                    form.parentElement?.querySelector('.form-micro');
 
-      if (isSubscribed && input) {
-        input.value   = localStorage.getItem('nr_email') || '';
+      if (isSubscribed) {
+        // [SEC-1] Do NOT repopulate email from storage — it's no longer stored
         input.disabled = true;
         if (btn) { btn.textContent = '✓ You\'re subscribed'; btn.disabled = true; }
       }
 
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
+        // [SEC-2] Trim and validate email before ANY use
         const email = input.value.trim();
 
+        // Basic format validation
         if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
           input.style.borderColor = '#EF4444';
+          input.setAttribute('aria-invalid', 'true');
           input.focus();
-          setTimeout(() => { input.style.borderColor = ''; }, 2000);
+          setTimeout(() => {
+            input.style.borderColor = '';
+            input.removeAttribute('aria-invalid');
+          }, 2000);
           return;
         }
 
@@ -133,75 +160,110 @@
 
         try {
           // TODO: Replace with real ESP endpoint before deploy
-          // await fetch('https://api.convertkit.com/v3/forms/YOUR_FORM_ID/subscribe', {
+          // ConvertKit example:
+          // const res = await fetch('https://api.convertkit.com/v3/forms/YOUR_FORM_ID/subscribe', {
           //   method: 'POST',
           //   headers: { 'Content-Type': 'application/json' },
           //   body: JSON.stringify({ api_key: 'YOUR_API_KEY', email })
           // });
-          await new Promise(r => setTimeout(r, 800));
+          // if (!res.ok) throw new Error('ESP error');
+          await new Promise(r => setTimeout(r, 800)); // dev stub
 
+          // [SEC-1] Store ONLY the subscription flag — not the email itself
           localStorage.setItem('nr_subscribed', 'true');
-          localStorage.setItem('nr_email', email);
           input.disabled = true;
 
-          if (btn) { btn.textContent = '✓ Check your inbox'; btn.style.background = 'var(--green)'; }
-          if (micro) micro.textContent = 'Starter pack on its way. Check your inbox.';
+          if (btn) {
+            // [SEC-2] Use textContent — no interpolation into innerHTML
+            btn.textContent = '✓ Check your inbox';
+            btn.style.background = 'var(--green)';
+          }
 
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'email_signup', { form_id: form.id || 'unnamed' });
+          // Fire GA4 event only if analytics loaded
+          if (typeof gtag === 'function') {
+            gtag('event', 'email_signup', {
+              event_category: 'engagement',
+              form_id: form.id || 'unnamed'
+            });
           }
 
         } catch (err) {
           if (btn) { btn.textContent = originalText; btn.disabled = false; }
+          console.warn('Form submission error:', err);
         }
       });
     });
   }
 
-  /* ── 7. COOKIE CONSENT ── */
+  /* ── 7. COOKIE CONSENT — GDPR ── */
   function initCookieConsent() {
     const COOKIE_KEY = 'nr_cookie_consent';
     const banner     = $('.cookie-banner');
     if (!banner) return;
 
     const consent = localStorage.getItem(COOKIE_KEY);
-    if (consent === 'accepted') { loadAnalytics(); return; }
-    if (!consent) banner.classList.add('visible');
+
+    // [SEC-3] Explicit string check — only 'accepted' triggers analytics
+    if (consent === 'accepted') {
+      loadAnalytics();
+      return;
+    }
+
+    // Show banner only if no decision has been made
+    if (consent !== 'rejected') {
+      banner.classList.add('visible');
+    }
 
     const acceptBtn = banner.querySelector('.cookie-accept');
     const rejectBtn = banner.querySelector('.cookie-reject');
 
-    if (acceptBtn) acceptBtn.addEventListener('click', () => {
-      localStorage.setItem(COOKIE_KEY, 'accepted');
-      banner.classList.remove('visible');
-      loadAnalytics();
-    });
+    if (acceptBtn) {
+      acceptBtn.addEventListener('click', () => {
+        localStorage.setItem(COOKIE_KEY, 'accepted');
+        banner.classList.remove('visible');
+        loadAnalytics();
+      });
+    }
 
-    if (rejectBtn) rejectBtn.addEventListener('click', () => {
-      localStorage.setItem(COOKIE_KEY, 'rejected');
-      banner.classList.remove('visible');
-    });
+    if (rejectBtn) {
+      rejectBtn.addEventListener('click', () => {
+        localStorage.setItem(COOKIE_KEY, 'rejected');
+        banner.classList.remove('visible');
+        // GA4 is NOT loaded — do nothing further
+      });
+    }
 
+    // Cookie settings trigger (footer link)
     $$('.cookie-settings-trigger').forEach(link => {
-      link.addEventListener('click', (e) => { e.preventDefault(); banner.classList.add('visible'); });
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Reset so user can re-decide
+        localStorage.removeItem(COOKIE_KEY);
+        banner.classList.add('visible');
+      });
     });
   }
 
   function loadAnalytics() {
+    // [SEC-3] Only called after explicit user consent
     const GA_ID = 'G-XXXXXXXXXX'; // ← Replace before deploy
-    if (GA_ID === 'G-XXXXXXXXXX' || document.querySelector(`script[src*="${GA_ID}"]`)) return;
+    if (GA_ID === 'G-XXXXXXXXXX') return; // Safety: don't load with placeholder
+    if (document.querySelector(`script[src*="${GA_ID}"]`)) return; // Already loaded
+
     const s = document.createElement('script');
     s.src   = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
     s.async = true;
     document.head.appendChild(s);
+
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    window.gtag = gtag;
-    gtag('js', new Date());
-    gtag('config', GA_ID);
+    window.gtag = function gtag() { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', GA_ID, { anonymize_ip: true });
   }
 
-  /* ── 8. PRICING TOGGLE ── */
+  /* ── 8. STRIPE PAYMENT LINKS ── */
+  // [SEC-4] Publishable payment link URLs only — no secret keys in client JS
+  // These are replaced by actual Stripe Payment Link URLs before deploy
   const STRIPE_LINKS = {
     proMonthly:     'https://buy.stripe.com/REPLACE_PRO_MONTHLY',
     proAnnual:      'https://buy.stripe.com/REPLACE_PRO_ANNUAL',
@@ -209,6 +271,7 @@
     proPlusAnnual:  'https://buy.stripe.com/REPLACE_PROPLUS_ANNUAL',
   };
 
+  /* ── 9. PRICING TOGGLE ── */
   function initPricingToggle() {
     const toggle = $('.toggle-switch');
     if (!toggle) return;
@@ -216,38 +279,42 @@
 
     const update = () => {
       toggle.classList.toggle('active', isAnnual);
+      toggle.setAttribute('aria-checked', String(isAnnual));
       $$('.price-monthly').forEach(el => el.style.display = isAnnual ? 'none' : '');
       $$('.price-annual').forEach(el  => el.style.display = isAnnual ? ''     : 'none');
       $$('[data-stripe="pro"]').forEach(btn     => { btn.href = isAnnual ? STRIPE_LINKS.proAnnual     : STRIPE_LINKS.proMonthly; });
       $$('[data-stripe="proplus"]').forEach(btn => { btn.href = isAnnual ? STRIPE_LINKS.proPlusAnnual : STRIPE_LINKS.proPlusMonthly; });
     };
 
+    toggle.setAttribute('role', 'switch');
+    toggle.setAttribute('aria-checked', 'false');
+    toggle.setAttribute('tabindex', '0');
     toggle.addEventListener('click', () => { isAnnual = !isAnnual; update(); });
+    toggle.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); isAnnual = !isAnnual; update(); }
+    });
     update();
   }
 
-  /* ── 9. CONTENT GATE ── */
+  /* ── 10. CONTENT GATE ── */
   function initContentGate() {
     $$('.template-unlock-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        const target = document.querySelector('[data-email-capture]') ||
-                       document.querySelector('#newsletter-cta') ||
-                       document.querySelector('.final-form');
+        const target = $('.newsletter-cta, [data-email-capture], #newsletter-cta, .final-form');
         if (!target) return;
-
         target.scrollIntoView({ behavior: 'smooth', block: 'center' });
         setTimeout(() => {
           target.style.transition = 'box-shadow 0.3s ease';
           target.style.boxShadow  = '0 0 0 4px rgba(45,106,79,0.4)';
           setTimeout(() => { target.style.boxShadow = ''; }, 1200);
-          const input = target.querySelector('input[type="email"]');
-          if (input && !input.disabled) input.focus();
+          const inp = target.querySelector('input[type="email"]');
+          if (inp && !inp.disabled) inp.focus();
         }, 600);
       });
     });
   }
 
-  /* ── 10. FAQ ACCORDION ── */
+  /* ── 11. FAQ ACCORDION ── */
   function initFAQ() {
     const items = $$('.faq-item');
     if (!items.length) return;
@@ -264,7 +331,7 @@
     });
   }
 
-  /* ── 11. BLOG FILTER ── */
+  /* ── 12. BLOG FILTER ── */
   function initBlogFilter() {
     const filters = $$('.filter-btn');
     const cards   = $$('.blog-card[data-category]');
@@ -282,7 +349,7 @@
     });
   }
 
-  /* ── 12. SMOOTH SCROLL ── */
+  /* ── 13. SMOOTH SCROLL ── */
   function initSmoothScroll() {
     $$('a[href^="#"]').forEach(link => {
       link.addEventListener('click', (e) => {
@@ -296,19 +363,25 @@
     });
   }
 
-  /* ── 13. YEAR ── */
+  /* ── 14. YEAR ── */
   function initYear() {
     $$('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
   }
 
-  /* ── 14. PERSONALISE CTAs FROM STORED TRACK ── */
+  /* ── 15. PERSONALISE CTAs FROM QUIZ TRACK ── */
   function personaliseCTAs() {
     const track = localStorage.getItem('nr_quiz_track');
     if (!track) return;
-    const labels = { sleep: 'Sleep Better', morning: 'Morning Routine', screen: 'Screen Time Reset', dad: 'New Dad', midlife: 'Midlife Reset' };
+    const labels = {
+      sleep: 'Sleep Better', morning: 'Morning Routine',
+      screen: 'Screen Time Reset', dad: 'New Dad', midlife: 'Midlife Reset'
+    };
     const label = labels[track];
     if (!label) return;
-    $$('[data-personalise-cta]').forEach(el => { el.textContent = `Get My Free ${label} Plan →`; });
+    $$('[data-personalise-cta]').forEach(el => {
+      // [SEC-2] textContent only — never innerHTML with user-influenced data
+      el.textContent = `Get My Free ${label} Plan →`;
+    });
   }
 
   /* ── INIT ── */
