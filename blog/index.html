@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Habit Science Blog — Routines & Screen Time Tips</title>
-  <meta name="description" content="Science-backed articles on morning routines, reducing screen time, and building daily habits that stick. New posts every week. Join 12,000+ readers.">
+  <meta name="description" content="Science-backed articles on sleep routines, morning habits, and reducing screen time. New posts every week. Free to read. Join 12,000+ subscribers.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://nextroutine.com/blog/">
   <meta name="theme-color" content="#7C3AED">
@@ -18,6 +18,7 @@
   <meta property="og:description" content="Science-backed articles on morning routines, reducing screen time, and building habits that stick. New posts every week.">
   <meta property="og:url" content="https://nextroutine.com/blog/">
   <meta property="og:image" content="https://nextroutine.com/assets/og-blog.jpg">
+  <meta property="og:image:alt" content="Habit Science Blog — Sleep, Morning Routine and Screen Time Tips">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="en_US">
@@ -54,6 +55,8 @@
         "url": "https://nextroutine.com/blog/",
         "publisher": { "@type": "Organization", "name": "NextRoutine", "url": "https://nextroutine.com", "logo": { "@type": "ImageObject", "url": "https://nextroutine.com/assets/favicon.svg" } },
         "blogPost": [
+          { "@type": "BlogPosting", "headline": "Why 8 Hours Isn't Enough — The Real Reason You Wake Up Tired", "url": "https://nextroutine.com/blog/why-8-hours-not-enough/", "datePublished": "2026-04-22", "author": { "@type": "Organization", "name": "NextRoutine" } },
+          { "@type": "BlogPosting", "headline": "The Phone-Sleep Connection: What's Actually Happening After 9pm", "url": "https://nextroutine.com/blog/phone-sleep-connection/", "datePublished": "2026-04-16", "author": { "@type": "Organization", "name": "NextRoutine" } },
           { "@type": "BlogPosting", "headline": "The Cortisol Window You're Wasting Every Morning", "url": "https://nextroutine.com/blog/cortisol-window-morning/", "datePublished": "2026-04-15", "author": { "@type": "Organization", "name": "NextRoutine" } },
           { "@type": "BlogPosting", "headline": "Why App Blockers Keep Failing You (And What Actually Works)", "url": "https://nextroutine.com/blog/app-blockers-failing/", "datePublished": "2026-04-08", "author": { "@type": "Organization", "name": "NextRoutine" } },
           { "@type": "BlogPosting", "headline": "Habit Stacking: The Science Behind Routines That Actually Stick", "url": "https://nextroutine.com/blog/habit-stacking/", "datePublished": "2026-04-01", "author": { "@type": "Organization", "name": "NextRoutine" } }
@@ -121,6 +124,7 @@
     <!-- Category Filter -->
     <div class="blog-filter fade-in" role="group" aria-label="Filter posts by category">
       <button class="filter-btn active" data-category="all" aria-pressed="true">All Posts</button>
+      <button class="filter-btn" data-category="sleep" aria-pressed="false">Sleep</button>
       <button class="filter-btn" data-category="morning-routine" aria-pressed="false">Morning Routine</button>
       <button class="filter-btn" data-category="screen-time" aria-pressed="false">Screen Time</button>
       <button class="filter-btn" data-category="productivity" aria-pressed="false">Productivity</button>
@@ -129,6 +133,34 @@
 
     <!-- Blog Grid -->
     <div class="blog-grid">
+
+      <!-- Sleep Post 1 -->
+      <article class="blog-card fade-in" data-category="sleep">
+        <div class="blog-card-img violet" aria-hidden="true">😴</div>
+        <div class="blog-card-body">
+          <div class="blog-category violet">Sleep</div>
+          <h3><a href="/blog/why-8-hours-not-enough/" aria-label="Read: Why 8 Hours Isn't Enough — The Real Reason You Wake Up Tired">Why 8 Hours Isn't Enough — The Real Reason You Wake Up Tired</a></h3>
+          <p>Duration is not quality. Here's the specific science behind why you can sleep a full night and still feel wrecked — and the three things that actually determine how rested you feel.</p>
+          <div class="blog-card-footer">
+            <span class="blog-date">April 22, 2026</span>
+            <span class="blog-read">6 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sleep Post 2 -->
+      <article class="blog-card fade-in fade-in-delay-1" data-category="sleep">
+        <div class="blog-card-img emerald" aria-hidden="true">🌙</div>
+        <div class="blog-card-body">
+          <div class="blog-category emerald">Sleep</div>
+          <h3><a href="/blog/phone-sleep-connection/" aria-label="Read: The Phone-Sleep Connection: What's Actually Happening After 9pm">The Phone-Sleep Connection: What's Actually Happening After 9pm</a></h3>
+          <p>Blue light is only part of the story. Here's the full picture of how your phone disrupts sleep — from melatonin suppression to cortisol spikes to dopamine loops that keep your brain awake long after you've put the phone down.</p>
+          <div class="blog-card-footer">
+            <span class="blog-date">April 16, 2026</span>
+            <span class="blog-read">8 min read</span>
+          </div>
+        </div>
+      </article>
 
       <!-- Post 1 — Morning Routine -->
       <article class="blog-card fade-in fade-in-delay-1" data-category="morning-routine">
