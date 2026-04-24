@@ -386,12 +386,15 @@ section.compact { padding: 60px 0; }
   .proof-stat:nth-child(even) { border-left: 1px solid rgba(255,255,255,0.15); }
   .form-inline { flex-direction: column; }
   .form-inline .btn { width: 100%; }
-  .hero { padding-top: calc(var(--nav-h) + 48px); padding-bottom: 60px; }
+  .hero { padding-top: calc(var(--nav-h) + 32px); padding-bottom: 60px; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; padding: 20px var(--container-px-sm); }
   .final-cta-section { padding: 72px 24px; }
   .final-cta-section h2 { font-size: 36px; }
   .sticky-cta { display: flex; }
+  .hero-sub { margin-bottom: 20px; }
+  .hero-divider { margin: 12px 0; }
+  .hero-proof { margin-top: 12px; }
 }
 
 @media (max-width: 375px) {
@@ -401,6 +404,24 @@ section.compact { padding: 60px 0; }
   .clarity-free,.clarity-pro { padding: 24px; }
 }
 
+
+/* Above-fold fix: laptop viewport (1025-1439px) */
+/* Reduces hero padding so proof row stays visible at 800px viewport height */
+@media (min-width: 1025px) and (max-width: 1439px) {
+  .hero { padding-top: calc(var(--nav-h) + 56px); padding-bottom: 80px; }
+  .hero-sub { margin-bottom: 28px; }
+  .hero-divider { margin: 16px 0; }
+  .hero-proof { margin-top: 14px; }
+}
+
+/* Above-fold fix: 375px small phone — ensure all hero elements above fold */
+@media (max-width: 375px) {
+  .hero { padding-top: calc(var(--nav-h) + 24px); padding-bottom: 48px; }
+  .hero-sub { margin-bottom: 16px; font-size: 16px; }
+  .hero-badge { margin-bottom: 16px; }
+  .hero-divider { margin: 10px 0; }
+  .hero-proof { margin-top: 10px; font-size: 12px; }
+}
 /* [COMPAT-6] Respect user motion preferences */
 @media (prefers-reduced-motion: reduce) {
   *,*::before,*::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
