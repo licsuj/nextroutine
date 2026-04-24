@@ -1,0 +1,344 @@
+/* ============================================================
+   NEXTROUTINE — Affiliate Product Card Components
+   css/affiliate-cards.css
+   
+   Three variants:
+   1. .aff-card          — Single product card
+   2. .aff-comparison    — Product comparison row (2–3 cards)
+   3. .aff-inline        — Inline text recommendation
+   
+   Drop into any page. Uses existing design system variables.
+   ============================================================ */
+
+/* === VARIANT 1 — SINGLE PRODUCT CARD === */
+.aff-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+  position: relative;
+  max-width: 380px;
+  transition: var(--transition);
+}
+.aff-card:hover {
+  border-color: var(--green);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+.aff-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--gold-muted);
+  color: var(--gold);
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.aff-badge-green {
+  background: rgba(45,106,79,0.15);
+  color: var(--green-bright);
+}
+.aff-product-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  font-size: 28px;
+  color: var(--text-muted);
+  overflow: hidden;
+}
+.aff-product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.aff-card h4 {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+.aff-card-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 12px;
+}
+.aff-stars {
+  display: flex;
+  gap: 2px;
+  color: var(--gold);
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.aff-price {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+.aff-price span {
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.aff-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px 24px;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--green-bright);
+  background: transparent;
+  border: 1px solid var(--green);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+.aff-cta:hover {
+  background: rgba(45,106,79,0.1);
+  border-color: var(--green-bright);
+}
+.aff-disclosure {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+
+/* === VARIANT 2 — PRODUCT COMPARISON ROW === */
+.aff-comparison {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 40px 0;
+}
+.aff-comparison-2 {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 760px;
+}
+.aff-comp-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+.aff-comp-card:hover {
+  border-color: var(--green);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+.aff-comp-card.featured {
+  border-color: var(--green);
+  box-shadow: 0 0 0 1px var(--green), 0 8px 32px rgba(0,0,0,0.2);
+}
+.aff-comp-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  width: fit-content;
+}
+.aff-comp-badge-gold {
+  background: var(--gold-muted);
+  color: var(--gold);
+}
+.aff-comp-badge-green {
+  background: rgba(45,106,79,0.15);
+  color: var(--green-bright);
+}
+.aff-comp-card .aff-product-img {
+  width: 52px;
+  height: 52px;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+.aff-comp-card h4 {
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+.aff-comp-card .aff-card-desc {
+  font-size: 13px;
+  margin-bottom: 14px;
+  flex: 1;
+}
+.aff-comp-card .aff-stars {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.aff-comp-card .aff-price {
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+.aff-comp-card .aff-cta {
+  padding: 10px 20px;
+  font-size: 13px;
+}
+
+/* Feature comparison mini-table */
+.aff-features-table {
+  margin-top: 28px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.aff-features-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.aff-features-table th {
+  background: var(--bg-alt);
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 10px 14px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+.aff-features-table th:first-child {
+  text-align: left;
+}
+.aff-features-table td {
+  padding: 10px 14px;
+  color: var(--text-secondary);
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+.aff-features-table td:first-child {
+  text-align: left;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+.aff-features-table tr:last-child td {
+  border-bottom: none;
+}
+.aff-check { color: var(--green-bright); }
+.aff-dash { color: var(--text-muted); }
+
+.aff-comparison-disclosure {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 12px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+
+/* === VARIANT 3 — INLINE RECOMMENDATION === */
+.aff-inline {
+  float: right;
+  width: 240px;
+  margin: 0 0 20px 28px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px;
+  transition: var(--transition);
+}
+.aff-inline:hover {
+  border-color: var(--green);
+}
+.aff-inline-img {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 6px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  font-size: 36px;
+  color: var(--text-muted);
+  overflow: hidden;
+}
+.aff-inline-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.aff-inline h5 {
+  font-family: var(--font-heading);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+.aff-inline-pitch {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.aff-inline-link {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--green-bright);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.aff-inline-link:hover {
+  color: var(--gold);
+}
+.aff-inline .aff-disclosure {
+  font-size: 10px;
+  margin-top: 8px;
+}
+
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .aff-comparison {
+    grid-template-columns: 1fr;
+  }
+  .aff-comparison-2 {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+  .aff-inline {
+    float: none;
+    width: 100%;
+    margin: 20px 0;
+  }
+  .aff-card {
+    max-width: 100%;
+  }
+  .aff-features-table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .aff-features-table table {
+    min-width: 420px;
+  }
+}
