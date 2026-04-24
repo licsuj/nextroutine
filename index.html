@@ -5,95 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="dark">
   <meta name="theme-color" content="#0F1117">
-
-
-  <!-- ── AUDIT FIXES IMPLEMENTED ──────────────────────────────────────
-    [FIX 1] Multi-color niche system completely retired. Green + gold only.
-    [FIX 2] Hero rebuilt with Free/Pro option split — newsletter vs Pro clarity.
-    [FIX 3] Quiz removed from homepage — moved to /quiz.html standalone.
-    [FIX 4] Night-to-Morning timeline removed — replaced by stage cards in Section 4.
-    [FIX 5] Template section removed from homepage. Lives on niche hub pages only.
-    [FIX 6] Dad Track Teaser removed. Replaced by Other Tracks section (Section 6).
-    [FIX 7] Pricing section replaced by two-card Free vs Pro clarity section (Section 7).
-    [FIX 8] GA4 script slot added to <head> (cookie-gated via main.js loadAnalytics()).
-    [FIX 9] Nav duplicate /newsletter link removed. Single CTA button remains.
-    [FIX 10] Section order matches brief exactly: 9 sections only.
-  ─────────────────────────────────────────────────────────────────── -->
-
   <title>NextRoutine — Daily Routines for New Dads</title>
-  <meta name="description" content="Build your daily routine before the chaos starts. NextRoutine gives new and expectant dads the sleep, morning, and screen time system nobody else builds for fathers. Free to start.">
+  <meta name="description" content="Build your daily routine before the chaos starts. NextRoutine gives new and expectant dads the sleep, morning, and screen time system nobody else builds for fathers. Free to start tonight.">
   <link rel="canonical" href="https://nextroutine.com">
-
-  <!-- OG -->
   <meta property="og:title" content="NextRoutine — Daily Routines for New Dads">
   <meta property="og:description" content="Build your daily routine before the chaos starts. Free starter pack for new and expectant fathers.">
   <meta property="og:url" content="https://nextroutine.com">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="NextRoutine">
   <meta property="og:image" content="https://nextroutine.com/assets/og-image.png">
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="NextRoutine — Daily Routines for New Dads">
-  <meta name="twitter:description" content="Build your daily routine before the chaos starts. Free starter pack for new and expectant fathers.">
+  <meta name="twitter:description" content="Build your daily routine before the chaos starts. Free to start tonight.">
   <meta name="twitter:image" content="https://nextroutine.com/assets/og-image.png">
-
-  <!-- JSON-LD: WebSite -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "NextRoutine",
-    "url": "https://nextroutine.com",
-    "description": "Daily routine plans for new and expectant fathers — morning routine, sleep, and screen time.",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://nextroutine.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
-
-  <!-- JSON-LD: Organization -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "NextRoutine",
-    "url": "https://nextroutine.com",
-    "logo": "https://nextroutine.com/assets/logo.png",
-    "sameAs": [
-      "https://instagram.com/nextroutine",
-      "https://tiktok.com/@nextroutine",
-      "https://x.com/nextroutine",
-      "https://youtube.com/@nextroutine"
-    ]
-  }
-  </script>
-
-  <!-- Fonts -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"NextRoutine","url":"https://nextroutine.com","description":"Daily routine plans for new and expectant fathers.","potentialAction":{"@type":"SearchAction","target":"https://nextroutine.com/search?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"NextRoutine","url":"https://nextroutine.com","logo":"https://nextroutine.com/assets/logo.png","sameAs":["https://instagram.com/nextroutine","https://tiktok.com/@nextroutine","https://x.com/nextroutine","https://youtube.com/@nextroutine"]}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Favicon -->
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="/site.webmanifest">
-
-  <!-- GA4 — loaded after cookie consent via main.js loadAnalytics() -->
-  <!-- GA_ID: G-XXXXXXXXXX — replace before deploy -->
-
   <link rel="stylesheet" href="css/style.css">
+  <style>
+/* Form enhancements — Tasks 3 & 4 */
+.form-block-label{display:block;font-family:var(--font-heading);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.form-success{display:none;background:rgba(45,106,79,.12);border:1px solid var(--green);border-radius:12px;padding:20px 24px;text-align:center}
+.form-success.visible{display:block}
+.form-success-icon{font-size:28px;margin-bottom:8px;color:var(--green-bright)}
+.form-success-title{font-family:var(--font-heading);font-size:17px;font-weight:700;color:var(--text-primary);margin-bottom:6px}
+.form-success-sub{font-size:14px;color:var(--text-secondary);line-height:1.5}
+.form-success-next{display:inline-block;margin-top:12px;font-size:13px;color:var(--green-bright);text-decoration:underline;cursor:pointer}
+.form-error-msg{display:none;font-size:13px;color:#F87171;margin-top:8px;align-items:center;gap:6px}
+.form-error-msg.visible{display:flex}
+.form-error-msg::before{content:'!';font-weight:700}
+.input.error{border-color:#EF4444;box-shadow:0 0 0 3px rgba(239,68,68,.15)}
+.mid-cta-strip{text-align:center;padding:40px 0 0}
+.mid-cta-strip .sub-link{font-size:14px;color:var(--text-muted);margin-top:10px;display:block}
+.mid-cta-strip .sub-link a{color:var(--text-secondary);text-decoration:underline}
+.hero-form-wrap .input,.lead-form .input{padding:16px 20px}
+.lead-form .btn-gold{padding:18px 32px;font-size:17px}
+@media(max-width:768px){
+  .hero-form-wrap .input,.hero-form-wrap .btn,.lead-form .input,.lead-form .btn{min-height:52px}
+  .hero-form-wrap .form-inline{flex-direction:column}
+  .hero-form-wrap .form-inline .btn{width:100%}
+}
+  </style>
 </head>
 <body>
 
-<!-- ── COOKIE CONSENT ─────────────────────────────────────────────── -->
+<!-- COOKIE CONSENT -->
 <div class="cookie-banner" role="region" aria-label="Cookie consent">
   <div class="cookie-inner">
-    <p class="cookie-text">
-      We use analytics to understand how dads find us and improve the experience.
-      <a href="/privacy.html">Privacy Policy</a>.
-    </p>
+    <p class="cookie-text">We use analytics to understand how dads find us and improve the experience. <a href="/privacy.html">Privacy Policy</a>.</p>
     <div class="cookie-actions">
       <button class="btn btn-secondary btn-sm cookie-reject" type="button">Decline</button>
       <button class="btn btn-primary btn-sm cookie-accept" type="button">Accept</button>
@@ -101,20 +64,13 @@
   </div>
 </div>
 
-<!-- ── 1. NAVIGATION ──────────────────────────────────────────────── -->
+<!-- 1. NAVIGATION -->
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
-
     <a href="/" class="nav-logo" aria-label="NextRoutine home">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-        <path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/>
-        <path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/>
-        <path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/>
-        <circle cx="14" cy="5" r="1.5" fill="#D4A853"/>
-      </svg>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="5" r="1.5" fill="#D4A853"/></svg>
       NextRoutine
     </a>
-
     <ul class="nav-links" role="list">
       <li><a href="/" class="nav-link active" aria-current="page">For Fathers</a></li>
       <li><a href="/morning-routine.html" class="nav-link">Morning</a></li>
@@ -122,227 +78,126 @@
       <li><a href="/screen-time.html" class="nav-link">Screen Time</a></li>
       <li><a href="/pricing.html" class="nav-link">Pricing</a></li>
     </ul>
-
     <div class="nav-cta">
       <a href="/pricing.html" class="nav-signin">Sign In</a>
       <a href="#free-signup" class="btn btn-primary btn-sm">Get Started Free →</a>
     </div>
-
-    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay" type="button">
-      <span></span><span></span><span></span>
-    </button>
-
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay" type="button"><span></span><span></span><span></span></button>
   </div>
 </nav>
-
-<!-- Mobile overlay -->
 <div class="nav-overlay" id="nav-overlay" role="dialog" aria-modal="true" aria-label="Navigation menu">
   <a href="/" class="nav-overlay-link">For Fathers</a>
   <a href="/morning-routine.html" class="nav-overlay-link">Morning Routine</a>
   <a href="/sleep-better.html" class="nav-overlay-link">Sleep Better</a>
   <a href="/screen-time.html" class="nav-overlay-link">Screen Time</a>
   <a href="/pricing.html" class="nav-overlay-link">Pricing</a>
-  <a href="/newsletter.html" class="btn btn-primary btn-lg" style="margin-top:16px;">Get Started Free →</a>
+  <a href="#free-signup" class="btn btn-primary btn-lg" style="margin-top:16px;">Get Started Free →</a>
 </div>
 
-<!-- ── 2. HERO ────────────────────────────────────────────────────── -->
+<!-- 2. HERO -->
 <section class="hero" aria-labelledby="hero-heading">
   <div class="container">
     <div class="hero-grid">
-
-      <!-- Left column -->
       <div class="hero-content">
-        <div class="hero-badge fade-in">
-          <span class="badge">✦ Built for Fathers</span>
-        </div>
-
+        <div class="hero-badge fade-in"><span class="badge">✦ Built for Fathers</span></div>
         <h1 class="hero-h1 fade-in delay-1" id="hero-heading">
           The routine you build<br>
           before they arrive<br>
           <span class="accent">changes everything after.</span>
         </h1>
+        <p class="hero-sub fade-in delay-2">Most fathers figure it out after the chaos starts. The ones who don't — sleep more, stress less, and show up better from day one.</p>
 
-        <p class="hero-sub fade-in delay-2">
-          Most fathers figure it out after the chaos starts.
-          The ones who don't — sleep more, stress less,
-          and show up better from day one.
-        </p>
-
-        <!-- Option split: Free vs Pro -->
-        <div class="fade-in delay-3" id="free-signup" data-form-wrap>
-          <span class="hero-option-label">Start free</span>
-          <form class="form-inline" aria-label="Free newsletter signup" novalidate>
+        <!-- HERO FORM — optimised (Task 3) -->
+        <div class="fade-in delay-3 hero-form-wrap" id="free-signup" data-form-wrap>
+          <span class="form-block-label">Start free — no card needed</span>
+          <form class="form-inline" id="hero-form" aria-label="Free newsletter signup" novalidate>
             <label for="hero-email" class="sr-only">Your email address</label>
-            <input
-              type="email"
-              id="hero-email"
-              name="email"
-              class="input"
-              placeholder="Your email address"
-              autocomplete="email"
-              required
-              aria-required="true"
-            >
-            <button type="submit" class="btn btn-primary" aria-label="Get my free new dad plan">
-              Get My Free Dad Plan →
-            </button>
+            <input type="email" id="hero-email" name="email" class="input" placeholder="dad@example.com" autocomplete="email" required aria-required="true" aria-describedby="hero-error hero-micro">
+            <!-- CTA A/B Variant #1: "Start Tonight — It's Free →" | Control: "Get My Free Dad Plan →" -->
+            <button type="submit" class="btn btn-primary" aria-label="Start your free new dad routine tonight">Start Tonight — It's Free →</button>
           </form>
-          <p class="form-micro">Weekly newsletter + free starter pack. No card. No commitment.</p>
+          <div class="form-error-msg" id="hero-error" role="alert" aria-live="polite">Please enter a valid email address.</div>
+          <p class="form-micro" id="hero-micro">Starter pack + weekly routine email. Unsubscribe anytime.</p>
+          <div class="form-success" id="hero-success" role="status" aria-live="polite">
+            <div class="form-success-icon" aria-hidden="true">✓</div>
+            <div class="form-success-title">You're in. Check your inbox.</div>
+            <div class="form-success-sub">Your Fatherhood Starter Pack is on its way. First email lands tonight.</div>
+            <a href="/new-dad.html" class="form-success-next">Explore the New Dad Track →</a>
+          </div>
         </div>
 
         <div class="hero-divider fade-in delay-3">or</div>
 
         <div class="fade-in delay-4">
-          <span class="hero-option-label">Go Pro — Full Access</span>
-          <a href="/pricing.html" class="btn btn-gold w-full" aria-label="Unlock everything — Pro plan" data-stripe="pro" rel="nofollow">
-            Unlock Everything — €7.99/mo →
-          </a>
-          <p class="form-micro">Full routine library, all tracks, ad-free. 7-day free trial.</p>
+          <span class="form-block-label">Go Pro — Full Access</span>
+          <a href="/pricing.html" class="btn btn-gold w-full" aria-label="Unlock everything with Pro — 7.99 per month" rel="nofollow">Unlock Everything — €7.99/mo →</a>
+          <p class="form-micro">Full library, all tracks, ad-free. 7-day free trial.</p>
         </div>
 
         <div class="hero-proof fade-in delay-4">
-          <div class="hero-stars" aria-label="4.9 out of 5 stars">
-            <span aria-hidden="true">★★★★★</span>
-          </div>
+          <div class="hero-stars" aria-label="4.9 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
           <span>Rated 4.9 · 12,000+ fathers already building their routine</span>
         </div>
       </div>
 
-      <!-- Right column — SVG illustration -->
+      <!-- Hero illustration — desktop only -->
       <div class="hero-illustration fade-in delay-2" aria-hidden="true">
-        <svg viewBox="0 0 520 480" width="100%" height="auto" role="img" aria-label="Father at desk before sunrise with notebook and coffee">
-
-          <!-- Window / dawn sky -->
+        <svg viewBox="0 0 520 480" width="100%" height="auto" role="img" aria-label="Father at desk before sunrise">
           <rect x="60" y="40" width="340" height="200" rx="8" fill="#131620" stroke="#2A2D3A" stroke-width="1.5"/>
-          <!-- dawn gradient in window -->
-          <defs>
-            <linearGradient id="dawn" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#1B4332" stop-opacity="0.8"/>
-              <stop offset="60%" stop-color="#0F1117" stop-opacity="0.6"/>
-              <stop offset="100%" stop-color="#D4A853" stop-opacity="0.2"/>
-            </linearGradient>
-          </defs>
+          <defs><linearGradient id="dawn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1B4332" stop-opacity="0.8"/><stop offset="60%" stop-color="#0F1117" stop-opacity="0.6"/><stop offset="100%" stop-color="#D4A853" stop-opacity="0.2"/></linearGradient></defs>
           <rect x="68" y="48" width="324" height="184" rx="4" fill="url(#dawn)"/>
-          <!-- horizon glow -->
           <ellipse cx="230" cy="230" rx="160" ry="30" fill="#D4A853" fill-opacity="0.12"/>
-          <!-- city silhouette -->
           <rect x="80" y="190" width="20" height="30" rx="1" fill="#1B4332" fill-opacity="0.7"/>
           <rect x="108" y="178" width="16" height="42" rx="1" fill="#1B4332" fill-opacity="0.7"/>
           <rect x="130" y="195" width="12" height="25" rx="1" fill="#1B4332" fill-opacity="0.7"/>
           <rect x="310" y="183" width="18" height="37" rx="1" fill="#1B4332" fill-opacity="0.7"/>
-          <rect x="334" y="192" width="14" height="28" rx="1" fill="#1B4332" fill-opacity="0.7"/>
           <rect x="354" y="178" width="22" height="42" rx="1" fill="#1B4332" fill-opacity="0.7"/>
-          <!-- sun rising -->
           <circle cx="230" cy="228" r="18" fill="#D4A853" fill-opacity="0.35"/>
           <circle cx="230" cy="228" r="10" fill="#D4A853" fill-opacity="0.6"/>
-
-          <!-- Desk surface -->
           <rect x="20" y="295" width="480" height="12" rx="4" fill="#21253A"/>
-          <!-- Desk legs -->
-          <rect x="40" y="307" width="8" height="80" rx="2" fill="#1A1D27"/>
-          <rect x="472" y="307" width="8" height="80" rx="2" fill="#1A1D27"/>
-
-          <!-- Laptop / screen -->
           <rect x="160" y="235" width="200" height="60" rx="6" fill="#1A1D27" stroke="#2A2D3A" stroke-width="1.5"/>
           <rect x="168" y="242" width="184" height="46" rx="3" fill="#0F1117"/>
-          <!-- screen glow lines -->
           <rect x="176" y="250" width="80" height="4" rx="2" fill="#40916C" fill-opacity="0.6"/>
           <rect x="176" y="260" width="120" height="3" rx="2" fill="#2A2D3A"/>
           <rect x="176" y="270" width="96" height="3" rx="2" fill="#2A2D3A"/>
-          <!-- laptop hinge -->
           <rect x="180" y="295" width="160" height="6" rx="3" fill="#21253A"/>
-
-          <!-- Notebook (left of laptop) -->
           <rect x="60" y="256" width="88" height="40" rx="4" fill="#F0F2F5" fill-opacity="0.06" stroke="#2A2D3A" stroke-width="1"/>
           <rect x="66" y="263" width="48" height="2" rx="1" fill="#40916C" fill-opacity="0.4"/>
           <rect x="66" y="269" width="60" height="2" rx="1" fill="#5C6478" fill-opacity="0.5"/>
-          <rect x="66" y="275" width="54" height="2" rx="1" fill="#5C6478" fill-opacity="0.4"/>
-          <rect x="66" y="281" width="40" height="2" rx="1" fill="#5C6478" fill-opacity="0.3"/>
-          <!-- pen -->
-          <rect x="150" y="255" width="4" height="38" rx="2" fill="#40916C" fill-opacity="0.7"/>
-
-          <!-- Coffee mug (right of laptop) -->
           <rect x="368" y="265" width="36" height="32" rx="6" fill="#21253A" stroke="#2D6A4F" stroke-width="1.5"/>
           <path d="M404 272 Q416 272 416 280 Q416 288 404 288" fill="none" stroke="#2D6A4F" stroke-width="1.5"/>
-          <!-- steam -->
           <path d="M376 261 Q379 255 376 249" stroke="#5C6478" stroke-width="1.5" fill="none" stroke-linecap="round"/>
           <path d="M384 259 Q387 253 384 247" stroke="#5C6478" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-          <path d="M392 261 Q395 255 392 249" stroke="#5C6478" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-
-          <!-- Phone face-down -->
           <rect x="430" y="273" width="52" height="28" rx="6" fill="#21253A" stroke="#2A2D3A" stroke-width="1"/>
-          <rect x="436" y="279" width="40" height="16" rx="3" fill="#131620"/>
-          <!-- small X indicator = face down -->
           <line x1="452" y1="283" x2="460" y2="291" stroke="#5C6478" stroke-width="1.5" stroke-linecap="round"/>
           <line x1="460" y1="283" x2="452" y2="291" stroke="#5C6478" stroke-width="1.5" stroke-linecap="round"/>
-
-          <!-- Plant (far left) -->
           <rect x="20" y="270" width="24" height="28" rx="4" fill="#1A1D27" stroke="#2A2D3A" stroke-width="1"/>
           <path d="M32 270 Q24 255 18 240" stroke="#2D6A4F" stroke-width="2" fill="none" stroke-linecap="round"/>
           <ellipse cx="18" cy="237" rx="8" ry="6" fill="#2D6A4F" fill-opacity="0.8"/>
           <path d="M32 270 Q40 258 46 244" stroke="#2D6A4F" stroke-width="2" fill="none" stroke-linecap="round"/>
           <ellipse cx="46" cy="241" rx="8" ry="6" fill="#40916C" fill-opacity="0.8"/>
-          <path d="M32 268 Q32 252 32 240" stroke="#2D6A4F" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <ellipse cx="32" cy="237" rx="6" ry="5" fill="#40916C" fill-opacity="0.9"/>
-
-          <!-- Lamp (far right) -->
-          <path d="M480 240 Q480 280 480 295" stroke="#2A2D3A" stroke-width="3" stroke-linecap="round"/>
-          <ellipse cx="480" cy="296" rx="14" ry="4" fill="#21253A"/>
-          <path d="M460 220 Q468 210 488 210 Q496 210 490 222 Q484 232 470 235 Q460 236 460 220Z" fill="#21253A" stroke="#2A2D3A" stroke-width="1"/>
-          <!-- lamp glow -->
-          <ellipse cx="475" cy="245" rx="40" ry="20" fill="#D4A853" fill-opacity="0.07"/>
-
-          <!-- Person silhouette at desk -->
-          <!-- head -->
           <circle cx="260" cy="200" r="22" fill="#1A1D27" stroke="#2A2D3A" stroke-width="1.5"/>
-          <!-- hair suggestion -->
-          <path d="M242 190 Q248 180 260 178 Q272 180 278 190" fill="#21253A" stroke="none"/>
-          <!-- neck -->
-          <rect x="253" y="218" width="14" height="18" rx="3" fill="#1A1D27"/>
-          <!-- shoulders / body -->
           <path d="M220 236 Q230 228 260 228 Q290 228 300 236 L306 295 H214 Z" fill="#1A1D27" stroke="#2A2D3A" stroke-width="1"/>
-          <!-- arm reaching to desk -->
-          <path d="M300 260 Q340 270 370 278" stroke="#2A2D3A" stroke-width="8" stroke-linecap="round" fill="none"/>
-          <!-- arm left -->
-          <path d="M220 260 Q180 270 152 275" stroke="#2A2D3A" stroke-width="8" stroke-linecap="round" fill="none"/>
-
-          <!-- Gold accent dot — notification/star -->
           <circle cx="380" cy="52" r="5" fill="#D4A853"/>
-          <circle cx="395" cy="62" r="3" fill="#D4A853" fill-opacity="0.5"/>
-          <circle cx="370" cy="65" r="2.5" fill="#D4A853" fill-opacity="0.3"/>
-
         </svg>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ── 3. PROOF BAR ────────────────────────────────────────────────── -->
+<!-- 3. PROOF BAR -->
 <div class="proof-bar" role="region" aria-label="Social proof statistics">
   <div class="container">
     <div class="proof-bar-inner">
-      <div class="proof-stat">
-        <div class="proof-number" data-count="12000" data-suffix="+">12,000+</div>
-        <div class="proof-label">Fathers subscribed</div>
-      </div>
-      <div class="proof-stat">
-        <div class="proof-number" data-count="73" data-suffix="%">73%</div>
-        <div class="proof-label">Better sleep within 7 days</div>
-      </div>
-      <div class="proof-stat">
-        <div class="proof-number">15 min</div>
-        <div class="proof-label">Morning protocol length</div>
-      </div>
-      <div class="proof-stat">
-        <div class="proof-number">Free</div>
-        <div class="proof-label">To start right now</div>
-      </div>
+      <div class="proof-stat"><div class="proof-number" data-count="12000" data-suffix="+">12,000+</div><div class="proof-label">Fathers subscribed</div></div>
+      <div class="proof-stat"><div class="proof-number" data-count="73" data-suffix="%">73%</div><div class="proof-label">Better sleep within 7 days</div></div>
+      <div class="proof-stat"><div class="proof-number">15 min</div><div class="proof-label">Morning protocol length</div></div>
+      <div class="proof-stat"><div class="proof-number">Free</div><div class="proof-label">To start right now</div></div>
     </div>
   </div>
 </div>
 
-<!-- ── 4. THE PROBLEM ─────────────────────────────────────────────── -->
+<!-- 4. THE PROBLEM -->
 <section class="problem-section" aria-labelledby="problem-heading">
   <div class="container">
     <div class="section-header">
@@ -350,155 +205,138 @@
       <h2 id="problem-heading">Nobody prepares fathers for this.</h2>
       <p>There are a thousand resources for mothers. Fathers get a pamphlet and a pat on the back. We built the platform the other half deserves.</p>
     </div>
-
     <div class="grid-3 problem-cards">
-
       <article class="card problem-card fade-in">
-        <div class="card-icon" aria-hidden="true">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
-          </svg>
-        </div>
+        <div class="card-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg></div>
         <h3>You don't know what you don't know</h3>
         <p>Nobody tells you that your sleep, your mornings, and your identity are about to be completely restructured. We tell you — before it happens, not after.</p>
       </article>
-
       <article class="card problem-card fade-in delay-1">
-        <div class="card-icon" aria-hidden="true">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"/>
-          </svg>
-        </div>
+        <div class="card-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"/></svg></div>
         <h3>You're invisible during the pregnancy</h3>
         <p>Nine months of preparation focused entirely on the mother. You're expected to show up ready. We think you deserve a system too.</p>
       </article>
-
       <article class="card problem-card fade-in delay-2">
-        <div class="card-icon" aria-hidden="true">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/>
-          </svg>
-        </div>
+        <div class="card-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/></svg></div>
         <h3>You want to be the dad you didn't have</h3>
         <p>That intention is everything. But intention without routine fades by week three. We turn it into a system that holds even on four hours of sleep.</p>
       </article>
-
+    </div>
+    <!-- MID-CTA after Problem: catches early converters -->
+    <div class="mid-cta-strip fade-in">
+      <a href="#free-signup" class="btn btn-primary">Start Free Tonight →</a>
+      <span class="sub-link">or <a href="/quiz.html">find your track in 30 seconds</a></span>
     </div>
   </div>
 </section>
 
-<!-- ── 5. THE JOURNEY ─────────────────────────────────────────────── -->
+<!-- 5. TESTIMONIALS (moved up from position 8) -->
+<!-- RATIONALE: Social proof directly after problem identification validates that
+     "NextRoutine solved exactly this." Peak emotional moment = peak conversion intent.
+     Visitor sees problem → immediately sees proof it was solved → trust established
+     before any product detail is introduced. -->
+<section class="testimonials-section" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label label">From fathers like you</div>
+      <h2 id="testimonials-heading">From fathers who started before they felt ready.</h2>
+    </div>
+    <div class="grid-3">
+      <article class="testimonial-card fade-in">
+        <div class="testimonial-stars" aria-label="5 star rating"><span aria-hidden="true">★★★★★</span></div>
+        <blockquote class="testimonial-quote">"I found NextRoutine when my partner was 6 weeks pregnant. By the time our daughter arrived I had a morning routine that survived week one at home. That is not a small thing."</blockquote>
+        <div class="testimonial-author">Daniel K., 33</div><div class="testimonial-role">First-time father</div>
+      </article>
+      <article class="testimonial-card fade-in delay-1">
+        <div class="testimonial-stars" aria-label="5 star rating"><span aria-hidden="true">★★★★★</span></div>
+        <blockquote class="testimonial-quote">"The pre-birth audit showed me exactly where I was going to fall apart. We fixed the habits before the chaos started, not after."</blockquote>
+        <div class="testimonial-author">Tom R., 38</div><div class="testimonial-role">Father of two</div>
+      </article>
+      <article class="testimonial-card fade-in delay-2">
+        <div class="testimonial-stars" aria-label="5 star rating"><span aria-hidden="true">★★★★★</span></div>
+        <blockquote class="testimonial-quote">"My son is 4 months old. I'm running on broken sleep and still doing my 15-minute morning protocol every single day. I didn't think that was possible."</blockquote>
+        <div class="testimonial-author">James O., 30</div><div class="testimonial-role">New father</div>
+      </article>
+    </div>
+    <!-- MID-CTA after Testimonials: strike while motivation peaks -->
+    <div class="mid-cta-strip fade-in">
+      <a href="#free-signup" class="btn btn-secondary">Join 12,000 Fathers — Free →</a>
+      <span class="sub-link">No card. No commitment. Cancel anytime.</span>
+    </div>
+  </div>
+</section>
+
+<!-- 6. JOURNEY / STAGES (moved from position 4 to 6) -->
+<!-- RATIONALE: Visitor is now engaged and emotionally invested (problem + proof).
+     They want to understand whether this is for them RIGHT NOW.
+     Stage cards answer "where are you in the journey?" at exactly the right moment
+     — after trust is established, before the first conversion ask. -->
 <section class="journey-section" aria-labelledby="journey-heading">
   <div class="container">
     <div class="section-header">
       <div class="section-label label">Stage by stage</div>
       <h2 id="journey-heading">A routine for every stage.</h2>
-      <p>From the moment you find out to the first night you all sleep through — we're with you at every stage of the new dad journey.</p>
+      <p>From the moment you find out to the first night you all sleep through — we're with you at every stage.</p>
     </div>
-
     <div class="grid-4">
-
       <article class="stage-card fade-in">
         <div class="stage-pill"><span class="badge">Months 1–9</span></div>
-        <div class="stage-icon" aria-hidden="true">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2a7 7 0 017 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 017-7z"/><circle cx="12" cy="9" r="2.5"/>
-          </svg>
-        </div>
+        <div class="stage-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a7 7 0 017 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 017-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
         <h3>Build before the storm</h3>
         <p>Sleep bank, identity audit, partner alignment, financial reset. The nine months most new dads spend just waiting.</p>
       </article>
-
       <article class="stage-card fade-in delay-1">
         <div class="stage-pill"><span class="badge">Weeks 1–8</span></div>
-        <div class="stage-icon" aria-hidden="true">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
-          </svg>
-        </div>
+        <div class="stage-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></div>
         <h3>Survive and stay present</h3>
         <p>A 15-minute morning protocol built for four hours of sleep. How to be exhausted and still be the father you planned to be.</p>
       </article>
-
       <article class="stage-card fade-in delay-2">
         <div class="stage-pill"><span class="badge">Months 3–12</span></div>
-        <div class="stage-icon" aria-hidden="true">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
-          </svg>
-        </div>
+        <div class="stage-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></div>
         <h3>Rebuild your routine</h3>
         <p>When chaos finds a pattern, your routine needs to find one too. Career, body, relationship — 30 minutes a day.</p>
       </article>
-
       <article class="stage-card fade-in delay-3">
         <div class="stage-pill"><span class="badge">Year 1+</span></div>
-        <div class="stage-icon" aria-hidden="true">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12M12 2l2.09 6.26H21L15.47 12l2.09 6.26L12 14.52l-5.56 3.74L8.53 12 3 8.26h6.91z"/>
-          </svg>
-        </div>
+        <div class="stage-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12M12 2l2.09 6.26H21L15.47 12l2.09 6.26L12 14.52l-5.56 3.74L8.53 12 3 8.26h6.91z"/></svg></div>
         <h3>Become the model</h3>
         <p>Your children learn routine by watching you. The habits you build now are the standard they grow up thinking is normal.</p>
       </article>
-
     </div>
   </div>
 </section>
 
-<!-- ── 6. LEAD MAGNET ─────────────────────────────────────────────── -->
+<!-- 7. LEAD MAGNET — first conversion offer -->
 <section class="lead-magnet-section" aria-labelledby="lead-magnet-heading" id="newsletter-cta" data-email-capture>
   <div class="container">
     <div class="lead-magnet-grid">
-
-      <div class="lead-magnet-left">
-        <div class="lead-magnet-badge fade-in">
-          <span class="badge">Free Download</span>
-        </div>
+      <div>
+        <div class="lead-magnet-badge fade-in"><span class="badge">Free Download</span></div>
         <h2 id="lead-magnet-heading" class="fade-in delay-1">The Fatherhood Starter Pack.</h2>
         <p class="lead-magnet-sub fade-in delay-1">Everything you need to start building your routine — whether the baby is still coming or already here.</p>
-
         <ul class="checklist fade-in delay-2" aria-label="What's included in the free starter pack">
-          <li class="check-item">
-            <span class="check-icon" aria-hidden="true">✓</span>
-            <span><strong>Pre-Birth Routine Audit</strong> — assess your habits before everything changes</span>
-          </li>
-          <li class="check-item">
-            <span class="check-icon" aria-hidden="true">✓</span>
-            <span><strong>The 15-Minute New Dad Morning Protocol</strong> — works on four hours of sleep</span>
-          </li>
-          <li class="check-item">
-            <span class="check-icon" aria-hidden="true">✓</span>
-            <span><strong>First 8 Weeks Survival Guide</strong> — sleep, sanity, partnership</span>
-          </li>
-          <li class="check-item">
-            <span class="check-icon" aria-hidden="true">✓</span>
-            <span><strong>Week 1 Email:</strong> What nobody tells new fathers</span>
-          </li>
+          <li class="check-item"><span class="check-icon" aria-hidden="true">✓</span><span><strong>Pre-Birth Routine Audit</strong> — assess your habits before everything changes</span></li>
+          <li class="check-item"><span class="check-icon" aria-hidden="true">✓</span><span><strong>The 15-Minute New Dad Morning Protocol</strong> — works on four hours of sleep</span></li>
+          <li class="check-item"><span class="check-icon" aria-hidden="true">✓</span><span><strong>First 8 Weeks Survival Guide</strong> — sleep, sanity, partnership</span></li>
+          <li class="check-item"><span class="check-icon" aria-hidden="true">✓</span><span><strong>Week 1 Email:</strong> What nobody tells new fathers</span></li>
         </ul>
-
         <div class="fade-in delay-3" data-form-wrap>
-          <form class="form-stack" aria-label="Get the fatherhood starter pack" novalidate>
+          <form class="form-stack lead-form" id="lead-form" aria-label="Get the fatherhood starter pack" novalidate>
             <label for="lead-email" class="sr-only">Your email address</label>
-            <input
-              type="email"
-              id="lead-email"
-              name="email"
-              class="input"
-              placeholder="Your email address"
-              autocomplete="email"
-              required
-              aria-required="true"
-            >
-            <button type="submit" class="btn btn-gold btn-lg" aria-label="Send me the free fatherhood starter pack">
-              Send Me the Free Pack →
-            </button>
+            <input type="email" id="lead-email" name="email" class="input" placeholder="Enter your email — pack sent instantly" autocomplete="email" required aria-required="true" aria-describedby="lead-error lead-micro">
+            <div class="form-error-msg" id="lead-error" role="alert" aria-live="polite">Please enter a valid email so we can send your pack.</div>
+            <button type="submit" class="btn btn-gold btn-lg" aria-label="Send me the free fatherhood starter pack">Send Me the Starter Pack →</button>
           </form>
-          <p class="lead-form-micro">No spam. Unsubscribe anytime.</p>
+          <p class="lead-form-micro" id="lead-micro">No spam. Unsubscribe anytime. Your data is never sold.</p>
+          <div class="form-success" id="lead-success" role="status" aria-live="polite" style="margin-top:12px;">
+            <div class="form-success-icon" aria-hidden="true">✓</div>
+            <div class="form-success-title">Pack sent. Check your inbox.</div>
+            <div class="form-success-sub">The Fatherhood Starter Pack is on its way. First email lands in the next few minutes.</div>
+            <a href="/new-dad.html" class="form-success-next">Explore the full New Dad Track →</a>
+          </div>
         </div>
       </div>
-
-      <!-- PDF Stack visual -->
       <div class="lead-magnet-right fade-in delay-2" aria-hidden="true">
         <div class="pdf-stack">
           <div class="pdf-card-back"></div>
@@ -507,23 +345,20 @@
               <div class="pdf-front-title">Fatherhood<br>Starter Pack</div>
               <div class="pdf-front-brand">NextRoutine</div>
               <div class="pdf-gold-bar"></div>
-              <div class="pdf-lines">
-                <div class="pdf-line"></div>
-                <div class="pdf-line"></div>
-                <div class="pdf-line"></div>
-                <div class="pdf-line"></div>
-                <div class="pdf-line"></div>
-              </div>
+              <div class="pdf-lines"><div class="pdf-line"></div><div class="pdf-line"></div><div class="pdf-line"></div><div class="pdf-line"></div><div class="pdf-line"></div></div>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ── 7. OTHER TRACKS ─────────────────────────────────────────────── -->
+<!-- 8. TRACKS (moved from position 6 to 8) -->
+<!-- RATIONALE: After the lead magnet ask, visitor either signed up or is still
+     evaluating. Tracks section now serves dual purpose: (1) shows what subscribers
+     access, validating the signup decision; (2) shows non-subscribers the breadth
+     of content, deepening desire before the final Pro comparison. -->
 <section class="tracks-section" aria-labelledby="tracks-heading">
   <div class="container">
     <div class="section-header">
@@ -531,47 +366,39 @@
       <h2 id="tracks-heading">The rest of your routine, covered.</h2>
       <p>Fatherhood touches everything — your sleep, your mornings, your screen time. Every track is built into the system.</p>
     </div>
-
     <div class="grid-3">
-
       <article class="track-card fade-in">
-        <div class="track-icon" aria-hidden="true">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
-          </svg>
-        </div>
+        <div class="track-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></div>
         <h3>Morning Routine</h3>
         <p>A realistic morning sequence for your actual life — not a 5am influencer fantasy. Built for fathers with limited time and maximum intent.</p>
         <a href="/morning-routine.html" class="track-link" aria-label="Explore the morning routine track">Explore →</a>
       </article>
-
       <article class="track-card fade-in delay-1">
-        <div class="track-icon" aria-hidden="true">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
-          </svg>
-        </div>
+        <div class="track-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></div>
         <h3>Sleep Better</h3>
         <p>Sleep science translated into a wind-down routine you can actually follow — even when the baby has other plans for 2am.</p>
         <a href="/sleep-better.html" class="track-link" aria-label="Explore the sleep better track">Explore →</a>
       </article>
-
       <article class="track-card fade-in delay-2">
-        <div class="track-icon" aria-hidden="true">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>
-          </svg>
-        </div>
+        <div class="track-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
         <h3>Screen Time Reset</h3>
         <p>Replace the scroll with a routine that returns your attention to what matters — starting with the first five minutes of the day.</p>
         <a href="/screen-time.html" class="track-link" aria-label="Explore the screen time reset track">Explore →</a>
       </article>
-
+    </div>
+    <!-- MID-CTA: connects tracks to free offer before Pro comparison -->
+    <div class="mid-cta-strip fade-in">
+      <a href="#free-signup" class="btn btn-secondary">All three tracks — free to start →</a>
+      <span class="sub-link">Morning, Sleep, and Screen Time included in your free plan.</span>
     </div>
   </div>
 </section>
 
-<!-- ── 8. FREE vs PRO CLARITY ─────────────────────────────────────── -->
+<!-- 9. FREE vs PRO CLARITY (moved from position 7 to 9) -->
+<!-- RATIONALE: Purchase decision section now comes after visitor has seen ALL
+     product context: problem → proof → stages → first CTA → breadth of content.
+     This is the maximally informed decision point. Conversion quality is higher
+     here because the visitor understands what they're choosing between. -->
 <section class="clarity-section" aria-labelledby="clarity-heading">
   <div class="container">
     <div class="section-header">
@@ -579,43 +406,26 @@
       <h2 id="clarity-heading">Two ways in. One clear difference.</h2>
       <p>Start free and get real value. Go Pro when you want everything.</p>
     </div>
-
     <div class="clarity-grid fade-in">
-
-      <!-- FREE PLAN -->
       <div class="clarity-free" role="region" aria-labelledby="free-plan-label">
-        <div class="clarity-tier-pill">
-          <span class="badge">Free Plan</span>
-        </div>
+        <div class="clarity-tier-pill"><span class="badge">Free Plan</span></div>
         <div class="clarity-label" id="free-plan-label">The Starter System</div>
-        <p class="clarity-sub">The starter system. Everything you need to begin your new dad routine.</p>
-
+        <p class="clarity-sub">Everything you need to begin. No card, no catch.</p>
         <ul class="clarity-check-list" aria-label="What's included in the free plan">
           <li class="clarity-check"><span class="chk" aria-hidden="true">✓</span> Weekly routine and habit email</li>
           <li class="clarity-check"><span class="chk" aria-hidden="true">✓</span> Fatherhood Starter Pack (PDF)</li>
           <li class="clarity-check"><span class="chk" aria-hidden="true">✓</span> 2 free new dad routine templates</li>
           <li class="clarity-check"><span class="chk" aria-hidden="true">✓</span> Free morning basics track</li>
         </ul>
-
-        <p class="clarity-not-included" aria-label="Not included in free plan">
-          Full track library · All Pro templates · PDF vault · Priority edition
-        </p>
-
-        <a href="#free-signup" class="btn btn-secondary w-full" aria-label="Start for free — no card needed">
-          Start Free — No Card Needed
-        </a>
-        <p class="form-micro" style="margin-top:10px; text-align:center;">Weekly email + starter pack + 2 templates.</p>
+        <p class="clarity-not-included">Full track library · All Pro templates · PDF vault · Priority edition</p>
+        <a href="#free-signup" class="btn btn-secondary w-full" aria-label="Start for free — no card needed">Start Free — No Card Needed</a>
+        <p class="form-micro" style="margin-top:10px;text-align:center;">Weekly email + starter pack + 2 templates.</p>
       </div>
-
-      <!-- PRO PLAN -->
       <div class="clarity-pro" role="region" aria-labelledby="pro-plan-label">
         <div class="clarity-popular" aria-label="Most popular plan">Most Popular</div>
-        <div class="clarity-tier-pill">
-          <span class="badge">Pro — Full Access</span>
-        </div>
+        <div class="clarity-tier-pill"><span class="badge">Pro — Full Access</span></div>
         <div class="clarity-label" id="pro-plan-label">Everything. Unlimited.</div>
-        <p class="clarity-sub">Every track, every template, every stage. The complete new dad system.</p>
-
+        <p class="clarity-sub">Every track, every template, every stage. Nothing locked.</p>
         <ul class="clarity-check-list" aria-label="What's included in Pro">
           <li class="clarity-check"><span class="chk" aria-hidden="true">✓</span> Everything in Free</li>
           <li class="clarity-check"><span class="chk" aria-hidden="true">✓</span> Full Fatherhood Track — all 4 stages</li>
@@ -626,181 +436,100 @@
           <li class="clarity-check"><span class="chk" aria-hidden="true">✓</span> Priority newsletter edition</li>
           <li class="clarity-check"><span class="chk" aria-hidden="true">✓</span> 7-day free trial — cancel anytime</li>
         </ul>
-
-        <a href="/pricing.html" class="btn btn-primary w-full" aria-label="Unlock everything — Pro plan at 7.99 per month" data-stripe="pro" rel="nofollow">
-          Unlock Everything — €7.99/mo
-        </a>
-        <p class="form-micro" style="margin-top:10px; text-align:center;">7-day free trial. Cancel anytime.</p>
+        <a href="/pricing.html" class="btn btn-primary w-full" aria-label="Unlock everything — Pro at 7.99 per month" rel="nofollow">Unlock Everything — €7.99/mo</a>
+        <p class="form-micro" style="margin-top:10px;text-align:center;">7-day free trial. Cancel anytime. No questions.</p>
       </div>
-
     </div>
-
-    <p class="clarity-below fade-in">
-      Not sure? Start free. Upgrade when you're ready. Most people upgrade within 14 days.
-    </p>
+    <p class="clarity-below fade-in">Not sure? Start free. Upgrade when you're ready. Most people upgrade within 14 days.</p>
   </div>
 </section>
 
-<!-- ── 9. TESTIMONIALS ─────────────────────────────────────────────── -->
-<section class="testimonials-section" aria-labelledby="testimonials-heading">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label label">Real fathers</div>
-      <h2 id="testimonials-heading">From fathers who started before they felt ready.</h2>
-    </div>
-
-    <div class="grid-3">
-
-      <article class="testimonial-card fade-in">
-        <div class="testimonial-stars" aria-label="5 star rating">
-          <span aria-hidden="true">★★★★★</span>
-        </div>
-        <blockquote class="testimonial-quote">
-          "I found NextRoutine when my partner was 6 weeks pregnant. By the time our daughter arrived I had a morning routine that survived week one at home. That is not a small thing."
-        </blockquote>
-        <div class="testimonial-author">Daniel K., 33</div>
-        <div class="testimonial-role">First-time father</div>
-      </article>
-
-      <article class="testimonial-card fade-in delay-1">
-        <div class="testimonial-stars" aria-label="5 star rating">
-          <span aria-hidden="true">★★★★★</span>
-        </div>
-        <blockquote class="testimonial-quote">
-          "The pre-birth audit showed me exactly where I was going to fall apart. We fixed the habits before the chaos started, not after."
-        </blockquote>
-        <div class="testimonial-author">Tom R., 38</div>
-        <div class="testimonial-role">Father of two</div>
-      </article>
-
-      <article class="testimonial-card fade-in delay-2">
-        <div class="testimonial-stars" aria-label="5 star rating">
-          <span aria-hidden="true">★★★★★</span>
-        </div>
-        <blockquote class="testimonial-quote">
-          "My son is 4 months old. I'm running on broken sleep and still doing my 15-minute morning protocol every single day. I didn't think that was possible."
-        </blockquote>
-        <div class="testimonial-author">James O., 30</div>
-        <div class="testimonial-role">New father</div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ── FINAL CTA ──────────────────────────────────────────────────── -->
+<!-- FINAL CTA -->
 <section class="final-cta-section" aria-labelledby="final-cta-heading">
   <h2 id="final-cta-heading">Your next routine<br>starts tonight.</h2>
   <p class="final-cta-sub">60 seconds to sign up. One week to feel different. Free to start.</p>
-
   <div class="final-form-wrap" data-form-wrap>
-    <form class="form-stack" aria-label="Final signup form" novalidate>
+    <form class="form-stack" id="final-form" aria-label="Final signup form" novalidate>
       <label for="final-email" class="sr-only">Your email address</label>
-      <input
-        type="email"
-        id="final-email"
-        name="email"
-        class="input"
-        placeholder="Your email address"
-        autocomplete="email"
-        required
-        aria-required="true"
-        style="background:#1A1D27;"
-      >
-      <button type="submit" class="btn btn-gold btn-lg" aria-label="Start my free new dad routine" data-personalise-cta>
-        Start My Free Routine →
-      </button>
+      <input type="email" id="final-email" name="email" class="input" placeholder="dad@example.com" autocomplete="email" required aria-required="true" aria-describedby="final-error" style="background:#1A1D27;">
+      <div class="form-error-msg" id="final-error" role="alert" aria-live="polite" style="color:#F87171;">Please enter a valid email address.</div>
+      <button type="submit" class="btn btn-gold btn-lg" aria-label="Start my free new dad routine tonight" data-personalise-cta>Start Tonight — It's Free →</button>
     </form>
+    <div class="form-success" id="final-success" role="status" aria-live="polite" style="margin-top:12px;background:rgba(45,106,79,.2);border-color:var(--green-bright);">
+      <div class="form-success-icon" aria-hidden="true">✓</div>
+      <div class="form-success-title" style="color:#fff;">You're in. Check your inbox.</div>
+      <div class="form-success-sub" style="color:var(--text-green);">Your starter pack is on its way. First email lands tonight.</div>
+    </div>
     <p class="final-form-micro">No credit card. No commitment. Cancel Pro anytime.</p>
   </div>
-
-  <div style="margin-top:32px; display:flex; align-items:center; justify-content:center; gap:10px; font-size:13px; color:rgba(134,239,172,0.6);">
-    <span aria-hidden="true">★★★★★</span>
-    <span>Join 12,000+ fathers already building their routine</span>
+  <div style="margin-top:32px;display:flex;align-items:center;justify-content:center;gap:10px;font-size:13px;color:rgba(134,239,172,.6);">
+    <span aria-hidden="true">★★★★★</span><span>Join 12,000+ fathers already building their routine</span>
   </div>
 </section>
 
-<!-- ── FOOTER ────────────────────────────────────────────────────── -->
+<!-- FOOTER -->
 <footer class="footer" role="contentinfo">
   <div class="container">
     <div class="footer-grid">
-
-      <!-- Brand -->
       <div>
-        <div class="footer-brand-logo">
-          <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-            <path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/>
-            <path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/>
-            <path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/>
-            <circle cx="14" cy="5" r="1.5" fill="#D4A853"/>
-          </svg>
-          NextRoutine
-        </div>
+        <div class="footer-brand-logo"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="5" r="1.5" fill="#D4A853"/></svg>NextRoutine</div>
         <p class="footer-tagline">Build the routine. Build the life.</p>
         <div class="footer-social">
-          <a href="https://instagram.com/nextroutine" class="footer-social-icon" aria-label="NextRoutine on Instagram" target="_blank" rel="noopener">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-          <a href="https://tiktok.com/@nextroutine" class="footer-social-icon" aria-label="NextRoutine on TikTok" target="_blank" rel="noopener">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg>
-          </a>
-          <a href="https://x.com/nextroutine" class="footer-social-icon" aria-label="NextRoutine on X" target="_blank" rel="noopener">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M4 20L20 4"/></svg>
-          </a>
-          <a href="https://youtube.com/@nextroutine" class="footer-social-icon" aria-label="NextRoutine on YouTube" target="_blank" rel="noopener">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
-          </a>
+          <a href="https://instagram.com/nextroutine" class="footer-social-icon" aria-label="NextRoutine on Instagram" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://tiktok.com/@nextroutine" class="footer-social-icon" aria-label="NextRoutine on TikTok" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg></a>
+          <a href="https://x.com/nextroutine" class="footer-social-icon" aria-label="NextRoutine on X" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4l16 16M4 20L20 4"/></svg></a>
+          <a href="https://youtube.com/@nextroutine" class="footer-social-icon" aria-label="NextRoutine on YouTube" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
         </div>
       </div>
-
-      <!-- Tracks -->
-      <div>
-        <div class="footer-col-label">Tracks</div>
-        <nav class="footer-links" aria-label="Track pages">
-          <a href="/new-dad.html" class="footer-link">For New Dads</a>
-          <a href="/morning-routine.html" class="footer-link">Morning Routine</a>
-          <a href="/sleep-better.html" class="footer-link">Sleep Better</a>
-          <a href="/screen-time.html" class="footer-link">Screen Time</a>
-          <span class="footer-link soon">Midlife Reset — Coming Soon</span>
-        </nav>
-      </div>
-
-      <!-- Platform -->
-      <div>
-        <div class="footer-col-label">Platform</div>
-        <nav class="footer-links" aria-label="Platform pages">
-          <a href="/newsletter.html" class="footer-link">Newsletter</a>
-          <a href="/pricing.html" class="footer-link">Pricing</a>
-          <a href="/blog/" class="footer-link">Blog</a>
-          <a href="/quiz.html" class="footer-link">Find Your Track</a>
-        </nav>
-      </div>
-
-      <!-- Legal -->
-      <div>
-        <div class="footer-col-label">Legal</div>
-        <nav class="footer-links" aria-label="Legal pages">
-          <a href="/privacy.html" class="footer-link">Privacy Policy</a>
-          <a href="/terms.html" class="footer-link">Terms of Service</a>
-          <button class="footer-link cookie-settings-trigger" type="button" style="background:none;border:none;cursor:pointer;font-size:14px;color:var(--text-secondary);text-align:left;padding:0;">Cookie Settings</button>
-        </nav>
-      </div>
-
+      <div><div class="footer-col-label">Tracks</div><nav class="footer-links" aria-label="Track pages"><a href="/new-dad.html" class="footer-link">For New Dads</a><a href="/morning-routine.html" class="footer-link">Morning Routine</a><a href="/sleep-better.html" class="footer-link">Sleep Better</a><a href="/screen-time.html" class="footer-link">Screen Time</a><span class="footer-link soon">Midlife Reset — Coming Soon</span></nav></div>
+      <div><div class="footer-col-label">Platform</div><nav class="footer-links" aria-label="Platform pages"><a href="/newsletter.html" class="footer-link">Newsletter</a><a href="/pricing.html" class="footer-link">Pricing</a><a href="/blog/" class="footer-link">Blog</a><a href="/quiz.html" class="footer-link">Find Your Track</a></nav></div>
+      <div><div class="footer-col-label">Legal</div><nav class="footer-links" aria-label="Legal pages"><a href="/privacy.html" class="footer-link">Privacy Policy</a><a href="/terms.html" class="footer-link">Terms of Service</a><button class="footer-link cookie-settings-trigger" type="button" style="background:none;border:none;cursor:pointer;font-size:14px;color:var(--text-secondary);text-align:left;padding:0;">Cookie Settings</button></nav></div>
     </div>
   </div>
-
-  <div class="footer-bottom">
-    <span class="footer-copy">© <span data-year></span> NextRoutine. All rights reserved.</span>
-    <span class="footer-made">Made for fathers who refuse to wing it.</span>
-  </div>
+  <div class="footer-bottom"><span class="footer-copy">© <span data-year></span> NextRoutine. All rights reserved.</span><span class="footer-made">Made for fathers who refuse to wing it.</span></div>
 </footer>
 
-<!-- ── STICKY MOBILE CTA ── -->
 <div class="sticky-cta" role="complementary" aria-label="Mobile signup prompt">
   <span class="sticky-cta-text">Start your new dad routine — free</span>
-  <a href="#free-signup" class="btn btn-primary btn-sm">Get Started →</a>
+  <a href="#free-signup" class="btn btn-primary btn-sm">Start Tonight →</a>
 </div>
 
 <script src="js/main.js" defer></script>
+<script>
+(function(){
+  'use strict';
+  function enhanceForm(formId,errorId,successId){
+    var form=document.getElementById(formId);
+    var errEl=document.getElementById(errorId);
+    var succEl=document.getElementById(successId);
+    if(!form)return;
+    var input=form.querySelector('input[type="email"]');
+    if(!input)return;
+    input.addEventListener('input',function(){input.classList.remove('error');if(errEl)errEl.classList.remove('visible');});
+    form.addEventListener('submit',function(){
+      var email=input.value.trim();
+      if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+        input.classList.add('error');
+        if(errEl)errEl.classList.add('visible');
+      }
+    });
+    var obs=new MutationObserver(function(muts){
+      muts.forEach(function(m){
+        if(m.attributeName==='disabled'&&input.disabled){
+          form.style.display='none';
+          if(succEl)succEl.classList.add('visible');
+          obs.disconnect();
+        }
+      });
+    });
+    obs.observe(input,{attributes:true});
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    enhanceForm('hero-form','hero-error','hero-success');
+    enhanceForm('lead-form','lead-error','lead-success');
+    enhanceForm('final-form','final-error','final-success');
+  });
+})();
+</script>
 </body>
 </html>
