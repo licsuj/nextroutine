@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0F1117">
+<title>Dad Readiness Assessment — NextRoutine</title>
+<meta name="description" content="Score your readiness across 5 dimensions — sleep, mornings, finances, relationship, and identity. Find out where you'll break first and what to fix before the baby arrives.">
+<link rel="canonical" href="https://nextroutine-one.vercel.app/readiness.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.ra-page{min-height:100vh;padding:calc(var(--nav-h)+60px) 0 80px}
+.ra-container{max-width:640px;margin:0 auto;padding:0 24px}
+.ra-header{text-align:center;margin-bottom:48px}
+.ra-header h1{font-size:40px;margin-bottom:16px}
+.ra-header p{font-size:18px;color:var(--text-secondary);line-height:1.7;max-width:480px;margin:0 auto}
+.ra-progress{display:flex;gap:6px;margin-bottom:40px}
+.ra-progress-dot{height:4px;flex:1;border-radius:2px;background:var(--border);transition:background .3s}
+.ra-progress-dot.done{background:var(--green-bright)}
+.ra-progress-dot.active{background:var(--green)}
+.ra-dimension{display:none}
+.ra-dimension.active{display:block}
+.ra-dim-header{margin-bottom:28px}
+.ra-dim-icon{width:48px;height:48px;border-radius:12px;background:rgba(45,106,79,.12);display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:24px}
+.ra-dim-title{font-family:var(--font-heading);font-size:24px;font-weight:700;color:var(--text-primary);margin-bottom:6px}
+.ra-dim-sub{font-size:15px;color:var(--text-secondary)}
+.ra-question{background:var(--bg-surface);border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin-bottom:16px}
+.ra-question p{font-size:15px;color:var(--text-primary);font-weight:500;margin-bottom:14px}
+.ra-scale{display:flex;gap:8px}
+.ra-scale-btn{flex:1;padding:10px 0;border-radius:8px;background:var(--bg-alt);border:1px solid var(--border);color:var(--text-muted);font-family:var(--font-heading);font-size:14px;font-weight:600;cursor:pointer;transition:all .15s ease;text-align:center}
+.ra-scale-btn:hover{border-color:var(--green);color:var(--text-primary)}
+.ra-scale-btn.selected{background:var(--green);border-color:var(--green);color:#fff}
+.ra-scale-labels{display:flex;justify-content:space-between;margin-top:6px;font-size:11px;color:var(--text-muted)}
+.ra-nav{display:flex;justify-content:space-between;margin-top:32px}
+.ra-nav .btn{min-width:120px}
+/* Results */
+.ra-results{display:none;text-align:center}
+.ra-results.active{display:block}
+.ra-score-ring{width:160px;height:160px;margin:0 auto 24px;position:relative}
+.ra-score-ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ra-score-ring circle{fill:none;stroke-width:10}
+.ra-score-ring .bg{stroke:var(--border)}
+.ra-score-ring .fill{stroke:var(--green-bright);stroke-linecap:round;transition:stroke-dashoffset 1s ease}
+.ra-score-number{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ra-score-val{font-family:var(--font-heading);font-size:48px;font-weight:800;color:var(--text-primary)}
+.ra-score-label{font-size:13px;color:var(--text-muted)}
+.ra-score-verdict{font-family:var(--font-heading);font-size:22px;font-weight:600;color:var(--text-primary);margin-bottom:8px}
+.ra-score-desc{font-size:16px;color:var(--text-secondary);line-height:1.7;max-width:440px;margin:0 auto 32px}
+.ra-dims-breakdown{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:40px}
+.ra-dim-card{background:var(--bg-surface);border:1px solid var(--border);border-radius:10px;padding:16px 12px;text-align:center}
+.ra-dim-card-icon{font-size:20px;margin-bottom:6px}
+.ra-dim-card-score{font-family:var(--font-heading);font-size:24px;font-weight:700;margin-bottom:2px}
+.ra-dim-card-name{font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em}
+.ra-dim-card.lowest{border-color:var(--gold)}
+.ra-dim-card.lowest .ra-dim-card-score{color:var(--gold)}
+.ra-weakest{background:var(--bg-surface);border:1px solid var(--gold);border-radius:12px;padding:24px;margin-bottom:32px;text-align:left}
+.ra-weakest h3{font-size:18px;color:var(--gold);margin-bottom:8px}
+.ra-weakest p{font-size:15px;color:var(--text-secondary);line-height:1.65}
+.ra-cta-box{background:var(--bg-green);border:1px solid var(--green);border-radius:12px;padding:32px;margin-bottom:24px}
+.ra-cta-box h3{font-size:20px;color:var(--text-primary);margin-bottom:8px}
+.ra-cta-box p{font-size:15px;color:var(--text-green);margin-bottom:20px}
+.ra-retake{font-size:14px;color:var(--text-muted);cursor:pointer;background:none;border:none;text-decoration:underline}
+@media(max-width:768px){.ra-header h1{font-size:28px}.ra-dims-breakdown{grid-template-columns:repeat(3,1fr)}.ra-scale-btn{padding:10px 4px;font-size:13px}}
+@media(max-width:375px){.ra-dims-breakdown{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation"><div class="nav-inner"><a href="/" class="nav-brand" aria-label="NextRoutine home"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="5" r="1.5" fill="#D4A853"/></svg>NextRoutine</a><div class="nav-links" role="list"><a href="/dad-track.html" class="nav-link" role="listitem">For Fathers</a><a href="/morning-routine.html" class="nav-link" role="listitem">Morning</a><a href="/sleep-better.html" class="nav-link" role="listitem">Sleep</a><a href="/screen-time.html" class="nav-link" role="listitem">Screen Time</a><a href="/pricing.html" class="nav-link" role="listitem">Pricing</a></div><div class="nav-actions"><a href="/pricing.html" class="nav-signin">Sign In</a><a href="/#free-signup" class="btn btn-primary btn-sm">Get Started Free →</a></div><button class="nav-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button></div></nav>
+<div class="nav-overlay" id="nav-overlay" aria-hidden="true"><button class="nav-overlay-close" aria-label="Close menu">✕</button><nav class="nav-overlay-links" aria-label="Mobile navigation"><a href="/dad-track.html" class="nav-overlay-link">For Fathers</a><a href="/morning-routine.html" class="nav-overlay-link">Morning</a><a href="/sleep-better.html" class="nav-overlay-link">Sleep</a><a href="/screen-time.html" class="nav-overlay-link">Screen Time</a><a href="/pricing.html" class="nav-overlay-link">Pricing</a><a href="/#free-signup" class="btn btn-primary btn-full" style="margin-top:24px;">Get Started Free →</a></nav></div>
+
+<section class="ra-page">
+<div class="ra-container">
+<div class="ra-header">
+<div class="pill pill-gold" style="margin-bottom:20px;">✦ Pro Feature</div>
+<h1>Dad Readiness Assessment</h1>
+<p>Score your readiness across 5 dimensions. Find out where you'll break first — and what to fix before the baby arrives.</p>
+</div>
+
+<!-- Progress -->
+<div class="ra-progress" id="ra-progress">
+<div class="ra-progress-dot active" data-dim="0"></div>
+<div class="ra-progress-dot" data-dim="1"></div>
+<div class="ra-progress-dot" data-dim="2"></div>
+<div class="ra-progress-dot" data-dim="3"></div>
+<div class="ra-progress-dot" data-dim="4"></div>
+</div>
+
+<!-- DIM 1: SLEEP -->
+<div class="ra-dimension active" data-dim="0">
+<div class="ra-dim-header">
+<div class="ra-dim-icon">🌙</div>
+<div class="ra-dim-title">Sleep</div>
+<div class="ra-dim-sub">Your current sleep habits and environment</div>
+</div>
+<div class="ra-question" data-q="0"><p>How consistent is your bedtime? (Same time ±30 min most nights)</p><div class="ra-scale"><button class="ra-scale-btn" data-v="1">1</button><button class="ra-scale-btn" data-v="2">2</button><button class="ra-scale-btn" data-v="3">3</button><button class="ra-scale-btn" data-v="4">4</button><button class="ra-scale-btn" data-v="5">5</button></div><div class="ra-scale-labels"><span>Never</span><span>Always</span></div></div>
+<div class="ra-question" data-q="1"><p>Do you use screens in the last hour before sleep?</p><div class="ra-scale"><button class="ra-scale-btn" data-v="1">1</button><button class="ra-scale-btn" data-v="2">2</button><button class="ra-scale-btn" data-v="3">3</button><button class="ra-scale-btn" data-v="4">4</button><button class="ra-scale-btn" data-v="5">5</button></div><div class="ra-scale-labels"><span>Every night</span><span>Never</span></div></div>
+<div class="ra-question" data-q="2"><p>How quickly can you fall back asleep if woken at 3am?</p><div class="ra-scale"><button class="ra-scale-btn" data-v="1">1</button><button class="ra-scale-btn" data-v="2">2</button><button class="ra-scale-btn" data-v="3">3</button><button class="ra-scale-btn" data-v="4">4</button><button class="ra-scale-btn" data-v="5">5</button></div><div class="ra-scale-labels"><span>Takes 1hr+</span><span>Within minutes</span></div></div>
+</div>
+
+<!-- DIM 2: MORNINGS -->
+<div class="ra-dimension" data-dim="1">
+<div class="ra-dim-header">
+<div class="ra-dim-icon">☀️</div>
+<div class="ra-dim-title">Mornings</div>
+<div class="ra-dim-sub">Your morning routine and activation habits</div>
+</div>
+<div class="ra-question" data-q="3"><p>Do you have a consistent morning routine that you follow most days?</p><div class="ra-scale"><button class="ra-scale-btn" data-v="1">1</button><button class="ra-scale-btn" data-v="2">2</button><button class="ra-scale-btn" data-v="3">3</button><button class="ra-scale-btn" data-v="4">4</button><button class="ra-scale-btn" data-v="5">5</button></div><div class="ra-scale-labels"><span>No routine</span><span>Every day</span></div></div>
+<div class="ra-question" data-q="4"><p>Do you check your phone within the first 20 minutes of waking?</p><div class="ra-scale"><button class="ra-scale-btn" data-v="1">1</button><button class="ra-scale-btn" data-v="2">2</button><button class="ra-scale-btn" data-v="3">3</button><button class="ra-scale-btn" data-v="4">4</button><button class="ra-scale-btn" data-v="5">5</button></div><div class="ra-scale-labels"><span>Always</span><span>Never</span></div></div>
+<div class="ra-question" data-q="5"><p>Could your morning routine survive on 4 hours of broken sleep?</p><div class="ra-scale"><button class="ra-scale-btn" data-v="1">1</button><button class="ra-scale-btn" data-v="2">2</button><button class="ra-scale-btn" data-v="3">3</button><button class="ra-scale-btn" data-v="4">4</button><button class="ra-scale-btn" data-v="5">5</button></div><div class="ra-scale-labels"><span>It would collapse</span><span>Built for it</span></div></div>
+</div>
+
+<!-- DIM 3: FINANCES -->
+<div class="ra-dimension" data-dim="2">
+<div class="ra-dim-header">
+<div class="ra-dim-icon">💰</div>
+<div class="ra-dim-title">Finances</div>
+<div class="ra-dim-sub">Your financial preparation for the transition</div>
+</div>
+<div class="ra-question" data-q="6"><p>Do you have a clear picture of how your expenses will change?</p><div class="ra-scale"><button class="ra-scale-btn" data-v="1">1</button><button class="ra-scale-btn" data-v="2">2</button><button class="ra-scale-btn" data-v="3">3</button><button class="ra-scale-btn" data-v="4">4</button><button class="ra-scale-btn" data-v="5">5</button></div><div class="ra-scale-labels"><span>No idea</span><span>Fully mapped</span></div></div>
+<div class="ra-question" data-q="7"><p>Do you have savings to cover reduced income during leave or early months?</p><div class="ra-scale"><button class="ra-scale-btn" data-v="1">1</button><button class="ra-scale-btn" data-v="2">2</button><button class="ra-scale-btn" data-v="3">3</button><button class="ra-scale-btn" data-v="4">4</button><button class="ra-scale-btn" data-v="5">5</button></div><div class="ra-scale-labels"><span>Nothing saved</span><span>Fully covered</span></div></div>
+<div class="ra-question" data-q="8"><p>Have you reviewed your insurance and legal documents (will, beneficiaries)?</p><div class="ra-scale"><button class="ra-scale-btn" data-v="1">1</button><button class="ra-scale-btn" data-v="2">2</button><button class="ra-scale-btn" data-v="3">3</button><button class="ra-scale-btn" data-v="4">4</button><button class="ra-scale-btn" data-v="5">5</button></div><div class="ra-scale-labels"><span>Not started</span><span>All done</span></div></div>
+</div>
+
+<!-- DIM 4: RELATIONSHIP -->
+<div class="ra-dimension" data-dim="3">
+<div class="ra-dim-header">
+<div class="ra-dim-icon">❤️</div>
+<div class="ra-dim-title">Relationship</div>
+<div class="ra-dim-sub">Your partnership and communication systems</div>
+</div>
+<div class="ra-question" data-q="9"><p>Have you and your partner discussed how you'll divide night feeds?</p><div class="ra-scale"><button class="ra-scale-btn" data-v="1">1</button><button class="ra-scale-btn" data-v="2">2</button><button class="ra-scale-btn" data-v="3">3</button><button class="ra-scale-btn" data-v="4">4</button><button class="ra-scale-btn" data-v="5">5</button></div><div class="ra-scale-labels"><span>Not at all</span><span>Agreed plan</span></div></div>
+<div class="ra-question" data-q="10"><p>Do you have a way to communicate needs without conflict under stress?</p><div class="ra-scale"><button class="ra-scale-btn" data-v="1">1</button><button class="ra-scale-btn" data-v="2">2</button><button class="ra-scale-btn" data-v="3">3</button><button class="ra-scale-btn" data-v="4">4</button><button class="ra-scale-btn" data-v="5">5</button></div><div class="ra-scale-labels"><span>We struggle</span><span>Solid system</span></div></div>
+<div class="ra-question" data-q="11"><p>Have you discussed postpartum mental health — for both of you?</p><div class="ra-scale"><button class="ra-scale-btn" data-v="1">1</button><button class="ra-scale-btn" data-v="2">2</button><button class="ra-scale-btn" data-v="3">3</button><button class="ra-scale-btn" data-v="4">4</button><button class="ra-scale-btn" data-v="5">5</button></div><div class="ra-scale-labels"><span>Not discussed</span><span>Open dialogue</span></div></div>
+</div>
+
+<!-- DIM 5: IDENTITY -->
+<div class="ra-dimension" data-dim="4">
+<div class="ra-dim-header">
+<div class="ra-dim-icon">🧭</div>
+<div class="ra-dim-title">Identity</div>
+<div class="ra-dim-sub">Your sense of self and readiness for the shift</div>
+</div>
+<div class="ra-question" data-q="12"><p>Do you have a clear sense of the kind of father you want to be?</p><div class="ra-scale"><button class="ra-scale-btn" data-v="1">1</button><button class="ra-scale-btn" data-v="2">2</button><button class="ra-scale-btn" data-v="3">3</button><button class="ra-scale-btn" data-v="4">4</button><button class="ra-scale-btn" data-v="5">5</button></div><div class="ra-scale-labels"><span>No idea</span><span>Crystal clear</span></div></div>
+<div class="ra-question" data-q="13"><p>Have you thought about which parts of your current identity will change?</p><div class="ra-scale"><button class="ra-scale-btn" data-v="1">1</button><button class="ra-scale-btn" data-v="2">2</button><button class="ra-scale-btn" data-v="3">3</button><button class="ra-scale-btn" data-v="4">4</button><button class="ra-scale-btn" data-v="5">5</button></div><div class="ra-scale-labels"><span>Haven't thought</span><span>Deeply considered</span></div></div>
+<div class="ra-question" data-q="14"><p>Do you have friendships or support outside your partner?</p><div class="ra-scale"><button class="ra-scale-btn" data-v="1">1</button><button class="ra-scale-btn" data-v="2">2</button><button class="ra-scale-btn" data-v="3">3</button><button class="ra-scale-btn" data-v="4">4</button><button class="ra-scale-btn" data-v="5">5</button></div><div class="ra-scale-labels"><span>Isolated</span><span>Strong network</span></div></div>
+</div>
+
+<!-- NAV BUTTONS -->
+<div class="ra-nav" id="ra-nav">
+<button class="btn btn-outline" id="ra-prev" style="visibility:hidden;">← Back</button>
+<button class="btn btn-primary" id="ra-next">Next →</button>
+</div>
+
+<!-- RESULTS -->
+<div class="ra-results" id="ra-results">
+<div class="ra-score-ring">
+<svg viewBox="0 0 120 120"><circle class="bg" cx="60" cy="60" r="54"/><circle class="fill" id="ra-ring" cx="60" cy="60" r="54" stroke-dasharray="339.29" stroke-dashoffset="339.29"/></svg>
+<div class="ra-score-number"><div class="ra-score-val" id="ra-total">0</div><div class="ra-score-label">out of 100</div></div>
+</div>
+<div class="ra-score-verdict" id="ra-verdict"></div>
+<p class="ra-score-desc" id="ra-desc"></p>
+
+<div class="ra-dims-breakdown" id="ra-breakdown"></div>
+
+<div class="ra-weakest" id="ra-weakest">
+<h3 id="ra-weak-title"></h3>
+<p id="ra-weak-text"></p>
+</div>
+
+<div class="ra-cta-box">
+<h3>Your personalised action plan is inside Pro.</h3>
+<p>Get the full system — stage-specific protocols, templates, and weekly coaching matched to your weakest dimensions.</p>
+<a href="/pricing.html" class="btn btn-primary btn-full">Start 7-Day Free Trial →</a>
+</div>
+
+<button class="ra-retake" id="ra-retake">Retake assessment</button>
+</div>
+
+</div>
+</section>
+
+<script src="js/main.js" defer></script>
+<script>
+(function(){
+  var DIMS=[
+    {name:'Sleep',icon:'🌙',qs:[0,1,2],weak:'Your sleep habits are your biggest vulnerability. When the baby arrives and fragments your sleep, a weak foundation becomes a crisis. Start with the 3-2-1 protocol tonight: no food 3 hours before bed, no screens 2 hours, wind-down routine 1 hour.'},
+    {name:'Mornings',icon:'☀️',qs:[3,4,5],weak:'Your mornings are your biggest vulnerability. Without a routine that survives on broken sleep, every day starts reactive. The 15-minute protocol with a 2-minute fallback is designed for exactly this — start before the baby arrives.'},
+    {name:'Finances',icon:'💰',qs:[6,7,8],weak:'Your financial preparation is your biggest vulnerability. Money stress compounds every other challenge in early fatherhood. Map your expected expenses this week and set up an automatic transfer to a baby fund — even a small one reduces anxiety.'},
+    {name:'Relationship',icon:'❤️',qs:[9,10,11],weak:'Your relationship systems are your biggest vulnerability. The number one source of conflict in early parenthood is unspoken expectations about responsibilities. Complete the Partner Night Feed Agreement this week — it is the single most practical thing you can do.'},
+    {name:'Identity',icon:'🧭',qs:[12,13,14],weak:'Your identity preparation is your biggest vulnerability. Most fathers experience an identity shift they did not see coming. The Identity Audit helps you map what will change and what you want to carry forward — start it before the chaos starts.'}
+  ];
+  var answers=new Array(15).fill(0);
+  var currentDim=0;
+  var dims=document.querySelectorAll('.ra-dimension');
+  var dots=document.querySelectorAll('.ra-progress-dot');
+  var prevBtn=document.getElementById('ra-prev');
+  var nextBtn=document.getElementById('ra-next');
+  var navEl=document.getElementById('ra-nav');
+  var progressEl=document.getElementById('ra-progress');
+  var resultsEl=document.getElementById('ra-results');
+
+  // Scale button clicks
+  document.querySelectorAll('.ra-scale-btn').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var q=parseInt(btn.closest('.ra-question').getAttribute('data-q'));
+      var v=parseInt(btn.getAttribute('data-v'));
+      answers[q]=v;
+      btn.closest('.ra-scale').querySelectorAll('.ra-scale-btn').forEach(function(b){b.classList.remove('selected')});
+      btn.classList.add('selected');
+    });
+  });
+
+  function showDim(i){
+    dims.forEach(function(d){d.classList.remove('active')});
+    dots.forEach(function(d,j){d.classList.remove('active');if(j<i)d.classList.add('done');else d.classList.remove('done')});
+    if(i<5){dims[i].classList.add('active');dots[i].classList.add('active')}
+    prevBtn.style.visibility=i===0?'hidden':'visible';
+    nextBtn.textContent=i===4?'See My Score →':'Next →';
+    currentDim=i;
+  }
+
+  function allAnswered(dimIdx){
+    var qs=DIMS[dimIdx].qs;
+    for(var j=0;j<qs.length;j++){if(answers[qs[j]]===0)return false}
+    return true;
+  }
+
+  nextBtn.addEventListener('click',function(){
+    if(!allAnswered(currentDim)){
+      // Highlight unanswered
+      var dim=dims[currentDim];
+      dim.querySelectorAll('.ra-question').forEach(function(qEl){
+        var qi=parseInt(qEl.getAttribute('data-q'));
+        if(answers[qi]===0)qEl.style.borderColor='#e74c3c';
+        else qEl.style.borderColor='';
+      });
+      return;
+    }
+    if(currentDim<4){showDim(currentDim+1);window.scrollTo({top:0,behavior:'smooth'})}
+    else showResults();
+  });
+
+  prevBtn.addEventListener('click',function(){
+    if(currentDim>0){showDim(currentDim-1);window.scrollTo({top:0,behavior:'smooth'})}
+  });
+
+  function showResults(){
+    dims.forEach(function(d){d.classList.remove('active')});
+    navEl.style.display='none';
+    progressEl.style.display='none';
+    resultsEl.classList.add('active');
+
+    // Calculate scores
+    var dimScores=[];
+    var total=0;
+    DIMS.forEach(function(dim,i){
+      var sum=0;
+      dim.qs.forEach(function(qi){sum+=answers[qi]});
+      var pct=Math.round((sum/15)*100);
+      dimScores.push({name:dim.name,icon:dim.icon,score:pct,weak:dim.weak});
+      total+=sum;
+    });
+    var totalPct=Math.round((total/75)*100);
+
+    // Animate ring
+    var ring=document.getElementById('ra-ring');
+    var circumference=339.29;
+    var offset=circumference-(totalPct/100)*circumference;
+    setTimeout(function(){ring.style.strokeDashoffset=offset},100);
+    document.getElementById('ra-total').textContent=totalPct;
+
+    // Verdict
+    var verdict,desc;
+    if(totalPct>=80){verdict='Well prepared.';desc='You are ahead of most expectant fathers. Your foundations are solid — the stage-specific protocols will help you maintain them when the chaos starts.'}
+    else if(totalPct>=60){verdict='Good foundation, gaps to fill.';desc='You have some strong areas but clear vulnerabilities. The next few months are your window to fix them — before the baby tests every one.'}
+    else if(totalPct>=40){verdict='Work to do — but you have time.';desc='Several dimensions need attention. The good news: you are here, you are assessing, and you have months to prepare. That puts you ahead of most.'}
+    else{verdict='Start building now.';desc='Your readiness is low across multiple dimensions. That is not a judgement — it is a starting point. Every father who builds a system starts somewhere. Start tonight.'}
+    document.getElementById('ra-verdict').textContent=verdict;
+    document.getElementById('ra-desc').textContent=desc;
+
+    // Breakdown cards
+    var lowestIdx=0;
+    dimScores.forEach(function(ds,i){if(ds.score<dimScores[lowestIdx].score)lowestIdx=i});
+    var html='';
+    dimScores.forEach(function(ds,i){
+      var cls=i===lowestIdx?'ra-dim-card lowest':'ra-dim-card';
+      var color=ds.score>=70?'var(--green-bright)':ds.score>=40?'var(--text-primary)':'var(--gold)';
+      html+='<div class="'+cls+'"><div class="ra-dim-card-icon">'+ds.icon+'</div><div class="ra-dim-card-score" style="color:'+color+'">'+ds.score+'</div><div class="ra-dim-card-name">'+ds.name+'</div></div>';
+    });
+    document.getElementById('ra-breakdown').innerHTML=html;
+
+    // Weakest dimension
+    var weakest=dimScores[lowestIdx];
+    document.getElementById('ra-weak-title').textContent='Your weakest area: '+weakest.name;
+    document.getElementById('ra-weak-text').textContent=weakest.weak;
+
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  document.getElementById('ra-retake').addEventListener('click',function(){
+    answers.fill(0);currentDim=0;
+    document.querySelectorAll('.ra-scale-btn').forEach(function(b){b.classList.remove('selected')});
+    document.querySelectorAll('.ra-question').forEach(function(q){q.style.borderColor=''});
+    resultsEl.classList.remove('active');
+    navEl.style.display='flex';
+    progressEl.style.display='flex';
+    showDim(0);
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+</html>
