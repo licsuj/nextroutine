@@ -1,431 +1,570 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="dark">
-  <meta name="theme-color" content="#0F1117">
-  <title>NextRoutine for New Dads — Build Your Fatherhood Routine</title>
-  <meta name="description" content="The complete fatherhood routine system — from pregnancy to year one. Morning protocol, sleep guide, and identity work for new dads. Free starter pack. Start tonight.">
-  <link rel="canonical" href="https://nextroutine.com/new-dad">
-  <meta property="og:title" content="NextRoutine for New Dads — Build Your Fatherhood Routine">
-  <meta property="og:description" content="The complete fatherhood routine system — from pregnancy to year one. Free starter pack for expectant and new dads.">
-  <meta property="og:url" content="https://nextroutine.com/new-dad">
-  <meta property="og:type" content="article">
-  <meta property="og:site_name" content="NextRoutine">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="NextRoutine for New Dads — Build Your Fatherhood Routine">
-  <meta name="twitter:description" content="The complete fatherhood routine system — from pregnancy to year one.">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "NextRoutine for New Dads — Build Your Fatherhood Routine",
-    "description": "The complete fatherhood routine system for new and expectant dads.",
-    "url": "https://nextroutine.com/new-dad",
-    "publisher": { "@type": "Organization", "name": "NextRoutine", "url": "https://nextroutine.com" },
-    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://nextroutine.com/new-dad" }
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "When should I start building a new dad routine?", "acceptedAnswer": { "@type": "Answer", "text": "The moment you find out. The nine months of pregnancy are the single best window you will ever have to build habits before your life is restructured. Dads who start before the birth consistently report a smoother transition than those who wait." } },
-      { "@type": "Question", "name": "What does a morning routine for a new dad actually look like?", "acceptedAnswer": { "@type": "Answer", "text": "On the first 8 weeks it's 15 minutes: 5 minutes of movement, 5 minutes of one priority task, 5 minutes of a short journal prompt. Not a 5am ice bath. A realistic sequence that survives on four hours of broken sleep." } },
-      { "@type": "Question", "name": "How is NextRoutine different from generic parenting content?", "acceptedAnswer": { "@type": "Answer", "text": "Generic parenting content is for mothers, or it covers newborn care basics. NextRoutine is built specifically for the father's experience: your sleep, your identity shift, your morning routine, your career rebalancing. It's the first platform to treat fathers as the primary audience, not an afterthought." } },
-      { "@type": "Question", "name": "Will the routine work if I have a partner who is also trying to build habits?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — and the pre-birth routine audit explicitly covers partner alignment. The goal is not to build competing individual routines but a household rhythm that supports both parents. The audit walks through the overlap and conflict points before the baby arrives." } },
-      { "@type": "Question", "name": "What do Pro members get that free subscribers don't?", "acceptedAnswer": { "@type": "Answer", "text": "Free subscribers get the weekly newsletter, the Fatherhood Starter Pack, and 2 routine templates. Pro members get the full fatherhood track across all four stages, the complete morning, sleep, and screen time tracks, the full template library, PDF download vault, and the priority edition newsletter each week." } }
-    ]
-  }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/components.css">
-  <style>
-    .stage-expanded { background: var(--bg-surface); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 24px; transition: var(--transition); }
-    .stage-expanded:hover { border-color: var(--green); }
-    .stage-expanded-header { display: flex; align-items: flex-start; gap: 24px; margin-bottom: 24px; }
-    .stage-expanded-pill { flex-shrink: 0; }
-    .stage-expanded-meta { flex: 1; }
-    .stage-expanded-title { font-family: var(--font-heading); font-size: 24px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; }
-    .stage-expanded-sub { font-size: 16px; color: var(--text-secondary); line-height: 1.6; }
-    .stage-content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }
-    .stage-content-box { background: var(--bg-raised); border-radius: 10px; padding: 20px; }
-    .stage-content-box-label { font-family: var(--font-heading); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
-    .stage-content-box ul { display: flex; flex-direction: column; gap: 8px; }
-    .stage-content-box li { font-size: 14px; color: var(--text-secondary); padding-left: 16px; position: relative; line-height: 1.5; }
-    .stage-content-box li::before { content: '→'; position: absolute; left: 0; color: var(--green-bright); font-size: 12px; }
-    .stage-pro-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--gold-muted); color: var(--gold); border-radius: 999px; font-family: var(--font-heading); font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 4px 10px; margin-top: 16px; }
-    .cross-links { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
-    .cross-link-card { background: var(--bg-surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; text-decoration: none; display: block; transition: var(--transition); }
-    .cross-link-card:hover { border-color: var(--green); transform: translateY(-2px); }
-    .cross-link-card .label { color: var(--green-bright); margin-bottom: 8px; }
-    .cross-link-card h3 { font-size: 18px; color: var(--text-primary); margin-bottom: 8px; }
-    .cross-link-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
-    @media(max-width:768px) { .stage-content-grid { grid-template-columns: 1fr; } .cross-links { grid-template-columns: 1fr; } .stage-expanded { padding: 24px; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0F1117">
+<title>NextRoutine for New Dads — Build Your Fatherhood Routine</title>
+<meta name="description" content="The only routine system built for new dads. Morning protocol, sleep system, and daily habits — from bump to year one. Four stages, stage-specific templates. Start free tonight.">
+<link rel="canonical" href="https://nextroutine.com/new-dad.html">
+<meta property="og:title" content="NextRoutine for New Dads — Build Your Fatherhood Routine">
+<meta property="og:description" content="The routine system built for new and expectant dads. Four stages. Start free.">
+<meta property="og:url" content="https://nextroutine.com/new-dad.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://nextroutine.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When should a new dad start building a routine?",
+      "acceptedAnswer": {"@type": "Answer", "text": "The moment you find out. Pre-birth is the most underutilised window in a father's preparation. The habits you build during pregnancy — sleep, mornings, screen time — are the exact habits that survive the first eight weeks. Starting after the birth means starting in chaos. Our expectant father tips section covers exactly what to build before the due date."}
+    },
+    {
+      "@type": "Question",
+      "name": "What does a new dad morning routine actually look like?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Our 15-minute new dad morning protocol covers: one minute to set an intention, five minutes of movement (no gym required), five minutes of silence before screens, and four minutes to review one priority for the day. It runs on four hours of sleep and requires no equipment. The 30-minute version adds journalling and a short walk."}
+    },
+    {
+      "@type": "Question",
+      "name": "Is NextRoutine for expectant dads or new dads who already have a baby?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Both. The fatherhood track has four distinct stages: Stage 1 covers months 1–9 (pre-birth preparation), Stage 2 covers weeks 1–8 (newborn survival), Stage 3 covers months 3–12 (routine rebuild), and Stage 4 covers year one and beyond (long-term identity modelling). You start wherever you are in the journey."}
+    },
+    {
+      "@type": "Question",
+      "name": "How is NextRoutine different from generic productivity advice?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Generic productivity advice is built for people with eight hours of sleep and no dependents. NextRoutine is built for the reality of new fatherhood: broken sleep, emotional load, relationship pressure, and identity shift. Every protocol is designed to hold when everything else is falling apart. The fatherhood routine here is not a productivity system — it is a stability system."}
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use NextRoutine if I am a second-time dad?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. Second-time fathers often find the stakes higher because they know what is coming. The Year 1+ stage and the identity modelling section are particularly relevant for fathers who want to be intentional about what they are showing their children through their own daily behaviour. The fatherhood routine works at any stage."}
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ── Dad Track page-specific styles ── */
+.stage-block { background: var(--bg-surface); border: 1px solid var(--border); border-radius: 16px; padding: 40px; margin-bottom: 28px; transition: var(--transition); }
+.stage-block:hover { border-color: var(--green); box-shadow: 0 8px 32px rgba(45,106,79,0.12); }
+.stage-header { display: flex; align-items: flex-start; gap: 20px; margin-bottom: 28px; }
+.stage-number { width: 52px; height: 52px; border-radius: 12px; background: var(--bg-green); border: 1px solid var(--green); display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-size: 22px; font-weight: 800; color: var(--gold); flex-shrink: 0; }
+.stage-meta { flex: 1; }
+.stage-meta h3 { font-size: 24px; margin-bottom: 6px; }
+.stage-timing { font-size: 13px; font-weight: 600; color: var(--gold); letter-spacing: .05em; text-transform: uppercase; }
+.stage-body { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.stage-content-list { display: flex; flex-direction: column; gap: 10px; }
+.stage-content-item { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; color: var(--text-secondary); line-height: 1.5; }
+.stage-content-item::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--green-bright); margin-top: 7px; flex-shrink: 0; }
+.stage-pro-box { background: var(--bg-raised); border: 1px solid var(--border-raised); border-radius: 12px; padding: 24px; }
+.stage-pro-box .pro-label { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+.stage-pro-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; line-height: 1.4; }
+.stage-pro-item svg { flex-shrink: 0; margin-top: 2px; }
+.pack-visual { background: var(--bg-surface); border: 1px solid var(--border); border-radius: 16px; padding: 32px 28px; display: flex; flex-direction: column; gap: 10px; }
+.pack-item { display: flex; align-items: center; gap: 14px; padding: 14px 18px; background: var(--bg-raised); border: 1px solid var(--border-raised); border-radius: 10px; font-size: 15px; color: var(--text-secondary); }
+.pack-item-icon { width: 36px; height: 36px; border-radius: 8px; background: var(--bg-green); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.pack-item-label { font-weight: 600; color: var(--text-primary); font-size: 14px; }
+.pack-item-sub { font-size: 13px; color: var(--text-muted); }
+.testimonial-stage { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.pro-features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.pro-feature-card { background: var(--bg-surface); border: 1px solid var(--border); border-radius: 14px; padding: 28px; transition: var(--transition); }
+.pro-feature-card:hover { border-color: var(--green); }
+.pro-feature-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--bg-green); border: 1px solid var(--green); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+.faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-item:last-child { border-bottom: none; }
+.faq-q { width: 100%; text-align: left; padding: 24px 28px; font-family: var(--font-heading); font-size: 17px; font-weight: 600; color: var(--text-primary); background: var(--bg-surface); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; transition: var(--transition); }
+.faq-q:hover { background: var(--bg-raised); color: var(--gold); }
+.faq-q .faq-icon { width: 24px; height: 24px; flex-shrink: 0; color: var(--text-muted); transition: transform .25s ease; }
+.faq-item.open .faq-q { color: var(--gold); }
+.faq-item.open .faq-icon { transform: rotate(45deg); color: var(--gold); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height .35s ease, padding .25s ease; background: var(--bg-alt); }
+.faq-item.open .faq-a { max-height: 300px; }
+.faq-a-inner { padding: 20px 28px 28px; font-size: 16px; color: var(--text-secondary); line-height: 1.75; }
+@media (max-width: 768px) {
+  .stage-body { grid-template-columns: 1fr; }
+  .pro-features-grid { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 <body>
 
-<div class="cookie-banner" role="region" aria-label="Cookie consent"><div class="cookie-inner"><p class="cookie-text">We use analytics to understand how dads find us. <a href="/privacy.html">Privacy Policy</a>.</p><div class="cookie-actions"><button class="btn btn-secondary btn-sm cookie-reject" type="button">Decline</button><button class="btn btn-primary btn-sm cookie-accept" type="button">Accept</button></div></div></div>
-
-<nav class="nav" role="navigation" aria-label="Main navigation">
+<!-- NAV -->
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
-    <a href="/" class="nav-logo" aria-label="NextRoutine home"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="5" r="1.5" fill="#D4A853"/></svg>NextRoutine</a>
-    <ul class="nav-links" role="list">
-      <li><a href="/" class="nav-link active" aria-current="page">For Fathers</a></li>
-      <li><a href="/morning-routine.html" class="nav-link">Morning</a></li>
-      <li><a href="/sleep-better.html" class="nav-link">Sleep</a></li>
-      <li><a href="/screen-time.html" class="nav-link">Screen Time</a></li>
-      <li><a href="/pricing.html" class="nav-link">Pricing</a></li>
-    </ul>
-    <div class="nav-cta"><a href="/pricing.html" class="nav-signin">Sign In</a><a href="#email-cta" class="btn btn-primary btn-sm">Get Started Free →</a></div>
-    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" type="button"><span></span><span></span><span></span></button>
+    <a href="/" class="nav-brand" aria-label="NextRoutine home">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="5" r="1.5" fill="#D4A853"/></svg>
+      NextRoutine
+    </a>
+    <div class="nav-links" role="list">
+      <a href="/new-dad.html" class="nav-link active" role="listitem">For Dads</a>
+      <a href="/morning-routine.html" class="nav-link" role="listitem">Morning</a>
+      <a href="/sleep-better.html" class="nav-link" role="listitem">Sleep</a>
+      <a href="/screen-time.html" class="nav-link" role="listitem">Screen Time</a>
+      <a href="/blog/" class="nav-link" role="listitem">Blog</a>
+      <a href="/pricing.html" class="nav-link" role="listitem">Pricing</a>
+    </div>
+    <div class="nav-actions">
+      <a href="/pricing.html" class="btn btn-ghost btn-sm">Sign In</a>
+      <a href="#dad-signup" class="btn btn-primary btn-sm">Start Free</a>
+    </div>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
-<div class="nav-overlay" role="dialog" aria-modal="true"><a href="/" class="nav-overlay-link">For Fathers</a><a href="/morning-routine.html" class="nav-overlay-link">Morning Routine</a><a href="/sleep-better.html" class="nav-overlay-link">Sleep Better</a><a href="/screen-time.html" class="nav-overlay-link">Screen Time</a><a href="/pricing.html" class="nav-overlay-link">Pricing</a><a href="#email-cta" class="btn btn-primary btn-lg" style="margin-top:16px;">Get Started Free →</a></div>
-
-<main>
+<div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+  <button class="nav-overlay-close" aria-label="Close menu">✕</button>
+  <nav class="nav-overlay-links" aria-label="Mobile navigation">
+    <a href="/new-dad.html" class="nav-overlay-link active">For Dads</a>
+    <a href="/morning-routine.html" class="nav-overlay-link">Morning Routine</a>
+    <a href="/sleep-better.html" class="nav-overlay-link">Sleep Better</a>
+    <a href="/screen-time.html" class="nav-overlay-link">Screen Time</a>
+    <a href="/blog/" class="nav-overlay-link">Blog</a>
+    <a href="/pricing.html" class="nav-overlay-link">Pricing</a>
+    <a href="#dad-signup" class="btn btn-primary" style="margin-top:16px;">Start Free</a>
+  </nav>
+</div>
 
 <!-- HERO -->
-<section class="page-hero" aria-labelledby="dad-h1" style="padding-bottom:60px;">
-  <div class="container">
-    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="breadcrumb-sep" aria-hidden="true">›</span><span class="breadcrumb-current">For New Dads</span></nav>
-    <div class="page-hero-label"><span class="badge">✦ Fatherhood Track</span></div>
-    <h1 id="dad-h1" style="max-width:720px;">The new dad routine nobody built for you.<br><span style="color:var(--green-bright);">Until now.</span></h1>
-    <p class="sub">Fatherhood restructures your sleep, your mornings, and your sense of self — usually all at once, usually starting at 3am. NextRoutine gives new and expectant dads the system nobody else bothered to build: stage by stage, habit by habit, from the moment you find out to the first night everyone sleeps through.</p>
-    <div id="email-cta" style="max-width:460px;">
-      <form class="form-inline" id="hero-form" aria-label="Get free dad routine plan" novalidate>
-        <label for="dad-email" class="sr-only">Your email address</label>
-        <input type="email" id="dad-email" name="email" class="input" placeholder="dad@example.com" autocomplete="email" required aria-required="true">
-        <button type="submit" class="btn btn-primary" aria-label="Get the free fatherhood starter pack">Get the Free Pack →</button>
-      </form>
-      <p style="margin-top:8px;font-size:13px;color:var(--text-muted);">Free starter pack · 15-min morning protocol · Unsubscribe anytime</p>
+<section class="hero" style="padding-top: calc(var(--nav-h) + 80px); padding-bottom: 100px;" aria-labelledby="dad-h1">
+  <div class="container" style="max-width:800px; text-align:center;">
+    <div class="label" style="margin-bottom:20px;">
+      <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true" style="display:inline;vertical-align:middle;margin-right:6px;"><path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="5" r="1.5" fill="#D4A853"/></svg>
+      Fatherhood Track
     </div>
-
-    <!-- Stats -->
-    <div class="stat-grid" style="margin-top:56px;">
-      <div class="stat-item"><div class="stat-number">12,000+</div><div class="stat-desc">Dads building their routine</div></div>
-      <div class="stat-item"><div class="stat-number">4 stages</div><div class="stat-desc">From pregnancy to year one</div></div>
-      <div class="stat-item"><div class="stat-number">15 min</div><div class="stat-desc">New dad morning protocol</div></div>
-      <div class="stat-item"><div class="stat-number">73%</div><div class="stat-desc">Report better sleep week one</div></div>
+    <h1 id="dad-h1">The new dad routine nobody else bothered to build.</h1>
+    <p style="font-size:20px; margin-top:24px; margin-bottom:40px; max-width:600px; margin-left:auto; margin-right:auto;">Generic productivity advice assumes 8 hours of sleep and zero dependents. This is built for the reality: broken nights, emotional load, identity shift, and a relationship that needs you present. Four stages, from bump to year one.</p>
+    <form class="hero-form" id="dad-hero-form" novalidate>
+      <input type="email" name="email" placeholder="dad@example.com" autocomplete="email" required aria-label="Email address">
+      <button type="submit" class="btn btn-primary">Start Tonight — It's Free →</button>
+    </form>
+    <div class="form-error" id="dad-hero-error" role="alert" aria-live="polite">Please enter a valid email address.</div>
+    <div class="form-success" id="dad-hero-success" aria-live="polite">
+      <div class="form-success-icon" aria-hidden="true">✓</div>
+      <div>
+        <div class="form-success-title">Starter pack on its way.</div>
+        <div class="form-success-sub">Check your inbox — then <a href="/quiz.html" style="color:var(--gold);">find your stage →</a></div>
+      </div>
+    </div>
+    <p style="font-size:13px; color:var(--text-muted); margin-top:14px;">Starter pack + weekly routine email. Unsubscribe anytime.</p>
+  </div>
+  <div class="container" style="margin-top:56px;">
+    <div class="proof-row" role="list">
+      <div class="proof-item" role="listitem"><span class="proof-number">4 stages</span><span class="proof-label">from bump to year one</span></div>
+      <div class="proof-divider" aria-hidden="true"></div>
+      <div class="proof-item" role="listitem"><span class="proof-number">15 min</span><span class="proof-label">daily protocol</span></div>
+      <div class="proof-divider" aria-hidden="true"></div>
+      <div class="proof-item" role="listitem"><span class="proof-number">10</span><span class="proof-label">downloadable templates</span></div>
+      <div class="proof-divider" aria-hidden="true"></div>
+      <div class="proof-item" role="listitem"><span class="proof-number">Free</span><span class="proof-label">to start — no card</span></div>
     </div>
   </div>
 </section>
 
-<!-- THE FOUR STAGES — EXPANDED -->
-<section style="background:var(--bg-alt);padding:var(--section-py) 0;" aria-labelledby="stages-heading">
+<!-- FOUR STAGE JOURNEY -->
+<section style="padding: var(--section-py) 0; background: var(--bg-alt);" aria-labelledby="stages-heading">
   <div class="container">
-    <div class="section-header">
-      <div class="label" style="color:var(--gold);margin-bottom:12px;">The complete system</div>
-      <h2 id="stages-heading">Your new dad routine, stage by stage.</h2>
-      <p>Every stage of fatherhood requires a different routine. The system adapts with you — from the nine months you spend preparing to the new normal you build in year one.</p>
+    <div class="section-header" style="text-align:center; margin-bottom:64px;">
+      <div class="label" style="margin-bottom:16px;">The Fatherhood Journey</div>
+      <h2 id="stages-heading">Four stages. One continuous routine.</h2>
+      <p style="max-width:560px; margin:20px auto 0; font-size:18px;">Each stage of new fatherhood has completely different demands. The system adapts with you — not against you.</p>
     </div>
 
-    <!-- STAGE 1 -->
-    <div class="stage-expanded fade-in">
-      <div class="stage-expanded-header">
-        <div class="stage-expanded-pill"><span class="badge">Stage 1 · Months 1–9</span></div>
-        <div class="stage-expanded-meta">
-          <div class="stage-expanded-title">Build before the storm.</div>
-          <div class="stage-expanded-sub">The nine months of pregnancy are the last large block of unstructured time you will have for years. Most expectant fathers spend them worrying or waiting. The ones who come out of the other side intact spend them building. Your sleep, your mornings, your relationship, your finances — all of these need a system before the baby arrives, not after.</div>
+    <!-- Stage 1 -->
+    <div class="stage-block">
+      <div class="stage-header">
+        <div class="stage-number">1</div>
+        <div class="stage-meta">
+          <div class="stage-timing">Months 1–9 · Pre-Birth Preparation</div>
+          <h3>The expectant father window</h3>
+          <p style="font-size:15px; margin-top:6px;">The most underused nine months in a man's life. While everything is still calm, this is when foundations are built — or left unbuilt.</p>
         </div>
       </div>
-      <div class="stage-content-grid">
-        <div class="stage-content-box">
-          <div class="stage-content-box-label">Free — What You Get</div>
-          <ul>
-            <li>Pre-birth habit audit — identify what breaks first</li>
-            <li>Partner routine alignment worksheet</li>
-            <li>Week 1 email: what nobody tells expectant fathers</li>
-            <li>The sleep banking protocol (simple, effective)</li>
-          </ul>
+      <div class="stage-body">
+        <div>
+          <div style="font-size:13px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--text-muted); margin-bottom:14px;">What this stage covers (free)</div>
+          <div class="stage-content-list">
+            <div class="stage-content-item">The Pre-Birth Routine Audit — 12 questions that reveal exactly where you'll struggle in weeks 1–8</div>
+            <div class="stage-content-item">The 30-minute expectant father morning protocol — built to run before your partner wakes up</div>
+            <div class="stage-content-item">How to handle identity anxiety before it becomes behaviour — the psychological shift most dads don't see coming</div>
+            <div class="stage-content-item">Sleep debt prevention: building the habits now that protect your mental health post-birth</div>
+            <div class="stage-content-item">The relationship conversation every couple avoids and exactly how to open it</div>
+          </div>
         </div>
-        <div class="stage-content-box">
-          <div class="stage-content-box-label">Pro — Full Stage 1 Track</div>
-          <ul>
-            <li>Full identity audit — who you are before, who you're becoming</li>
-            <li>30-day pre-birth morning routine build programme</li>
-            <li>Financial routine reset template (before income changes)</li>
-            <li>Relationship maintenance routine — the 10-minute daily check-in</li>
-            <li>Your first 90 days as a father: the planning framework</li>
-          </ul>
-          <div class="stage-pro-tag">✦ Pro only</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- STAGE 2 -->
-    <div class="stage-expanded fade-in">
-      <div class="stage-expanded-header">
-        <div class="stage-expanded-pill"><span class="badge">Stage 2 · Weeks 1–8</span></div>
-        <div class="stage-expanded-meta">
-          <div class="stage-expanded-title">Survive and stay present.</div>
-          <div class="stage-expanded-sub">Sleep deprivation is measurable. In the first eight weeks, new parents lose an average of 44 nights of sleep — equivalent to two months of impairment. This is not a willpower challenge. It's a logistics problem. The 15-minute new dad morning protocol was built specifically for this window: it works when you're running on three hours, when the baby won't settle, and when you haven't had a warm cup of coffee in a week.</div>
-        </div>
-      </div>
-      <div class="stage-content-grid">
-        <div class="stage-content-box">
-          <div class="stage-content-box-label">Free — What You Get</div>
-          <ul>
-            <li>The 15-Minute New Dad Morning Protocol (complete)</li>
-            <li>First 8 Weeks Survival Guide PDF</li>
-            <li>Week-by-week email series: what's normal, what's not</li>
-            <li>The sleep window method (sleep when the baby sleeps — actually)</li>
-          </ul>
-        </div>
-        <div class="stage-content-box">
-          <div class="stage-content-box-label">Pro — Full Stage 2 Track</div>
-          <ul>
-            <li>Night-feed protocol — stay present without destroying your sleep</li>
-            <li>Emotional check-in system — 5 minutes a day, prevents crises</li>
-            <li>Partner support framework — practical, non-generic</li>
-            <li>Return-to-work transition protocol (weeks 6–8)</li>
-            <li>Identity anchor exercises — who you are when you're exhausted</li>
-          </ul>
-          <div class="stage-pro-tag">✦ Pro only</div>
+        <div class="stage-pro-box">
+          <div class="pro-label">🔒 Pro — Stage 1 extras</div>
+          <div class="stage-pro-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8L6.5 11.5L13 4.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Full 9-month pre-birth timeline with weekly micro-habits</div>
+          <div class="stage-pro-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8L6.5 11.5L13 4.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>The Hospital Bag Routine — what to have locked in before the due date</div>
+          <div class="stage-pro-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8L6.5 11.5L13 4.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Partner communication templates — for the hard conversations</div>
+          <div class="stage-pro-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8L6.5 11.5L13 4.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>7 expectant father tips from 3,000+ dads: the things nobody told you</div>
+          <div class="stage-pro-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8L6.5 11.5L13 4.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Downloadable: The Pre-Birth Dad Plan (8-page PDF)</div>
         </div>
       </div>
     </div>
 
-    <!-- STAGE 3 -->
-    <div class="stage-expanded fade-in">
-      <div class="stage-expanded-header">
-        <div class="stage-expanded-pill"><span class="badge">Stage 3 · Months 3–12</span></div>
-        <div class="stage-expanded-meta">
-          <div class="stage-expanded-title">Rebuild your routine.</div>
-          <div class="stage-expanded-sub">By month three, the chaos begins to have a shape. The baby sleeps in longer stretches. You know what the day roughly looks like. This is the window to rebuild — not to the routine you had before (that's gone), but to a routine that fits who you are now. Career, body, relationship, ambition: all of these need to be renegotiated. This stage gives you the framework for that negotiation.</div>
+    <!-- Stage 2 -->
+    <div class="stage-block">
+      <div class="stage-header">
+        <div class="stage-number">2</div>
+        <div class="stage-meta">
+          <div class="stage-timing">Weeks 1–8 · Newborn Survival Mode</div>
+          <h3>Hold the line. Don't start over.</h3>
+          <p style="font-size:15px; margin-top:6px;">Everything you planned pre-birth will be tested here. The goal isn't a perfect routine — it's a minimum viable one that keeps you functional.</p>
         </div>
       </div>
-      <div class="stage-content-grid">
-        <div class="stage-content-box">
-          <div class="stage-content-box-label">Free — What You Get</div>
-          <ul>
-            <li>30-minute dad morning routine (expanded from the 15-min)</li>
-            <li>Monthly routine review template</li>
-            <li>Body reset guide — movement that fits interrupted sleep</li>
-          </ul>
+      <div class="stage-body">
+        <div>
+          <div style="font-size:13px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--text-muted); margin-bottom:14px;">What this stage covers (free)</div>
+          <div class="stage-content-list">
+            <div class="stage-content-item">The 10-minute new dad morning protocol — the absolute floor that keeps you human on 3 hours of sleep</div>
+            <div class="stage-content-item">Sleep fragmentation strategy — how to use 90-minute cycles when 8-hour blocks aren't an option</div>
+            <div class="stage-content-item">The single daily anchor habit — one thing that never moves, no matter what the night was like</div>
+            <div class="stage-content-item">Emotion regulation on no sleep — the physiological tools that work in under 3 minutes</div>
+            <div class="stage-content-item">How not to lose yourself — maintaining identity markers during weeks you'll barely remember</div>
+          </div>
         </div>
-        <div class="stage-content-box">
-          <div class="stage-content-box-label">Pro — Full Stage 3 Track</div>
-          <ul>
-            <li>Career rebalancing framework — ambition and presence, not either/or</li>
-            <li>Relationship rebuilding protocol (the first year changes everything)</li>
-            <li>Full 90-day routine build programme for months 3–6</li>
-            <li>Financial reset stage 2 — adjusting to new income reality</li>
-            <li>Physical health rebuild — the post-newborn body and sleep reset</li>
-          </ul>
-          <div class="stage-pro-tag">✦ Pro only</div>
+        <div class="stage-pro-box">
+          <div class="pro-label">🔒 Pro — Stage 2 extras</div>
+          <div class="stage-pro-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8L6.5 11.5L13 4.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>The Survival Stack — 8-week day-by-day habit rebuild plan</div>
+          <div class="stage-pro-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8L6.5 11.5L13 4.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Night feed protocol — how to handle 2am without destroying tomorrow</div>
+          <div class="stage-pro-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8L6.5 11.5L13 4.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>The paternity leave plan — making the weeks count without burning out</div>
+          <div class="stage-pro-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8L6.5 11.5L13 4.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Return-to-work transition protocol — how to re-anchor when life restarts</div>
+          <div class="stage-pro-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8L6.5 11.5L13 4.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Downloadable: Weeks 1–8 Survival Tracker (Google Sheets)</div>
         </div>
       </div>
     </div>
 
-    <!-- STAGE 4 -->
-    <div class="stage-expanded fade-in">
-      <div class="stage-expanded-header">
-        <div class="stage-expanded-pill"><span class="badge">Stage 4 · Year 1+</span></div>
-        <div class="stage-expanded-meta">
-          <div class="stage-expanded-title">Become the model.</div>
-          <div class="stage-expanded-sub">Your child learns what a morning looks like by watching you have one. They learn what discipline looks like by watching you practise it. They learn whether adults take care of themselves — or just manage — by watching you every single day. The habits you build in the first year of fatherhood are the standard your child grows up thinking is normal. That's not pressure. That's the best reason there is to build them well.</div>
+    <!-- Stage 3 -->
+    <div class="stage-block">
+      <div class="stage-header">
+        <div class="stage-number">3</div>
+        <div class="stage-meta">
+          <div class="stage-timing">Months 3–12 · The Rebuild</div>
+          <h3>Build the routine that actually lasts.</h3>
+          <p style="font-size:15px; margin-top:6px;">The fog is lifting. Sleep is becoming more predictable. This is the window to move from surviving to building — intentionally, not by default.</p>
         </div>
       </div>
-      <div class="stage-content-grid">
-        <div class="stage-content-box">
-          <div class="stage-content-box-label">Free — What You Get</div>
-          <ul>
-            <li>Year 1 reflection framework — what worked, what didn't</li>
-            <li>The dad morning routine reset (for toddler stage)</li>
-          </ul>
+      <div class="stage-body">
+        <div>
+          <div style="font-size:13px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--text-muted); margin-bottom:14px;">What this stage covers (free)</div>
+          <div class="stage-content-list">
+            <div class="stage-content-item">The 30-minute new dad morning routine — expanded protocol for when you can actually breathe again</div>
+            <div class="stage-content-item">Re-building physical health post-newborn — the movement protocol that works with baby's schedule</div>
+            <div class="stage-content-item">The relationship reset conversation — how to recalibrate your partnership after the shock of months 1–8</div>
+            <div class="stage-content-item">Professional re-engagement — returning to ambitious work without abandoning presence at home</div>
+            <div class="stage-content-item">Screen time accountability — why this is the stage where phone habits either get fixed or become permanent</div>
+          </div>
         </div>
-        <div class="stage-content-box">
-          <div class="stage-content-box-label">Pro — Full Stage 4 Track</div>
-          <ul>
-            <li>Long-game habit system — building for 5 years, not 5 weeks</li>
-            <li>Teaching routine to a toddler — modelling, not instructing</li>
-            <li>Advanced identity work — the father you are becoming</li>
-            <li>Career and ambition reset — year two and beyond</li>
-            <li>The family routine architecture — whole-household systems</li>
-          </ul>
-          <div class="stage-pro-tag">✦ Pro only</div>
+        <div class="stage-pro-box">
+          <div class="pro-label">🔒 Pro — Stage 3 extras</div>
+          <div class="stage-pro-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8L6.5 11.5L13 4.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>The Full Rebuild Blueprint — 90-day routine reconstruction plan</div>
+          <div class="stage-pro-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8L6.5 11.5L13 4.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>The evening architecture — building the end of day that serves the next morning</div>
+          <div class="stage-pro-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8L6.5 11.5L13 4.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Deep work re-entry — protecting focus time without disappearing from family</div>
+          <div class="stage-pro-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8L6.5 11.5L13 4.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Monthly review template — tracking what's working, what isn't</div>
+          <div class="stage-pro-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8L6.5 11.5L13 4.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Downloadable: Months 3–12 Habit Stack Planner (PDF + Notion)</div>
         </div>
       </div>
+    </div>
+
+    <!-- Stage 4 -->
+    <div class="stage-block">
+      <div class="stage-header">
+        <div class="stage-number">4</div>
+        <div class="stage-meta">
+          <div class="stage-timing">Year 1+ · Identity and Modelling</div>
+          <h3>What are you teaching them without words?</h3>
+          <p style="font-size:15px; margin-top:6px;">By now the routine is less about survival and more about signal. Your child is watching. Every habit you build at this stage is a lesson they're absorbing.</p>
+        </div>
+      </div>
+      <div class="stage-body">
+        <div>
+          <div style="font-size:13px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--text-muted); margin-bottom:14px;">What this stage covers (free)</div>
+          <div class="stage-content-list">
+            <div class="stage-content-item">The fatherhood identity audit — who you're being vs. who you want your child to see</div>
+            <div class="stage-content-item">The 60-minute morning routine — the full protocol for fathers operating at full capacity</div>
+            <div class="stage-content-item">Modelling intentionality — how to build daily habits that demonstrate focus, calm, and presence</div>
+            <div class="stage-content-item">The long game — maintaining routine momentum beyond the first year when motivation fades</div>
+            <div class="stage-content-item">Integrating the three sub-tracks: morning, sleep, and screen time as one unified fatherhood system</div>
+          </div>
+        </div>
+        <div class="stage-pro-box">
+          <div class="pro-label">🔒 Pro — Stage 4 extras</div>
+          <div class="stage-pro-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8L6.5 11.5L13 4.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Annual fatherhood review template — year-end reflection and reset</div>
+          <div class="stage-pro-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8L6.5 11.5L13 4.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>The Values Architecture — mapping your habits to your stated priorities</div>
+          <div class="stage-pro-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8L6.5 11.5L13 4.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>The second child preparation module — for fathers expecting again</div>
+          <div class="stage-pro-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8L6.5 11.5L13 4.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Advanced sleep optimisation — going from functional to genuinely rested</div>
+          <div class="stage-pro-item"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8L6.5 11.5L13 4.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Downloadable: Year One+ Dad Journal (guided, 52 weeks)</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:16px;">
+      <a href="#dad-signup" class="btn btn-primary">Start Free Tonight →</a>
+      <p style="font-size:13px; color:var(--text-muted); margin-top:12px;">Free tier includes Stage 1 and 2 core protocols. No card required.</p>
     </div>
   </div>
 </section>
 
 <!-- LEAD MAGNET -->
-<section style="background:var(--bg-green);padding:var(--section-py) 0;" aria-labelledby="pack-heading">
+<section id="dad-signup" style="padding: var(--section-py) 0; background: var(--bg-alt);" aria-labelledby="lead-heading">
   <div class="container">
-    <div class="lead-magnet-grid">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
       <div>
-        <div style="margin-bottom:20px;"><span class="badge">Free Download</span></div>
-        <h2 id="pack-heading" style="color:var(--text-primary);margin-bottom:12px;">The Fatherhood Starter Pack.</h2>
-        <p style="font-size:18px;color:var(--text-green);margin-bottom:32px;line-height:1.65;">Everything you need right now — whether the baby is still coming or already here and keeping you awake.</p>
-        <ul class="checklist" aria-label="What's included">
-          <li class="check-item"><span class="check-icon" aria-hidden="true">✓</span><span><strong>Pre-Birth Routine Audit</strong> — 12 questions that show where you'll struggle</span></li>
-          <li class="check-item"><span class="check-icon" aria-hidden="true">✓</span><span><strong>The 15-Minute New Dad Morning Protocol</strong> — works on four hours of sleep</span></li>
-          <li class="check-item"><span class="check-icon" aria-hidden="true">✓</span><span><strong>First 8 Weeks Survival Guide</strong> — sleep, sanity, and staying present</span></li>
-          <li class="check-item"><span class="check-icon" aria-hidden="true">✓</span><span><strong>Week 1 Email:</strong> what nobody tells new fathers — and why</span></li>
+        <div class="label" style="margin-bottom:20px;">Free download</div>
+        <h2 id="lead-heading">The Fatherhood Starter Pack.</h2>
+        <p style="font-size:18px; margin-top:20px; margin-bottom:32px;">Everything you need to start your new dad routine tonight. No account required, no card, no upsell. Just the system.</p>
+        <ul style="display:flex; flex-direction:column; gap:12px; margin-bottom:36px;">
+          <li style="display:flex; align-items:flex-start; gap:12px; font-size:15px; color:var(--text-secondary);"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="flex-shrink:0;margin-top:3px;"><path d="M3 8L6.5 11.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>The Pre-Birth Routine Audit (12 questions)</li>
+          <li style="display:flex; align-items:flex-start; gap:12px; font-size:15px; color:var(--text-secondary);"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="flex-shrink:0;margin-top:3px;"><path d="M3 8L6.5 11.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>The 10-minute Survival Morning Protocol</li>
+          <li style="display:flex; align-items:flex-start; gap:12px; font-size:15px; color:var(--text-secondary);"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="flex-shrink:0;margin-top:3px;"><path d="M3 8L6.5 11.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>The 90-minute sleep cycle cheatsheet for broken nights</li>
+          <li style="display:flex; align-items:flex-start; gap:12px; font-size:15px; color:var(--text-secondary);"><svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="flex-shrink:0;margin-top:3px;"><path d="M3 8L6.5 11.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>The weekly routine email (new dad edition)</li>
         </ul>
-        <form class="form-stack" id="pack-form" aria-label="Get fatherhood starter pack" novalidate style="margin-top:8px;">
-          <label for="pack-email" class="sr-only">Your email address</label>
-          <input type="email" id="pack-email" name="email" class="input" placeholder="Enter your email — pack sent instantly" autocomplete="email" required aria-required="true">
-          <button type="submit" class="btn btn-gold btn-lg" aria-label="Send me the free fatherhood starter pack">Send Me the Free Pack →</button>
+        <form id="dad-lead-form" novalidate style="display:flex; flex-direction:column; gap:12px; max-width:440px;">
+          <input type="email" name="email" placeholder="Enter your email — pack sent instantly" autocomplete="email" required aria-label="Email address" style="width:100%; padding:14px 18px; background:var(--bg-surface); border:1px solid var(--border); border-radius:8px; color:var(--text-primary); font-size:16px; outline:none; transition:var(--transition);" onfocus="this.style.borderColor='var(--green)'" onblur="this.style.borderColor='var(--border)'">
+          <button type="submit" class="btn btn-primary" style="width:100%;">Send Me the Starter Pack →</button>
         </form>
-        <p style="margin-top:10px;font-size:13px;color:rgba(134,239,172,.7);">No spam. Unsubscribe anytime. Your data is never sold.</p>
-      </div>
-      <div class="lead-magnet-right" aria-hidden="true">
-        <div class="pdf-stack">
-          <div class="pdf-card-back"></div>
-          <div class="pdf-card-front">
-            <div class="pdf-front-content">
-              <div class="pdf-front-title">Fatherhood<br>Starter Pack</div>
-              <div class="pdf-front-brand">NextRoutine · Stage 1–2</div>
-              <div class="pdf-gold-bar"></div>
-              <div class="pdf-lines"><div class="pdf-line"></div><div class="pdf-line"></div><div class="pdf-line"></div><div class="pdf-line"></div><div class="pdf-line"></div></div>
-            </div>
-          </div>
+        <div class="form-error" id="dad-lead-error" role="alert" aria-live="polite">Please enter a valid email address.</div>
+        <div class="form-success" id="dad-lead-success" aria-live="polite">
+          <div class="form-success-icon" aria-hidden="true">✓</div>
+          <div><div class="form-success-title">Pack sent to your inbox.</div><div class="form-success-sub">Next up: <a href="/morning-routine.html" style="color:var(--gold);">explore the morning routine →</a></div></div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section style="background:var(--bg-alt);padding:var(--section-py) 0;" aria-labelledby="test-heading">
-  <div class="container">
-    <div class="section-header">
-      <div class="label" style="color:var(--gold);margin-bottom:12px;">Real new dads</div>
-      <h2 id="test-heading">From fathers who started before they felt ready.</h2>
-    </div>
-    <div class="grid-3">
-      <article class="testimonial-card fade-in">
-        <div class="testimonial-stars" aria-label="5 star rating"><span aria-hidden="true">★★★★★</span></div>
-        <blockquote class="testimonial-quote">"I started the pre-birth audit at 12 weeks pregnant. By the time my daughter arrived, I had a morning routine that had been running for six months. Week one with a newborn was still chaos — but I had a foundation to come back to every morning. That made a difference I can't overstate."</blockquote>
-        <div class="testimonial-author">Callum M., 35</div><div class="testimonial-role">First-time father · Started during pregnancy</div>
-      </article>
-      <article class="testimonial-card fade-in delay-1">
-        <div class="testimonial-stars" aria-label="5 star rating"><span aria-hidden="true">★★★★★</span></div>
-        <blockquote class="testimonial-quote">"My son is 10 weeks old. I am sleeping 4–5 hours in fragments. I still do my 15 minutes every morning: five minutes of movement, five minutes on one task, five minutes writing. It is the only thing in my day that is still mine. I did not think I would be able to say that."</blockquote>
-        <div class="testimonial-author">Rory T., 31</div><div class="testimonial-role">New father · Stage 2</div>
-      </article>
-      <article class="testimonial-card fade-in delay-2">
-        <div class="testimonial-stars" aria-label="5 star rating"><span aria-hidden="true">★★★★★</span></div>
-        <blockquote class="testimonial-quote">"My daughter is 8 months old and I finally feel like I have a routine again — not the one I had before she arrived, but a better one. The Stage 3 rebalancing framework was the most useful thing I've read since she was born. Concrete, not motivational."</blockquote>
-        <div class="testimonial-author">Ben F., 38</div><div class="testimonial-role">Father · Stage 3 rebuild</div>
-      </article>
+      <div class="pack-visual">
+        <div style="font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--text-muted); margin-bottom:16px; padding-left:4px;">What you receive</div>
+        <div class="pack-item">
+          <div class="pack-item-icon"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3" y="2" width="14" height="16" rx="2" stroke="#40916C" stroke-width="1.5"/><path d="M7 7H13M7 10H13M7 13H10" stroke="#40916C" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <div><div class="pack-item-label">Pre-Birth Routine Audit</div><div class="pack-item-sub">12 questions · PDF · 4 pages</div></div>
+        </div>
+        <div class="pack-item">
+          <div class="pack-item-icon"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7" stroke="#40916C" stroke-width="1.5"/><path d="M10 6V10L12.5 12.5" stroke="#40916C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div><div class="pack-item-label">10-min Morning Protocol</div><div class="pack-item-sub">Survival mode · works on 3 hrs sleep</div></div>
+        </div>
+        <div class="pack-item">
+          <div class="pack-item-icon"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10C4 10 5.5 6 10 6C14.5 6 16 10 16 10C16 10 14.5 14 10 14C5.5 14 4 10 4 10Z" stroke="#40916C" stroke-width="1.5"/><circle cx="10" cy="10" r="2" stroke="#40916C" stroke-width="1.5"/></svg></div>
+          <div><div class="pack-item-label">Sleep Cycle Cheatsheet</div><div class="pack-item-sub">Broken nights strategy · 1 page</div></div>
+        </div>
+        <div class="pack-item">
+          <div class="pack-item-icon"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 4H17M3 8H12M3 12H15M3 16H9" stroke="#40916C" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <div><div class="pack-item-label">Weekly Routine Email</div><div class="pack-item-sub">New dad edition · every Tuesday</div></div>
+        </div>
+        <div style="margin-top:12px; padding:14px 18px; background:var(--bg-green); border:1px solid var(--green); border-radius:10px; text-align:center; font-size:14px; color:var(--gold); font-weight:600;">Free forever · No card needed</div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- PRO UPSELL -->
-<section style="background:var(--bg-base);padding:var(--section-py) 0;" aria-labelledby="pro-heading">
+<section style="padding: var(--section-py) 0;" aria-labelledby="pro-heading">
   <div class="container">
-    <div class="section-header">
-      <div class="label" style="color:var(--gold);margin-bottom:12px;">Pro membership</div>
-      <h2 id="pro-heading">The complete new dad system — inside Pro.</h2>
-      <p>The free plan gives you the foundation. Pro gives you every stage, every template, every protocol — for less than a single baby purchase.</p>
+    <div class="section-header" style="text-align:center; margin-bottom:56px;">
+      <div class="label" style="margin-bottom:16px;">NextRoutine Pro</div>
+      <h2 id="pro-heading">Go further with the full fatherhood track.</h2>
+      <p style="max-width:520px; margin:20px auto 0; font-size:18px;">The free tier gets you started. Pro gives you everything — all four stages, 38 templates, and the complete system.</p>
     </div>
-
-    <div class="pro-strip fade-in">
-      <div class="pro-strip-content">
-        <h3>Everything in the Fatherhood Track</h3>
-        <p>The full four-stage system, all 20+ templates, and every protocol from pre-birth to year one. Updated as you move through the stages.</p>
-        <div class="pro-check-grid">
-          <div class="pro-check"><span class="pro-check-icon">✓</span> All 4 fatherhood stages</div>
-          <div class="pro-check"><span class="pro-check-icon">✓</span> 20+ stage-specific templates</div>
-          <div class="pro-check"><span class="pro-check-icon">✓</span> Morning, Sleep & Screen tracks</div>
-          <div class="pro-check"><span class="pro-check-icon">✓</span> PDF download vault</div>
-          <div class="pro-check"><span class="pro-check-icon">✓</span> Priority weekly edition</div>
-          <div class="pro-check"><span class="pro-check-icon">✓</span> Ad-free experience</div>
-          <div class="pro-check"><span class="pro-check-icon">✓</span> Identity and career protocols</div>
-          <div class="pro-check"><span class="pro-check-icon">✓</span> Partner alignment frameworks</div>
-        </div>
+    <div class="pro-features-grid">
+      <div class="pro-feature-card">
+        <div class="pro-feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L4 6V12C4 16.4 7.4 20.5 12 22C16.6 20.5 20 16.4 20 12V6L12 2Z" stroke="#40916C" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+        <h4 style="margin-bottom:10px;">All 4 stages unlocked</h4>
+        <p style="font-size:14px; line-height:1.65;">Every protocol, from expectant father tips through year one identity modelling. Nothing gated.</p>
       </div>
-      <div class="pro-strip-price">
-        <div class="pro-price-amount">€7.99</div>
-        <div class="pro-price-period">/month</div>
-        <a href="/pricing.html" class="btn btn-gold" aria-label="Start Pro with 7-day free trial">Start Free Trial →</a>
-        <div class="pro-price-note">7-day free trial.<br>Cancel anytime.</div>
+      <div class="pro-feature-card">
+        <div class="pro-feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#40916C" stroke-width="1.5"/><path d="M8 8H16M8 12H13M8 16H11" stroke="#40916C" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <h4 style="margin-bottom:10px;">38 downloadable templates</h4>
+        <p style="font-size:14px; line-height:1.65;">Every tracker, planner, journal, and protocol in PDF and Notion format. Plug and use.</p>
       </div>
+      <div class="pro-feature-card">
+        <div class="pro-feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="4" stroke="#40916C" stroke-width="1.5"/><path d="M4 20C4 16.686 7.582 14 12 14C16.418 14 20 16.686 20 20" stroke="#40916C" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <h4 style="margin-bottom:10px;">Weekly Pro edition</h4>
+        <p style="font-size:14px; line-height:1.65;">The Pro email goes deeper — stage-specific protocols, community questions answered, and new templates monthly.</p>
+      </div>
+      <div class="pro-feature-card">
+        <div class="pro-feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3C7 3 3 7 3 12C3 15 4.5 17.7 6.8 19.4L6 21H12C17 21 21 17 21 12C21 7 17 3 12 3Z" stroke="#40916C" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+        <h4 style="margin-bottom:10px;">Morning Routine track</h4>
+        <p style="font-size:14px; line-height:1.65;">The full morning routine for new dads — 10, 30, and 60-minute blueprints with complete breakdowns.</p>
+      </div>
+      <div class="pro-feature-card">
+        <div class="pro-feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3C7 8 4 11 4 14C4 17.3 7.6 20 12 20C16.4 20 20 17.3 20 14C20 11 17 8 12 3Z" stroke="#40916C" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+        <h4 style="margin-bottom:10px;">Sleep track</h4>
+        <p style="font-size:14px; line-height:1.65;">The advanced sleep system — 90-minute cycles, wind-down protocols, the Sunday Night Reset, and more.</p>
+      </div>
+      <div class="pro-feature-card">
+        <div class="pro-feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="3" stroke="#40916C" stroke-width="1.5"/><circle cx="12" cy="17" r="1" fill="#40916C"/><path d="M9 7H15M9 11H13" stroke="#40916C" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <h4 style="margin-bottom:10px;">Screen Time track</h4>
+        <p style="font-size:14px; line-height:1.65;">The full 7-Day Phone Reset and replacement framework — why stopping scrolling is hard and how to actually do it.</p>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:48px;">
+      <a href="/pricing.html" class="btn btn-primary" style="margin-right:16px;">Unlock Pro — €7.99/mo →</a>
+      <a href="#dad-signup" class="btn btn-ghost">Start Free First</a>
+      <p style="font-size:13px; color:var(--text-muted); margin-top:14px;">7-day free trial. Cancel anytime.</p>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section style="background:var(--bg-alt);padding:var(--section-py) 0;" aria-labelledby="faq-heading">
-  <div class="container">
-    <div class="section-header">
-      <h2 id="faq-heading">Frequently asked questions.</h2>
+<section style="padding: var(--section-py) 0; background: var(--bg-alt);" aria-labelledby="faq-heading">
+  <div class="container" style="max-width:760px;">
+    <div class="section-header" style="text-align:center; margin-bottom:48px;">
+      <div class="label" style="margin-bottom:16px;">FAQ</div>
+      <h2 id="faq-heading">Common questions.</h2>
     </div>
     <div class="faq-list" role="list">
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" type="button">When should I start building a new dad routine?<span class="faq-chevron" aria-hidden="true">▾</span></button>
-        <div class="faq-answer"><p>The moment you find out. The nine months of pregnancy are the single best window you will ever have to build habits before your life is restructured. Dads who start before the birth consistently report a smoother transition than those who wait until after. The pre-birth audit takes 20 minutes and immediately shows you which habits will break first.</p></div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          When should a new dad start building a routine?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="faq-a" aria-hidden="true"><div class="faq-a-inner">The moment you find out. Pre-birth is the most underutilised window in a father's preparation. The habits you build during pregnancy — sleep timing, morning anchors, screen use — are the exact habits that survive or fail in the first eight weeks. Our Stage 1 protocols are built specifically for expectant fathers. Starting before the birth means arriving with systems already embedded, not starting from zero in the chaos of week one.</div></div>
       </div>
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" type="button">What does a morning routine for a new dad actually look like?<span class="faq-chevron" aria-hidden="true">▾</span></button>
-        <div class="faq-answer"><p>In the first eight weeks, it's 15 minutes: 5 minutes of movement (not exercise — movement), 5 minutes on one priority task, 5 minutes of a short journal prompt. Not a 5am ice bath. Not a 90-minute productivity ritual. A realistic sequence that survives on four hours of broken sleep. As your child grows and sleep improves, the protocol expands with you — to 30 minutes at Stage 3 and a full routine by year one.</p></div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          What does a new dad morning routine actually look like?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="faq-a" aria-hidden="true"><div class="faq-a-inner">In survival mode (Stage 2), it is 10 minutes: one minute of intention setting, five minutes of minimal movement, and four minutes reviewing one priority. No gym, no journalling, no pressure. As sleep stabilises (Stage 3), the 30-minute version adds a short walk and a brief journal prompt. In Stage 4, the full 60-minute protocol becomes available. Every version is built to run on less sleep than you think you need to function on.</div></div>
       </div>
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" type="button">How is NextRoutine different from parenting books and blogs?<span class="faq-chevron" aria-hidden="true">▾</span></button>
-        <div class="faq-answer"><p>Parenting books cover what happens to the baby. Parenting blogs are for mothers, or they're written as if all fathers are clueless. NextRoutine is built specifically for the father's experience — your sleep, your identity shift, your morning routine, your career rebalancing, your relationship under pressure. It's the first platform that treats the father as the primary audience, not an afterthought. Every protocol is mechanism-based: we explain why something works, not just what to do.</p></div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          Is NextRoutine for expectant dads or dads who already have a baby?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="faq-a" aria-hidden="true"><div class="faq-a-inner">Both. The fatherhood track covers four stages: Stage 1 (months 1–9, pre-birth), Stage 2 (weeks 1–8, newborn), Stage 3 (months 3–12, rebuild), and Stage 4 (year one plus, identity). You start wherever you are in the journey, and the system adapts. Many fathers use it from pre-birth all the way through year one — following the progression as their situation changes.</div></div>
       </div>
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" type="button">Will this work if my partner is also building their own routine?<span class="faq-chevron" aria-hidden="true">▾</span></button>
-        <div class="faq-answer"><p>Yes — and the pre-birth audit explicitly covers partner alignment. The goal is not two competing individual routines but a household rhythm that supports both parents. The audit identifies overlap and conflict points before the baby arrives. The Stage 3 framework explicitly covers relationship rebuilding — the first year changes the dynamic of every partnership and the framework addresses that directly.</p></div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          How is NextRoutine different from generic productivity advice?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="faq-a" aria-hidden="true"><div class="faq-a-inner">Generic productivity systems assume eight hours of sleep, a stable emotional baseline, and no dependents. NextRoutine is built for the actual conditions of new fatherhood: sleep fragmentation, identity disruption, relationship strain, and the constant sense of falling behind on everything at once. Every protocol here is designed to hold under those conditions — not under ideal ones. It is a stability system first, a performance system second.</div></div>
       </div>
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" type="button">What do Pro members get that free subscribers don't?<span class="faq-chevron" aria-hidden="true">▾</span></button>
-        <div class="faq-answer"><p>Free subscribers get the weekly newsletter, the Fatherhood Starter Pack (pre-birth audit, 15-minute morning protocol, 8-week survival guide), and 2 routine templates. Pro members get the complete four-stage fatherhood track, the full morning routine, sleep, and screen time tracks, the entire template library (20+ templates), PDF download vault, priority newsletter edition, identity and career frameworks, and partner alignment protocols. Pro is €7.99/month with a 7-day free trial.</p></div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-q" aria-expanded="false">
+          Can I use NextRoutine if I'm a second-time dad?
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="faq-a" aria-hidden="true"><div class="faq-a-inner">Yes, and many second-time fathers find it more valuable because they know what is coming and want to handle it better this time. The Stage 4 identity and modelling section is particularly relevant for fathers who want to be deliberate about what their daily habits are teaching both children. The Stage 1 preparation module also includes a second-child preparation section in Pro.</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CROSS-LINKS -->
-<section style="background:var(--bg-base);padding:var(--section-py) 0;" aria-labelledby="related-heading">
+<!-- INTERNAL LINKS / RELATED TRACKS -->
+<section style="padding: var(--section-py) 0;" aria-labelledby="tracks-heading">
   <div class="container">
-    <div class="section-header">
-      <div class="label" style="color:var(--gold);margin-bottom:12px;">Complete the system</div>
-      <h2 id="related-heading">Fatherhood touches everything. So does NextRoutine.</h2>
-      <p>The fatherhood routine connects to three other tracks — each of which changes dramatically when you become a new dad.</p>
+    <div style="text-align:center; margin-bottom:48px;">
+      <div class="label" style="margin-bottom:16px;">Sub-tracks</div>
+      <h2 id="tracks-heading" style="font-size:36px;">Three systems inside the fatherhood track.</h2>
+      <p style="max-width:500px; margin:16px auto 0;">The dad track integrates three discipline-specific sub-tracks. Explore each one — all free to start.</p>
     </div>
-    <div class="cross-links">
-      <a href="/morning-routine.html" class="cross-link-card fade-in" aria-label="Explore the Morning Routine track">
-        <div class="label">Morning Routine</div>
-        <h3>Build a morning that survives the newborn stage</h3>
-        <p>The 15-minute protocol expands to a full system as your baby grows. Realistic, mechanism-based, built for sleep deprivation.</p>
-        <p style="margin-top:12px;color:var(--green-bright);font-weight:600;font-size:14px;">Explore Morning →</p>
+    <div class="grid-3">
+      <a href="/morning-routine.html" class="card" style="text-decoration:none; display:block; background:var(--bg-surface); border:1px solid var(--border); border-radius:16px; padding:32px; transition:var(--transition);" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--font-heading); font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--green-bright); margin-bottom:12px;">Morning Routine</div>
+        <h3 style="font-size:21px; margin-bottom:10px;">The morning routine for new dads that survives week one.</h3>
+        <p style="font-size:14px; line-height:1.6;">10-min, 30-min, and 60-min blueprints. Science-backed. Designed to run on whatever sleep you got.</p>
+        <span style="color:var(--green-bright); font-size:14px; font-weight:600; margin-top:16px; display:block;">Explore Morning Routine →</span>
       </a>
-      <a href="/sleep-better.html" class="cross-link-card fade-in delay-1" aria-label="Explore the Sleep Better track">
-        <div class="label">Sleep Better</div>
-        <h3>Sleep science for the year everything changes</h3>
-        <p>New dads don't just sleep less — they sleep differently. The wind-down protocol is built for interrupted nights and recovery.</p>
-        <p style="margin-top:12px;color:var(--green-bright);font-weight:600;font-size:14px;">Explore Sleep →</p>
+      <a href="/sleep-better.html" class="card" style="text-decoration:none; display:block; background:var(--bg-surface); border:1px solid var(--border); border-radius:16px; padding:32px; transition:var(--transition);" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--font-heading); font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--green-bright); margin-bottom:12px;">Sleep</div>
+        <h3 style="font-size:21px; margin-bottom:10px;">How to sleep better when the baby has other ideas.</h3>
+        <p style="font-size:14px; line-height:1.6;">The 90-minute cycle, three sleep killers to eliminate, and the 3-2-1 wind-down protocol that works tonight.</p>
+        <span style="color:var(--green-bright); font-size:14px; font-weight:600; margin-top:16px; display:block;">Explore Sleep →</span>
       </a>
-      <a href="/screen-time.html" class="cross-link-card fade-in delay-2" aria-label="Explore the Screen Time track">
-        <div class="label">Screen Time Reset</div>
-        <h3>Reclaim your attention before the baby notices</h3>
-        <p>The phone goes face-down. The scroll stops. The attention goes where it matters most — especially in the first year.</p>
-        <p style="margin-top:12px;color:var(--green-bright);font-weight:600;font-size:14px;">Explore Screen Time →</p>
+      <a href="/screen-time.html" class="card" style="text-decoration:none; display:block; background:var(--bg-surface); border:1px solid var(--border); border-radius:16px; padding:32px; transition:var(--transition);" onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">
+        <div style="font-family:var(--font-heading); font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--green-bright); margin-bottom:12px;">Screen Time</div>
+        <h3 style="font-size:21px; margin-bottom:10px;">Reduce screen time without fighting yourself.</h3>
+        <p style="font-size:14px; line-height:1.6;">The neuroscience behind why stopping is hard — and the 7-day replacement framework that makes it easier.</p>
+        <span style="color:var(--green-bright); font-size:14px; font-weight:600; margin-top:16px; display:block;">Explore Screen Time →</span>
       </a>
     </div>
   </div>
 </section>
 
-</main>
-
+<!-- FOOTER -->
 <footer class="footer" role="contentinfo">
-  <div class="container"><div class="footer-grid"><div><div class="footer-brand-logo"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="5" r="1.5" fill="#D4A853"/></svg>NextRoutine</div><p class="footer-tagline">Build the routine. Build the life.</p></div><div><div class="footer-col-label">Tracks</div><nav class="footer-links"><a href="/new-dad.html" class="footer-link">For New Dads</a><a href="/morning-routine.html" class="footer-link">Morning Routine</a><a href="/sleep-better.html" class="footer-link">Sleep Better</a><a href="/screen-time.html" class="footer-link">Screen Time</a></nav></div><div><div class="footer-col-label">Platform</div><nav class="footer-links"><a href="/newsletter.html" class="footer-link">Newsletter</a><a href="/pricing.html" class="footer-link">Pricing</a><a href="/blog/" class="footer-link">Blog</a><a href="/quiz.html" class="footer-link">Find Your Track</a></nav></div><div><div class="footer-col-label">Legal</div><nav class="footer-links"><a href="/privacy.html" class="footer-link">Privacy Policy</a><a href="/terms.html" class="footer-link">Terms of Service</a></nav></div></div></div>
-  <div class="footer-bottom"><span class="footer-copy">© <span data-year></span> NextRoutine. All rights reserved.</span><span class="footer-made">Made for fathers who refuse to wing it.</span></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="5" r="1.5" fill="#D4A853"/></svg>
+          NextRoutine
+        </div>
+        <p class="footer-tagline">Build the routine. Build the life.</p>
+      </div>
+      <div>
+        <div class="footer-col-label">Tracks</div>
+        <nav class="footer-links" aria-label="Track links">
+          <a href="/new-dad.html" class="footer-link">For New Dads</a>
+          <a href="/morning-routine.html" class="footer-link">Morning Routine</a>
+          <a href="/sleep-better.html" class="footer-link">Sleep Better</a>
+          <a href="/screen-time.html" class="footer-link">Screen Time</a>
+        </nav>
+      </div>
+      <div>
+        <div class="footer-col-label">Platform</div>
+        <nav class="footer-links" aria-label="Platform links">
+          <a href="/pricing.html" class="footer-link">Pricing</a>
+          <a href="/blog/" class="footer-link">Blog</a><a href="/about.html" class="footer-link">About</a>
+          <a href="/quiz.html" class="footer-link">Find Your Track</a>
+          <a href="/newsletter.html" class="footer-link">Newsletter</a>
+        </nav>
+      </div>
+      <div>
+        <div class="footer-col-label">Legal</div>
+        <nav class="footer-links" aria-label="Legal links">
+          <a href="/privacy.html" class="footer-link">Privacy Policy</a>
+          <a href="/terms.html" class="footer-link">Terms of Service</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© <span data-year></span> NextRoutine. All rights reserved.</span>
+    <span class="footer-made">Made for fathers who refuse to wing it.</span>
+  </div>
 </footer>
-<div class="sticky-cta" role="complementary"><span class="sticky-cta-text">Get the free Fatherhood Starter Pack</span><a href="#email-cta" class="btn btn-primary btn-sm">Get Free Pack →</a></div>
-<script src="/js/main.js" defer></script>
+
+
+<script src="js/main.js" defer></script>
+<script>
+(function(){
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(el){ el.classList.remove('open'); el.querySelector('.faq-q').setAttribute('aria-expanded','false'); el.querySelector('.faq-a').setAttribute('aria-hidden','true'); });
+      if(!isOpen){ item.classList.add('open'); btn.setAttribute('aria-expanded','true'); item.querySelector('.faq-a').setAttribute('aria-hidden','false'); }
+    });
+  });
+  // Form enhancement
+  function enhanceForm(fId,eId,sId){
+    var f=document.getElementById(fId); if(!f)return;
+    var eEl=document.getElementById(eId); var sEl=document.getElementById(sId);
+    var inp=f.querySelector('input[type="email"]'); if(!inp)return;
+    inp.addEventListener('input',function(){ inp.classList.remove('error'); if(eEl)eEl.classList.remove('visible'); });
+    f.addEventListener('submit',function(e){ e.preventDefault(); var em=inp.value.trim();
+      if(!em||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){ inp.classList.add('error'); if(eEl)eEl.classList.add('visible'); return; }
+      inp.disabled=true; f.style.display='none'; if(sEl)sEl.classList.add('visible');
+    });
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    enhanceForm('dad-hero-form','dad-hero-error','dad-hero-success');
+    enhanceForm('dad-lead-form','dad-lead-error','dad-lead-success');
+    // Year
+    document.querySelectorAll('[data-year]').forEach(function(el){ el.textContent=new Date().getFullYear(); });
+  });
+})();
+</script>
 </body>
 </html>

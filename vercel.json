@@ -51,8 +51,6 @@
   ],
   "redirects": [
     { "source": "/dad",            "destination": "/new-dad",         "permanent": true },
-    { "source": "/dad-track",      "destination": "/new-dad",         "permanent": true },
-    { "source": "/dad-track.html", "destination": "/new-dad",         "permanent": true },
     { "source": "/sleep",          "destination": "/sleep-better",    "permanent": true },
     { "source": "/morning",        "destination": "/morning-routine", "permanent": true },
     { "source": "/screen",         "destination": "/screen-time",     "permanent": true },
