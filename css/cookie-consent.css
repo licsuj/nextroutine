@@ -1,0 +1,39 @@
+/* Cookie Consent — Banner + Modal */
+.cc-banner{position:fixed;bottom:0;left:0;right:0;z-index:400;display:none;justify-content:center;padding:16px}
+.cc-banner.visible{display:flex}
+.cc-banner-inner{max-width:680px;width:100%;background:#1A1D27;border:1px solid #2A2D3A;border-radius:12px;padding:24px 28px;box-shadow:0 -4px 40px rgba(0,0,0,.5)}
+.cc-banner-text{margin-bottom:16px}
+.cc-banner-text strong{font-family:var(--font-heading);font-size:16px;color:#F0F2F5;display:block;margin-bottom:6px}
+.cc-banner-text p{font-size:14px;color:#9BA3B2;line-height:1.6;margin:0}
+.cc-banner-text a{color:#D4A853;text-decoration:underline}
+.cc-banner-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.cc-btn{font-family:var(--font-heading);font-weight:600;font-size:14px;border-radius:8px;padding:10px 22px;cursor:pointer;transition:all .2s ease;border:none}
+.cc-btn-accept{background:#2D6A4F;color:#fff}
+.cc-btn-accept:hover{background:#40916C}
+.cc-btn-link{background:none;border:none;color:#9BA3B2;font-size:13px;cursor:pointer;padding:0;transition:color .15s ease;font-family:var(--font-body)}
+.cc-btn-link:hover{color:#F0F2F5}
+.cc-modal-overlay{position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;padding:24px}
+.cc-modal-overlay.visible{display:flex}
+.cc-modal{background:#1A1D27;border:1px solid #2A2D3A;border-radius:12px;max-width:480px;width:100%;box-shadow:0 16px 64px rgba(0,0,0,.6)}
+.cc-modal-header{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid #2A2D3A}
+.cc-modal-header h3{font-family:var(--font-heading);font-size:18px;font-weight:600;color:#F0F2F5;margin:0}
+.cc-modal-close{font-size:20px;color:#9BA3B2;cursor:pointer;width:32px;height:32px;display:flex;align-items:center;justify-content:center;background:none;border:none;transition:color .15s ease}
+.cc-modal-close:hover{color:#F0F2F5}
+.cc-modal-body{padding:0}
+.cc-modal-footer{padding:16px 24px;border-top:1px solid #2A2D3A}
+.cc-modal-footer .cc-btn{width:100%}
+.cc-pref-row{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;border-bottom:1px solid #2A2D3A}
+.cc-pref-row:last-child{border-bottom:none}
+.cc-pref-info{flex:1}
+.cc-pref-label{font-family:var(--font-heading);font-size:15px;font-weight:600;color:#F0F2F5;margin-bottom:4px}
+.cc-pref-info p{font-size:13px;color:#9BA3B2;line-height:1.5;margin:0}
+.cc-toggle{position:relative;width:44px;height:24px;flex-shrink:0}
+.cc-toggle input{opacity:0;width:0;height:0;position:absolute}
+.cc-slider{position:absolute;inset:0;background:#2A2D3A;border-radius:12px;cursor:pointer;transition:background .2s ease}
+.cc-slider::after{content:'';position:absolute;width:18px;height:18px;background:#5C6478;border-radius:50%;top:3px;left:3px;transition:transform .2s ease,background .2s ease}
+.cc-toggle input:checked+.cc-slider{background:#2D6A4F}
+.cc-toggle input:checked+.cc-slider::after{transform:translateX(20px);background:#F0F2F5}
+.cc-toggle-locked .cc-slider{cursor:not-allowed;opacity:.5}
+.cc-toggle-locked input:checked+.cc-slider{background:#2D6A4F}
+.cc-toggle-locked input:checked+.cc-slider::after{background:#F0F2F5}
+@media(max-width:768px){.cc-banner{padding:12px}.cc-banner-inner{padding:20px}.cc-banner-actions{flex-direction:column;align-items:stretch;gap:10px}.cc-btn-link{text-align:center;padding:8px 0}.cc-modal{margin:12px;max-height:90vh;overflow-y:auto}}
