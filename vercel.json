@@ -57,10 +57,10 @@
     { "source": "/morning",        "destination": "/morning-routine", "permanent": true },
     { "source": "/screen",         "destination": "/screen-time",     "permanent": true },
     { "source": "/subscribe",      "destination": "/newsletter",      "permanent": true },
-    { "source": "/pro",            "destination": "/pricing",         "permanent": false },
-    { "source": "/blog",           "destination": "/blog/",           "permanent": false }
+    { "source": "/pro",            "destination": "/pricing",         "permanent": false }
   ],
   "rewrites": [
+    { "source": "/blog",          "destination": "/blog/index.html" },
     { "source": "/api/subscribe", "destination": "/api/subscribe" },
     { "source": "/api/webhook",   "destination": "/api/webhook" }
   ]
