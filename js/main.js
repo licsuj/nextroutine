@@ -84,6 +84,7 @@
     var form = document.getElementById(formId);
     if (!form) return;
     var input = form.querySelector('input[type="email"]');
+    var stageSelect = form.querySelector('select[name="stage"]');
     var errorEl = document.getElementById(errorId);
     var successEl = document.getElementById(successId);
     if (!input) return;
@@ -91,11 +92,22 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var email = input.value.trim();
+      var stage = stageSelect ? stageSelect.value : '';
 
       // Clear previous state
       if (errorEl) errorEl.classList.remove('visible');
       input.style.borderColor = '';
+      if (stageSelect) stageSelect.style.borderColor = '';
 
+      // Validate stage
+      if (stageSelect && !stage) {
+        stageSelect.style.borderColor = '#e74c3c';
+        if (errorEl) errorEl.classList.add('visible');
+        stageSelect.focus();
+        return;
+      }
+
+      // Validate email
       if (!email || !EMAIL_RE.test(email)) {
         input.style.borderColor = '#e74c3c';
         if (errorEl) errorEl.classList.add('visible');
@@ -105,17 +117,21 @@
 
       // Success — hide form, show success
       input.disabled = true;
+      if (stageSelect) stageSelect.disabled = true;
       form.style.display = 'none';
       if (successEl) successEl.classList.add('visible');
 
-      // Store subscribed state (no PII)
-      try { localStorage.setItem('nr_subscribed', 'true'); } catch (ex) {}
+      // Store subscribed state + stage (no PII)
+      try {
+        localStorage.setItem('nr_subscribed', 'true');
+        if (stage) localStorage.setItem('nr_stage', stage);
+      } catch (ex) {}
 
       // TODO: Uncomment and configure ESP endpoint
       // fetch('YOUR_ESP_ENDPOINT', {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify({ email: email })
+      //   body: JSON.stringify({ email: email, stage: stage })
       // });
     });
 
