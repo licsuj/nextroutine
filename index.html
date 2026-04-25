@@ -29,17 +29,9 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/cookie-consent.css">
 </head>
 <body>
-
-<!-- COOKIE CONSENT -->
-<div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent">
-  <span>We use analytics to understand how dads find us and improve the experience. <a href="/privacy.html">Privacy Policy</a>.</span>
-  <div class="cookie-btns">
-    <button class="cookie-btn cookie-btn-decline" id="cookie-decline">Decline</button>
-    <button class="cookie-btn cookie-btn-accept" id="cookie-accept">Accept</button>
-  </div>
-</div>
 
 <!-- NAV -->
 <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
@@ -475,7 +467,7 @@
         <nav class="footer-links" aria-label="Legal links">
           <a href="/privacy.html" class="footer-link">Privacy Policy</a>
           <a href="/terms.html" class="footer-link">Terms of Service</a>
-          <button class="footer-link" style="background:none;border:none;padding:0;text-align:left;cursor:pointer;" onclick="document.getElementById('cookie-banner').classList.add('visible');">Cookie Settings</button>
+          <button class="footer-link" style="background:none;border:none;padding:0;text-align:left;cursor:pointer;" data-cc-open>Cookie Settings</button>
         </nav>
       </div>
     </div>
@@ -487,5 +479,6 @@
 </footer>
 
 <script src="js/main.js" defer></script>
+<script src="js/cookie-consent.js" defer></script>
 </body>
 </html>

@@ -1,204 +1,84 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About NextRoutine — Why We Built This</title>
-  <meta name="description" content="NextRoutine helps 12,000+ people build morning routines and reduce screen time. Learn why we built it, what we believe, and who's behind the newsletter.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://nextroutine.com/about">
-  <meta name="theme-color" content="#7C3AED">
-  <link rel="alternate" hreflang="en" href="https://nextroutine.com/about">
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-192.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon-192.png">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="NextRoutine">
-  <meta property="og:title" content="About NextRoutine — Why We Built This">
-  <meta property="og:description" content="NextRoutine helps 12,000+ people build morning routines and reduce screen time. Learn who's behind it.">
-  <meta property="og:url" content="https://nextroutine.com/about">
-  <meta property="og:image" content="https://nextroutine.com/assets/og-home.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:image:alt" content="About NextRoutine — Why We Built This Habit System">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@nextroutine">
-  <meta name="twitter:title" content="About NextRoutine — Why We Built This">
-  <meta name="twitter:description" content="NextRoutine helps 12,000+ people build morning routines and reduce screen time.">
-  <meta name="twitter:image" content="https://nextroutine.com/assets/og-home.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="https://www.google-analytics.com">
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-  <link rel="preload" as="style" href="css/style.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="manifest" href="site.webmanifest">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nextroutine.com/" },
-          { "@type": "ListItem", "position": 2, "name": "About", "item": "https://nextroutine.com/about" }
-        ]
-      },
-      {
-        "@type": "AboutPage",
-        "name": "About NextRoutine",
-        "url": "https://nextroutine.com/about",
-        "publisher": { "@type": "Organization", "name": "NextRoutine" }
-      }
-    ]
-  }
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0F1117">
+<title>About — NextRoutine</title>
+<meta name="description" content="NextRoutine was built because nobody builds routine systems for new dads. Here is why it exists, who it is for, and what makes it different.">
+<link rel="canonical" href="https://nextroutine-one.vercel.app/about.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.about-hero{padding:calc(var(--nav-h)+80px) 0 60px;background:var(--bg-alt)}
+.about-hero h1{font-size:48px;max-width:640px;margin-bottom:20px}
+.about-hero-sub{font-size:20px;color:var(--text-secondary);line-height:1.75;max-width:600px}
+.about-body{padding:var(--section-py) 0;max-width:720px;margin:0 auto}
+.about-body h2{font-size:28px;color:var(--text-primary);margin:48px 0 16px}
+.about-body h2:first-of-type{margin-top:0}
+.about-body p{font-size:18px;color:var(--text-secondary);line-height:1.85;margin-bottom:20px}
+.about-body strong{color:var(--text-primary)}
+.about-body a{color:var(--green-bright);text-decoration:underline}
+.about-body a:hover{color:var(--gold)}
+.about-values{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:40px 0}
+.about-value{background:var(--bg-surface);border:1px solid var(--border);border-radius:12px;padding:24px}
+.about-value h3{font-size:18px;color:var(--text-primary);margin-bottom:8px}
+.about-value p{font-size:15px;margin-bottom:0}
+.about-founder{background:var(--bg-surface);border:1px solid var(--border);border-radius:12px;padding:36px;margin:48px 0;display:flex;gap:24px;align-items:flex-start}
+.about-founder-avatar{width:72px;height:72px;flex-shrink:0;border-radius:50%;background:var(--bg-green);border:2px solid var(--green);display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:24px;font-weight:700;color:var(--green-bright)}
+.about-founder-name{font-family:var(--font-heading);font-size:20px;font-weight:700;color:var(--text-primary);margin-bottom:4px}
+.about-founder-title{font-size:14px;color:var(--text-muted);margin-bottom:16px}
+.about-cta{text-align:center;padding:80px 0}
+@media(max-width:768px){.about-hero h1{font-size:32px}.about-values{grid-template-columns:1fr}.about-founder{flex-direction:column;gap:16px}}
+</style>
 </head>
 <body>
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation"><div class="nav-inner"><a href="/" class="nav-brand" aria-label="NextRoutine home"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="5" r="1.5" fill="#D4A853"/></svg>NextRoutine</a><div class="nav-links" role="list"><a href="/dad-track.html" class="nav-link" role="listitem">For Fathers</a><a href="/morning-routine.html" class="nav-link" role="listitem">Morning</a><a href="/sleep-better.html" class="nav-link" role="listitem">Sleep</a><a href="/screen-time.html" class="nav-link" role="listitem">Screen Time</a><a href="/pricing.html" class="nav-link" role="listitem">Pricing</a></div><div class="nav-actions"><a href="/pricing.html" class="nav-signin">Sign In</a><a href="/#free-signup" class="btn btn-primary btn-sm">Get Started Free →</a></div><button class="nav-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button></div></nav>
+<div class="nav-overlay" id="nav-overlay" aria-hidden="true"><button class="nav-overlay-close" aria-label="Close menu">✕</button><nav class="nav-overlay-links" aria-label="Mobile navigation"><a href="/dad-track.html" class="nav-overlay-link">For Fathers</a><a href="/morning-routine.html" class="nav-overlay-link">Morning</a><a href="/sleep-better.html" class="nav-overlay-link">Sleep</a><a href="/screen-time.html" class="nav-overlay-link">Screen Time</a><a href="/pricing.html" class="nav-overlay-link">Pricing</a><a href="/#free-signup" class="btn btn-primary btn-full" style="margin-top:24px;">Get Started Free →</a></nav></div>
 
-<nav class="nav" role="navigation" aria-label="Main navigation">
-  <div class="nav-inner">
-    <a href="/" class="nav-logo" aria-label="NextRoutine Home">next<span>routine</span></a>
-    <ul class="nav-links" role="list">
-      <li><a href="/morning-routine" class="nav-link">Morning Routine</a></li>
-      <li><a href="/sleep" class="nav-link">Sleep Better</a></li>
-      <li><a href="/screen-time" class="nav-link">Screen Time</a></li>
-      <li><a href="/blog/" class="nav-link">Blog</a></li>
-      <li><a href="/newsletter" class="nav-link">Newsletter</a></li>
-      <li><a href="/pricing" class="nav-link">Pricing</a></li>
-    </ul>
-    <div class="nav-cta">
-      <a href="/newsletter" class="btn btn-ghost btn-sm">Free Newsletter</a>
-      <a href="/pricing" class="btn btn-primary btn-sm">Go Pro</a>
-    </div>
-    <button class="hamburger" aria-label="Open mobile menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-<div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
-  <a href="/morning-routine">🌅 Morning Routine</a>
-  <a href="/sleep">😴 Sleep Better</a>
-  <a href="/screen-time">📵 Screen Time Reset</a>
-  <a href="/blog/">✍️ Blog</a>
-  <a href="/newsletter">📬 Newsletter</a>
-  <a href="/pricing">💎 Pricing</a>
-  <a href="/newsletter" class="btn btn-primary" style="margin-top:0.5rem;">Start Your Next Routine — It's Free</a>
+<header class="about-hero"><div class="container"><h1>Nobody builds routine systems for fathers. So we did.</h1><p class="about-hero-sub">NextRoutine exists because the self-improvement world forgot about the people who need it most — new and expectant dads navigating the biggest identity shift of their lives.</p></div></header>
+
+<main><div class="container"><div class="about-body">
+<h2>Why this exists</h2>
+<p>When my first child arrived, every morning routine I had spent three years building collapsed within 72 hours. The 5am wake-ups, the journaling, the gym — all of it gone. Replaced by fragmented sleep, 4am feeds, and the quiet realisation that nobody had prepared me for any of this.</p>
+<p>I went looking for help. The internet had thousands of morning routine guides, sleep optimisation articles, and habit-building frameworks. None of them were built for a father running on four hours of sleep with a newborn who has no respect for circadian rhythms.</p>
+<p>So I built one. Then I built three more. Then I realised this was bigger than my own mornings — there is an entire gap in the market where fathers should be.</p>
+
+<h2>Who this is for</h2>
+<p>NextRoutine is for expectant and new fathers who want a system — not just motivation — for the biggest transition of their adult life. That means:</p>
+<p><strong>Expectant fathers</strong> who have 9 months to prepare and do not want to waste them. <strong>New dads in the first 8 weeks</strong> who need protocols that survive on no sleep. <strong>Fathers in the rebuild phase</strong> (months 3–12) who are ready to reclaim their mornings, sleep, and identity. And <strong>any father</strong> who knows that wanting to be a good dad is not enough — they need a system that holds when willpower does not.</p>
+
+<h2>What makes this different</h2>
+<div class="about-values">
+<div class="about-value"><h3>Mechanism first</h3><p>We explain why something works before telling you to do it. If you understand the cortisol awakening response, you will never check your phone first thing again.</p></div>
+<div class="about-value"><h3>Built for the worst day</h3><p>Every protocol has a full version, a 5-minute fallback, and a 2-minute minimum viable version. Because the morning your baby was up three times is the morning your routine matters most.</p></div>
+<div class="about-value"><h3>Fathers are not an afterthought</h3><p>We do not adapt content designed for mothers. We build content designed for fathers from the ground up. Different challenges, different biology, different expectations.</p></div>
 </div>
 
-<main id="main-content">
+<h2>The mission</h2>
+<p>There are thousands of resources for mothers — and they deserve every one of them. But fathers get a pamphlet and a pat on the back. NextRoutine is here to close that gap.</p>
+<p>Our mission is to make fatherhood the most well-prepared-for transition in a man's life, not the least. That means giving fathers a system that starts before the baby arrives and evolves through every stage after.</p>
 
-<section class="page-hero" aria-labelledby="about-heading">
-  <div class="page-hero-bg" aria-hidden="true"></div>
-  <div class="container-md" style="position:relative; z-index:1; text-align:center;">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="/">Home</a>
-      <span aria-hidden="true">›</span>
-      <span aria-current="page">About</span>
-    </nav>
-    <div class="label fade-in" style="display:inline-flex; margin-bottom:1.25rem;">Our story</div>
-    <h1 id="about-heading" class="fade-in fade-in-delay-1">
-      Built for the person who keeps<br><span class="text-gradient">meaning to start.</span>
-    </h1>
-    <p class="fade-in fade-in-delay-2" style="font-size:1.125rem; color:var(--text-muted); max-width:580px; margin:1.25rem auto 0;">NextRoutine exists because most morning routine advice is either toxic (5am grind culture) or useless (another 47-step protocol). We wanted something different.</p>
-  </div>
-</section>
-
-<section>
-  <div class="container-md">
-    <div class="grid-2" style="align-items:center; gap:5rem;">
-      <div class="fade-in">
-        <div class="label" style="margin-bottom:1rem;">Why we exist</div>
-        <h2>Screens took our mornings. We want them back.</h2>
-        <p style="margin:1.25rem 0;">We built NextRoutine after noticing a pattern: everyone we knew wanted a better morning routine, but almost nobody had one that lasted past day three. The reason was always the same — the phone won.</p>
-        <p style="margin-bottom:1.25rem;">The insight that changed everything: screen time and morning routines aren't two separate problems. They're one problem. Your phone fills the void where your morning routine should be. Give your morning structure, and the phone habit breaks naturally.</p>
-        <p>That's the entire philosophy of NextRoutine. Not a blocker. Not a lecture. A structured replacement that makes the scrolling irrelevant.</p>
-      </div>
-      <div class="fade-in fade-in-delay-2">
-        <div class="card" style="background: linear-gradient(135deg, var(--surface-2), rgba(124,58,237,0.05));">
-          <h4 style="margin-bottom:1.5rem;">What we believe</h4>
-          <div class="feature-list">
-            <div class="feature-item">
-              <div class="feature-num" aria-hidden="true">1</div>
-              <div><h4>Consistency beats intensity</h4><p>A 20-minute routine done every day is worth infinitely more than a 2-hour routine done twice a month.</p></div>
-            </div>
-            <div class="feature-item">
-              <div class="feature-num" aria-hidden="true">2</div>
-              <div><h4>Shame doesn't work</h4><p>You're not weak for checking your phone. You're outmatched by billion-dollar engineering. Our approach has zero lectures.</p></div>
-            </div>
-            <div class="feature-item">
-              <div class="feature-num" aria-hidden="true">3</div>
-              <div><h4>Replace, don't restrict</h4><p>Habits are replaced, not deleted. We give you something better to do — the old habit loses its grip on its own.</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section style="border-top:1px solid var(--border); background:var(--surface);">
-  <div class="container">
-    <div class="stat-grid">
-      <div class="stat-card fade-in"><div class="stat-number" data-count="12" data-suffix="k+">0</div><p class="stat-label">newsletter subscribers</p></div>
-      <div class="stat-card fade-in fade-in-delay-1"><div class="stat-number" data-count="52" data-suffix="">0</div><p class="stat-label">weekly editions published</p></div>
-      <div class="stat-card fade-in fade-in-delay-2"><div class="stat-number" data-count="68" data-suffix="%">0%</div><p class="stat-label">reduce screen time in week 1</p></div>
-      <div class="stat-card fade-in fade-in-delay-3"><div class="stat-number" data-count="4.9" data-suffix="/5">0</div><p class="stat-label">average subscriber rating</p></div>
-    </div>
-  </div>
-</section>
-
-<section style="border-top:1px solid var(--border);">
-  <div class="container-sm" style="text-align:center;">
-    <div class="label fade-in" style="display:inline-flex; margin-bottom:1.25rem;">Get started</div>
-    <h2 class="fade-in fade-in-delay-1" style="margin-bottom:1rem;">Start with the free newsletter.<br><span class="text-gradient">Everything else follows.</span></h2>
-    <p class="fade-in fade-in-delay-2" style="margin-bottom:2rem;">One email per week. The 7-Day Phone Reset Plan free on signup. No pressure to upgrade ever.</p>
-    <div class="hero-actions fade-in fade-in-delay-3" style="justify-content:center;">
-      <a href="/newsletter" class="btn btn-primary btn-lg" aria-label="Join the free newsletter">Join the Newsletter Free</a>
-      <a href="mailto:hello@nextroutine.com" class="btn btn-ghost btn-lg" aria-label="Contact us">Get in Touch</a>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="/" class="nav-logo" aria-label="NextRoutine Home">next<span>routine</span></a>
-        <p>Built for people who keep meaning to start.</p>
-        <div class="footer-socials" style="margin-top:1.25rem;" aria-label="Social media links">
-          <a href="https://twitter.com/nextroutine" class="footer-social" target="_blank" rel="nofollow noopener" aria-label="Follow on Twitter">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
-          <a href="https://instagram.com/nextroutine" class="footer-social" target="_blank" rel="nofollow noopener" aria-label="Follow on Instagram">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          </a>
-        </div>
-      </div>
-      <nav aria-label="Product links"><h5>Product</h5><a href="/sleep">Sleep Reset Track</a><a href="/morning-routine">Morning Routine Track</a><a href="/screen-time">Screen Time Reset</a><a href="/newsletter">Newsletter</a><a href="/pricing">Pricing</a></nav>
-      <nav aria-label="Resources links"><h5>Resources</h5><a href="/blog/">Blog</a><a href="/screen-time#reset-plan">7-Day Reset Plan</a><a href="/morning-routine#templates">Routine Templates</a></nav>
-      <nav aria-label="Company links"><h5>Company</h5><a href="/about" aria-current="page">About</a><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a><a href="mailto:hello@nextroutine.com">Contact</a></nav>
-    </div>
-    <div class="footer-bottom">
-      <p class="text-faint">© <span id="year"></span> NextRoutine. All rights reserved.</p>
-      <p class="text-faint">Built for better mornings.</p>
-    </div>
-  </div>
-</footer>
-
-<div id="cookie-banner" class="cookie-banner hidden" role="dialog" aria-live="polite" aria-label="Cookie consent">
-  <p class="cookie-text">We use cookies to improve your experience. <a href="/privacy">Privacy Policy</a></p>
-  <div class="cookie-actions">
-    <button id="cookie-decline" class="btn btn-ghost btn-sm">Decline</button>
-    <button id="cookie-accept" class="btn btn-primary btn-sm">Accept</button>
-  </div>
+<h2>A note from the founder</h2>
+<div class="about-founder">
+<div class="about-founder-avatar" aria-hidden="true">JW</div>
+<div>
+<div class="about-founder-name">James Whitfield</div>
+<div class="about-founder-title">Founder, NextRoutine</div>
+<p>I am not a parenting expert. I am a father who built a system because nobody else had built one for me. Every protocol on this site was tested on my own worst mornings — the ones where I had slept three hours, the ones where I wanted to skip everything, the ones where the baby decided 4:17am was a perfectly reasonable time to start the day.</p>
+<p>If this helps one father show up better for his family because he showed up for himself first — even for just 15 minutes — then building it was worth it.</p>
+<p>I read every reply. <a href="mailto:hello@nextroutine.com">hello@nextroutine.com</a></p>
 </div>
+</div>
+</div></div></main>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<section class="about-cta section-green"><div class="container"><h2>Ready to build your routine?</h2><p style="font-size:18px;color:var(--text-green);margin-bottom:28px;max-width:440px;margin-left:auto;margin-right:auto;text-align:center;">Start with the free weekly newsletter and Fatherhood Starter Pack. Upgrade when you are ready.</p><a href="/#free-signup" class="btn btn-primary" style="display:inline-flex;">Get Started Free →</a></div></section>
+
+<footer class="footer" role="contentinfo"><div class="container"><div class="footer-grid"><div><div class="footer-brand"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="5" r="1.5" fill="#D4A853"/></svg>NextRoutine</div><p class="footer-tagline">Build the routine. Build the life.</p></div><div><div class="footer-col-label">Tracks</div><nav class="footer-links" aria-label="Tracks"><a href="/dad-track.html" class="footer-link">For Fathers</a><a href="/morning-routine.html" class="footer-link">Morning Routine</a><a href="/sleep-better.html" class="footer-link">Sleep Better</a><a href="/screen-time.html" class="footer-link">Screen Time</a></nav></div><div><div class="footer-col-label">Platform</div><nav class="footer-links" aria-label="Platform"><a href="/newsletter.html" class="footer-link">Newsletter</a><a href="/pricing.html" class="footer-link">Pricing</a><a href="/blog/" class="footer-link">Blog</a></nav></div><div><div class="footer-col-label">Legal</div><nav class="footer-links" aria-label="Legal"><a href="/privacy.html" class="footer-link">Privacy Policy</a><a href="/terms.html" class="footer-link">Terms of Service</a></nav></div></div></div><div class="footer-bottom"><span>© <span data-year></span> NextRoutine. All rights reserved.</span><span>Made for fathers who refuse to wing it.</span></div></footer>
 <script src="js/main.js" defer></script>
 </body>
 </html>

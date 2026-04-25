@@ -1,108 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — NextRoutine</title>
-  <meta name="description" content="How NextRoutine collects, uses, and protects your personal data. GDPR compliant, EU/Malta jurisdiction. Updated 2025.">
-  <link rel="canonical" href="https://nextroutine.com/privacy">
-  <meta property="og:title" content="Privacy Policy — NextRoutine"><meta property="og:description" content="How NextRoutine handles your data. GDPR compliant, Malta jurisdiction."><meta property="og:url" content="https://nextroutine.com/privacy"><meta property="og:type" content="website"><meta property="og:site_name" content="NextRoutine"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Privacy Policy — NextRoutine"><meta name="twitter:description" content="GDPR-compliant privacy policy for NextRoutine.">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0F1117">
+<title>Privacy Policy — NextRoutine</title>
+<meta name="description" content="How NextRoutine collects, uses, and protects your personal data. GDPR compliant. EU/Malta jurisdiction. Plain English.">
+<link rel="canonical" href="https://nextroutine-one.vercel.app/privacy.html">
+<meta property="og:title" content="Privacy Policy — NextRoutine">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nextroutine-one.vercel.app/privacy.html">
+<meta property="og:site_name" content="NextRoutine">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.legal-header{padding:calc(var(--nav-h)+64px) 0 48px;background:var(--bg-alt)}
+.legal-header h1{font-size:42px;margin-bottom:8px}
+.legal-updated{font-size:14px;color:var(--text-muted)}
+.legal-body{padding:var(--section-py) 0;max-width:760px;margin:0 auto}
+.legal-body h2{font-size:24px;color:var(--text-primary);margin:48px 0 12px;padding-top:8px}
+.legal-body h2:first-of-type{margin-top:0}
+.legal-body p{font-size:18px;color:var(--text-secondary);line-height:1.85;margin-bottom:16px}
+.legal-body ul{margin:0 0 20px;padding:0}
+.legal-body li{font-size:17px;color:var(--text-secondary);line-height:1.75;margin-bottom:8px;padding-left:20px;position:relative}
+.legal-body li::before{content:'•';position:absolute;left:0;color:var(--green-bright)}
+.legal-body a{color:var(--green-bright);text-decoration:underline}
+.legal-body a:hover{color:var(--gold)}
+.legal-body strong{color:var(--text-primary);font-weight:600}
+.legal-toc{background:var(--bg-surface);border:1px solid var(--border);border-radius:12px;padding:24px 28px;margin-bottom:48px}
+.legal-toc-title{font-family:var(--font-heading);font-size:14px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
+.legal-toc a{display:block;font-size:15px;color:var(--text-secondary);line-height:2;text-decoration:none;transition:color .15s ease}
+.legal-toc a:hover{color:var(--text-primary)}
+.processors-table{width:100%;border-collapse:collapse;margin:16px 0 24px;font-size:15px}
+.processors-table th{text-align:left;padding:10px 14px;background:var(--bg-surface);color:var(--text-muted);font-family:var(--font-heading);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid var(--border)}
+.processors-table td{padding:10px 14px;color:var(--text-secondary);border-bottom:1px solid var(--border)}
+@media(max-width:768px){.legal-header h1{font-size:32px}.legal-body p{font-size:16px}.legal-body li{font-size:15px}.processors-table{font-size:13px}}
+</style>
 </head>
 <body>
-<nav class="nav scrolled" role="navigation" aria-label="Main navigation">
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
-    <a href="/" class="nav-logo" aria-label="NextRoutine home"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="5" r="1.5" fill="#D4A853"/></svg>NextRoutine</a>
-    <div class="nav-cta"><a href="/" class="btn btn-secondary btn-sm">← Back</a></div>
+    <a href="/" class="nav-brand" aria-label="NextRoutine home"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="5" r="1.5" fill="#D4A853"/></svg>NextRoutine</a>
+    <div class="nav-links" role="list">
+      <a href="/dad-track.html" class="nav-link" role="listitem">For Fathers</a>
+      <a href="/morning-routine.html" class="nav-link" role="listitem">Morning</a>
+      <a href="/sleep-better.html" class="nav-link" role="listitem">Sleep</a>
+      <a href="/screen-time.html" class="nav-link" role="listitem">Screen Time</a>
+      <a href="/pricing.html" class="nav-link" role="listitem">Pricing</a>
+    </div>
+    <div class="nav-actions">
+      <a href="/pricing.html" class="nav-signin">Sign In</a>
+      <a href="/#free-signup" class="btn btn-primary btn-sm">Get Started Free →</a>
+    </div>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
-<main>
-<section class="legal-section">
+<div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+  <button class="nav-overlay-close" aria-label="Close menu">✕</button>
+  <nav class="nav-overlay-links" aria-label="Mobile navigation">
+    <a href="/dad-track.html" class="nav-overlay-link">For Fathers</a>
+    <a href="/morning-routine.html" class="nav-overlay-link">Morning</a>
+    <a href="/sleep-better.html" class="nav-overlay-link">Sleep</a>
+    <a href="/screen-time.html" class="nav-overlay-link">Screen Time</a>
+    <a href="/pricing.html" class="nav-overlay-link">Pricing</a>
+    <a href="/#free-signup" class="btn btn-primary btn-full" style="margin-top:24px;">Get Started Free →</a>
+  </nav>
+</div>
+
+<header class="legal-header">
   <div class="container">
-    <div class="legal-content">
-      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="breadcrumb-sep" aria-hidden="true">›</span><span class="breadcrumb-current">Privacy Policy</span></nav>
-      <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: January 2025 · NextRoutine Ltd, Malta</p>
+    <h1>Privacy Policy</h1>
+    <p class="legal-updated">Last updated: January 2025 · NextRoutine Ltd, Malta</p>
+  </div>
+</header>
 
-      <h2>1. Who We Are</h2>
-      <p>NextRoutine ("we," "us," "our") is operated by NextRoutine Ltd, registered in Malta. We provide daily routine plans and content for new and expectant fathers via nextroutine.com. Contact us at <a href="mailto:privacy@nextroutine.com">privacy@nextroutine.com</a>.</p>
+<main>
+  <div class="container">
+    <div class="legal-body">
 
-      <h2>2. What Data We Collect</h2>
-      <p>We collect only what we need to deliver our service:</p>
+      <div class="legal-toc">
+        <div class="legal-toc-title">Contents</div>
+        <a href="#who">1. Who we are</a>
+        <a href="#what">2. What data we collect</a>
+        <a href="#why">3. How and why we use your data</a>
+        <a href="#email">4. Email and newsletter</a>
+        <a href="#payments">5. Payments (Stripe)</a>
+        <a href="#cookies">6. Cookies and analytics (GA4)</a>
+        <a href="#affiliates">7. Affiliate links and tracking</a>
+        <a href="#processors">8. Third-party processors</a>
+        <a href="#rights">9. Your rights under GDPR</a>
+        <a href="#retention">10. Data retention</a>
+        <a href="#security">11. Data security</a>
+        <a href="#children">12. Children's data</a>
+        <a href="#transfers">13. International transfers</a>
+        <a href="#authority">14. Supervisory authority</a>
+        <a href="#changes">15. Changes to this policy</a>
+        <a href="#contact">16. Contact</a>
+      </div>
+
+      <h2 id="who">1. Who We Are</h2>
+      <p>NextRoutine is operated by NextRoutine Ltd, a company registered in Malta. We provide daily routine plans, habit systems, and email content for new and expectant fathers via nextroutine.com.</p>
+      <p><strong>Data controller:</strong> NextRoutine Ltd<br>
+      <strong>Registered address:</strong> [YOUR REGISTERED ADDRESS], Malta<br>
+      <strong>Company number:</strong> [YOUR COMPANY NUMBER]<br>
+      <strong>Contact:</strong> <a href="mailto:privacy@nextroutine.com">privacy@nextroutine.com</a></p>
+
+      <h2 id="what">2. What Data We Collect</h2>
+      <p>We collect only what we need to deliver the service. Here is every category of personal data we process:</p>
       <ul>
-        <li><strong>Email address</strong> — when you subscribe to the free newsletter or create a Pro account.</li>
-        <li><strong>Payment information</strong> — processed entirely by Stripe. We never see or store your card details.</li>
-        <li><strong>Analytics data</strong> — page views, session duration, and referral sources via Google Analytics 4 (only after you accept cookies).</li>
-        <li><strong>Local storage</strong> — quiz results and email submission state stored in your browser only, never sent to our servers.</li>
+        <li><strong>Email address</strong> — when you subscribe to the free newsletter, sign up for Pro, or contact us.</li>
+        <li><strong>Payment information</strong> — processed entirely by Stripe. We never see, receive, or store your card number, expiry date, or CVV. We receive only a confirmation of payment status and your Stripe customer ID.</li>
+        <li><strong>Analytics data</strong> — page views, session duration, approximate location (country level), device type, and referral source via Google Analytics 4. Only collected after you accept analytics cookies.</li>
+        <li><strong>Local storage data</strong> — cookie consent preference, email submission state, and quiz results stored in your browser. This data never leaves your device.</li>
       </ul>
+      <p>We do not collect your name, phone number, physical address, or any data beyond what is listed above.</p>
 
-      <h2>3. How We Use Your Data</h2>
+      <h2 id="why">3. How and Why We Use Your Data</h2>
+      <p>Every use of your data has a lawful basis under GDPR:</p>
       <ul>
-        <li>To send you the weekly NextRoutine newsletter and starter pack (lawful basis: consent).</li>
-        <li>To manage your Pro subscription and process payments (lawful basis: contract).</li>
-        <li>To understand how visitors use the site and improve content (lawful basis: legitimate interest — only after cookie consent).</li>
-        <li>We never sell your data. We never share your data with advertisers.</li>
+        <li><strong>To send the weekly newsletter and starter pack</strong> — lawful basis: your consent, given when you enter your email address and submit the form.</li>
+        <li><strong>To manage your Pro subscription and process payments</strong> — lawful basis: performance of a contract (the subscription you purchased).</li>
+        <li><strong>To understand how visitors use the site and improve content</strong> — lawful basis: legitimate interest, balanced against your rights. Analytics are only active after you explicitly accept cookies.</li>
+        <li><strong>To respond to your emails</strong> — lawful basis: legitimate interest (you contacted us and expect a response).</li>
       </ul>
+      <p>We never sell your data. We never share your data with advertisers. We never use your email for purposes other than what you signed up for.</p>
 
-      <h2>4. Email Service Provider</h2>
-      <p>We use ConvertKit (or Mailchimp) to send email. Your email address is stored on their servers. Both are GDPR-compliant processors with Data Processing Agreements in place. You can unsubscribe from any email using the unsubscribe link at the bottom of every message.</p>
+      <h2 id="email">4. Email and Newsletter</h2>
+      <p>We use a third-party email service provider (ConvertKit or Mailchimp) to send the NextRoutine newsletter and transactional emails. Your email address is stored on their servers under a Data Processing Agreement.</p>
+      <p>You can unsubscribe from any email using the unsubscribe link at the bottom of every message. Upon unsubscribing, your email is removed from our active mailing list within 48 hours and fully deleted from the provider within 30 days.</p>
+      <p>We do not send unsolicited emails. We do not share your email with other companies. We do not add your email to any list you did not explicitly subscribe to.</p>
 
-      <h2>5. Stripe — Payment Processing</h2>
-      <p>Pro subscriptions are processed by Stripe, Inc. Stripe is PCI-DSS Level 1 certified. Your payment card data is processed and stored by Stripe — never by NextRoutine. Stripe's privacy policy: <a href="https://stripe.com/privacy" target="_blank" rel="noopener">stripe.com/privacy</a>.</p>
+      <h2 id="payments">5. Payments (Stripe)</h2>
+      <p>Pro and Pro+ subscriptions are processed by Stripe, Inc. Stripe is PCI-DSS Level 1 certified — the highest level of payment security certification.</p>
+      <p>When you enter your card details at checkout, that data goes directly to Stripe. NextRoutine never sees, processes, or stores your card number. We receive only:</p>
+      <ul>
+        <li>A Stripe customer ID (a random string, not your card number)</li>
+        <li>Confirmation of payment status (succeeded, failed, refunded)</li>
+        <li>Subscription status (active, cancelled, trialling)</li>
+      </ul>
+      <p>Stripe's privacy policy: <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer">stripe.com/privacy</a></p>
 
-      <h2>6. Cookies and Analytics</h2>
+      <h2 id="cookies">6. Cookies and Analytics (GA4)</h2>
       <p>We use two categories of cookies:</p>
+      <p><strong>Strictly necessary (always active):</strong> Cookie consent preference stored in your browser's localStorage. This is not a tracking cookie. It remembers whether you accepted or declined analytics so we do not ask you again on every visit.</p>
+      <p><strong>Analytics (optional — off by default):</strong> Google Analytics 4. This is only loaded after you click "Accept" on our cookie consent banner. GA4 collects:</p>
       <ul>
-        <li><strong>Strictly necessary:</strong> Cookie consent preference stored in localStorage. No tracking.</li>
-        <li><strong>Analytics (optional):</strong> Google Analytics 4 — only loaded after you click "Accept" on our cookie banner. GA4 anonymises IP addresses. Data retention: 14 months. You can withdraw consent at any time via the Cookie Settings link in the footer.</li>
+        <li>Pages you visit and how long you spend on them</li>
+        <li>Your approximate country (IP address is anonymised by GA4)</li>
+        <li>Device type and browser</li>
+        <li>How you found the site (search engine, direct, social media)</li>
       </ul>
+      <p>GA4 data retention is set to 14 months. You can withdraw consent at any time using the Cookie Settings link in the footer of every page. Withdrawing consent stops all analytics tracking immediately.</p>
 
-      <h2>7. Your Rights Under GDPR</h2>
-      <p>As a resident of the EU/EEA you have the right to:</p>
+      <h2 id="affiliates">7. Affiliate Links and Tracking</h2>
+      <p>Some pages on nextroutine.com contain affiliate links to products we recommend. When you click an affiliate link and make a purchase, the merchant may set a cookie on your device to track the referral, and we may earn a commission at no additional cost to you.</p>
+      <p>We do not control the cookies set by affiliate merchants. Each merchant has their own cookie and privacy policy. Affiliate relationships never influence our editorial recommendations — we only recommend products we would use ourselves.</p>
+      <p>All affiliate links are disclosed with a visible statement near the link.</p>
+
+      <h2 id="processors">8. Third-Party Processors</h2>
+      <p>We share your data only with processors who need it to deliver our service. Here is every third party that may process your data:</p>
+      <table class="processors-table">
+        <thead>
+          <tr><th>Processor</th><th>Purpose</th><th>Data shared</th><th>Location</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Stripe</td><td>Payment processing</td><td>Payment details (direct)</td><td>US (SCCs in place)</td></tr>
+          <tr><td>ConvertKit / Mailchimp</td><td>Email delivery</td><td>Email address</td><td>US (SCCs in place)</td></tr>
+          <tr><td>Google (GA4)</td><td>Analytics</td><td>Anonymised usage data</td><td>US (SCCs in place)</td></tr>
+          <tr><td>Vercel</td><td>Website hosting</td><td>Server logs (IP, timestamp)</td><td>US/EU (edge nodes)</td></tr>
+        </tbody>
+      </table>
+      <p>All processors operate under Standard Contractual Clauses (SCCs) or equivalent GDPR-approved transfer mechanisms. We have Data Processing Agreements in place with each processor.</p>
+
+      <h2 id="rights">9. Your Rights Under GDPR</h2>
+      <p>If you are in the EU/EEA, you have the following rights over your personal data:</p>
       <ul>
-        <li><strong>Access</strong> — request a copy of the data we hold about you.</li>
+        <li><strong>Access</strong> — request a copy of all data we hold about you.</li>
         <li><strong>Rectification</strong> — ask us to correct inaccurate data.</li>
         <li><strong>Erasure</strong> — ask us to delete your data ("right to be forgotten").</li>
-        <li><strong>Portability</strong> — receive your data in a machine-readable format.</li>
-        <li><strong>Object</strong> — object to processing based on legitimate interests.</li>
-        <li><strong>Withdraw consent</strong> — unsubscribe from emails at any time; withdraw cookie consent via footer link.</li>
+        <li><strong>Portability</strong> — receive your data in a machine-readable format (CSV or JSON).</li>
+        <li><strong>Restriction</strong> — ask us to stop processing your data while a complaint is resolved.</li>
+        <li><strong>Object</strong> — object to processing based on our legitimate interests.</li>
+        <li><strong>Withdraw consent</strong> — unsubscribe from emails at any time; withdraw cookie consent via the footer link.</li>
       </ul>
-      <p>To exercise any right, email <a href="mailto:privacy@nextroutine.com">privacy@nextroutine.com</a>. We respond within 30 days.</p>
+      <p>To exercise any of these rights, email <a href="mailto:privacy@nextroutine.com">privacy@nextroutine.com</a>. We will respond within 30 days. There is no fee for exercising your rights unless requests are manifestly unfounded or excessive.</p>
 
-      <h2>8. Data Retention</h2>
+      <h2 id="retention">10. Data Retention</h2>
       <ul>
-        <li>Email subscribers: data held while you remain subscribed. Deleted within 30 days of unsubscribe.</li>
-        <li>Pro subscribers: account data held for the duration of subscription plus 30 days after cancellation.</li>
-        <li>Payment records: retained for 7 years as required by EU financial regulations.</li>
-        <li>Analytics data: 14 months (Google Analytics 4 default).</li>
+        <li><strong>Email subscribers:</strong> data held while you remain subscribed. Fully deleted within 30 days of unsubscribing.</li>
+        <li><strong>Pro subscribers:</strong> account data held for the duration of your subscription plus 30 days after cancellation.</li>
+        <li><strong>Payment records:</strong> retained for 7 years as required by EU financial record-keeping regulations.</li>
+        <li><strong>Analytics data:</strong> 14 months (GA4 configuration).</li>
+        <li><strong>Cookie consent preference:</strong> 180 days in your browser's localStorage. After 180 days we ask again.</li>
       </ul>
 
-      <h2>9. Data Security</h2>
-      <p>The site is served over HTTPS/TLS via Vercel. Email is transmitted via encrypted channels. Stripe handles all payment data with PCI-DSS Level 1 certification. We do not store payment card data on our servers.</p>
+      <h2 id="security">11. Data Security</h2>
+      <p>The site is served over HTTPS/TLS via Vercel's global edge network. Email is transmitted via encrypted channels (TLS in transit). Stripe handles all payment data with PCI-DSS Level 1 certification. We do not store payment card data on any server we control. Access to our email provider account is protected by two-factor authentication.</p>
 
-      <h2>10. Children's Data</h2>
-      <p>Our service is intended for adults aged 18 and over. We do not knowingly collect data from anyone under 16. If we discover we have done so, we will delete it immediately. Contact <a href="mailto:privacy@nextroutine.com">privacy@nextroutine.com</a> if you believe a minor has submitted data.</p>
+      <h2 id="children">12. Children's Data</h2>
+      <p>NextRoutine is intended for adults aged 18 and over. We do not knowingly collect data from anyone under 16. If we discover we have collected data from a child, we will delete it immediately. If you believe a minor has submitted data to us, contact <a href="mailto:privacy@nextroutine.com">privacy@nextroutine.com</a>.</p>
 
-      <h2>11. International Transfers</h2>
-      <p>Data may be processed outside the EU/EEA by our processors (Stripe, ConvertKit/Mailchimp, Google Analytics). All processors operate under Standard Contractual Clauses or equivalent GDPR transfer mechanisms.</p>
+      <h2 id="transfers">13. International Transfers</h2>
+      <p>Your data may be processed outside the EU/EEA by our processors (Stripe, ConvertKit/Mailchimp, Google Analytics, Vercel). All transfers are protected by Standard Contractual Clauses or equivalent GDPR-approved mechanisms. We do not transfer data to any country or organisation without appropriate safeguards.</p>
 
-      <h2>12. Supervisory Authority</h2>
-      <p>You have the right to lodge a complaint with the Malta Information and Data Protection Commissioner (IDPC) at <a href="https://idpc.org.mt" target="_blank" rel="noopener">idpc.org.mt</a>, or with your local supervisory authority if you are based outside Malta.</p>
+      <h2 id="authority">14. Supervisory Authority</h2>
+      <p>You have the right to lodge a complaint with the Malta Information and Data Protection Commissioner (IDPC) at <a href="https://idpc.org.mt" target="_blank" rel="noopener noreferrer">idpc.org.mt</a>, or with your local EU/EEA supervisory authority if you are based outside Malta.</p>
 
-      <h2>13. Changes to This Policy</h2>
-      <p>We will update this policy as our practices change. Significant changes will be communicated via email to subscribers. The current version is always available at nextroutine.com/privacy.</p>
+      <h2 id="changes">15. Changes to This Policy</h2>
+      <p>We update this policy when our practices change. Significant changes will be communicated by email to active subscribers at least 14 days before they take effect. The current version is always available at this URL.</p>
 
-      <h2>14. Contact</h2>
-      <p>For any privacy-related question: <a href="mailto:privacy@nextroutine.com">privacy@nextroutine.com</a></p>
+      <h2 id="contact">16. Contact</h2>
+      <p>For any privacy-related question or data request:<br>
+      <a href="mailto:privacy@nextroutine.com">privacy@nextroutine.com</a></p>
+      <p>We aim to respond to all privacy enquiries within 72 hours and to all formal GDPR requests within 30 days.</p>
+
     </div>
   </div>
-</section>
 </main>
+
 <footer class="footer" role="contentinfo">
-  <div class="container"><div class="footer-grid"><div><div class="footer-brand-logo"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="5" r="1.5" fill="#D4A853"/></svg>NextRoutine</div><p class="footer-tagline">Build the routine. Build the life.</p></div><div><div class="footer-col-label">Tracks</div><nav class="footer-links"><a href="/new-dad.html" class="footer-link">For New Dads</a><a href="/morning-routine.html" class="footer-link">Morning Routine</a><a href="/sleep-better.html" class="footer-link">Sleep Better</a><a href="/screen-time.html" class="footer-link">Screen Time</a></nav></div><div><div class="footer-col-label">Platform</div><nav class="footer-links"><a href="/newsletter.html" class="footer-link">Newsletter</a><a href="/pricing.html" class="footer-link">Pricing</a><a href="/blog/" class="footer-link">Blog</a></nav></div><div><div class="footer-col-label">Legal</div><nav class="footer-links"><a href="/privacy.html" class="footer-link">Privacy Policy</a><a href="/terms.html" class="footer-link">Terms of Service</a></nav></div></div></div>
-  <div class="footer-bottom"><span class="footer-copy">© <span data-year></span> NextRoutine. All rights reserved.</span></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="5" r="1.5" fill="#D4A853"/></svg>NextRoutine</div>
+        <p class="footer-tagline">Build the routine. Build the life.</p>
+      </div>
+      <div><div class="footer-col-label">Tracks</div><nav class="footer-links" aria-label="Tracks"><a href="/dad-track.html" class="footer-link">For Fathers</a><a href="/morning-routine.html" class="footer-link">Morning Routine</a><a href="/sleep-better.html" class="footer-link">Sleep Better</a><a href="/screen-time.html" class="footer-link">Screen Time</a></nav></div>
+      <div><div class="footer-col-label">Platform</div><nav class="footer-links" aria-label="Platform"><a href="/newsletter.html" class="footer-link">Newsletter</a><a href="/pricing.html" class="footer-link">Pricing</a><a href="/blog/" class="footer-link">Blog</a></nav></div>
+      <div><div class="footer-col-label">Legal</div><nav class="footer-links" aria-label="Legal"><a href="/privacy.html" class="footer-link">Privacy Policy</a><a href="/terms.html" class="footer-link">Terms of Service</a><button class="footer-link" style="background:none;border:none;padding:0;text-align:left;cursor:pointer;" onclick="document.getElementById('cookie-banner').classList.add('visible');">Cookie Settings</button></nav></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><span>© <span data-year></span> NextRoutine. All rights reserved.</span><span>Made for fathers who refuse to wing it.</span></div>
 </footer>
 <script src="js/main.js" defer></script>
 </body>
