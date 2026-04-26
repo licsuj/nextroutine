@@ -5,88 +5,56 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#0F1117">
-<title>Morning Routine for New Dads — Build the Habit That Survives Week One</title>
-<meta name="description" content="The best morning routine for new dads. Three blueprints — 10, 30, and 60 minutes. Science-backed, sleep-proof, and built to run when everything else is falling apart.">
-<link rel="canonical" href="https://nextroutine.com/morning-routine.html">
-<meta property="og:title" content="Morning Routine for New Dads — Build the Habit That Survives Week One">
-<meta property="og:description" content="Three morning routine blueprints for new dads. 10-min survival mode to 60-min full protocol.">
-<meta property="og:url" content="https://nextroutine.com/morning-routine.html">
+<title>Morning Routine for New Dads — NextRoutine</title>
+<meta name="description" content="A morning routine built for broken sleep. Three versions: 10, 30, and 60 minutes. Start with the one that matches your worst morning.">
+<link rel="canonical" href="https://nextroutine-one.vercel.app/morning-routine">
+<meta property="og:title" content="Morning Routine for New Dads — NextRoutine">
+<meta property="og:description" content="A morning routine built for broken sleep. Three versions: 10, 30, and 60 minutes.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://nextroutine.com/assets/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the best morning routine for a new dad?",
-      "acceptedAnswer": {"@type": "Answer", "text": "The best morning routine for a new dad is the one that actually runs on broken sleep. In weeks 1–8, that means a 10-minute survival protocol: one minute of intention setting, five minutes of light movement, four minutes reviewing one priority. As sleep stabilises, the 30-minute and 60-minute versions expand into journalling, longer movement, and deeper planning. Start with the minimum and grow from there."}
-    },
-    {
-      "@type": "Question",
-      "name": "How early should a morning routine start?",
-      "acceptedAnswer": {"@type": "Answer", "text": "The goal is not a specific time — it is consistency before the household wakes. Even 15 minutes before your partner or child is enough to establish the physiological and psychological separation that makes a morning routine effective. The cortisol awakening response peaks in the first 30–45 minutes of waking regardless of the clock time."}
-    },
-    {
-      "@type": "Question",
-      "name": "Should you start your morning routine with your phone?",
-      "acceptedAnswer": {"@type": "Answer", "text": "No. This is the single most common and damaging morning routine mistake. Checking your phone within the first 20 minutes of waking hijacks the cortisol awakening response — the natural alertness window your brain generates on waking — and replaces intentional direction with reactive input. The result is a morning that feels off before it has started."}
-    },
-    {
-      "@type": "Question",
-      "name": "How do I build a morning routine I can actually stick to?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Start with the minimum viable version — 10 minutes — and treat it as non-negotiable before adding to it. The failure mode for most morning routines is designing for your best-case day rather than your worst. Build for the morning after a bad night, and let the routine grow from there as your capacity grows. Environment design matters more than motivation: lay out your clothes the night before, keep your phone charging away from the bed, and set a single reminder."}
-    },
-    {
-      "@type": "Question",
-      "name": "What should a morning routine for productivity include?",
-      "acceptedAnswer": {"@type": "Answer", "text": "A productive morning routine should include: a no-phone window of at least 10–20 minutes after waking; some form of physical movement — even five minutes of bodyweight exercise activates the prefrontal cortex; a brief planning step where you identify one priority for the day; and if time allows, journalling or quiet reflection. The 23-minute window after waking is when the brain is most plastic and most receptive to intentional direction."}
-    }
-  ]
-}
-</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/cookie-consent.css">
 <style>
-.blueprint-card { background: var(--bg-surface); border: 1px solid var(--border); border-radius: 16px; padding: 36px; transition: var(--transition); position: relative; overflow: hidden; }
-.blueprint-card:hover { border-color: var(--green); box-shadow: 0 8px 32px rgba(45,106,79,0.1); }
-.blueprint-card.featured { border-color: var(--green); }
-.blueprint-badge { position: absolute; top: 20px; right: 20px; background: var(--gold); color: var(--bg-base); font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 4px 10px; border-radius: 20px; }
-.blueprint-duration { font-family: var(--font-heading); font-size: 48px; font-weight: 800; color: var(--gold); line-height: 1; margin-bottom: 4px; }
-.blueprint-label { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--text-muted); margin-bottom: 20px; }
-.blueprint-desc { font-size: 15px; color: var(--text-secondary); margin-bottom: 28px; line-height: 1.65; }
-.time-block { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 10px; }
-.time-block-time { font-size: 13px; font-weight: 700; color: var(--gold); min-width: 44px; padding-top: 2px; }
-.time-block-label { font-size: 14px; color: var(--text-secondary); line-height: 1.5; }
-.mistake-card { background: var(--bg-surface); border: 1px solid var(--border); border-radius: 14px; padding: 32px; }
-.mistake-number { font-family: var(--font-heading); font-size: 40px; font-weight: 800; color: var(--border-raised); line-height: 1; margin-bottom: 16px; }
-.mistake-tag { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); background: var(--gold-muted); padding: 3px 10px; border-radius: 20px; display: inline-block; margin-bottom: 12px; }
-.template-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.template-card { background: var(--bg-surface); border: 1px solid var(--border); border-radius: 14px; padding: 28px; }
-.template-card.locked { opacity: .8; }
-.template-status { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; display: inline-block; margin-bottom: 14px; }
-.template-status.free { color: var(--green-bright); background: rgba(64,145,108,.12); }
-.template-status.pro { color: var(--gold); background: var(--gold-muted); }
-.faq-list { border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
-.faq-item { border-bottom: 1px solid var(--border); }
-.faq-item:last-child { border-bottom: none; }
-.faq-q { width: 100%; text-align: left; padding: 22px 28px; font-family: var(--font-heading); font-size: 16px; font-weight: 600; color: var(--text-primary); background: var(--bg-surface); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; transition: var(--transition); }
-.faq-q:hover { background: var(--bg-raised); color: var(--gold); }
-.faq-icon { width: 22px; height: 22px; flex-shrink: 0; color: var(--text-muted); transition: transform .25s ease; }
-.faq-item.open .faq-q { color: var(--gold); }
-.faq-item.open .faq-icon { transform: rotate(45deg); color: var(--gold); }
-.faq-a { max-height: 0; overflow: hidden; transition: max-height .35s ease; background: var(--bg-alt); }
-.faq-item.open .faq-a { max-height: 280px; }
-.faq-a-inner { padding: 18px 28px 26px; font-size: 15px; color: var(--text-secondary); line-height: 1.75; }
-@media (max-width: 768px) {
-  .template-row { grid-template-columns: 1fr; }
-}
+.mr-hero{padding:160px 24px 120px;text-align:center}
+.mr-hero-inner{max-width:720px;margin:0 auto}
+.mr-hero h1{font-size:56px;line-height:1.15;letter-spacing:-0.035em}
+.mr-hero h1 .green{color:var(--green-bright)}
+.mr-hero-sub{font-size:20px;color:var(--text-secondary);max-width:520px;margin:24px auto 0;line-height:1.7}
+.mr-science{padding:100px 24px;background:var(--bg-alt)}
+.mr-science-inner{max-width:640px;margin:0 auto;text-align:center}
+.mr-science-body{font-size:18px;color:var(--text-secondary);line-height:1.8;margin-top:24px;max-width:560px;margin-left:auto;margin-right:auto}
+.mr-science-highlight{background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--card-radius);padding:28px 32px;margin-top:40px;display:flex;align-items:flex-start;gap:16px;text-align:left;max-width:540px;margin-left:auto;margin-right:auto}
+.mr-science-highlight-icon{font-size:24px;flex-shrink:0;margin-top:2px}
+.mr-science-highlight p{font-size:16px;color:var(--text-primary);line-height:1.65}
+.mr-science-highlight strong{color:var(--gold)}
+.mr-blueprints{padding:100px 24px}
+.mr-bp-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px}
+.mr-bp-card{background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--card-radius);padding:var(--card-px);display:flex;flex-direction:column;transition:all 0.25s var(--ease)}
+.mr-bp-card:hover{border-color:rgba(255,255,255,0.1);box-shadow:0 16px 48px rgba(0,0,0,0.4);transform:translateY(-2px)}
+.mr-bp-card.featured{border-color:rgba(45,106,79,0.4)}
+.mr-bp-time{font-family:var(--font-heading);font-size:48px;font-weight:700;color:var(--green-bright);letter-spacing:-0.03em;line-height:1}
+.mr-bp-time span{font-size:20px;font-weight:400;color:var(--text-muted)}
+.mr-bp-name{font-family:var(--font-heading);font-size:14px;font-weight:600;color:var(--gold);text-transform:uppercase;letter-spacing:0.08em;margin-top:12px}
+.mr-bp-desc{font-size:16px;color:var(--text-secondary);line-height:1.65;margin-top:12px;flex:1}
+.mr-bp-reqs{font-size:13px;color:var(--text-muted);margin-top:20px;padding-top:16px;border-top:1px solid var(--border)}
+.mr-free-section{padding:100px 24px;background:var(--bg-green)}
+.mr-free-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;max-width:900px;margin:0 auto}
+.mr-free-card{background:rgba(15,17,23,0.4);border:1px solid rgba(255,255,255,0.08);border-radius:var(--card-radius);padding:var(--card-px)}
+.mr-free-card h3{font-size:22px;margin-bottom:6px}
+.mr-free-card-sub{font-size:14px;color:var(--text-green);margin-bottom:20px}
+.mr-free-card-items{display:flex;flex-direction:column;gap:12px;margin-bottom:24px}
+.mr-free-card-item{display:flex;gap:10px;font-size:15px;color:var(--text-primary);line-height:1.5}
+.mr-free-card-item svg{flex-shrink:0;margin-top:3px}
+.mr-decision{padding:100px 24px;text-align:center}
+.mr-decision-inner{max-width:600px;margin:0 auto}
+.mr-decision-sub{font-size:18px;color:var(--text-secondary);margin-top:16px;line-height:1.7;max-width:460px;margin-left:auto;margin-right:auto}
+.mr-decision-form{max-width:420px;margin:40px auto 0;display:flex;flex-direction:column;gap:12px}
+.mr-decision-form input{padding:15px 18px;background:var(--bg-surface);border:1px solid var(--border-visible);border-radius:10px;color:var(--text-primary);font-size:16px;outline:none}
+.mr-decision-form input:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(45,106,79,0.15)}
+@media(max-width:768px){.mr-hero h1{font-size:36px}.mr-hero{padding:calc(var(--nav-h)+64px) 24px 80px}.mr-science,.mr-blueprints,.mr-free-section,.mr-decision{padding:80px 24px}.mr-bp-cards{grid-template-columns:1fr}.mr-free-grid{grid-template-columns:1fr}.mr-science-highlight{flex-direction:column}}
 </style>
 </head>
 <body>
@@ -94,279 +62,153 @@
 <!-- NAV -->
 <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
-    <a href="/" class="nav-brand" aria-label="NextRoutine home">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="5" r="1.5" fill="#D4A853"/></svg>
-      NextRoutine
-    </a>
+    <a href="/" class="nav-brand" aria-label="NextRoutine home"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="5" r="1.5" fill="#D4A853"/></svg>NextRoutine</a>
     <div class="nav-links" role="list">
       <a href="/new-dad.html" class="nav-link" role="listitem">For Fathers</a>
-      <a href="/morning-routine.html" class="nav-link active" role="listitem">Morning</a>
+      <a href="/morning-routine.html" class="nav-link" role="listitem" style="color:var(--text-primary)">Morning</a>
       <a href="/sleep-better.html" class="nav-link" role="listitem">Sleep</a>
       <a href="/screen-time.html" class="nav-link" role="listitem">Screen Time</a>
-      <a href="/blog/" class="nav-link" role="listitem">Blog</a>
       <a href="/pricing.html" class="nav-link" role="listitem">Pricing</a>
     </div>
     <div class="nav-actions">
-      <a href="/pricing.html" class="btn btn-ghost btn-sm">Sign In</a>
-      <a href="#morning-signup" class="btn btn-primary btn-sm">Start Free</a>
+      <a href="/pricing.html" class="nav-signin">Sign In</a>
+      <a href="#mr-cta" class="btn btn-primary btn-sm">Get Started Free →</a>
     </div>
-    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
 <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
   <button class="nav-overlay-close" aria-label="Close menu">✕</button>
   <nav class="nav-overlay-links" aria-label="Mobile navigation">
     <a href="/new-dad.html" class="nav-overlay-link">For Fathers</a>
-    <a href="/morning-routine.html" class="nav-overlay-link active">Morning Routine</a>
-    <a href="/sleep-better.html" class="nav-overlay-link">Sleep Better</a>
+    <a href="/morning-routine.html" class="nav-overlay-link">Morning</a>
+    <a href="/sleep-better.html" class="nav-overlay-link">Sleep</a>
     <a href="/screen-time.html" class="nav-overlay-link">Screen Time</a>
-    <a href="/blog/" class="nav-overlay-link">Blog</a>
     <a href="/pricing.html" class="nav-overlay-link">Pricing</a>
-    <a href="#morning-signup" class="btn btn-primary" style="margin-top:16px;">Start Free</a>
+    <a href="#mr-cta" class="btn btn-primary btn-full" style="margin-top:24px;">Get Started Free →</a>
   </nav>
 </div>
 
-<!-- HERO -->
-<section style="padding-top: calc(var(--nav-h) + 80px); padding-bottom: 100px;" aria-labelledby="morning-h1">
-  <div class="container" style="max-width:820px; text-align:center;">
-    <div class="label" style="margin-bottom:20px;">Morning Routine Track</div>
-    <h1 id="morning-h1">The morning routine for new dads that actually survives week one.</h1>
-    <p style="font-size:20px; margin-top:24px; margin-bottom:40px; max-width:620px; margin-left:auto; margin-right:auto;">Three blueprints — 10, 30, and 60 minutes. Each built to run on whatever sleep you got last night. Start with the minimum, grow when you're ready.</p>
-    <form class="hero-form" id="morning-hero-form" novalidate>
-      <input type="email" name="email" placeholder="dad@example.com" autocomplete="email" required aria-label="Email address">
-      <button type="submit" class="btn btn-primary">Get Free Protocol →</button>
-    </form>
-    <div class="form-error" id="morning-hero-error" role="alert" aria-live="polite">Please enter a valid email address.</div>
-    <div class="form-success" id="morning-hero-success" aria-live="polite">
-      <div class="form-success-icon" aria-hidden="true">✓</div>
-      <div><div class="form-success-title">Protocol sent.</div><div class="form-success-sub">Check your inbox — <a href="/new-dad.html" style="color:var(--gold);">explore the full dad track →</a></div></div>
+
+<!-- SECTION 1 — HERO -->
+<section class="mr-hero" aria-labelledby="mr-h1">
+  <div class="mr-hero-inner">
+    <div class="pill pill-green" style="margin-bottom:32px;">Morning Routine Track</div>
+    <h1 id="mr-h1">The first 23 minutes decide<br><span class="green">the rest of your day.</span></h1>
+    <p class="mr-hero-sub">Most fathers give those minutes to their phone before their feet touch the floor. There is a better use for them.</p>
+    <div style="margin-top:40px;">
+      <a href="#mr-cta" class="btn btn-primary">Get the free protocol →</a>
     </div>
-    <p style="font-size:13px; color:var(--text-muted); margin-top:14px;">Free protocol + weekly routine email. No card needed.</p>
   </div>
 </section>
 
-<!-- SCIENCE SECTION -->
-<section style="padding: var(--section-py) 0; background: var(--bg-alt);" aria-labelledby="science-heading">
+
+<!-- SECTION 2 — THE SCIENCE (condensed) -->
+<section class="mr-science" aria-labelledby="mr-science-h2">
+  <div class="mr-science-inner">
+    <h2 id="mr-science-h2">Your brain has a 23-minute window.</h2>
+    <p class="mr-science-body">In the first 20–30 minutes after waking, your body produces a cortisol spike called the cortisol awakening response. It drives your alertness, focus, and emotional control for the rest of the day. What you do in this window — not what you do at the gym, not what you eat — sets your neurological baseline until evening.</p>
+
+    <div class="mr-science-highlight fade-in">
+      <div class="mr-science-highlight-icon">📱</div>
+      <p>Checking your phone in this window <strong>hijacks the entire response</strong>. You hand the most powerful 23 minutes of your day to someone else's agenda. The morning feels off before it starts — because neurologically, it is.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION 3 — THE BLUEPRINTS (3 cards, concise) -->
+<section class="mr-blueprints section" aria-labelledby="mr-bp-h2">
   <div class="container">
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;">
-      <div>
-        <div class="label" style="margin-bottom:20px;">The science</div>
-        <h2 id="science-heading" style="font-size:38px; margin-bottom:24px;">What a morning routine actually does to your brain.</h2>
-        <p style="font-size:16px; line-height:1.8; margin-bottom:20px;">In the first 20–30 minutes after waking, your brain undergoes a surge of cortisol — the cortisol awakening response (CAR). This is not stress cortisol. It is the neurochemical signal that governs alertness, mood regulation, and cognitive readiness for the day ahead.</p>
-        <p style="font-size:16px; line-height:1.8; margin-bottom:20px;">The CAR peaks within 20–30 minutes and determines your baseline functioning for the next 12–14 hours. What you do in this window shapes the neurological platform you operate on all day. This is not a metaphor — it is measurable.</p>
-        <p style="font-size:16px; line-height:1.8; margin-bottom:20px;">The problem: checking your phone in the first 20 minutes hijacks this response entirely. You replace an internally-directed cortisol surge — one primed for proactive action — with a reactive, externally-driven one. The morning feels off before it has started. And as a new dad on broken sleep, you cannot afford to lose the 23-minute window that actually works in your favour.</p>
-        <p style="font-size:16px; line-height:1.8;">Movement in the first 30 minutes activates the prefrontal cortex, the region responsible for planning, emotion regulation, and decision-making — the three things most under pressure in new fatherhood. Even five minutes of bodyweight exercise is enough to trigger this activation.</p>
+    <div class="section-header">
+      <h2 id="mr-bp-h2">Three versions. Pick your worst morning.</h2>
+      <p>Start with the one that matches your reality right now. Not where you want to be.</p>
+    </div>
+
+    <div class="mr-bp-cards">
+      <div class="mr-bp-card fade-in">
+        <div class="mr-bp-time">10<span> min</span></div>
+        <div class="mr-bp-name">Survival Protocol</div>
+        <div class="mr-bp-desc">Intention. Movement. One priority. Built for the morning after a three-hour night. No journalling, no gym, no pressure. Just the floor that keeps you functional.</div>
+        <div class="mr-bp-reqs">Works on 3 hours of sleep · No equipment</div>
       </div>
-      <div>
-        <div style="background:var(--bg-surface); border:1px solid var(--border); border-radius:16px; padding:36px;">
-          <div style="font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--text-muted); margin-bottom:24px;">The 23-minute window</div>
-          <div style="display:flex; flex-direction:column; gap:0;">
-            <div style="display:flex; gap:16px; padding:16px 0; border-bottom:1px solid var(--border);">
-              <div style="font-family:var(--font-heading); font-size:28px; font-weight:800; color:var(--gold); min-width:56px;">0</div>
-              <div><div style="font-weight:600; color:var(--text-primary); margin-bottom:4px;">Wake</div><div style="font-size:13px; color:var(--text-secondary);">Cortisol begins rising. Brain is in high-plasticity state.</div></div>
-            </div>
-            <div style="display:flex; gap:16px; padding:16px 0; border-bottom:1px solid var(--border);">
-              <div style="font-family:var(--font-heading); font-size:28px; font-weight:800; color:var(--gold); min-width:56px;">5'</div>
-              <div><div style="font-weight:600; color:var(--text-primary); margin-bottom:4px;">Move</div><div style="font-size:13px; color:var(--text-secondary);">5 minutes of movement activates the prefrontal cortex. Emotion regulation switches on.</div></div>
-            </div>
-            <div style="display:flex; gap:16px; padding:16px 0; border-bottom:1px solid var(--border);">
-              <div style="font-family:var(--font-heading); font-size:28px; font-weight:800; color:var(--gold); min-width:56px;">15'</div>
-              <div><div style="font-weight:600; color:var(--text-primary); margin-bottom:4px;">Set direction</div><div style="font-size:13px; color:var(--text-secondary);">Identify one priority. This step anchors the CAR to proactive intent — not reactive noise.</div></div>
-            </div>
-            <div style="display:flex; gap:16px; padding:16px 0;">
-              <div style="font-family:var(--font-heading); font-size:28px; font-weight:800; color:var(--gold); min-width:56px;">23'</div>
-              <div><div style="font-weight:600; color:var(--text-primary); margin-bottom:4px;">CAR peak</div><div style="font-size:13px; color:var(--text-secondary);">Maximum cortisol alertness. Your cognitive baseline for the day is now set. The window closes.</div></div>
-            </div>
-          </div>
-        </div>
+      <div class="mr-bp-card featured fade-in" data-delay="100">
+        <div class="pill pill-green" style="margin-bottom:12px;">Most popular</div>
+        <div class="mr-bp-time">30<span> min</span></div>
+        <div class="mr-bp-name">Standard Protocol</div>
+        <div class="mr-bp-desc">Walk, journal, plan. The full version most dads settle into once sleep improves. Adds depth without adding pressure. The sweet spot between survival and ambition.</div>
+        <div class="mr-bp-reqs">Requires 5+ hrs sleep · Months 3–6</div>
+      </div>
+      <div class="mr-bp-card fade-in" data-delay="200">
+        <div class="mr-bp-time">60<span> min</span></div>
+        <div class="mr-bp-name">Full Protocol</div>
+        <div class="mr-bp-desc">Exercise, read, write, plan. The complete morning for fathers operating at capacity. This is where your child starts learning what a morning looks like by watching you have one.</div>
+        <div class="mr-bp-reqs">Requires 6+ hrs sleep · Year 1+</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- THREE BLUEPRINTS -->
-<section style="padding: var(--section-py) 0;" aria-labelledby="blueprints-heading">
+
+<!-- SECTION 4 — WHAT YOU GET (free vs Pro, merged) -->
+<section class="mr-free-section" aria-labelledby="mr-free-h2">
   <div class="container">
-    <div class="section-header" style="text-align:center; margin-bottom:56px;">
-      <div class="label" style="margin-bottom:16px;">The blueprints</div>
-      <h2 id="blueprints-heading">Three versions. One for every stage.</h2>
-      <p style="max-width:520px; margin:20px auto 0; font-size:17px;">Pick the version that matches where you are now, not where you want to be. You can always move up.</p>
+    <div class="section-header" style="margin-bottom:48px;">
+      <h2 id="mr-free-h2" style="color:var(--text-primary);">Start with the free protocol tonight.</h2>
+      <p style="color:var(--text-green);">The 10-minute survival version is free. The full system is in Pro.</p>
     </div>
-    <div class="grid-3">
-      <!-- 10-min -->
-      <div class="blueprint-card">
-        <div class="blueprint-duration">10'</div>
-        <div class="blueprint-label">Survival Protocol · Weeks 1–8</div>
-        <div class="blueprint-desc">The absolute floor. Built for the mornings after a three-hour night. No journalling, no gym, no pressure. Just the three things that keep you functional.</div>
-        <div class="time-block"><div class="time-block-time">1 min</div><div class="time-block-label"><strong>Intention.</strong> One sentence out loud or in your head: what matters most today? Not a list. One thing.</div></div>
-        <div class="time-block"><div class="time-block-time">5 min</div><div class="time-block-label"><strong>Movement.</strong> 10 press-ups, 10 squats, 30-second plank. Or a slow walk to the kitchen and back. Whatever your body allows.</div></div>
-        <div class="time-block"><div class="time-block-time">4 min</div><div class="time-block-label"><strong>Priority.</strong> Write down or say the one thing that would make today a win. Then leave your phone face-down for another 10 minutes.</div></div>
-        <div style="margin-top:24px; padding:14px 16px; background:var(--bg-green); border-radius:8px; font-size:13px; color:var(--gold);">Works on 3 hours of sleep · No equipment needed</div>
+
+    <div class="mr-free-grid">
+      <!-- Free -->
+      <div class="mr-free-card">
+        <div class="pill pill-gold" style="margin-bottom:16px;">Free</div>
+        <h3>The No-Phone Morning Protocol</h3>
+        <p class="mr-free-card-sub">How to use the first 23 minutes without your phone. Yours tonight.</p>
+        <div class="mr-free-card-items">
+          <div class="mr-free-card-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>10-minute survival protocol (complete)</div>
+          <div class="mr-free-card-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>14-day no-phone habit tracker</div>
+          <div class="mr-free-card-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Environment setup checklist</div>
+        </div>
+        <a href="#mr-cta" class="btn btn-outline btn-full">Get free protocol →</a>
       </div>
-      <!-- 30-min -->
-      <div class="blueprint-card featured">
-        <div class="blueprint-badge">Most popular</div>
-        <div class="blueprint-duration">30'</div>
-        <div class="blueprint-label">Standard Protocol · Months 3–6</div>
-        <div class="blueprint-desc">The full version most dads settle into once sleep improves. Adds a walk, a short journal, and a slightly expanded planning window.</div>
-        <div class="time-block"><div class="time-block-time">2 min</div><div class="time-block-label"><strong>Intention.</strong> Quiet, no phone. One minute eyes closed, one minute reviewing one goal for the week.</div></div>
-        <div class="time-block"><div class="time-block-time">10 min</div><div class="time-block-label"><strong>Movement.</strong> Bodyweight circuit or a brisk 8-minute walk. The goal is a raised heart rate before screens, not a workout.</div></div>
-        <div class="time-block"><div class="time-block-time">8 min</div><div class="time-block-label"><strong>Journal.</strong> Three prompts: What am I grateful for? What would make today successful? What am I avoiding?</div></div>
-        <div class="time-block"><div class="time-block-time">10 min</div><div class="time-block-label"><strong>Plan.</strong> Review calendar, identify top priority, set one secondary task. Close the notebook. Now you can check your phone.</div></div>
-        <div style="margin-top:24px; padding:14px 16px; background:var(--bg-green); border-radius:8px; font-size:13px; color:var(--gold);">For when sleep is stabilising · Requires 5+ hrs sleep</div>
-      </div>
-      <!-- 60-min -->
-      <div class="blueprint-card">
-        <div class="blueprint-duration">60'</div>
-        <div class="blueprint-label">Full Protocol · Year 1+</div>
-        <div class="blueprint-desc">The complete version for fathers operating at full capacity — or working toward it. Includes reading, deeper planning, and a proper physical session.</div>
-        <div class="time-block"><div class="time-block-time">5 min</div><div class="time-block-label"><strong>Silence.</strong> No phone, no input. Sit with the day before it starts. Some dads use this for prayer or meditation.</div></div>
-        <div class="time-block"><div class="time-block-time">20 min</div><div class="time-block-label"><strong>Movement.</strong> A real workout — weights, run, or structured bodyweight. This is where physical health gets rebuilt post-newborn.</div></div>
-        <div class="time-block"><div class="time-block-time">15 min</div><div class="time-block-label"><strong>Read.</strong> Non-fiction only in the morning. 10 pages of something that sharpens your thinking — nothing work-related.</div></div>
-        <div class="time-block"><div class="time-block-time">10 min</div><div class="time-block-label"><strong>Journal.</strong> Expanded prompts: identity, priorities, what you are modelling for your child today.</div></div>
-        <div class="time-block"><div class="time-block-time">10 min</div><div class="time-block-label"><strong>Plan.</strong> Weekly and daily review. Identify one deep work block. Close your systems. Begin.</div></div>
-        <div style="margin-top:24px; padding:14px 16px; background:var(--bg-green); border-radius:8px; font-size:13px; color:var(--gold);">Requires 6+ hrs sleep · Stage 4 recommended</div>
+
+      <!-- Pro -->
+      <div class="mr-free-card" style="border-color:rgba(45,106,79,0.4);">
+        <div class="pill pill-gold" style="margin-bottom:16px;">Pro</div>
+        <h3>The Routine Architect</h3>
+        <p class="mr-free-card-sub">Build a custom morning protocol from scratch. 28-day progressive plan.</p>
+        <div class="mr-free-card-items">
+          <div class="mr-free-card-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>All 3 protocols (10 / 30 / 60 min)</div>
+          <div class="mr-free-card-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>28-day habit builder with recovery plan</div>
+          <div class="mr-free-card-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Journal prompt library (60 prompts)</div>
+          <div class="mr-free-card-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Sleep + morning coordination system</div>
+        </div>
+        <a href="/pricing.html" class="btn btn-primary btn-full">Unlock with Pro — €7.99/mo →</a>
+        <p style="font-size:13px;color:var(--text-green);text-align:center;margin-top:10px;opacity:0.7;">7-day free trial. Cancel anytime.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- COMMON MISTAKES -->
-<section style="padding: var(--section-py) 0; background: var(--bg-alt);" aria-labelledby="mistakes-heading">
-  <div class="container">
-    <div class="section-header" style="text-align:center; margin-bottom:56px;">
-      <div class="label" style="margin-bottom:16px;">What goes wrong</div>
-      <h2 id="mistakes-heading">The three mistakes that kill morning routines.</h2>
-      <p style="max-width:500px; margin:18px auto 0; font-size:17px;">Not lack of discipline. These three design errors. Fix them before you start.</p>
-    </div>
-    <div class="grid-3">
-      <div class="mistake-card">
-        <div class="mistake-number">01</div>
-        <div class="mistake-tag">Mechanism: hijacked CAR</div>
-        <h3 style="font-size:22px; margin-bottom:12px;">Starting with your phone.</h3>
-        <p style="font-size:15px; line-height:1.7; margin-bottom:16px;">Checking your phone within the first 20 minutes replaces the cortisol awakening response — your brain's natural alertness window — with reactive, externally-driven input. The morning feels off because neurologically, it is.</p>
-        <div style="padding:16px; background:var(--bg-raised); border-radius:10px; font-size:14px;">
-          <div style="font-weight:700; color:var(--green-bright); margin-bottom:6px;">The fix</div>
-          <div style="color:var(--text-secondary);">Charge your phone in another room. Put a physical notebook and pen next to your bed instead. The phone isn't a banned object — it's just not a first-20-minutes object.</div>
-        </div>
-      </div>
-      <div class="mistake-card">
-        <div class="mistake-number">02</div>
-        <div class="mistake-tag">Mechanism: optimism bias</div>
-        <h3 style="font-size:22px; margin-bottom:12px;">Designing for your best-case morning.</h3>
-        <p style="font-size:15px; line-height:1.7; margin-bottom:16px;">Most people design their morning routine for a morning where they slept eight hours, nothing urgent came up, and they feel motivated. New dads rarely have that morning. When the routine is designed for optimal conditions, it collapses under real ones.</p>
-        <div style="padding:16px; background:var(--bg-raised); border-radius:10px; font-size:14px;">
-          <div style="font-weight:700; color:var(--green-bright); margin-bottom:6px;">The fix</div>
-          <div style="color:var(--text-secondary);">Design for your worst-case morning. If it works on three hours of sleep after a bad night, it works on everything else too. Start with the 10-minute version.</div>
-        </div>
-      </div>
-      <div class="mistake-card">
-        <div class="mistake-number">03</div>
-        <div class="mistake-tag">Mechanism: friction load</div>
-        <h3 style="font-size:22px; margin-bottom:12px;">Ignoring environment design.</h3>
-        <p style="font-size:15px; line-height:1.7; margin-bottom:16px;">Willpower is finite and depleted fastest under sleep deprivation. A morning routine that requires multiple decisions before it starts — where are my shoes, what should I do first — will fail under pressure. Friction compounds when you're tired.</p>
-        <div style="padding:16px; background:var(--bg-raised); border-radius:10px; font-size:14px;">
-          <div style="font-weight:700; color:var(--green-bright); margin-bottom:6px;">The fix</div>
-          <div style="color:var(--text-secondary);">Lay out your clothes the night before. Have your journal already open to a blank page. Make the first three steps of your routine require zero decisions.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- TEMPLATE PREVIEW -->
-<section id="morning-signup" style="padding: var(--section-py) 0;" aria-labelledby="templates-heading">
-  <div class="container">
-    <div class="section-header" style="text-align:center; margin-bottom:48px;">
-      <div class="label" style="margin-bottom:16px;">Templates</div>
-      <h2 id="templates-heading">Start tonight. Not next Monday.</h2>
-    </div>
-    <div class="template-row">
-      <div class="template-card">
-        <div class="template-status free">Free</div>
-        <h3 style="font-size:21px; margin-bottom:12px;">No-Phone First Hour Protocol</h3>
-        <p style="font-size:15px; line-height:1.65; margin-bottom:20px;">A one-page reference card covering exactly how to structure your first 60 minutes with zero phone use. Includes the timing, what to do instead, and how to build the habit over 14 days.</p>
-        <ul style="display:flex; flex-direction:column; gap:8px; margin-bottom:24px;">
-          <li style="display:flex; gap:10px; font-size:14px; color:var(--text-secondary);"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="flex-shrink:0;margin-top:3px;"><path d="M3 8L6.5 11.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>14-day habit progression map</li>
-          <li style="display:flex; gap:10px; font-size:14px; color:var(--text-secondary);"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="flex-shrink:0;margin-top:3px;"><path d="M3 8L6.5 11.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Phone-replacement activities by time slot</li>
-          <li style="display:flex; gap:10px; font-size:14px; color:var(--text-secondary);"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="flex-shrink:0;margin-top:3px;"><path d="M3 8L6.5 11.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Environment setup checklist (do the night before)</li>
-        </ul>
-        <form id="morning-lead-form" novalidate style="display:flex; gap:10px; flex-direction:column;">
-          <input type="email" name="email" placeholder="dad@example.com" autocomplete="email" required aria-label="Email address" style="padding:13px 16px; background:var(--bg-raised); border:1px solid var(--border); border-radius:8px; color:var(--text-primary); font-size:15px; outline:none; transition:var(--transition);" onfocus="this.style.borderColor='var(--green)'" onblur="this.style.borderColor='var(--border)'">
-          <button type="submit" class="btn btn-primary">Download Free Template →</button>
-        </form>
-        <div class="form-success" id="morning-lead-success" aria-live="polite">
-          <div class="form-success-icon" aria-hidden="true">✓</div>
-          <div><div class="form-success-title">Template on its way.</div></div>
-        </div>
-      </div>
-      <div class="template-card locked">
-        <div class="template-status pro">Pro</div>
-        <h3 style="font-size:21px; margin-bottom:12px;">The Routine Architect — Build Your Custom Protocol</h3>
-        <p style="font-size:15px; line-height:1.65; margin-bottom:20px;">The 28-day evidence-based protocol for building a morning routine when you've failed before. Designed specifically to overcome the start-stop cycle most dads experience in months 1–6.</p>
-        <ul style="display:flex; flex-direction:column; gap:8px; margin-bottom:24px;">
-          <li style="display:flex; gap:10px; font-size:14px; color:var(--text-secondary);"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="flex-shrink:0;margin-top:3px;"><path d="M3 8L6.5 11.5L13 4.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>28-day progressive plan (day-by-day)</li>
-          <li style="display:flex; gap:10px; font-size:14px; color:var(--text-secondary);"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="flex-shrink:0;margin-top:3px;"><path d="M3 8L6.5 11.5L13 4.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Recovery protocol — what to do when you miss a day</li>
-          <li style="display:flex; gap:10px; font-size:14px; color:var(--text-secondary);"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="flex-shrink:0;margin-top:3px;"><path d="M3 8L6.5 11.5L13 4.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Partner communication script for getting household support</li>
-          <li style="display:flex; gap:10px; font-size:14px; color:var(--text-secondary);"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="flex-shrink:0;margin-top:3px;"><path d="M3 8L6.5 11.5L13 4.5" stroke="#D4A853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Habit tracking sheet (PDF + Google Sheets)</li>
-        </ul>
-        <a href="/pricing.html" class="btn btn-primary" style="width:100%; text-align:center; display:block;">Unlock with Pro — €7.99/mo →</a>
-        <p style="font-size:12px; color:var(--text-muted); text-align:center; margin-top:10px;">7-day free trial · Cancel anytime</p>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- SECTION 5 — FINAL CTA -->
+<section class="mr-decision" id="mr-cta" aria-labelledby="mr-cta-h2">
+  <div class="mr-decision-inner">
+    <h2 id="mr-cta-h2">Tomorrow morning is 23 minutes away.</h2>
+    <p class="mr-decision-sub">Move your phone to the kitchen tonight. Do the 10-minute protocol tomorrow. See what changes.</p>
 
-<!-- PRO UPSELL -->
-<section style="padding: var(--section-py) 0; background: var(--bg-alt);" aria-labelledby="pro-morning-heading">
-  <div class="container" style="max-width:800px; text-align:center;">
-    <div class="label" style="margin-bottom:20px;">NextRoutine Pro</div>
-    <h2 id="pro-morning-heading" style="margin-bottom:24px;">The full morning routine track.</h2>
-    <p style="font-size:18px; max-width:560px; margin:0 auto 40px;">Pro unlocks everything in the morning routine track — all three blueprints with complete breakdowns, all templates, and the full integration with sleep and the dad track.</p>
-    <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-bottom:40px; text-align:left; max-width:600px; margin-left:auto; margin-right:auto;">
-      <div style="display:flex; gap:10px; align-items:flex-start; font-size:15px; color:var(--text-secondary);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="flex-shrink:0;margin-top:3px;"><path d="M3 8L6.5 11.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>All 3 blueprint PDFs, fully detailed</div>
-      <div style="display:flex; gap:10px; align-items:flex-start; font-size:15px; color:var(--text-secondary);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="flex-shrink:0;margin-top:3px;"><path d="M3 8L6.5 11.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>28-day habit builder plan</div>
-      <div style="display:flex; gap:10px; align-items:flex-start; font-size:15px; color:var(--text-secondary);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="flex-shrink:0;margin-top:3px;"><path d="M3 8L6.5 11.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Journal prompt library (60 prompts)</div>
-      <div style="display:flex; gap:10px; align-items:flex-start; font-size:15px; color:var(--text-secondary);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="flex-shrink:0;margin-top:3px;"><path d="M3 8L6.5 11.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Full dad track integration</div>
-      <div style="display:flex; gap:10px; align-items:flex-start; font-size:15px; color:var(--text-secondary);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="flex-shrink:0;margin-top:3px;"><path d="M3 8L6.5 11.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Sleep + morning coordination system</div>
-      <div style="display:flex; gap:10px; align-items:flex-start; font-size:15px; color:var(--text-secondary);"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="flex-shrink:0;margin-top:3px;"><path d="M3 8L6.5 11.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Weekly Pro email edition</div>
-    </div>
-    <a href="/pricing.html" class="btn btn-primary" style="margin-right:16px;">Unlock Pro — €7.99/mo →</a>
-    <a href="#morning-signup" class="btn btn-ghost">Start Free First</a>
-    <p style="font-size:13px; color:var(--text-muted); margin-top:14px;">7-day free trial. Cancel anytime.</p>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section style="padding: var(--section-py) 0;" aria-labelledby="faq-morning-heading">
-  <div class="container" style="max-width:760px;">
-    <div class="section-header" style="text-align:center; margin-bottom:48px;">
-      <div class="label" style="margin-bottom:16px;">FAQ</div>
-      <h2 id="faq-morning-heading">Questions about morning routines.</h2>
-    </div>
-    <div class="faq-list" role="list">
-      <div class="faq-item" role="listitem">
-        <button class="faq-q" aria-expanded="false">What is the best morning routine for a new dad?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-        <div class="faq-a" aria-hidden="true"><div class="faq-a-inner">The best morning routine is the one you can actually run on broken sleep. In the first eight weeks, that means the 10-minute survival protocol — no equipment, no journalling, just intention, movement, and one priority. The mistake most dads make is designing a morning routine for their best day instead of their worst. Start with the minimum viable version and build from there as sleep stabilises.</div></div>
+    <div class="mr-decision-form">
+      <form id="mr-form" novalidate>
+        <label for="mr-email" class="sr-only">Email address</label>
+        <input type="email" id="mr-email" name="email" placeholder="Your email address" autocomplete="email" required>
+        <button type="submit" class="btn btn-gold btn-full" style="margin-top:12px;">Send me the free protocol →</button>
+      </form>
+      <div class="form-error" id="mr-error" role="alert" aria-live="polite">Please enter a valid email address.</div>
+      <div class="form-success" id="mr-success" aria-live="polite">
+        <div class="form-success-icon" aria-hidden="true">✓</div>
+        <div><div class="form-success-title">It's on its way.</div><div class="form-success-sub">Check your inbox. Start tonight.</div></div>
       </div>
-      <div class="faq-item" role="listitem">
-        <button class="faq-q" aria-expanded="false">How early should a morning routine start?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-        <div class="faq-a" aria-hidden="true"><div class="faq-a-inner">The goal is not a specific clock time — it is consistency before the household wakes. Even 15 minutes before your partner or child stirs is enough to establish the neurological separation that makes a morning routine effective. The cortisol awakening response activates on waking regardless of the time, so a 6am protocol and a 7:30am protocol are equally valid if both are consistent.</div></div>
-      </div>
-      <div class="faq-item" role="listitem">
-        <button class="faq-q" aria-expanded="false">Should you start your morning routine with your phone?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-        <div class="faq-a" aria-hidden="true"><div class="faq-a-inner">No. Checking your phone in the first 20 minutes hijacks the cortisol awakening response — the neurochemical window that determines your alertness baseline for the day. You replace an internally-directed, proactive surge with a reactive, externally-driven one. The morning feels off because neurologically it is. The phone is not banned — it is just not a first-20-minutes object.</div></div>
-      </div>
-      <div class="faq-item" role="listitem">
-        <button class="faq-q" aria-expanded="false">How do I build a morning routine I can actually stick to?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-        <div class="faq-a" aria-hidden="true"><div class="faq-a-inner">Start with the 10-minute version and treat it as completely non-negotiable before adding anything else. Most morning routines fail because they are designed for best-case conditions. Build for the morning after a bad night, and the routine becomes a floor, not a ceiling. Environment design is more reliable than motivation: lay out your kit the night before, charge your phone away from the bed, and remove every decision from the first three steps.</div></div>
-      </div>
-      <div class="faq-item" role="listitem">
-        <button class="faq-q" aria-expanded="false">What should a morning routine for productivity include?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-        <div class="faq-a" aria-hidden="true"><div class="faq-a-inner">At minimum: a no-phone window of at least 10–20 minutes, some form of physical movement to activate the prefrontal cortex, and a brief planning step where you identify one priority. If time allows, add journalling and reading. The 23-minute window after waking is when the brain is most plastic — what you feed it in that window shapes the neurological platform you operate on all day.</div></div>
-      </div>
+      <p style="font-size:13px;color:var(--text-muted);margin-top:12px;">Free protocol + weekly email. No card needed.</p>
     </div>
   </div>
 </section>
@@ -380,30 +222,34 @@
         <div class="footer-brand"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="5" r="1.5" fill="#D4A853"/></svg>NextRoutine</div>
         <p class="footer-tagline">Build the routine. Build the life.</p>
       </div>
-      <div><div class="footer-col-label">Tracks</div><nav class="footer-links" aria-label="Track links"><a href="/new-dad.html" class="footer-link">For Fathers</a><a href="/morning-routine.html" class="footer-link">Morning Routine</a><a href="/sleep-better.html" class="footer-link">Sleep Better</a><a href="/screen-time.html" class="footer-link">Screen Time</a></nav></div>
-      <div><div class="footer-col-label">Platform</div><nav class="footer-links" aria-label="Platform links"><a href="/pricing.html" class="footer-link">Pricing</a><a href="/blog/" class="footer-link">Blog</a><a href="/about.html" class="footer-link">About</a><a href="/quiz.html" class="footer-link">Find Your Track</a></nav></div>
-      <div><div class="footer-col-label">Legal</div><nav class="footer-links" aria-label="Legal links"><a href="/privacy.html" class="footer-link">Privacy Policy</a><a href="/terms.html" class="footer-link">Terms of Service</a></nav></div>
+      <div><div class="footer-col-label">Tracks</div><nav class="footer-links" aria-label="Tracks"><a href="/new-dad.html" class="footer-link">For Fathers</a><a href="/morning-routine.html" class="footer-link">Morning Routine</a><a href="/sleep-better.html" class="footer-link">Sleep Better</a><a href="/screen-time.html" class="footer-link">Screen Time</a></nav></div>
+      <div><div class="footer-col-label">Platform</div><nav class="footer-links" aria-label="Platform"><a href="/newsletter.html" class="footer-link">Newsletter</a><a href="/pricing.html" class="footer-link">Pricing</a><a href="/blog/" class="footer-link">Blog</a><a href="/about.html" class="footer-link">About</a></nav></div>
+      <div><div class="footer-col-label">Legal</div><nav class="footer-links" aria-label="Legal"><a href="/privacy.html" class="footer-link">Privacy Policy</a><a href="/terms.html" class="footer-link">Terms of Service</a></nav></div>
     </div>
   </div>
-  <div class="footer-bottom">
-    <span class="footer-copy">© <span data-year></span> NextRoutine. All rights reserved.</span>
-    <span class="footer-made">Made for fathers who refuse to wing it.</span>
-  </div>
+  <div class="footer-bottom"><span>© <span data-year></span> NextRoutine. All rights reserved.</span><span>Made for fathers who refuse to wing it.</span></div>
 </footer>
 
-
 <script src="js/main.js" defer></script>
+<script src="js/cookie-consent.js" defer></script>
 <script>
 (function(){
-  document.querySelectorAll('.faq-q').forEach(function(btn){
-    btn.addEventListener('click',function(){ var item=btn.closest('.faq-item'); var isOpen=item.classList.contains('open'); document.querySelectorAll('.faq-item.open').forEach(function(el){el.classList.remove('open');el.querySelector('.faq-q').setAttribute('aria-expanded','false');el.querySelector('.faq-a').setAttribute('aria-hidden','true');}); if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');item.querySelector('.faq-a').setAttribute('aria-hidden','false');} });
-  });
-  function ef(fId,sId){var f=document.getElementById(fId);if(!f)return;var sEl=document.getElementById(sId);var inp=f.querySelector('input[type="email"]');if(!inp)return;f.addEventListener('submit',function(e){e.preventDefault();var em=inp.value.trim();if(!em||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){inp.style.borderColor='var(--error,#e74c3c)';return;}inp.disabled=true;f.style.display='none';if(sEl)sEl.classList.add('visible');});}
+  var EMAIL_RE=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  function initForm(fId,eId,sId){
+    var f=document.getElementById(fId);if(!f)return;
+    var inp=f.querySelector('input[type="email"]');
+    var err=document.getElementById(eId);var suc=document.getElementById(sId);
+    f.addEventListener('submit',function(e){
+      e.preventDefault();var v=inp.value.trim();
+      if(err)err.classList.remove('visible');inp.style.borderColor='';
+      if(!v||!EMAIL_RE.test(v)){inp.style.borderColor='#e74c3c';if(err)err.classList.add('visible');inp.focus();return;}
+      inp.disabled=true;f.style.display='none';if(suc)suc.classList.add('visible');
+      try{localStorage.setItem('nr_subscribed','true')}catch(x){}
+    });
+  }
   document.addEventListener('DOMContentLoaded',function(){
-    ef('morning-hero-form','morning-hero-success');
-    ef('morning-lead-form','morning-lead-success');
-    ef('morning-newsletter-form','morning-nl-success');
-    document.querySelectorAll('[data-year]').forEach(function(el){el.textContent=new Date().getFullYear();});
+    initForm('mr-form','mr-error','mr-success');
+    document.querySelectorAll('[data-year]').forEach(function(el){el.textContent=new Date().getFullYear()});
   });
 })();
 </script>
