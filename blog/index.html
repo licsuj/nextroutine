@@ -206,11 +206,20 @@
     <p class="blog-cta-sub">One protocol per week — morning, sleep, or screen time. Matched to your fatherhood stage. Free forever.</p>
     <div class="blog-cta-form">
       <form id="blog-cta-form" novalidate>
+        <label for="blog-cta-stage" class="sr-only">Your fatherhood stage</label>
+        <select id="blog-cta-stage" name="stage" required>
+          <option value="" disabled selected>Where are you in the journey?</option>
+          <option value="exploring">Not a dad yet — just exploring</option>
+          <option value="got-the-news">Just got the news (expecting)</option>
+          <option value="9-month-journey">During the 9-month journey</option>
+          <option value="first-weeks">First weeks after birth</option>
+          <option value="months-after">Months after birth (3–12)</option>
+        </select>
         <label for="blog-cta-email" class="sr-only">Email address</label>
-        <input type="email" id="blog-cta-email" name="email" placeholder="Your email address" autocomplete="email" required>
+        <input type="email" id="blog-cta-email" name="email" placeholder="Your email address" autocomplete="email" required style="margin-top:12px;">
         <button type="submit" class="btn btn-gold btn-full" style="margin-top:12px;">Subscribe Free →</button>
       </form>
-      <div class="form-error" id="blog-cta-error" role="alert" aria-live="polite">Please enter a valid email address.</div>
+      <div class="form-error" id="blog-cta-error" role="alert" aria-live="polite">Please select your stage and enter a valid email.</div>
       <div class="form-success" id="blog-cta-success" aria-live="polite">
         <div class="form-success-icon" aria-hidden="true">✓</div>
         <div><div class="form-success-title">You're in.</div><div class="form-success-sub">See you Tuesday.</div></div>
