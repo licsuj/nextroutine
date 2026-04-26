@@ -12,12 +12,37 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<nav class="nav scrolled" role="navigation" aria-label="Main navigation">
+
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="/" class="nav-brand" aria-label="NextRoutine home"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="5" r="1.5" fill="#D4A853"/></svg>NextRoutine</a>
-    <div class="nav-cta"><a href="/" class="btn btn-primary btn-sm">Back to NextRoutine →</a></div>
+    <div class="nav-links" role="list">
+      <a href="/new-dad.html" class="nav-link" role="listitem">For Fathers</a>
+      <a href="/morning-routine.html" class="nav-link" role="listitem">Morning</a>
+      <a href="/sleep-better.html" class="nav-link" role="listitem">Sleep</a>
+      <a href="/screen-time.html" class="nav-link" role="listitem">Screen Time</a>
+      <a href="/blog/" class="nav-link" role="listitem">Blog</a>
+      <a href="/pricing.html" class="nav-link" role="listitem">Pricing</a>
+    </div>
+    <div class="nav-actions">
+      <a href="/#free-signup" class="btn btn-primary btn-sm">Get Started Free →</a>
+    </div>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay"><span></span><span></span><span></span></button>
   </div>
 </nav>
+<div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+  <button class="nav-overlay-close" aria-label="Close menu">✕</button>
+  <nav class="nav-overlay-links" aria-label="Mobile navigation">
+    <a href="/new-dad.html" class="nav-overlay-link">For Fathers</a>
+    <a href="/morning-routine.html" class="nav-overlay-link">Morning</a>
+    <a href="/sleep-better.html" class="nav-overlay-link">Sleep</a>
+    <a href="/screen-time.html" class="nav-overlay-link">Screen Time</a>
+    <a href="/blog/" class="nav-overlay-link">Blog</a>
+    <a href="/pricing.html" class="nav-overlay-link">Pricing</a>
+    <a href="/#free-signup" class="btn btn-primary btn-full" style="margin-top:24px;">Get Started Free →</a>
+  </nav>
+</div>
+
 <main>
 <section style="padding:calc(var(--nav-h) + 80px) var(--container-px-sm) 100px; text-align:center; background:var(--bg-base);">
   <div style="max-width:560px; margin:0 auto;">
