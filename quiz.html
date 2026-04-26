@@ -13,37 +13,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/style.css">
-<style>
-.quiz-page{min-height:100vh;padding:calc(var(--nav-h)+60px) 0 80px;display:flex;align-items:center;justify-content:center}
-.quiz-container{max-width:560px;width:100%;margin:0 auto;padding:0 24px}
-.quiz-progress{display:flex;gap:8px;margin-bottom:40px}
-.quiz-dot{height:4px;flex:1;border-radius:2px;background:var(--border);transition:background .3s ease}
-.quiz-dot.active{background:var(--green)}
-.quiz-dot.done{background:var(--green-bright)}
-.quiz-q{display:none}
-.quiz-q.active{display:block}
-.quiz-q h2{font-size:32px;margin-bottom:12px}
-.quiz-q p{font-size:16px;color:var(--text-secondary);margin-bottom:32px}
-.quiz-options{display:flex;flex-direction:column;gap:12px}
-.quiz-opt{background:var(--bg-surface);border:1px solid var(--border);border-radius:12px;padding:18px 24px;cursor:pointer;transition:var(--transition);font-size:16px;color:var(--text-primary);text-align:left;display:flex;align-items:center;gap:14px}
-.quiz-opt:hover{border-color:var(--green);background:rgba(45,106,79,.06)}
-.quiz-opt.selected{border-color:var(--green);background:rgba(45,106,79,.1)}
-.quiz-opt-icon{width:20px;height:20px;border-radius:50%;border:2px solid var(--border);flex-shrink:0;transition:var(--transition);display:flex;align-items:center;justify-content:center}
-.quiz-opt.selected .quiz-opt-icon{border-color:var(--green);background:var(--green)}
-.quiz-opt.selected .quiz-opt-icon::after{content:'';width:8px;height:8px;border-radius:50%;background:#fff}
-.quiz-result{display:none;text-align:center}
-.quiz-result.active{display:block}
-.quiz-result-badge{display:inline-flex;padding:6px 16px;background:var(--gold-muted);color:var(--gold);border-radius:999px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:20px}
-.quiz-result h2{font-size:36px;margin-bottom:12px}
-.quiz-result-desc{font-size:18px;color:var(--text-secondary);line-height:1.7;max-width:440px;margin:0 auto 32px}
-.quiz-result-form{max-width:380px;margin:0 auto}
-.quiz-result-form input{width:100%;padding:14px 18px;background:var(--bg-surface);border:1px solid var(--border);border-radius:8px;color:var(--text-primary);font-size:16px;outline:none;margin-bottom:12px}
-.quiz-result-form input:focus{border-color:var(--green)}
-.quiz-result-form .btn{width:100%}
-.quiz-result-micro{font-size:13px;color:var(--text-muted);margin-top:10px}
-.quiz-result-link{display:inline-block;margin-top:20px;font-size:15px;color:var(--green-bright);text-decoration:underline}
-@media(max-width:768px){.quiz-q h2{font-size:26px}.quiz-result h2{font-size:28px}}
-</style>
 <meta property="og:title" content="Find Your Track — NextRoutine">
 <meta property="og:description" content="Answer 3 questions. Get a personalised routine recommendation. Takes 30 seconds.">
 <meta property="og:type" content="website">
