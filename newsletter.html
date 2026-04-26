@@ -61,15 +61,23 @@
     <h1 id="nl-heading" style="max-width:640px;margin:0 auto 20px;">The weekly email for fathers who take their routine seriously.</h1>
     <p style="max-width:520px;margin:0 auto 40px;font-size:19px;color:var(--text-secondary);">Every week: one routine strategy, one science insight, one practical template. Specifically for new and expectant dads. No noise. No padding.</p>
     <div style="max-width:460px;margin:0 auto;" data-form-wrap>
-      <form class="form-inline" aria-label="Newsletter signup" novalidate>
+      <form class="form-inline" aria-label="Newsletter signup" novalidate style="flex-direction:column;gap:12px;">
+        <label for="nl-stage" class="sr-only">Your fatherhood stage</label>
+        <select id="nl-stage" name="stage" required style="width:100%;">
+          <option value="" disabled selected>Where are you in the journey?</option>
+          <option value="exploring">Not a dad yet — just exploring</option>
+          <option value="got-the-news">Just got the news (expecting)</option>
+          <option value="9-month-journey">During the 9-month journey</option>
+          <option value="first-weeks">First weeks after birth</option>
+          <option value="months-after">Months after birth (3–12)</option>
+        </select>
         <label for="nl-email" class="sr-only">Your email address</label>
         <input type="email" id="nl-email" name="email" class="input" placeholder="Your email address" autocomplete="email" required aria-required="true">
-        <button type="submit" class="btn btn-primary" aria-label="Subscribe to NextRoutine free newsletter">Subscribe Free →</button>
+        <button type="submit" class="btn btn-primary" style="width:100%;" aria-label="Subscribe to NextRoutine free newsletter">Subscribe Free →</button>
       </form>
       <p class="form-micro">Free forever. No credit card. Unsubscribe anytime.</p>
     </div>
     <div style="margin-top:20px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px;color:var(--text-secondary);">
-      <span style="color:var(--gold);">★★★★★</span> Rated 4.9 · thousands of fathers subscribed
     </div>
   </div>
 </section>
@@ -104,10 +112,19 @@
     <h2 id="nl-final-heading" style="color:var(--text-primary);margin-bottom:12px;">Your first issue arrives tonight.</h2>
     <p style="color:var(--text-green);max-width:420px;margin:0 auto 32px;">Plus the Fatherhood Starter Pack — 3 PDFs, free with every subscription.</p>
     <div style="max-width:460px;margin:0 auto;" data-form-wrap>
-      <form class="form-stack" aria-label="Subscribe to NextRoutine newsletter" novalidate>
+      <form class="form-stack" aria-label="Subscribe to NextRoutine newsletter" novalidate style="display:flex;flex-direction:column;gap:12px;">
+        <label for="nl-stage-bottom" class="sr-only">Your fatherhood stage</label>
+        <select id="nl-stage-bottom" name="stage" required style="width:100%;">
+          <option value="" disabled selected>Where are you in the journey?</option>
+          <option value="exploring">Not a dad yet — just exploring</option>
+          <option value="got-the-news">Just got the news (expecting)</option>
+          <option value="9-month-journey">During the 9-month journey</option>
+          <option value="first-weeks">First weeks after birth</option>
+          <option value="months-after">Months after birth (3–12)</option>
+        </select>
         <label for="nl-email-bottom" class="sr-only">Your email address</label>
         <input type="email" id="nl-email-bottom" name="email" class="input" placeholder="Your email address" autocomplete="email" required aria-required="true" style="background:#1A1D27;">
-        <button type="submit" class="btn btn-gold btn-lg" aria-label="Subscribe free to NextRoutine">Subscribe Free — No Card Needed →</button>
+        <button type="submit" class="btn btn-gold btn-lg" aria-label="Subscribe free to NextRoutine">Subscribe Free →</button>
       </form>
       <p class="lead-form-micro">No spam. Unsubscribe anytime.</p>
     </div>
