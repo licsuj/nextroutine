@@ -6,93 +6,67 @@
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#0F1117">
 <title>Pricing — NextRoutine | Plans for New Dads</title>
-<meta name="description" content="Simple pricing for serious fathers. Start free with 3 PDFs and a weekly newsletter. Go Pro for full access to all tracks, 6 exclusive templates, and the priority newsletter. 7-day free trial.">
-<link rel="canonical" href="https://nextroutine-one.vercel.app/pricing.html">
-<meta property="og:title" content="Pricing — NextRoutine">
-<meta property="og:description" content="Start free. Upgrade when you're ready. Cancel anytime. Plans from €0 to €7.99/month.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://nextroutine-one.vercel.app/pricing.html">
-<meta property="og:site_name" content="NextRoutine">
-<script type="application/ld+json">
-[
-  {"@context":"https://schema.org","@type":"Product","name":"NextRoutine Free","description":"Weekly newsletter, Fatherhood Starter Pack (3 PDFs), 2 routine templates, morning basics.","brand":{"@type":"Brand","name":"NextRoutine"},"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR","availability":"https://schema.org/InStock"}},
-  {"@context":"https://schema.org","@type":"Product","name":"NextRoutine Pro","description":"Full access to all 4 fatherhood stages (24 protocols), morning, sleep and screen time tracks, 6 Pro-exclusive templates, PDF vault, and priority newsletter.","brand":{"@type":"Brand","name":"NextRoutine"},"offers":[{"@type":"Offer","price":"7.99","priceCurrency":"EUR","availability":"https://schema.org/InStock","priceValidUntil":"2026-12-31"},{"@type":"Offer","price":"59.99","priceCurrency":"EUR","availability":"https://schema.org/InStock","priceValidUntil":"2026-12-31","unitPriceSpecification":{"@type":"UnitPriceSpecification","billingDuration":"P1Y"}}]}
-]
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-  {"@type":"Question","name":"Can I try Pro before I pay?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every Pro subscription starts with a 7-day free trial. You will not be charged until the trial ends. Cancel anytime during the trial and you will not be billed."}},
-  {"@type":"Question","name":"What payment methods do you accept?","acceptedAnswer":{"@type":"Answer","text":"We use Stripe for all payments. Stripe accepts Visa, Mastercard, American Express, and most major debit and credit cards. All transactions are encrypted and PCI-compliant."}},
-  {"@type":"Question","name":"Can I cancel anytime?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can cancel your subscription at any time from your account settings. If you cancel, you retain access until the end of your current billing period. No questions asked."}},
-  {"@type":"Question","name":"What is the difference between the free newsletter and Pro?","acceptedAnswer":{"@type":"Answer","text":"Free gives you a weekly email, the Fatherhood Starter Pack (3 PDFs), 2 routine templates, and morning basics. Pro adds full content across all 4 fatherhood stages (24 protocols), the complete Morning, Sleep and Screen Time tracks, 6 Pro-exclusive templates, the PDF vault, and the priority newsletter — an extended edition sent on Monday, 24 hours before the free Tuesday edition."}},
-  {"@type":"Question","name":"Is the free plan actually useful?","acceptedAnswer":{"@type":"Answer","text":"Yes. The free plan includes a weekly newsletter with actionable routine advice, the Fatherhood Starter Pack (3 PDFs), two named templates (The No-Phone Morning Checklist and The Sunday Night Reset), and access to morning routine basics. Many fathers stay on the free plan for months."}},
-  {"@type":"Question","name":"Do you offer refunds?","acceptedAnswer":{"@type":"Answer","text":"If you are not satisfied within 30 days of your first payment, email us and we will refund you in full. No questions asked. After 30 days, you can cancel anytime but we do not offer partial refunds for unused time."}},
-  {"@type":"Question","name":"Is my data safe?","acceptedAnswer":{"@type":"Answer","text":"We store only your email address and subscription status. We do not sell or share your data with third parties. All payments are processed by Stripe — we never see or store your card details. We are GDPR compliant and based in Malta."}},
-  {"@type":"Question","name":"Will this work if the baby is already here?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. The Fatherhood Track covers four stages from pre-birth through year one and beyond. Start at the stage that matches your situation. The morning, sleep, and screen time tracks are relevant regardless of your child's age."}}
-]}
-</script>
+<meta name="description" content="Start free with a weekly newsletter and starter pack. Go Pro for all tracks, templates, and coaching. 7-day free trial. Cancel anytime.">
+<link rel="canonical" href="https://nextroutine-one.vercel.app/pricing">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/cookie-consent.css">
 <style>
-.pricing-hero{padding:calc(var(--nav-h) + 80px) 0 60px;text-align:center}
-.pricing-hero h1{font-size:52px;margin-bottom:16px}
-.pricing-hero-sub{font-size:19px;color:var(--text-secondary);max-width:420px;margin:0 auto 40px;line-height:1.65}
-.billing-toggle{display:inline-flex;align-items:center;gap:14px;padding:6px;background:var(--bg-surface);border:1px solid var(--border);border-radius:999px;margin-bottom:56px}
-.billing-opt{padding:10px 22px;border-radius:999px;font-family:var(--font-heading);font-size:14px;font-weight:600;color:var(--text-muted);cursor:pointer;transition:var(--transition);border:none;background:none}
-.billing-opt.active{background:var(--green);color:#fff}
-.billing-save{font-size:11px;font-weight:700;color:var(--gold);background:var(--gold-muted);padding:3px 10px;border-radius:999px;margin-left:6px;letter-spacing:.04em}
-.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1020px;margin:0 auto}
-.pricing-card{background:var(--bg-surface);border:1px solid var(--border);border-radius:12px;padding:36px;display:flex;flex-direction:column;position:relative}
-.pricing-card.featured{border-color:var(--green);box-shadow:0 0 0 1px var(--green),0 8px 40px rgba(0,0,0,0.3)}
-.pricing-card.waitlist{opacity:.85}
-.pricing-pop-badge{position:absolute;top:-1px;right:20px;background:var(--green);color:#fff;font-size:11px;font-weight:600;text-transform:uppercase;padding:4px 12px;border-radius:0 0 6px 6px}
-.pricing-coming-badge{position:absolute;top:-1px;right:20px;background:var(--gold-muted);color:var(--gold);font-size:11px;font-weight:600;text-transform:uppercase;padding:4px 12px;border-radius:0 0 6px 6px}
-.pricing-tier{font-family:var(--font-heading);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);margin-bottom:8px}
-.pricing-card h3{font-size:22px;margin-bottom:8px}
-.pricing-amount{font-family:var(--font-heading);font-size:40px;font-weight:700;color:var(--text-primary);margin-bottom:4px}
-.pricing-amount span{font-size:16px;font-weight:400;color:var(--text-secondary)}
-.pricing-period{font-size:13px;color:var(--text-muted);margin-bottom:24px}
-.pricing-divider{height:1px;background:var(--border);margin-bottom:24px}
-.pricing-features{display:flex;flex-direction:column;gap:12px;flex:1;margin-bottom:28px}
-.pricing-feat{display:flex;align-items:flex-start;gap:10px;font-size:15px;color:var(--text-primary)}
-.pricing-feat svg{flex-shrink:0;margin-top:3px}
-.pricing-card .btn{width:100%}
-.pricing-card-micro{font-size:13px;color:var(--text-muted);text-align:center;margin-top:12px}
-.pricing-card-desc{font-size:15px;color:var(--text-secondary);line-height:1.65;margin-bottom:20px}
-.pricing-card-desc strong{color:var(--text-primary)}
-.trust-strip{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;padding:48px 0;font-size:14px;color:var(--text-secondary)}
-.trust-item{display:flex;align-items:center;gap:8px}
-.compare-section{padding:var(--section-py) 0;background:var(--bg-alt)}
-.compare-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
-.compare-table{width:100%;border-collapse:collapse;min-width:520px}
-.compare-table th{position:sticky;top:var(--nav-h);z-index:10;background:var(--bg-alt);font-family:var(--font-heading);font-size:14px;font-weight:600;color:var(--text-primary);padding:16px;text-align:center;border-bottom:2px solid var(--border)}
-.compare-table th:first-child{text-align:left;color:var(--text-muted);font-size:12px;text-transform:uppercase;letter-spacing:.08em}
-.compare-table td{padding:14px 16px;font-size:14px;color:var(--text-secondary);text-align:center;border-bottom:1px solid var(--border)}
-.compare-table td:first-child{text-align:left;color:var(--text-primary);font-weight:500}
-.compare-table tr:last-child td{border-bottom:none}
-.cmp-check{color:var(--green-bright);font-size:16px}
-.cmp-dash{color:var(--text-muted)}
-.compare-table .cmp-section-row td{background:var(--bg-surface);font-family:var(--font-heading);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);text-align:left;border-bottom:1px solid var(--border);padding:10px 16px}
-.faq-section{padding:var(--section-py) 0}
-.faq-list{border:1px solid var(--border);border-radius:12px;overflow:hidden;max-width:760px;margin:0 auto}
-.faq-item{border-bottom:1px solid var(--border)}
-.faq-item:last-child{border-bottom:none}
-.faq-q{width:100%;text-align:left;padding:20px 24px;font-family:var(--font-heading);font-size:16px;font-weight:600;color:var(--text-primary);background:var(--bg-surface);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:var(--transition)}
-.faq-q:hover{background:var(--bg-alt);color:var(--gold)}
-.faq-icon{width:20px;height:20px;flex-shrink:0;color:var(--text-muted);transition:transform .25s ease}
-.faq-item.open .faq-q{color:var(--gold)}
-.faq-item.open .faq-icon{transform:rotate(45deg);color:var(--gold)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;background:var(--bg-alt)}
-.faq-item.open .faq-a{max-height:400px}
-.faq-a-inner{padding:16px 24px 24px;font-size:15px;color:var(--text-secondary);line-height:1.75}
-.pricing-final{padding:80px 0;text-align:center}
-.pricing-final p{font-size:17px;color:var(--text-secondary);margin-bottom:28px}
-.pricing-footnote{font-size:13px;color:var(--text-muted);text-align:center;margin-top:24px}
-.pricing-footnote a{color:var(--gold);text-decoration:underline}
-@media(max-width:768px){.pricing-hero h1{font-size:34px}.pricing-grid{grid-template-columns:1fr;max-width:420px}.trust-strip{flex-direction:column;align-items:center;gap:16px}.compare-table{min-width:420px}}
+.pr-hero{padding:calc(var(--nav-h) + 80px) 0 40px;text-align:center}
+.pr-hero h1{font-size:52px;letter-spacing:-0.03em;margin-bottom:16px}
+.pr-hero-sub{font-size:19px;color:var(--text-secondary);max-width:400px;margin:0 auto 40px;line-height:1.65}
+.pr-toggle{display:inline-flex;background:var(--bg-surface);border:1px solid var(--border-visible);border-radius:999px;padding:4px;margin-bottom:56px}
+.pr-toggle-opt{padding:10px 28px;border-radius:999px;font-family:var(--font-heading);font-size:15px;font-weight:500;color:var(--text-muted);cursor:pointer;transition:all 0.2s ease;border:none;background:transparent}
+.pr-toggle-opt.active{background:var(--green);color:#fff;font-weight:600}
+.pr-save{display:inline-block;background:var(--gold-muted);color:var(--gold);font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;margin-left:6px;vertical-align:middle;letter-spacing:0.04em}
+.pr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1020px;margin:0 auto;align-items:stretch}
+.pr-card{background:var(--bg-surface);border:1px solid var(--border);border-radius:16px;padding:36px;display:flex;flex-direction:column;position:relative}
+.pr-card.featured{border-color:var(--green);box-shadow:0 0 0 1px var(--green),0 8px 40px rgba(0,0,0,0.3)}
+.pr-card.waitlist{opacity:0.8}
+.pr-badge{position:absolute;top:-1px;right:20px;background:var(--green);color:#fff;font-size:11px;font-weight:600;text-transform:uppercase;padding:5px 14px;border-radius:0 0 6px 6px;letter-spacing:0.04em}
+.pr-badge-coming{position:absolute;top:-1px;right:20px;background:var(--gold-muted);color:var(--gold);font-size:11px;font-weight:600;text-transform:uppercase;padding:5px 14px;border-radius:0 0 6px 6px;letter-spacing:0.04em}
+.pr-tier{font-family:var(--font-heading);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted);margin-bottom:8px}
+.pr-card h3{font-size:22px;margin-bottom:8px}
+.pr-price{font-family:var(--font-heading);font-size:40px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em}
+.pr-price span{font-size:16px;font-weight:400;color:var(--text-secondary)}
+.pr-period{font-size:13px;color:var(--text-muted);margin-top:4px;margin-bottom:24px;min-height:18px}
+.pr-divider{height:1px;background:var(--border-visible);margin-bottom:24px}
+.pr-features{display:flex;flex-direction:column;gap:14px;flex:1}
+.pr-feat{display:flex;align-items:flex-start;gap:10px;font-size:15px;color:var(--text-primary);line-height:1.5}
+.pr-feat svg{flex-shrink:0;margin-top:3px}
+.pr-card .btn{width:100%;margin-top:28px}
+.pr-micro{font-size:13px;color:var(--text-muted);text-align:center;margin-top:12px}
+.pr-card-desc{font-size:15px;color:var(--text-secondary);line-height:1.65;margin-bottom:16px}
+.pr-card-desc strong{color:var(--text-primary)}
+.pr-trust{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;padding:40px 0;font-size:14px;color:var(--text-secondary)}
+.pr-trust-item{display:flex;align-items:center;gap:8px}
+.pr-compare{padding:var(--section-py) 0;background:var(--bg-alt)}
+.pr-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.pr-table{width:100%;border-collapse:collapse;min-width:520px;max-width:800px;margin:0 auto}
+.pr-table th{font-family:var(--font-heading);font-size:15px;font-weight:600;color:var(--text-primary);padding:16px 20px;text-align:center;border-bottom:2px solid var(--green)}
+.pr-table th:first-child{text-align:left;width:45%}
+.pr-table td{padding:14px 20px;font-size:14px;color:var(--text-secondary);text-align:center;border-bottom:1px solid var(--border)}
+.pr-table td:first-child{text-align:left;color:var(--text-primary);font-weight:500}
+.pr-table tr:last-child td{border-bottom:none}
+.pr-table .cmp-section td{background:rgba(45,106,79,0.04);font-family:var(--font-heading);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-muted);text-align:left;padding:10px 20px}
+.pr-check{color:var(--green-bright)}
+.pr-dash{color:var(--text-muted)}
+.pr-faq{padding:var(--section-py) 0}
+.pr-faq-list{max-width:720px;margin:0 auto}
+.pr-faq-item{border-bottom:1px solid var(--border)}
+.pr-faq-q{width:100%;text-align:left;padding:20px 0;font-family:var(--font-heading);font-size:17px;font-weight:600;color:var(--text-primary);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:color 0.15s ease;background:none;border:none}
+.pr-faq-q:hover{color:var(--green-bright)}
+.pr-faq-icon{width:20px;height:20px;flex-shrink:0;color:var(--green-bright);transition:transform 0.2s ease}
+.pr-faq-item.open .pr-faq-icon{transform:rotate(45deg)}
+.pr-faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
+.pr-faq-item.open .pr-faq-a{max-height:300px}
+.pr-faq-a-inner{padding:0 0 20px;font-size:16px;color:var(--text-secondary);line-height:1.75}
+.pr-final{padding:80px 24px;text-align:center}
+.pr-final p{font-size:17px;color:var(--text-secondary);margin-bottom:28px}
+@media(max-width:768px){.pr-hero h1{font-size:36px}.pr-grid{grid-template-columns:1fr;max-width:420px;margin:0 auto}.pr-trust{flex-direction:column;align-items:center;gap:16px}.pr-table{min-width:420px}}
 </style>
 </head>
 <body>
@@ -129,178 +103,143 @@
 </div>
 
 
-<!-- HERO -->
-<section class="pricing-hero" aria-labelledby="pricing-h1">
+<!-- SECTION 1: HERO + CARDS -->
+<section class="pr-hero" aria-labelledby="pr-h1">
   <div class="container">
-    <h1 id="pricing-h1">Simple pricing for serious fathers.</h1>
-    <p class="pricing-hero-sub">Start free. Upgrade when you're ready. Cancel anytime.</p>
+    <h1 id="pr-h1">Simple pricing. No surprises.</h1>
+    <p class="pr-hero-sub">Start free. Upgrade when you're ready. Cancel anytime.</p>
 
-    <p style="font-size:14px;color:var(--text-muted);margin-bottom:48px;">Annual plan coming soon — subscribe monthly now and lock in the founding rate.</p>
+    <div class="pr-toggle" role="radiogroup" aria-label="Billing frequency">
+      <button class="pr-toggle-opt" data-billing="monthly" role="radio" aria-checked="false">Monthly</button>
+      <button class="pr-toggle-opt active" data-billing="annual" role="radio" aria-checked="true">Annual <span class="pr-save">Save 37%</span></button>
+    </div>
 
-    <!-- PRICING CARDS -->
-    <div class="pricing-grid">
+    <div class="pr-grid">
 
       <!-- FREE -->
-      <div class="pricing-card">
-        <div class="pricing-tier">Free</div>
+      <div class="pr-card">
+        <div class="pr-tier">Free</div>
         <h3>The NextRoutine Letter</h3>
-        <div class="pricing-amount">€0 <span>/ forever</span></div>
-        <div class="pricing-period">No card required</div>
-        <div class="pricing-divider"></div>
-        <div class="pricing-features">
-          <div class="pricing-feat"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Weekly newsletter (every Tuesday)</div>
-          <div class="pricing-feat"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Stage-specific starter template</div>
-          <div class="pricing-feat"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Morning routine basics</div>
-          <div class="pricing-feat"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Content matched to your fatherhood stage</div>
+        <div class="pr-price">€0 <span>/ forever</span></div>
+        <div class="pr-period">No card required</div>
+        <div class="pr-divider"></div>
+        <div class="pr-features">
+          <div class="pr-feat"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Weekly newsletter (every Tuesday)</div>
+          <div class="pr-feat"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Fatherhood Starter Pack (3 PDFs)</div>
+          <div class="pr-feat"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Morning routine basics</div>
+          <div class="pr-feat"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>2 free templates</div>
         </div>
         <a href="/#free-signup" class="btn btn-outline">Get Started Free →</a>
-        <p class="pricing-card-micro">No card. Just your email and your stage.</p>
+        <p class="pr-micro">No card needed.</p>
       </div>
 
-      <!-- PRO (featured) -->
-      <div class="pricing-card featured">
-        <div class="pricing-pop-badge">Most Popular</div>
-        <div class="pricing-tier">Pro</div>
+      <!-- PRO -->
+      <div class="pr-card featured">
+        <div class="pr-badge">Most Popular</div>
+        <div class="pr-tier">Pro</div>
         <h3>Full System</h3>
-        <div class="pricing-amount">€7.99 <span>/ month</span></div>
-        <div class="pricing-period">Cancel anytime. 7-day free trial.</div>
-        <div class="pricing-divider"></div>
-        <div class="pricing-features">
-          <div class="pricing-feat"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in Free</div>
-          <div class="pricing-feat"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Full Fatherhood Track — all 4 stages, 24 protocols</div>
-          <div class="pricing-feat"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Morning, Sleep &amp; Screen Time tracks — complete</div>
-          <div class="pricing-feat"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>6 Pro-exclusive templates</div>
-          <div class="pricing-feat"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Weekly stage-matched coaching email (extended edition)</div>
-          <div class="pricing-feat"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Monthly product briefings — researched gear recommendations</div>
-          <div class="pricing-feat"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Monthly research brief — latest fatherhood science</div>
-          <div class="pricing-feat"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Dad Readiness Assessment (interactive score)</div>
-          <div class="pricing-feat"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>7-day free trial, cancel anytime</div>
+        <div class="pr-price" id="pro-price">€59.99 <span>/ year</span></div>
+        <div class="pr-period" id="pro-period">€5/month · Billed annually</div>
+        <div class="pr-divider"></div>
+        <div class="pr-features">
+          <div class="pr-feat"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in Free</div>
+          <div class="pr-feat"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Full Fatherhood Track — all 4 stages</div>
+          <div class="pr-feat"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Morning, Sleep &amp; Screen Time tracks</div>
+          <div class="pr-feat"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>6 Pro-exclusive templates</div>
+          <div class="pr-feat"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Priority newsletter (extended, 24h early)</div>
+          <div class="pr-feat"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Monthly product briefings</div>
+          <div class="pr-feat"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Monthly research brief</div>
+          <div class="pr-feat"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>7-day free trial</div>
         </div>
         <a href="#" class="btn btn-primary" data-stripe="pro">Start 7-Day Free Trial →</a>
-        <p class="pricing-card-micro">7-day free trial. Cancel anytime. No questions asked.</p>
+        <p class="pr-micro">Cancel anytime. No questions asked.</p>
       </div>
 
-      <!-- PRO+ (Waitlist) -->
-      <div class="pricing-card waitlist">
-        <div class="pricing-coming-badge">Coming 2025</div>
-        <div class="pricing-tier">Pro+</div>
+      <!-- PRO+ WAITLIST -->
+      <div class="pr-card waitlist">
+        <div class="pr-badge-coming">Coming Soon</div>
+        <div class="pr-tier">Pro+</div>
         <h3>Community &amp; Coaching</h3>
-        <div class="pricing-amount" style="font-size:24px;margin-top:8px;">Pricing announced at launch</div>
-        <div class="pricing-period">&nbsp;</div>
-        <div class="pricing-divider"></div>
-        <p class="pricing-card-desc">Everything in Pro, plus a <strong>private community of fathers</strong>, <strong>monthly live sessions</strong> with experts, <strong>quarterly routine audits</strong>, and <strong>priority email support</strong>.</p>
-        <p class="pricing-card-desc">Join the founding member waitlist — <strong>founding members get 50% off for life</strong> when we launch.</p>
+        <div class="pr-price" style="font-size:22px;margin-top:4px;">Pricing at launch</div>
+        <div class="pr-period">&nbsp;</div>
+        <div class="pr-divider"></div>
+        <p class="pr-card-desc">Everything in Pro, plus a <strong>private community</strong>, <strong>monthly live sessions</strong>, <strong>quarterly routine audits</strong>, and <strong>priority support</strong>.</p>
+        <p class="pr-card-desc"><strong>Founding members get 50% off for life.</strong></p>
         <a href="/#free-signup" class="btn btn-outline" style="margin-top:auto;">Join the Waitlist →</a>
-        <p class="pricing-card-micro">We'll email you when Pro+ opens. No charge until then.</p>
+        <p class="pr-micro">No charge until launch.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TRUST STRIP -->
-<div class="trust-strip container">
-  <div class="trust-item">🔒 Stripe secured</div>
-  <div class="trust-item">↩ Cancel anytime</div>
-  <div class="trust-item">✓ 7-day free trial</div>
-  <div class="trust-item">📧 Email support included</div>
+<!-- TRUST -->
+<div class="pr-trust container">
+  <div class="pr-trust-item">🔒 Stripe secured</div>
+  <div class="pr-trust-item">↩ Cancel anytime</div>
+  <div class="pr-trust-item">✓ 7-day free trial</div>
+  <div class="pr-trust-item">📧 Email support</div>
 </div>
 
 
-<!-- FEATURE COMPARISON TABLE -->
-<section class="compare-section" aria-labelledby="compare-h2">
+<!-- SECTION 2: COMPARISON -->
+<section class="pr-compare" aria-labelledby="pr-compare-h2">
   <div class="container">
-    <div class="section-header" style="margin-bottom:40px;">
-      <h2 id="compare-h2">Compare every feature.</h2>
+    <div class="section-header" style="margin-bottom:48px;">
+      <h2 id="pr-compare-h2">Everything compared.</h2>
     </div>
-    <div class="compare-wrap">
-      <table class="compare-table">
-        <thead>
-          <tr>
-            <th>Feature</th>
-            <th>Free</th>
-            <th>Pro</th>
-          </tr>
-        </thead>
+    <div class="pr-table-wrap">
+      <table class="pr-table">
+        <thead><tr><th>Feature</th><th>Free</th><th>Pro</th></tr></thead>
         <tbody>
-          <tr class="cmp-section-row"><td colspan="3">Content</td></tr>
-          <tr><td>Weekly newsletter</td><td><span class="cmp-check">✓</span></td><td><span class="cmp-check">✓</span> (Priority — extended, 24h early)</td></tr>
-          <tr><td>Fatherhood Starter Pack (3 PDFs)</td><td><span class="cmp-check">✓</span></td><td><span class="cmp-check">✓</span></td></tr>
-          <tr><td>Morning routine basics</td><td><span class="cmp-check">✓</span></td><td><span class="cmp-check">✓</span></td></tr>
-          <tr><td>Full Fatherhood Track (4 stages, 24 protocols)</td><td><span class="cmp-dash">—</span></td><td><span class="cmp-check">✓</span></td></tr>
-          <tr><td>Morning Routine track — complete</td><td><span class="cmp-dash">—</span></td><td><span class="cmp-check">✓</span></td></tr>
-          <tr><td>Sleep track — complete</td><td><span class="cmp-dash">—</span></td><td><span class="cmp-check">✓</span></td></tr>
-          <tr><td>Screen Time track — complete</td><td><span class="cmp-dash">—</span></td><td><span class="cmp-check">✓</span></td></tr>
-          <tr><td>Monthly deep dive article</td><td><span class="cmp-dash">—</span></td><td><span class="cmp-check">✓</span></td></tr>
-          <tr class="cmp-section-row"><td colspan="3">Templates</td></tr>
-          <tr><td>The No-Phone Morning Checklist</td><td><span class="cmp-check">✓</span></td><td><span class="cmp-check">✓</span></td></tr>
-          <tr><td>The Sunday Night Reset</td><td><span class="cmp-check">✓</span></td><td><span class="cmp-check">✓</span></td></tr>
-          <tr><td>The Partner Night Feed Agreement</td><td><span class="cmp-dash">—</span></td><td><span class="cmp-check">✓</span></td></tr>
-          <tr><td>The Identity Audit</td><td><span class="cmp-dash">—</span></td><td><span class="cmp-check">✓</span></td></tr>
-          <tr><td>The First 8 Weeks Day-by-Day Protocol</td><td><span class="cmp-dash">—</span></td><td><span class="cmp-check">✓</span></td></tr>
-          <tr><td>The Routine Architect</td><td><span class="cmp-dash">—</span></td><td><span class="cmp-check">✓</span></td></tr>
-          <tr><td>The 90-Minute Cycle Calculator + Diary</td><td><span class="cmp-dash">—</span></td><td><span class="cmp-check">✓</span></td></tr>
-          <tr><td>The 7-Day Phone Reset Workbook</td><td><span class="cmp-dash">—</span></td><td><span class="cmp-check">✓</span></td></tr>
-          <tr class="cmp-section-row"><td colspan="3">Experience</td></tr>
-          <tr><td>PDF download vault</td><td><span class="cmp-dash">—</span></td><td><span class="cmp-check">✓</span></td></tr>
-          <tr><td>Ad-free</td><td><span class="cmp-dash">—</span></td><td><span class="cmp-check">✓</span></td></tr>
-          <tr><td>Quarterly Routine Review</td><td><span class="cmp-dash">—</span></td><td><span class="cmp-check">✓</span></td></tr>
+          <tr class="cmp-section"><td colspan="3">Content</td></tr>
+          <tr><td>Weekly newsletter</td><td><span class="pr-check">✓</span></td><td><span class="pr-check">✓</span> Extended, 24h early</td></tr>
+          <tr><td>Fatherhood Starter Pack (3 PDFs)</td><td><span class="pr-check">✓</span></td><td><span class="pr-check">✓</span></td></tr>
+          <tr><td>Morning routine basics</td><td><span class="pr-check">✓</span></td><td><span class="pr-check">✓</span></td></tr>
+          <tr><td>Full Fatherhood Track (4 stages)</td><td><span class="pr-dash">—</span></td><td><span class="pr-check">✓</span></td></tr>
+          <tr><td>Morning Routine track</td><td><span class="pr-dash">—</span></td><td><span class="pr-check">✓</span></td></tr>
+          <tr><td>Sleep track</td><td><span class="pr-dash">—</span></td><td><span class="pr-check">✓</span></td></tr>
+          <tr><td>Screen Time track</td><td><span class="pr-dash">—</span></td><td><span class="pr-check">✓</span></td></tr>
+          <tr class="cmp-section"><td colspan="3">Templates</td></tr>
+          <tr><td>Free templates</td><td>2</td><td>8 (2 free + 6 Pro)</td></tr>
+          <tr><td>Partner Night Feed Agreement</td><td><span class="pr-dash">—</span></td><td><span class="pr-check">✓</span></td></tr>
+          <tr><td>First 8 Weeks Day-by-Day Protocol</td><td><span class="pr-dash">—</span></td><td><span class="pr-check">✓</span></td></tr>
+          <tr><td>The Routine Architect</td><td><span class="pr-dash">—</span></td><td><span class="pr-check">✓</span></td></tr>
+          <tr><td>90-Min Cycle Calculator + Diary</td><td><span class="pr-dash">—</span></td><td><span class="pr-check">✓</span></td></tr>
+          <tr><td>7-Day Phone Reset Workbook</td><td><span class="pr-dash">—</span></td><td><span class="pr-check">✓</span></td></tr>
+          <tr class="cmp-section"><td colspan="3">Experience</td></tr>
+          <tr><td>Monthly product briefings</td><td><span class="pr-dash">—</span></td><td><span class="pr-check">✓</span></td></tr>
+          <tr><td>Monthly research brief</td><td><span class="pr-dash">—</span></td><td><span class="pr-check">✓</span></td></tr>
+          <tr><td>Dad Readiness Assessment</td><td><span class="pr-dash">—</span></td><td><span class="pr-check">✓</span></td></tr>
         </tbody>
       </table>
     </div>
-    <p class="pricing-footnote">Pro+ (Community &amp; Coaching) coming 2025. <a href="/#free-signup">Join the founding member waitlist →</a></p>
   </div>
 </section>
 
 
-<!-- FAQ -->
-<section class="faq-section" aria-labelledby="faq-h2">
+<!-- SECTION 3: FAQ -->
+<section class="pr-faq" aria-labelledby="pr-faq-h2">
   <div class="container">
-    <div class="section-header" style="margin-bottom:40px;">
-      <h2 id="faq-h2">Questions before you start.</h2>
+    <div class="section-header" style="margin-bottom:48px;">
+      <h2 id="pr-faq-h2">Questions answered.</h2>
     </div>
-    <div class="faq-list" role="list">
-      <div class="faq-item" role="listitem">
-        <button class="faq-q" aria-expanded="false">Can I try Pro before I pay?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-        <div class="faq-a" aria-hidden="true"><div class="faq-a-inner">Yes. Every Pro subscription starts with a 7-day free trial. You will not be charged until the trial ends. Cancel anytime during the trial and you will not be billed.</div></div>
-      </div>
-      <div class="faq-item" role="listitem">
-        <button class="faq-q" aria-expanded="false">What payment methods do you accept?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-        <div class="faq-a" aria-hidden="true"><div class="faq-a-inner">We use Stripe for all payments. Stripe accepts Visa, Mastercard, American Express, and most major debit and credit cards. All transactions are encrypted and PCI-compliant.</div></div>
-      </div>
-      <div class="faq-item" role="listitem">
-        <button class="faq-q" aria-expanded="false">Can I cancel anytime?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-        <div class="faq-a" aria-hidden="true"><div class="faq-a-inner">Yes. Cancel from your account settings at any time. You keep access until the end of your current billing period. No questions asked, no cancellation hoops.</div></div>
-      </div>
-      <div class="faq-item" role="listitem">
-        <button class="faq-q" aria-expanded="false">What is the difference between the free newsletter and Pro?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-        <div class="faq-a" aria-hidden="true"><div class="faq-a-inner">Free gives you a weekly email, the Fatherhood Starter Pack (3 PDFs), 2 templates, and morning basics. Pro adds full content across all 4 fatherhood stages (24 protocols), the complete Morning, Sleep and Screen Time tracks, 6 Pro-exclusive templates, the PDF vault, and the priority newsletter — an extended edition sent Monday, 24 hours before the free Tuesday edition.</div></div>
-      </div>
-      <div class="faq-item" role="listitem">
-        <button class="faq-q" aria-expanded="false">Is the free plan actually useful?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-        <div class="faq-a" aria-hidden="true"><div class="faq-a-inner">Yes. The free plan includes a weekly newsletter with actionable routine advice, the Fatherhood Starter Pack (3 PDFs), two named templates (The No-Phone Morning Checklist and The Sunday Night Reset), and morning routine basics. Many fathers stay free for months. We would rather you use the free plan than not start at all.</div></div>
-      </div>
-      <div class="faq-item" role="listitem">
-        <button class="faq-q" aria-expanded="false">Do you offer refunds?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-        <div class="faq-a" aria-hidden="true"><div class="faq-a-inner">If you are not satisfied within 30 days of your first payment, email us and we will refund you in full. No questions asked. After 30 days, you can cancel anytime but we do not offer partial refunds for unused time.</div></div>
-      </div>
-      <div class="faq-item" role="listitem">
-        <button class="faq-q" aria-expanded="false">Is my data safe?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-        <div class="faq-a" aria-hidden="true"><div class="faq-a-inner">We store only your email address and subscription status. We do not sell or share your data. All payments are processed by Stripe — we never see your card details. We are GDPR compliant and based in Malta.</div></div>
-      </div>
-      <div class="faq-item" role="listitem">
-        <button class="faq-q" aria-expanded="false">Will this work if the baby is already here?<svg class="faq-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-        <div class="faq-a" aria-hidden="true"><div class="faq-a-inner">Absolutely. The Fatherhood Track covers four stages from pre-birth through year one and beyond. Start at the stage that matches your situation. The morning, sleep, and screen time tracks are relevant regardless of your child's age.</div></div>
-      </div>
+    <div class="pr-faq-list">
+      <div class="pr-faq-item"><button class="pr-faq-q" aria-expanded="false">Can I try Pro before I pay?<svg class="pr-faq-icon" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="pr-faq-a"><div class="pr-faq-a-inner">Yes. Every Pro subscription starts with a 7-day free trial. Cancel anytime during the trial and you will not be charged.</div></div></div>
+      <div class="pr-faq-item"><button class="pr-faq-q" aria-expanded="false">What is the difference between Free and Pro?<svg class="pr-faq-icon" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="pr-faq-a"><div class="pr-faq-a-inner">Free gives you a weekly newsletter, the Starter Pack (3 PDFs), morning basics, and 2 templates. Pro adds full access to all 4 fatherhood stages, complete Morning, Sleep and Screen Time tracks, 6 exclusive templates, the extended priority newsletter, monthly product briefings, and monthly research briefs.</div></div></div>
+      <div class="pr-faq-item"><button class="pr-faq-q" aria-expanded="false">Can I cancel anytime?<svg class="pr-faq-icon" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="pr-faq-a"><div class="pr-faq-a-inner">Yes. Cancel from your account at any time. You keep access until the end of your billing period.</div></div></div>
+      <div class="pr-faq-item"><button class="pr-faq-q" aria-expanded="false">Do you offer refunds?<svg class="pr-faq-icon" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="pr-faq-a"><div class="pr-faq-a-inner">30-day full refund, no questions asked. After 30 days, cancel anytime but no partial refunds for unused time.</div></div></div>
+      <div class="pr-faq-item"><button class="pr-faq-q" aria-expanded="false">Is the free plan actually useful?<svg class="pr-faq-icon" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="pr-faq-a"><div class="pr-faq-a-inner">Yes. The weekly newsletter is genuinely useful — actionable routine advice every Tuesday. The Starter Pack gives you 3 PDFs and 2 templates to start tonight. Many fathers stay free for months.</div></div></div>
+      <div class="pr-faq-item"><button class="pr-faq-q" aria-expanded="false">Is my payment secure?<svg class="pr-faq-icon" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="pr-faq-a"><div class="pr-faq-a-inner">All payments are processed by Stripe. We never see or store your card details. Encrypted, PCI-compliant. GDPR compliant, based in Malta.</div></div></div>
     </div>
   </div>
 </section>
 
 
-<!-- FINAL CTA -->
-<section class="pricing-final" aria-labelledby="pricing-final-h2">
+<!-- SECTION 4: FINAL CTA -->
+<section class="pr-final">
   <div class="container">
-    <h2 id="pricing-final-h2">Not sure? Start free.</h2>
-    <p>Upgrade when you're ready. Most people do within 14 days.</p>
+    <h2>Not sure? Start free.</h2>
+    <p>Upgrade when you're ready.</p>
     <a href="/#free-signup" class="btn btn-outline">Get Started Free →</a>
   </div>
 </section>
@@ -323,17 +262,46 @@
 </footer>
 
 <script src="js/main.js" defer></script>
+<script src="js/cookie-consent.js" defer></script>
 <script>
 (function(){
-  // FAQ accordion
-  document.querySelectorAll('.faq-q').forEach(function(btn){
-    btn.addEventListener('click',function(){
-      var item=btn.closest('.faq-item');var isOpen=item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(function(el){el.classList.remove('open');el.querySelector('.faq-q').setAttribute('aria-expanded','false');el.querySelector('.faq-a').setAttribute('aria-hidden','true')});
-      if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');item.querySelector('.faq-a').setAttribute('aria-hidden','false')}
+  // Pricing toggle
+  var opts = document.querySelectorAll('.pr-toggle-opt');
+  var priceEl = document.getElementById('pro-price');
+  var periodEl = document.getElementById('pro-period');
+  opts.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      opts.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-checked','false'); });
+      btn.classList.add('active'); btn.setAttribute('aria-checked','true');
+      var billing = btn.getAttribute('data-billing');
+      if(billing === 'monthly'){
+        priceEl.innerHTML = '€7.99 <span>/ month</span>';
+        periodEl.textContent = 'Billed monthly';
+      } else {
+        priceEl.innerHTML = '€59.99 <span>/ year</span>';
+        periodEl.textContent = '€5/month · Billed annually';
+      }
     });
   });
-  document.querySelectorAll('[data-year]').forEach(function(el){el.textContent=new Date().getFullYear()});
+
+  // FAQ accordion
+  document.querySelectorAll('.pr-faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.closest('.pr-faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.pr-faq-item.open').forEach(function(el){
+        el.classList.remove('open');
+        el.querySelector('.pr-faq-q').setAttribute('aria-expanded','false');
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+
+  // Year
+  document.querySelectorAll('[data-year]').forEach(function(el){ el.textContent = new Date().getFullYear(); });
 })();
 </script>
 </body>

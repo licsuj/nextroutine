@@ -200,6 +200,14 @@
 
     <div class="mr-decision-form">
       <form id="mr-form" novalidate>
+        <label for="mr-stage" class="sr-only">Your fatherhood stage</label>
+        <select id="mr-stage" name="stage">
+          <option value="" disabled selected>Where are you in the journey?</option>
+          <option value="got-the-news">Just got the news</option>
+          <option value="9-month-journey">During the 9-month journey</option>
+          <option value="first-weeks">First weeks after birth</option>
+          <option value="months-after">Months after birth</option>
+        </select>
         <label for="mr-email" class="sr-only">Email address</label>
         <input type="email" id="mr-email" name="email" placeholder="Your email address" autocomplete="email" required>
         <button type="submit" class="btn btn-gold btn-full" style="margin-top:12px;">Send me the free protocol →</button>
