@@ -15,37 +15,37 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/cookie-consent.css">
 <style>
-.pr-hero{padding:calc(var(--nav-h) + 80px) 0 40px;text-align:center}
+.pr-hero{padding:calc(var(--nav-h) + 80px) 24px 40px;text-align:center}
 .pr-hero h1{font-size:52px;letter-spacing:-0.03em;margin-bottom:16px}
 .pr-hero-sub{font-size:19px;color:var(--text-secondary);max-width:400px;margin:0 auto 40px;line-height:1.65}
 .pr-toggle{display:inline-flex;background:var(--bg-surface);border:1px solid var(--border-visible);border-radius:999px;padding:4px;margin-bottom:56px}
 .pr-toggle-opt{padding:10px 28px;border-radius:999px;font-family:var(--font-heading);font-size:15px;font-weight:500;color:var(--text-muted);cursor:pointer;transition:all 0.2s ease;border:none;background:transparent}
 .pr-toggle-opt.active{background:var(--green);color:#fff;font-weight:600}
 .pr-save{display:inline-block;background:var(--gold-muted);color:var(--gold);font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;margin-left:6px;vertical-align:middle;letter-spacing:0.04em}
-.pr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1020px;margin:0 auto;align-items:stretch}
-.pr-card{background:var(--bg-surface);border:1px solid var(--border);border-radius:16px;padding:36px;display:flex;flex-direction:column;position:relative}
+.pr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1020px;margin:0 auto;align-items:start}
+.pr-card{background:var(--bg-surface);border:1px solid var(--border);border-radius:16px;padding:36px;display:flex;flex-direction:column;position:relative;min-height:100%}
 .pr-card.featured{border-color:var(--green);box-shadow:0 0 0 1px var(--green),0 8px 40px rgba(0,0,0,0.3)}
-.pr-card.waitlist{opacity:0.8}
+.pr-card.waitlist{opacity:0.85}
 .pr-badge{position:absolute;top:-1px;right:20px;background:var(--green);color:#fff;font-size:11px;font-weight:600;text-transform:uppercase;padding:5px 14px;border-radius:0 0 6px 6px;letter-spacing:0.04em}
 .pr-badge-coming{position:absolute;top:-1px;right:20px;background:var(--gold-muted);color:var(--gold);font-size:11px;font-weight:600;text-transform:uppercase;padding:5px 14px;border-radius:0 0 6px 6px;letter-spacing:0.04em}
 .pr-tier{font-family:var(--font-heading);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted);margin-bottom:8px}
 .pr-card h3{font-size:22px;margin-bottom:8px}
-.pr-price{font-family:var(--font-heading);font-size:40px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em}
-.pr-price span{font-size:16px;font-weight:400;color:var(--text-secondary)}
-.pr-period{font-size:13px;color:var(--text-muted);margin-top:4px;margin-bottom:24px;min-height:18px}
+.pr-price{font-family:var(--font-heading);font-size:40px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;min-height:48px;display:flex;align-items:baseline}
+.pr-price span{font-size:16px;font-weight:400;color:var(--text-secondary);margin-left:4px}
+.pr-period{font-size:13px;color:var(--text-muted);margin-top:4px;margin-bottom:24px;min-height:36px}
 .pr-divider{height:1px;background:var(--border-visible);margin-bottom:24px}
-.pr-features{display:flex;flex-direction:column;gap:14px;flex:1}
+.pr-features{display:flex;flex-direction:column;gap:14px;flex:1;min-height:0}
 .pr-feat{display:flex;align-items:flex-start;gap:10px;font-size:15px;color:var(--text-primary);line-height:1.5}
 .pr-feat svg{flex-shrink:0;margin-top:3px}
-.pr-card .btn{width:100%;margin-top:28px}
-.pr-card-footer{margin-top:auto;padding-top:8px}
+.pr-card .btn{width:100%}
+.pr-card-footer{margin-top:auto;padding-top:28px}
 .pr-micro{font-size:13px;color:var(--text-muted);text-align:center;margin-top:12px}
 .pr-card-desc{font-size:15px;color:var(--text-secondary);line-height:1.65;margin-bottom:16px}
 .pr-card-desc strong{color:var(--text-primary)}
 .pr-trust{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;padding:40px 0;font-size:14px;color:var(--text-secondary)}
 .pr-trust-item{display:flex;align-items:center;gap:8px}
-.pr-compare{padding:var(--section-py) 0;background:var(--bg-alt)}
-.pr-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.pr-compare{padding:var(--section-py) 24px;background:var(--bg-alt)}
+.pr-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:var(--container-max);margin:0 auto}
 .pr-table{width:100%;border-collapse:collapse;min-width:520px;max-width:800px;margin:0 auto}
 .pr-table th{font-family:var(--font-heading);font-size:15px;font-weight:600;color:var(--text-primary);padding:16px 20px;text-align:center;border-bottom:2px solid var(--green)}
 .pr-table th:first-child{text-align:left;width:45%}
@@ -55,7 +55,7 @@
 .pr-table .cmp-section td{background:rgba(45,106,79,0.04);font-family:var(--font-heading);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-muted);text-align:left;padding:10px 20px}
 .pr-check{color:var(--green-bright)}
 .pr-dash{color:var(--text-muted)}
-.pr-faq{padding:var(--section-py) 0}
+.pr-faq{padding:var(--section-py) 24px}
 .pr-faq-list{max-width:720px;margin:0 auto}
 .pr-faq-item{border-bottom:1px solid var(--border)}
 .pr-faq-q{width:100%;text-align:left;padding:20px 0;font-family:var(--font-heading);font-size:17px;font-weight:600;color:var(--text-primary);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:color 0.15s ease;background:none;border:none}
@@ -167,11 +167,13 @@
         <div class="pr-badge-coming">Coming Soon</div>
         <div class="pr-tier">Pro+</div>
         <h3>Community &amp; Coaching</h3>
-        <div class="pr-price" style="font-size:22px;margin-top:4px;">Pricing at launch</div>
+        <div class="pr-price" style="font-size:24px;">Pricing at launch</div>
         <div class="pr-period">&nbsp;</div>
         <div class="pr-divider"></div>
-        <p class="pr-card-desc">Everything in Pro, plus a <strong>private community</strong>, <strong>monthly live sessions</strong>, <strong>quarterly routine audits</strong>, and <strong>priority support</strong>.</p>
-        <p class="pr-card-desc"><strong>Founding members get 50% off for life.</strong></p>
+        <div style="flex:1;">
+          <p class="pr-card-desc">Everything in Pro, plus a <strong>private community</strong>, <strong>monthly live sessions</strong>, <strong>quarterly routine audits</strong>, and <strong>priority support</strong>.</p>
+          <p class="pr-card-desc"><strong>Founding members get 50% off for life.</strong></p>
+        </div>
         <div class="pr-card-footer">
           <a href="/#free-signup" class="btn btn-outline">Join the Waitlist →</a>
           <p class="pr-micro">No charge until launch.</p>
