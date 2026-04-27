@@ -7,12 +7,12 @@
 <meta name="theme-color" content="#0F1117">
 <title>Pricing — NextRoutine | Plans for New Dads</title>
 <meta name="description" content="Start free with a weekly newsletter and starter pack. Go Pro for all tracks, templates, and coaching. 7-day free trial. Cancel anytime.">
-<link rel="canonical" href="https://nextroutine-one.vercel.app/pricing">
+<link rel="canonical" href="https://www.nextroutine.com/pricing">
 <meta property="og:title" content="Pricing — NextRoutine | Plans for New Dads">
 <meta property="og:description" content="Start free with a weekly newsletter and starter pack. Go Pro for all tracks, templates, and coaching. 7-day free trial. Cancel anytime.">
 <meta property="og:type" content="website">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","name":"Pricing — NextRoutine","description":"Start free. Go Pro for all tracks, templates, and coaching.","url":"https://nextroutine-one.vercel.app/pricing"}
+{"@context":"https://schema.org","@type":"WebPage","name":"Pricing — NextRoutine","description":"Start free. Go Pro for all tracks, templates, and coaching.","url":"https://www.nextroutine.com/pricing"}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +36,7 @@
       <a href="/pricing.html" class="nav-link" role="listitem" style="color:#F0F2F5">Pricing</a>
     </div>
     <div class="nav-actions">
-      <a href="/#free-signup" class="btn btn-primary btn-sm">Get the Free Fatherhood Starter Pack →</a>
+      <a href="/#free-signup" class="btn btn-primary btn-sm">Get Started Free →</a>
     </div>
     <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay"><span></span><span></span><span></span></button>
   </div>
@@ -107,7 +107,10 @@
           <div style="display:flex;align-items:flex-start;gap:10px;font-size:15px;color:#F0F2F5;line-height:1.5;"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex-shrink:0;margin-top:3px;"><path d="M3 8l3.5 3.5L13 4.5" stroke="#40916C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>7-day free trial</div>
         </div>
         <div style="margin-top:auto;padding-top:24px;">
-          <a href="#" style="display:block;text-align:center;padding:16px 36px;background:#2D6A4F;border:1px solid #2D6A4F;border-radius:10px;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:16px;text-decoration:none;transition:all 0.2s ease;">Start 7-Day Free Trial →</a>
+          <!-- TODO: Replace href="#" with your Stripe Payment Link URL -->
+          <!-- Monthly: href="https://buy.stripe.com/YOUR_MONTHLY_LINK" -->
+          <!-- Annual: href="https://buy.stripe.com/YOUR_ANNUAL_LINK" -->
+          <a id="pro-btn" href="#" style="display:block;text-align:center;padding:16px 36px;background:#2D6A4F;border:1px solid #2D6A4F;border-radius:10px;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;font-size:16px;text-decoration:none;transition:all 0.2s ease;">Start 7-Day Free Trial →</a>
           <p style="font-size:13px;color:#5C6478;text-align:center;margin-top:12px;">7-day free trial. 30-day full refund. No questions asked.</p>
         </div>
       </div>
@@ -216,18 +219,23 @@
 function setBilling(type){
   var m=document.getElementById('tog-monthly'),a=document.getElementById('tog-annual');
   var p=document.getElementById('pro-price'),d=document.getElementById('pro-period');
+  var btn=document.getElementById('pro-btn');
   if(type==='monthly'){
     m.style.background='#2D6A4F';m.style.color='#fff';m.style.fontWeight='600';
     a.style.background='transparent';a.style.color='#5C6478';a.style.fontWeight='500';
     m.setAttribute('aria-checked','true');a.setAttribute('aria-checked','false');
     p.innerHTML='€7.99 <span style="font-size:16px;font-weight:400;color:#9BA3B2;">/ month</span>';
     d.textContent='Billed monthly';
+    // TODO: Uncomment and add your Stripe Payment Link for monthly
+    // if(btn) btn.href='https://buy.stripe.com/YOUR_MONTHLY_LINK';
   } else {
     a.style.background='#2D6A4F';a.style.color='#fff';a.style.fontWeight='600';
     m.style.background='transparent';m.style.color='#5C6478';m.style.fontWeight='500';
     a.setAttribute('aria-checked','true');m.setAttribute('aria-checked','false');
     p.innerHTML='€59.99 <span style="font-size:16px;font-weight:400;color:#9BA3B2;">/ year</span>';
     d.textContent='€5/month · Billed annually';
+    // TODO: Uncomment and add your Stripe Payment Link for annual
+    // if(btn) btn.href='https://buy.stripe.com/YOUR_ANNUAL_LINK';
   }
 }
 function toggleFaq(btn){
