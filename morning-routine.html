@@ -163,25 +163,7 @@
     <p class="mr-decision-sub">Move your phone to the kitchen tonight. Do the 10-minute protocol tomorrow. See what changes.</p>
 
     <div class="mr-decision-form">
-      <form id="mr-form" novalidate>
-        <label for="mr-stage" class="sr-only">Your fatherhood stage</label>
-        <select id="mr-stage" name="stage">
-          <option value="" disabled selected>Where are you in the journey?</option>
-          <option value="exploring">Not a dad yet — just exploring</option>
-          <option value="got-the-news">Just got the news</option>
-          <option value="9-month-journey">During the 9-month journey</option>
-          <option value="first-weeks">First weeks after birth</option>
-          <option value="months-after">Months after birth</option>
-        </select>
-        <label for="mr-email" class="sr-only">Email address</label>
-        <input type="email" id="mr-email" name="email" placeholder="Your email address" autocomplete="email" required>
-        <button type="submit" class="btn btn-gold btn-full" style="margin-top:12px;">Get the Free Morning Protocol →</button>
-      </form>
-      <div class="form-error" id="mr-error" role="alert" aria-live="polite">Please enter a valid email address.</div>
-      <div class="form-success" id="mr-success" aria-live="polite">
-        <div class="form-success-icon" aria-hidden="true">✓</div>
-        <div><div class="form-success-title">It's on its way.</div><div class="form-success-sub">Check your inbox. Start tonight.</div></div>
-      </div>
+      <script async data-uid="51638d63fa" src="https://next-routine.kit.com/51638d63fa/index.js"></script>
       <p style="font-size:13px;color:var(--text-muted);margin-top:12px;">Free protocol + weekly email. No card needed.</p>
     <p style="font-size:14px;color:#5C6478;margin-top:20px;">Your mornings depend on your sleep. <a href="/sleep-better.html" style="color:#40916C;text-decoration:underline;">Read the sleep protocol →</a></p>
     </div>
@@ -207,26 +189,6 @@
 
 <script src="js/main.js" defer></script>
 <script src="js/cookie-consent.js" defer></script>
-<script>
-(function(){
-  var EMAIL_RE=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  function initForm(fId,eId,sId){
-    var f=document.getElementById(fId);if(!f)return;
-    var inp=f.querySelector('input[type="email"]');
-    var err=document.getElementById(eId);var suc=document.getElementById(sId);
-    f.addEventListener('submit',function(e){
-      e.preventDefault();var v=inp.value.trim();
-      if(err)err.classList.remove('visible');inp.style.borderColor='';
-      if(!v||!EMAIL_RE.test(v)){inp.style.borderColor='#e74c3c';if(err)err.classList.add('visible');inp.focus();return;}
-      inp.disabled=true;f.style.display='none';if(suc)suc.classList.add('visible');
-      try{localStorage.setItem('nr_subscribed','true')}catch(x){}
-    });
-  }
-  document.addEventListener('DOMContentLoaded',function(){
-    initForm('mr-form','mr-error','mr-success');
-    document.querySelectorAll('[data-year]').forEach(function(el){el.textContent=new Date().getFullYear()});
-  });
-})();
-</script>
+
 </body>
 </html>

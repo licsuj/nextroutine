@@ -79,25 +79,7 @@
 
     <div class="nd-hero-options">
       <div class="hero-option-label">Start Free</div>
-      <form id="nd-hero-form" novalidate style="display:flex;flex-direction:column;gap:12px;">
-        <label for="nd-hero-stage" class="sr-only">Your fatherhood stage</label>
-        <select id="nd-hero-stage" name="stage" required>
-          <option value="" disabled selected>Where are you in the journey?</option>
-          <option value="exploring">Not a dad yet — just exploring</option>
-          <option value="got-the-news">Just got the news (expecting)</option>
-          <option value="9-month-journey">During the 9-month journey</option>
-          <option value="first-weeks">First weeks after birth</option>
-          <option value="months-after">Months after birth (3–12)</option>
-        </select>
-        <label for="nd-hero-email" class="sr-only">Email address</label>
-        <input type="email" id="nd-hero-email" name="email" placeholder="Your email address" autocomplete="email" required>
-        <button type="submit" class="btn btn-primary btn-full">Get the Free Fatherhood Starter Pack →</button>
-      </form>
-      <div class="form-error" id="nd-hero-error" role="alert" aria-live="polite">Please select your stage and enter a valid email.</div>
-      <div class="form-success" id="nd-hero-success" aria-live="polite">
-        <div class="form-success-icon" aria-hidden="true">✓</div>
-        <div><div class="form-success-title">You're in.</div><div class="form-success-sub">Check your inbox.</div></div>
-      </div>
+      <script async data-uid="51638d63fa" src="https://next-routine.kit.com/51638d63fa/index.js"></script>
       <p class="hero-micro" style="text-align:center;">Free. No card. Takes 30 seconds.</p>
 
       <div class="hero-divider"><span>or</span></div>
@@ -213,25 +195,7 @@
       </div>
 
       <div class="nd-free-form">
-        <form id="nd-free-form" novalidate>
-          <label for="nd-free-stage" class="sr-only">Your fatherhood stage</label>
-          <select id="nd-free-stage" name="stage" required style="width:100%;margin-bottom:12px;">
-            <option value="" disabled selected>Where are you in the journey?</option>
-            <option value="exploring">Not a dad yet — just exploring</option>
-            <option value="got-the-news">Just got the news (expecting)</option>
-            <option value="9-month-journey">During the 9-month journey</option>
-            <option value="first-weeks">First weeks after birth</option>
-            <option value="months-after">Months after birth (3–12)</option>
-          </select>
-          <label for="nd-free-email" class="sr-only">Email address</label>
-          <input type="email" id="nd-free-email" name="email" placeholder="Your email address" autocomplete="email" required>
-          <button type="submit" class="btn btn-gold btn-full">Get the Free Fatherhood Starter Pack →</button>
-        </form>
-        <div class="form-error" id="nd-free-error" role="alert" aria-live="polite">Please enter a valid email address.</div>
-        <div class="form-success" id="nd-free-success" aria-live="polite">
-          <div class="form-success-icon" aria-hidden="true">✓</div>
-          <div><div class="form-success-title">It's on its way.</div><div class="form-success-sub">Check your inbox.</div></div>
-        </div>
+        <script async data-uid="51638d63fa" src="https://next-routine.kit.com/51638d63fa/index.js"></script>
         <p class="nd-free-form-micro">No spam. One click to unsubscribe.</p>
       </div>
     </div>
@@ -327,42 +291,6 @@
 
 <script src="js/main.js" defer></script>
 <script src="js/cookie-consent.js" defer></script>
-<script>
-(function(){
-  var EMAIL_RE=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  function initForm(fId,eId,sId){
-    var f=document.getElementById(fId);if(!f)return;
-    var inp=f.querySelector('input[type="email"]');
-    var sel=f.querySelector('select');
-    var err=document.getElementById(eId);var suc=document.getElementById(sId);
-    f.addEventListener('submit',function(e){
-      e.preventDefault();var v=inp.value.trim();
-      if(err)err.classList.remove('visible');inp.style.borderColor='';if(sel)sel.style.borderColor='';
-      var stageOk=!sel||sel.value;
-      if(!stageOk||!v||!EMAIL_RE.test(v)){
-        if(!stageOk&&sel)sel.style.borderColor='#e74c3c';
-        if(!v||!EMAIL_RE.test(v))inp.style.borderColor='#e74c3c';
-        if(err)err.classList.add('visible');return;
-      }
-      if(sel)try{localStorage.setItem('nr_stage',sel.value)}catch(x){}
-      inp.disabled=true;f.style.display='none';if(suc)suc.classList.add('visible');
-      try{localStorage.setItem('nr_subscribed','true')}catch(x){}
-    });
-    try{if(localStorage.getItem('nr_subscribed')==='true'){f.style.display='none';if(suc)suc.classList.add('visible')}}catch(x){}
-  }
-  document.addEventListener('DOMContentLoaded',function(){
-    initForm('nd-hero-form','nd-hero-error','nd-hero-success');
-    initForm('nd-free-form','nd-free-error','nd-free-success');
-    document.querySelectorAll('[data-year]').forEach(function(el){el.textContent=new Date().getFullYear()});
-    // Smooth scroll for Find My Stage
-    document.querySelectorAll('a[href="#nd-free"]').forEach(function(a){
-      a.addEventListener('click',function(e){
-        e.preventDefault();var t=document.getElementById('nd-free');
-        if(t){var y=t.getBoundingClientRect().top+window.scrollY-80;window.scrollTo({top:y,behavior:'smooth'});}
-      });
-    });
-  });
-})();
-</script>
+
 </body>
 </html>
