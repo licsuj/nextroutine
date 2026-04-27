@@ -7,7 +7,7 @@
   'use strict';
   var STORAGE_KEY = 'nr_cookie_consent';
   var CONSENT_EXPIRY_DAYS = 180;
-  var GA_ID = 'G-XXXXXXXXXX';
+  var GA_ID = 'G-BS9N5GBYXK';
 
   function getConsent() {
     try {
@@ -27,7 +27,7 @@
 
   var gaLoaded = false;
   function loadGA4() {
-    if (gaLoaded || GA_ID === 'G-XXXXXXXXXX') return;
+    if (gaLoaded) return;
     gaLoaded = true;
     var s = document.createElement('script');
     s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
