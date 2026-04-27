@@ -62,25 +62,7 @@
     <h1 id="blog-h1">Routines, research, and real talk.</h1>
     <p class="blog-hero-sub">Practical writing for fathers who take their routine seriously. No listicles. No influencer advice. Protocols tested by real dads.</p>
     <div class="blog-form">
-      <form id="blog-hero-form" novalidate>
-        <label for="blog-stage" class="sr-only">Your fatherhood stage</label>
-        <select id="blog-stage" name="stage" required>
-          <option value="" disabled selected>Where are you in the journey?</option>
-          <option value="exploring">Not a dad yet — just exploring</option>
-          <option value="got-the-news">Just got the news (expecting)</option>
-          <option value="9-month-journey">During the 9-month journey</option>
-          <option value="first-weeks">First weeks after birth</option>
-          <option value="months-after">Months after birth (3–12)</option>
-        </select>
-        <label for="blog-email" class="sr-only">Email address</label>
-        <input type="email" id="blog-email" name="email" placeholder="Your email address" autocomplete="email" required style="margin-top:12px;">
-        <button type="submit" class="btn btn-primary btn-full" style="margin-top:12px;">Get the Weekly Newsletter →</button>
-      </form>
-      <div class="form-error" id="blog-hero-error" role="alert" aria-live="polite">Please select your stage and enter a valid email.</div>
-      <div class="form-success" id="blog-hero-success" aria-live="polite">
-        <div class="form-success-icon" aria-hidden="true">✓</div>
-        <div><div class="form-success-title">You're in.</div><div class="form-success-sub">See you Tuesday.</div></div>
-      </div>
+      <script async data-uid="51638d63fa" src="https://next-routine.kit.com/51638d63fa/index.js"></script>
       <p class="blog-form-micro">Free. Every Tuesday. Unsubscribe anytime.</p>
     </div>
   </div>
@@ -134,25 +116,7 @@
     <h2 id="blog-cta-h2">Every Tuesday in your inbox.</h2>
     <p class="blog-cta-sub">One protocol per week — morning, sleep, or screen time. Matched to your fatherhood stage. Free forever.</p>
     <div class="blog-cta-form">
-      <form id="blog-cta-form" novalidate>
-        <label for="blog-cta-stage" class="sr-only">Your fatherhood stage</label>
-        <select id="blog-cta-stage" name="stage" required>
-          <option value="" disabled selected>Where are you in the journey?</option>
-          <option value="exploring">Not a dad yet — just exploring</option>
-          <option value="got-the-news">Just got the news (expecting)</option>
-          <option value="9-month-journey">During the 9-month journey</option>
-          <option value="first-weeks">First weeks after birth</option>
-          <option value="months-after">Months after birth (3–12)</option>
-        </select>
-        <label for="blog-cta-email" class="sr-only">Email address</label>
-        <input type="email" id="blog-cta-email" name="email" placeholder="Your email address" autocomplete="email" required style="margin-top:12px;">
-        <button type="submit" class="btn btn-gold btn-full" style="margin-top:12px;">Get the Free Fatherhood Starter Pack →</button>
-      </form>
-      <div class="form-error" id="blog-cta-error" role="alert" aria-live="polite">Please select your stage and enter a valid email.</div>
-      <div class="form-success" id="blog-cta-success" aria-live="polite">
-        <div class="form-success-icon" aria-hidden="true">✓</div>
-        <div><div class="form-success-title">You're in.</div><div class="form-success-sub">See you Tuesday.</div></div>
-      </div>
+      <script async data-uid="51638d63fa" src="https://next-routine.kit.com/51638d63fa/index.js"></script>
       <p style="font-size:13px;color:var(--text-muted);margin-top:10px;text-align:center;">Free. Unsubscribe anytime.</p>
     </div>
   </div>
@@ -177,49 +141,6 @@
 
 <script src="/js/main.js" defer></script>
 <script src="/js/cookie-consent.js" defer></script>
-<script>
-(function(){
-  var EMAIL_RE=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  function initForm(fId,eId,sId){
-    var f=document.getElementById(fId);if(!f)return;
-    var inp=f.querySelector('input[type="email"]');
-    var sel=f.querySelector('select');
-    var err=document.getElementById(eId);var suc=document.getElementById(sId);
-    f.addEventListener('submit',function(e){
-      e.preventDefault();var v=inp.value.trim();
-      if(err)err.classList.remove('visible');inp.style.borderColor='';if(sel)sel.style.borderColor='';
-      var stageOk=!sel||sel.value;
-      if(!stageOk||!v||!EMAIL_RE.test(v)){
-        if(!stageOk&&sel)sel.style.borderColor='#e74c3c';
-        if(!v||!EMAIL_RE.test(v))inp.style.borderColor='#e74c3c';
-        if(err)err.classList.add('visible');return;
-      }
-      if(sel)try{localStorage.setItem('nr_stage',sel.value)}catch(x){}
-      inp.disabled=true;f.style.display='none';if(suc)suc.classList.add('visible');
-      try{localStorage.setItem('nr_subscribed','true')}catch(x){}
-    });
-  }
-  document.addEventListener('DOMContentLoaded',function(){
-    initForm('blog-hero-form','blog-hero-error','blog-hero-success');
-    initForm('blog-cta-form','blog-cta-error','blog-cta-success');
-    document.querySelectorAll('[data-year]').forEach(function(el){el.textContent=new Date().getFullYear()});
 
-    // Blog filter
-    var btns=document.querySelectorAll('.blog-filter-btn');
-    var cards=document.querySelectorAll('.blog-card');
-    btns.forEach(function(btn){
-      btn.addEventListener('click',function(){
-        btns.forEach(function(b){b.classList.remove('active');b.setAttribute('aria-selected','false')});
-        btn.classList.add('active');btn.setAttribute('aria-selected','true');
-        var cat=btn.getAttribute('data-filter');
-        cards.forEach(function(c){
-          if(cat==='all'||c.getAttribute('data-category')===cat){c.style.display='';}
-          else{c.style.display='none';}
-        });
-      });
-    });
-  });
-})();
-</script>
 </body>
 </html>
