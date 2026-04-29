@@ -5,30 +5,46 @@
    ============================================================ */
 
 /* === DESIGN TOKENS === */
+/* Lovable-merged palette: warm amber/coral/sage/sky accents */
 :root {
   /* Backgrounds */
-  --bg-base:    #0F1117;
-  --bg-alt:     #131620;
-  --bg-surface: #1A1D27;
+  --bg-base:    #0C1018;
+  --bg-alt:     #111724;
+  --bg-surface: #161E2E;
   --bg-green:   #1B4332;
 
-  /* Accent — used sparingly */
+  /* Accent — warm amber primary (from Lovable) */
   --green:        #2D6A4F;
   --green-bright: #40916C;
-  --gold:       #D4A853;
-  --gold-bright: #F0C060;
-  --gold-muted: rgba(212,168,83,0.08);
+  --gold:       #D4A24E;
+  --gold-bright: #E8B45A;
+  --gold-muted: rgba(212,162,78,0.10);
+
+  /* Lovable accent palette */
+  --sage:        #B5D5C0;
+  --sage-fg:     #1B4332;
+  --coral:       #E8A090;
+  --coral-fg:    #1A2A3A;
+  --sky:         #A8D4F0;
+  --sky-fg:      #1A2A3A;
+  --amber:       #D4A24E;
+  --amber-fg:    #F5F0E8;
 
   /* Text */
-  --text-primary:   #F0F2F5;
-  --text-secondary: #9BA3B2;
-  --text-muted:     #5C6478;
-  --text-inverse:   #0F1117;
+  --text-primary:   #F5F0E8;
+  --text-secondary: #B0A898;
+  --text-muted:     #6B6258;
+  --text-inverse:   #0C1018;
   --text-green:     #86EFAC;
 
   /* Borders — subtle */
-  --border: rgba(255,255,255,0.06);
-  --border-visible: rgba(255,255,255,0.1);
+  --border: rgba(255,255,255,0.08);
+  --border-visible: rgba(255,255,255,0.14);
+
+  /* Gradients (from Lovable) */
+  --gradient-hero: radial-gradient(circle at 18% 18%, rgba(80,160,220,0.22), transparent 28%), radial-gradient(circle at 78% 8%, rgba(232,160,144,0.20), transparent 30%), linear-gradient(145deg, #0C1018 0%, #141C2C 56%, #1A2838 100%);
+  --gradient-card: linear-gradient(145deg, rgba(22,30,46,0.96) 0%, rgba(14,18,30,0.94) 58%, rgba(80,160,220,0.12) 100%);
+  --gradient-warm: linear-gradient(135deg, #D4A24E 0%, #E8A090 52%, #A8D4F0 100%);
 
   /* Typography */
   --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -1170,3 +1186,75 @@ p {
   .author-bio-card{flex-direction:column;gap:16px}
 }
 @media(max-width:768px){.article-header h1{font-size:32px}.article-standfirst{font-size:17px}.article-body p{font-size:16px}}
+/* ============================================================
+   LOVABLE MERGE — Additional component styles
+   ============================================================ */
+
+/* Hero gradient background (Lovable-style) */
+.hero { background: var(--gradient-hero); }
+
+/* Gradient card backgrounds */
+.gradient-card { background: var(--gradient-card); }
+.gradient-warm { background: var(--gradient-warm); }
+
+/* Accent pill badges — Lovable palette */
+.pill-sage { background:var(--sage);color:var(--sage-fg);font-weight:700; }
+.pill-coral { background:var(--coral);color:var(--coral-fg);font-weight:700; }
+.pill-sky { background:var(--sky);color:var(--sky-fg);font-weight:700; }
+.pill-amber { background:var(--amber);color:var(--amber-fg);font-weight:700; }
+
+/* Interactive priority selector (pre-fatherhood challenge) */
+.pf-priorities{display:grid;gap:12px;margin:32px 0;}
+.pf-priority{background:var(--bg-surface);border:1.5px solid var(--border);border-radius:14px;padding:20px 24px;cursor:pointer;transition:border-color .2s,background .2s;}
+.pf-priority:hover{border-color:var(--border-visible);}
+.pf-priority.selected{border-color:var(--gold);background:rgba(212,162,78,0.06);}
+.pf-priority h4{font-family:var(--font-heading);font-size:17px;font-weight:700;margin-bottom:4px;display:flex;align-items:center;gap:10px;}
+.pf-priority p{color:var(--text-secondary);font-size:14px;line-height:1.6;}
+.pf-check{width:22px;height:22px;border:2px solid var(--border-visible);border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:border-color .2s,background .2s;}
+.pf-priority.selected .pf-check{border-color:var(--gold);background:var(--gold);}
+.pf-priority.selected .pf-check::after{content:'✓';color:var(--text-inverse);font-size:12px;font-weight:700;}
+.pf-timeline{display:grid;gap:8px;margin:32px 0;}
+.pf-day{background:var(--bg-surface);border:1px solid var(--border);border-radius:12px;padding:16px 20px;display:grid;grid-template-columns:60px 1fr;gap:12px;align-items:start;}
+.pf-day-num{font-family:var(--font-heading);font-weight:800;font-size:14px;color:var(--gold);background:var(--gold-muted);border-radius:8px;padding:6px 12px;text-align:center;}
+.pf-day p{font-size:15px;line-height:1.6;color:var(--text-secondary);}
+.pf-week-plan{background:var(--bg-surface);border:1.5px solid var(--gold);border-radius:16px;padding:28px;margin:12px 0 24px;}
+.pf-week-plan h3{font-family:var(--font-heading);font-size:20px;margin-bottom:16px;color:var(--gold);}
+.pf-task{padding:12px 0;border-bottom:1px solid var(--border);font-size:15px;line-height:1.6;color:var(--text-secondary);}
+.pf-task:last-child{border-bottom:none;}
+.pf-task strong{color:var(--text-primary);font-weight:600;}
+
+/* Readiness score display */
+.ra-score-display{background:var(--gold);color:var(--text-inverse);border-radius:16px;padding:24px;text-align:center;margin:24px 0;}
+.ra-score-number{font-family:var(--font-heading);font-size:64px;font-weight:800;line-height:1;}
+.ra-score-label{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-top:8px;}
+.ra-next-step{margin-top:12px;font-size:15px;line-height:1.6;}
+
+/* Guide article layout */
+.guide-layout{display:grid;gap:40px;margin-top:48px;}
+@media(min-width:1024px){.guide-layout{grid-template-columns:1fr 280px;}}
+.guide-sidebar{display:flex;flex-direction:column;gap:16px;}
+@media(min-width:1024px){.guide-sidebar{position:sticky;top:100px;align-self:start;}}
+.guide-sidebar-card{background:var(--bg-surface);border:1px solid var(--border);border-radius:14px;padding:20px;}
+.guide-sidebar-card h3{font-family:var(--font-heading);font-size:17px;font-weight:700;margin-bottom:12px;}
+.guide-link{display:block;padding:12px 16px;background:var(--bg-alt);border:1px solid var(--border);border-radius:10px;font-weight:600;font-size:14px;margin-bottom:8px;transition:border-color .2s;}
+.guide-link:hover{border-color:var(--gold);}
+
+/* Pro CTA card */
+.pro-cta-card{background:var(--bg-surface);border:1.5px solid var(--gold);border-radius:16px;padding:28px;}
+.pro-cta-card h3{font-family:var(--font-heading);font-size:22px;margin-top:8px;margin-bottom:12px;}
+.pro-cta-card p{color:var(--text-secondary);line-height:1.7;margin-bottom:20px;}
+
+/* Takeaway list */
+.takeaway-list{display:grid;gap:12px;font-size:15px;color:var(--text-secondary);}
+.takeaway-item{display:flex;gap:10px;align-items:start;}
+.takeaway-icon{flex-shrink:0;margin-top:4px;color:var(--green-bright);}
+
+/* Section with Lovable gradient bg */
+.section-gradient{background:var(--gradient-hero);position:relative;}
+
+/* Routine preview cards (from Lovable Index) */
+.routine-card{background:var(--gradient-card);border:1px solid var(--border);border-radius:16px;padding:20px;transition:border-color .2s;}
+.routine-card:hover{border-color:var(--gold);}
+.routine-card .accent-badge{display:inline-block;padding:4px 12px;border-radius:999px;font-size:12px;font-weight:700;}
+.routine-card h3{font-family:var(--font-heading);font-size:18px;font-weight:700;margin:16px 0 8px;min-height:50px;}
+.routine-card p{font-size:14px;color:var(--text-secondary);line-height:1.6;border-top:1px solid var(--border);padding-top:12px;margin-top:12px;}
