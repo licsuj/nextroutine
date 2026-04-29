@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0F1117">
+<title>Pre-Fatherhood Planning: 14-Day Challenge — NextRoutine</title>
+<meta name="description" content="A 14-day pre-fatherhood challenge covering money, career, leave, health, and relationship prep. Choose your priorities and get daily action steps before baby arrives.">
+<link rel="canonical" href="https://www.nextroutine.com/pre-fatherhood.html">
+<meta property="og:title" content="Pre-Fatherhood Planning: 14-Day Challenge — NextRoutine">
+<meta property="og:description" content="A 14-day pre-fatherhood challenge covering money, career, leave, health, and relationship prep.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<style>
+.pf-priorities{display:grid;gap:12px;margin:32px 0;}
+.pf-priority{background:var(--bg-surface);border:1.5px solid var(--border);border-radius:12px;padding:20px 24px;cursor:pointer;transition:border-color .2s,background .2s;}
+.pf-priority.selected{border-color:var(--green);background:rgba(45,106,79,.08);}
+.pf-priority h4{font-family:var(--font-heading);font-size:17px;font-weight:700;margin-bottom:4px;display:flex;align-items:center;gap:10px;}
+.pf-priority p{color:var(--text-secondary);font-size:14px;line-height:1.6;}
+.pf-priority .pf-check{width:22px;height:22px;border:2px solid var(--border-visible);border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:border-color .2s,background .2s;}
+.pf-priority.selected .pf-check{border-color:var(--green);background:var(--green);}
+.pf-priority.selected .pf-check::after{content:'✓';color:#fff;font-size:12px;font-weight:700;}
+.pf-timeline{display:grid;gap:8px;margin:32px 0;}
+.pf-day{background:var(--bg-surface);border:1px solid var(--border);border-radius:12px;padding:16px 20px;display:grid;grid-template-columns:60px 1fr;gap:12px;align-items:start;}
+.pf-day-num{font-family:var(--font-heading);font-weight:800;font-size:14px;color:var(--green-bright);background:rgba(45,106,79,.12);border-radius:8px;padding:6px 12px;text-align:center;}
+.pf-day p{font-size:15px;line-height:1.6;color:var(--text-secondary);}
+.pf-week-plan{background:var(--bg-surface);border:1.5px solid var(--green);border-radius:16px;padding:28px;margin:32px 0;}
+.pf-week-plan h3{font-family:var(--font-heading);font-size:22px;margin-bottom:16px;}
+.pf-task{padding:12px 0;border-bottom:1px solid var(--border);font-size:15px;line-height:1.6;color:var(--text-secondary);}
+.pf-task:last-child{border-bottom:none;}
+.pf-task strong{color:var(--text-primary);font-weight:600;}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand" aria-label="NextRoutine home"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="5" r="1.5" fill="#D4A853"/></svg>NextRoutine</a>
+    <div class="nav-links" role="list">
+      <a href="/new-dad.html" class="nav-link" role="listitem">For Fathers</a>
+      <a href="/morning-routine.html" class="nav-link" role="listitem">Morning</a>
+      <a href="/sleep-better.html" class="nav-link" role="listitem">Sleep</a>
+      <a href="/screen-time.html" class="nav-link" role="listitem">Screen Time</a>
+      <a href="/blog/" class="nav-link" role="listitem">Blog</a>
+      <a href="/pricing.html" class="nav-link" role="listitem">Pricing</a>
+    </div>
+    <div class="nav-actions">
+      <a href="/#free-signup" class="btn btn-primary btn-sm">Get Started Free →</a>
+    </div>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+  <button class="nav-overlay-close" aria-label="Close menu">✕</button>
+  <nav class="nav-overlay-links" aria-label="Mobile navigation">
+    <a href="/new-dad.html" class="nav-overlay-link">For Fathers</a>
+    <a href="/morning-routine.html" class="nav-overlay-link">Morning</a>
+    <a href="/sleep-better.html" class="nav-overlay-link">Sleep</a>
+    <a href="/screen-time.html" class="nav-overlay-link">Screen Time</a>
+    <a href="/blog/" class="nav-overlay-link">Blog</a>
+    <a href="/pricing.html" class="nav-overlay-link">Pricing</a>
+    <a href="/#free-signup" class="btn btn-primary btn-full" style="margin-top:24px;">Get Started Free →</a>
+  </nav>
+</div>
+
+<section class="section" style="padding-top:48px;">
+  <div class="container" style="max-width:800px;">
+
+    <div class="pill pill-gold" style="margin-bottom:20px;">✦ Pre-Fatherhood</div>
+    <h1>14-Day Pre-Fatherhood Challenge</h1>
+    <p style="color:var(--text-secondary);font-size:18px;line-height:1.7;margin-top:16px;max-width:640px;">
+      You have time before everything changes. This challenge helps you use it — not by panicking, but by taking one calm, practical step each day across the areas that matter most.
+    </p>
+
+    <!-- STEP 1: Choose priorities -->
+    <h2 style="margin-top:56px;font-size:24px;">Step 1 — Choose your top priorities</h2>
+    <p style="color:var(--text-secondary);margin-top:8px;">Pick 2–3 areas to focus your first two weeks on. The challenge adapts to what you choose.</p>
+
+    <div class="pf-priorities" id="pf-priorities">
+      <div class="pf-priority" data-id="money" onclick="togglePriority(this)">
+        <h4><span class="pf-check"></span> Money</h4>
+        <p>Budget snapshot, baby costs, insurance review, savings targets.</p>
+      </div>
+      <div class="pf-priority" data-id="career" onclick="togglePriority(this)">
+        <h4><span class="pf-check"></span> Career</h4>
+        <p>Work timeline, flexibility mapping, manager conversations, handoff planning.</p>
+      </div>
+      <div class="pf-priority" data-id="leave" onclick="togglePriority(this)">
+        <h4><span class="pf-check"></span> Leave</h4>
+        <p>PTO options, parental leave policy, income impact, HR questions.</p>
+      </div>
+      <div class="pf-priority" data-id="health" onclick="togglePriority(this)">
+        <h4><span class="pf-check"></span> Health</h4>
+        <p>Insurance basics, provider access, deductibles, adding baby to coverage.</p>
+      </div>
+      <div class="pf-priority" data-id="relationship" onclick="togglePriority(this)">
+        <h4><span class="pf-check"></span> Relationship</h4>
+        <p>Partner check-ins, shared expectations, chore handoff, protected time.</p>
+      </div>
+    </div>
+
+    <!-- STEP 2: 14-day timeline -->
+    <h2 style="margin-top:56px;font-size:24px;">Step 2 — Your 14-day plan</h2>
+    <p style="color:var(--text-secondary);margin-top:8px;">One practical move per day. No pressure. Just progress.</p>
+
+    <div class="pf-timeline" id="pf-timeline">
+      <div class="pf-day"><div class="pf-day-num">Day 1</div><p>Choose your top preparation priorities and write down why they matter right now.</p></div>
+      <div class="pf-day"><div class="pf-day-num">Day 2</div><p>Create one shared note for questions, decisions, dates, and next steps.</p></div>
+      <div class="pf-day"><div class="pf-day-num">Day 3</div><p>Handle the first task from your top priority.</p></div>
+      <div class="pf-day"><div class="pf-day-num">Day 4</div><p>Have a 15-minute conversation about what would lower future stress.</p></div>
+      <div class="pf-day"><div class="pf-day-num">Day 5</div><p>Handle the first task from your second priority, or deepen the first one.</p></div>
+      <div class="pf-day"><div class="pf-day-num">Day 6</div><p>Pick one home routine you can own without reminders.</p></div>
+      <div class="pf-day"><div class="pf-day-num">Day 7</div><p>Review the week and choose what needs a follow-up.</p></div>
+      <div class="pf-day"><div class="pf-day-num">Day 8</div><p>Turn one loose question into a real answer: policy, cost, contact, or deadline.</p></div>
+      <div class="pf-day"><div class="pf-day-num">Day 9</div><p>Handle the second task from your top priority.</p></div>
+      <div class="pf-day"><div class="pf-day-num">Day 10</div><p>Map who can help later and what kind of help would actually be useful.</p></div>
+      <div class="pf-day"><div class="pf-day-num">Day 11</div><p>Handle the second task from your second priority, or refine your plan.</p></div>
+      <div class="pf-day"><div class="pf-day-num">Day 12</div><p>Simplify one future stress point before it becomes urgent.</p></div>
+      <div class="pf-day"><div class="pf-day-num">Day 13</div><p>Share the plan, ask what feels missing, and adjust together.</p></div>
+      <div class="pf-day"><div class="pf-day-num">Day 14</div><p>Choose the next two-week focus and one recurring routine to keep.</p></div>
+    </div>
+
+    <!-- PRIORITY-SPECIFIC WEEKLY PLANS -->
+    <div id="pf-week-plans"></div>
+
+    <!-- CTA -->
+    <div style="text-align:center;margin-top:56px;padding:40px;background:var(--bg-surface);border-radius:16px;border:1px solid var(--border);">
+      <h3 style="font-size:22px;">Ready to go deeper?</h3>
+      <p style="color:var(--text-secondary);margin:12px 0 24px;">The free challenge gives you structure. Pro turns it into a personalised weekly plan that adapts to your stage and priorities.</p>
+      <a href="/pricing.html" class="btn btn-primary">See PRO Plans →</a>
+      <div style="margin-top:16px;">
+        <a href="/#free-signup" style="color:var(--text-secondary);font-size:14px;">or get the free weekly newsletter →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="5" r="1.5" fill="#D4A853"/></svg>NextRoutine</div>
+        <p class="footer-tagline">Build the routine. Build the life.</p>
+      </div>
+      <div>
+        <div class="footer-col-label">Tracks</div>
+        <nav class="footer-links"><a href="/new-dad.html" class="footer-link">For Fathers</a><a href="/morning-routine.html" class="footer-link">Morning Routine</a><a href="/sleep-better.html" class="footer-link">Sleep Better</a><a href="/screen-time.html" class="footer-link">Screen Time</a></nav>
+      </div>
+      <div>
+        <div class="footer-col-label">Platform</div>
+        <nav class="footer-links"><a href="/newsletter.html" class="footer-link">Newsletter</a><a href="/pricing.html" class="footer-link">Pricing</a><a href="/blog/" class="footer-link">Blog</a><a href="/about.html" class="footer-link">About</a></nav>
+      </div>
+      <div>
+        <div class="footer-col-label">Legal</div>
+        <nav class="footer-links"><a href="/privacy.html" class="footer-link">Privacy Policy</a><a href="/terms.html" class="footer-link">Terms of Service</a></nav>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span data-year></span> NextRoutine. All rights reserved.</span>
+    <span>Made for fathers who refuse to wing it.</span>
+  </div>
+</footer>
+
+<script>
+var priorityWeekPlans = {
+  money: {
+    title: "Money — Your first two weeks",
+    week1: "Build a 30-minute money snapshot: income, bills, debt, savings, insurance costs, and one baby expense you need to understand.",
+    week2: "Create a simple baby buffer target and choose one budget adjustment you can make without making life miserable."
+  },
+  career: {
+    title: "Career — Your first two weeks",
+    week1: "Map your next 3–6 months at work: busy seasons, deadlines, travel, commute stress, and where flexibility may matter.",
+    week2: "Write a low-pressure work plan: what you may need, who covers what, and which conversations should happen before birth pressure rises."
+  },
+  leave: {
+    title: "Leave — Your first two weeks",
+    week1: "Find your actual time-off options: PTO, sick days, unpaid leave, parental leave, notice rules, and whether leave can be split.",
+    week2: "Draft a paternity leave plan with dates, income impact, handoff needs, and questions for HR or your manager."
+  },
+  health: {
+    title: "Health — Your first two weeks",
+    week1: "Review health insurance basics: coverage, deductibles, co-pays, provider access, and how a baby gets added after birth.",
+    week2: "Create a shared health admin note with provider contacts, documents, appointment questions, and paperwork deadlines."
+  },
+  relationship: {
+    title: "Relationship — Your first two weeks",
+    week1: "Have one calm check-in: what feels exciting, what feels scary, what support means, and what each of you may need more of.",
+    week2: "Choose one recurring relationship rhythm: a weekly check-in, chore handoff, money talk, or protected time without logistics."
+  }
+};
+
+function togglePriority(el) {
+  el.classList.toggle('selected');
+  renderWeekPlans();
+}
+
+function renderWeekPlans() {
+  var container = document.getElementById('pf-week-plans');
+  var selected = document.querySelectorAll('.pf-priority.selected');
+  var html = '';
+  selected.forEach(function(el) {
+    var id = el.getAttribute('data-id');
+    var plan = priorityWeekPlans[id];
+    if (plan) {
+      html += '<div class="pf-week-plan">';
+      html += '<h3>' + plan.title + '</h3>';
+      html += '<div class="pf-task"><strong>Week 1:</strong> ' + plan.week1 + '</div>';
+      html += '<div class="pf-task"><strong>Week 2:</strong> ' + plan.week2 + '</div>';
+      html += '</div>';
+    }
+  });
+  container.innerHTML = html;
+}
+
+document.querySelectorAll('[data-year]').forEach(function(el){el.textContent=new Date().getFullYear()});
+</script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
