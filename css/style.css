@@ -629,4 +629,63 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 500; letter-spacin
   color: var(--text-secondary);
 }
 
+/* ============================================================
+   SVG SIZING FIX — constrain all inline icons to sane defaults
+   ============================================================ */
+
+/* Default: any SVG without explicit dimensions inside content
+   areas should not exceed reasonable icon size */
+.author-card svg,
+.author-contact svg,
+.author-location svg,
+.price-feature svg,
+.stats-link svg,
+.btn svg,
+.pill svg,
+.footer-social svg,
+.footer-link svg,
+.nav-brand svg,
+.footer-brand svg,
+.option-label svg {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
+/* More specific overrides where we want larger or smaller */
+.btn svg { width: 16px; height: 16px; }
+.author-avatar { font-size: 1.5rem; }
+.author-card .author-contact svg { width: 16px; height: 16px; }
+.author-card .author-location svg { width: 14px; height: 14px; }
+.price-feature svg { width: 16px; height: 16px; }
+.stats-link svg { width: 14px; height: 14px; }
+.footer-social svg { width: 16px; height: 16px; }
+.nav-brand svg { width: 20px; height: 20px; }
+.footer-brand svg { width: 18px; height: 18px; }
+.pill svg { width: 14px; height: 14px; }
+
+/* Pricing toggle — these were rendering huge */
+.billing-toggle svg { width: 14px; height: 14px; }
+
+/* Card icons — need to be bigger but constrained */
+.card .card-icon-wrap svg { width: 20px; height: 20px; }
+.card .card-icon { width: 24px; height: 24px; }
+
+/* Hero illustration MUST stay at full responsive size — exclude it */
+.hero-illustration { width: 100%; height: auto; }
+
+/* Hero pill icon */
+.pill-accent svg { width: 14px; height: 14px; }
+
+/* Final CTA bg should not have width applied */
+.final-cta-bg::before { width: 28rem; height: 15rem; }
+
+/* Failsafe: any SVG inside body that doesn't have explicit
+   width/height attributes shouldn't exceed 24px. This catches
+   anything we missed. */
+svg:not([width]):not([height]):not(.hero-illustration) {
+  max-width: 24px;
+  max-height: 24px;
+}
+
 .author-location
