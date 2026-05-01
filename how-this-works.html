@@ -10,77 +10,226 @@
 <link rel="canonical" href="https://www.nextroutine.com/how-this-works.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/cookie-consent.css">
 <meta property="og:title" content="How NextRoutine Works">
 <meta property="og:description" content="How content gets made. Research synthesis, AI-assisted drafting, human review.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.nextroutine.com/how-this-works.html">
 </head>
 <body>
-<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+
+<!-- NAVIGATION -->
+<header class="nav" id="nav">
 <div class="nav-inner">
-<a href="/" class="nav-brand" aria-label="NextRoutine home"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="5" r="1.5" fill="#D4A853"/></svg>NextRoutine</a>
-<div class="nav-links" role="list">
-<a href="/new-dad.html" class="nav-link" role="listitem">For Fathers</a>
-<a href="/morning-routine.html" class="nav-link" role="listitem">Morning</a>
-<a href="/sleep-better.html" class="nav-link" role="listitem">Sleep</a>
-<a href="/screen-time.html" class="nav-link" role="listitem">Screen Time</a>
-<a href="/blog/" class="nav-link" role="listitem">Blog</a>
-<a href="/pricing.html" class="nav-link" role="listitem">Pricing</a>
-<a href="/quiz.html" class="nav-link" role="listitem">Quiz</a>
-</div>
-<div class="nav-actions">
-<a href="/#free-signup" class="btn btn-primary btn-sm">Get Started Free →</a>
-</div>
-<button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay"><span></span><span></span><span></span></button>
-</div>
+<a href="/" class="nav-brand" aria-label="NextRoutine home">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 L13.6 10.4 L22 12 L13.6 13.6 L12 22 L10.4 13.6 L2 12 L10.4 10.4 Z"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/></svg>
+<span>NextRoutine</span>
+</a>
+<nav class="nav-links" aria-label="Main navigation">
+<a href="/new-dad.html" class="nav-link">For Fathers</a>
+<a href="/morning-routine.html" class="nav-link">Morning</a>
+<a href="/sleep-better.html" class="nav-link">Sleep</a>
+<a href="/screen-time.html" class="nav-link">Screen Time</a>
+<a href="/blog/" class="nav-link">Blog</a>
+<a href="/pricing.html" class="nav-link">Pricing</a>
 </nav>
-<div class="nav-overlay" id="nav-overlay" aria-hidden="true">
-<button class="nav-overlay-close" aria-label="Close menu">✕</button>
-<nav class="nav-overlay-links" aria-label="Mobile navigation">
+<div class="nav-actions">
+<a href="/#cta" class="btn btn-primary btn-sm">Get Started Free <span class="btn-arrow">→</span></a>
+<button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay" id="nav-toggle"><span></span><span></span><span></span></button>
+</div>
+</div>
+</header>
+<div class="nav-overlay-backdrop" id="nav-backdrop"></div>
+<aside class="nav-overlay" id="nav-overlay" aria-hidden="true">
+<button class="nav-overlay-close" aria-label="Close menu" id="nav-close">✕</button>
+<nav aria-label="Mobile navigation" style="display:flex;flex-direction:column;gap:0.25rem;">
 <a href="/new-dad.html" class="nav-overlay-link">For Fathers</a>
 <a href="/morning-routine.html" class="nav-overlay-link">Morning</a>
 <a href="/sleep-better.html" class="nav-overlay-link">Sleep</a>
 <a href="/screen-time.html" class="nav-overlay-link">Screen Time</a>
 <a href="/blog/" class="nav-overlay-link">Blog</a>
 <a href="/pricing.html" class="nav-overlay-link">Pricing</a>
-<a href="/quiz.html" class="nav-overlay-link">Quiz</a>
-<a href="/pre-fatherhood.html" class="nav-overlay-link">14-Day Challenge</a>
-<a href="/#free-signup" class="btn btn-primary btn-full" style="margin-top:24px;">Get Started Free →</a>
+<a href="/#cta" class="btn btn-primary btn-full" style="margin-top:1rem;">Get Started Free <span class="btn-arrow">→</span></a>
 </nav>
+</aside>
+
+<!-- HERO -->
+<section class="hero" id="top">
+<div class="hero-bg" aria-hidden="true">
+<div class="hero-bg-1"></div>
+<div class="hero-bg-2"></div>
+</div>
+<div class="container">
+<div class="reveal" style="max-width:48rem;margin:0 auto;text-align:center;">
+<div class="pill pill-accent" style="margin-bottom:2rem;">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 L13.6 10.4 L22 12 L13.6 13.6 L12 22 L10.4 13.6 L2 12 L10.4 10.4 Z"/></svg>
+Methodology
+</div>
+<h1 style="font-family:var(--font-serif); font-weight:500; font-size:clamp(2.25rem,5vw,4rem); line-height:1.1; letter-spacing:-0.02em; text-wrap:balance; color:var(--text-primary);">How NextRoutine actually works.</h1>
+<p style="font-size:1.125rem; line-height:1.625; color:var(--text-secondary); max-width:36rem; margin:1.5rem auto 0; text-wrap:balance;">A short note on methodology, because most "expert" content sites don't tell you how their content gets made.</p>
+</div>
+</div>
+</section>
+
+<!-- TWO CARDS: How protocols are built / What this is not -->
+<section class="section" style="padding-top:2rem;">
+<div class="container">
+<div class="cards-3" style="grid-template-columns:1fr 1fr; max-width:64rem; margin:0 auto;">
+
+<!-- CARD 1: How protocols are built -->
+<div class="card reveal">
+<div class="card-icon-wrap">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+</div>
+<h3>How protocols are built</h3>
+<p style="margin-top:1rem; line-height:1.7;">I read the relevant academic literature — sleep research, behavioural science papers, the actual studies behind the popular advice. I synthesise it into protocols. I use AI as a research and drafting assistant, then I review, edit, and approve everything before it ships.</p>
+<p style="margin-top:0.75rem; line-height:1.7; color:var(--text-secondary); font-size:0.875rem;">Where research is cited, the source is linked. Where I've personally tested something, I say so. Where two studies disagree, I say that too.</p>
 </div>
 
-<header class="about-hero"><div class="container"><h1>How NextRoutine works.</h1><p class="about-hero-sub">A short note on methodology, because most "expert" content sites don't tell you how their content gets made.</p></div></header>
+<!-- CARD 2: What this is not -->
+<div class="card reveal" style="transition-delay:120ms;">
+<div class="card-icon-wrap">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+</div>
+<h3>What this is not</h3>
+<p style="margin-top:1rem; line-height:1.7;">Not medical advice. Sleep, anxiety, and mental health protocols are research-based, but if you're experiencing severe symptoms — including postpartum depression, which fathers also experience — please speak to a healthcare professional.</p>
+<p style="margin-top:0.75rem; line-height:1.7; color:var(--text-secondary); font-size:0.875rem;">Not parenting advice for the child. The protocols are for the father. Your child has their own needs and you should rely on their paediatrician for those.</p>
+</div>
 
-<main><div class="container"><div class="about-body">
+</div>
+</div>
+</section>
 
-<h2>How protocols are built</h2>
+<!-- AUTHOR MINI CONTACT (compact version of author card) -->
+<section class="section" style="padding-top:0;">
+<div class="container">
+<div class="author-card reveal" style="max-width:42rem;">
+<div class="author-inner">
+<div class="author-avatar" aria-hidden="true">J</div>
+<div style="flex:1;">
+<div class="author-meta">
+<h3>Justin</h3>
+<span class="author-meta-sub">Founder · NextRoutine</span>
+</div>
+<div class="author-body" style="margin-top:1rem;">
+<p>If a protocol didn't work for you, I want to know. That's how the next version gets better.</p>
+</div>
+<a href="mailto:hello@nextroutine.com" class="author-contact">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+<span>hello@nextroutine.com</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
 
-<p>I read the relevant academic literature — sleep research from peer-reviewed journals, behavioural science papers, the actual studies behind the popular advice. I synthesise it into protocols. I use AI as a research and drafting assistant, then I review, edit, and approve everything before it ships.</p>
+<!-- FINAL CTA -->
+<section class="section" id="cta" style="padding-top:2rem;">
+<div class="container">
+<div class="final-cta reveal">
+<div class="final-cta-bg" aria-hidden="true"></div>
+<div class="section-heading">
+<h2>Ready to start?</h2>
+<p>Free weekly newsletter. Stage-specific template on signup. Cancel anytime.</p>
+</div>
+<div style="margin-top:2rem;">
+<a href="/#cta" class="btn btn-primary btn-lg">Get Started Free <span class="btn-arrow">→</span></a>
+</div>
+<p class="final-cta-microcopy">Or read more on the <a href="/about.html" style="color:var(--primary);">About page</a>.</p>
+</div>
+</div>
+</section>
 
-<p>Where research is cited, the source is linked. Where I've personally tested something, I say so. Where two studies disagree, I say that too.</p>
+<!-- FOOTER -->
+<footer class="footer">
+<div class="container footer-inner">
+<div class="footer-grid">
+<div>
+<a href="/" class="footer-brand">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 L13.6 10.4 L22 12 L13.6 13.6 L12 22 L10.4 13.6 L2 12 L10.4 10.4 Z"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/></svg>
+<span>NextRoutine</span>
+</a>
+<p class="footer-tagline">Build the routine. Build the life.</p>
+</div>
+<div>
+<div class="footer-col-label">Tracks</div>
+<nav class="footer-links" aria-label="Tracks">
+<a href="/new-dad.html" class="footer-link">For Fathers</a>
+<a href="/morning-routine.html" class="footer-link">Morning Routine</a>
+<a href="/sleep-better.html" class="footer-link">Sleep Better</a>
+<a href="/screen-time.html" class="footer-link">Screen Time</a>
+<span class="footer-link-muted">Midlife Reset <span class="soon-tag">Coming Soon</span></span>
+</nav>
+</div>
+<div>
+<div class="footer-col-label">Platform</div>
+<nav class="footer-links" aria-label="Platform">
+<a href="/newsletter.html" class="footer-link">Newsletter</a>
+<a href="/pricing.html" class="footer-link">Pricing</a>
+<a href="/blog/" class="footer-link">Blog</a>
+<a href="/about.html" class="footer-link">About</a>
+<a href="/how-this-works.html" class="footer-link">How This Works</a>
+</nav>
+</div>
+<div>
+<div class="footer-col-label">Legal</div>
+<nav class="footer-links" aria-label="Legal">
+<a href="/privacy.html" class="footer-link">Privacy Policy</a>
+<a href="/terms.html" class="footer-link">Terms of Service</a>
+<button class="footer-link-button" data-cc-open>Cookie Settings</button>
+</nav>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© <span id="year"></span> NextRoutine. All rights reserved.</span>
+<span class="footer-bottom-italic">Made for fathers who refuse to wing it.</span>
+</div>
+</div>
+</footer>
 
-<h2>What this site is not</h2>
-
-<p>This is not medical advice. Sleep, anxiety, and mental health protocols here are research-based, but if you're experiencing severe sleep issues or symptoms of postpartum depression (yes, fathers get this too), please speak to a healthcare professional.</p>
-
-<p>This is not parenting advice for the child. The protocols are for the father. Your child has their own needs and you should rely on their paediatrician for those.</p>
-
-<h2>Get in touch</h2>
-
-<p><a href="mailto:hello@nextroutine.com">hello@nextroutine.com</a> goes to my inbox. If a protocol didn't work for you, I want to know. That's how the next version gets better.</p>
-
-<p>— Justin</p>
-
-</div></div></main>
-
-<section class="about-cta section-green"><div class="container"><h2>Ready to build your routine?</h2><p style="font-size:18px;color:var(--text-green);margin-bottom:28px;max-width:440px;margin-left:auto;margin-right:auto;text-align:center;">Start with the free weekly newsletter and Fatherhood Starter Pack.</p><a href="/#free-signup" class="btn btn-primary" style="display:inline-flex;">Get Started Free →</a></div></section>
-
-<footer class="footer" role="contentinfo"><div class="container"><div class="footer-grid"><div><div class="footer-brand"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="5" r="1.5" fill="#D4A853"/></svg>NextRoutine</div><p class="footer-tagline">Build the routine. Build the life.</p></div><div><div class="footer-col-label">Tracks</div><nav class="footer-links" aria-label="Tracks"><a href="/new-dad.html" class="footer-link">For Fathers</a><a href="/morning-routine.html" class="footer-link">Morning Routine</a><a href="/sleep-better.html" class="footer-link">Sleep Better</a><a href="/screen-time.html" class="footer-link">Screen Time</a></nav></div><div><div class="footer-col-label">Platform</div><nav class="footer-links" aria-label="Platform"><a href="/newsletter.html" class="footer-link">Newsletter</a><a href="/pricing.html" class="footer-link">Pricing</a><a href="/blog/" class="footer-link">Blog</a><a href="/how-this-works.html" class="footer-link">How This Works</a></nav></div><div><div class="footer-col-label">Legal</div><nav class="footer-links" aria-label="Legal"><a href="/privacy.html" class="footer-link">Privacy Policy</a><a href="/terms.html" class="footer-link">Terms of Service</a></nav></div></div></div><div class="footer-bottom"><span>© <span data-year></span> NextRoutine. All rights reserved.</span><span>Made for fathers who refuse to wing it.</span></div></footer>
-
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+const nav = document.getElementById('nav');
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+onScroll();
+window.addEventListener('scroll', onScroll, { passive: true });
+const navToggle = document.getElementById('nav-toggle');
+const navOverlay = document.getElementById('nav-overlay');
+const navBackdrop = document.getElementById('nav-backdrop');
+const navClose = document.getElementById('nav-close');
+const openMenu = () => {
+  navOverlay.classList.add('open');
+  navBackdrop.classList.add('open');
+  navToggle.setAttribute('aria-expanded', 'true');
+  navOverlay.setAttribute('aria-hidden', 'false');
+};
+const closeMenu = () => {
+  navOverlay.classList.remove('open');
+  navBackdrop.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', 'false');
+  navOverlay.setAttribute('aria-hidden', 'true');
+};
+navToggle.addEventListener('click', openMenu);
+navClose.addEventListener('click', closeMenu);
+navBackdrop.addEventListener('click', closeMenu);
+navOverlay.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+const revealEls = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('is-visible');
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+revealEls.forEach(el => revealObserver.observe(el));
+</script>
 <script src="js/main.js" defer></script>
-
+<script src="js/cookie-consent.js" defer></script>
 </body>
 </html>
