@@ -1243,3 +1243,60 @@ svg:not([width]):not([height]):not(.hero-illustration) {
   width: 100%;
   height: auto;
 }
+
+
+/* ============================================================
+   FIX: hero stage selector cutoff + Most Popular badge clipping
+   ============================================================ */
+
+/* Issue 1: stage selector placeholder gets truncated.
+   Force the select to handle text overflow gracefully and
+   give it a bit more padding to fit the placeholder text. */
+.field.field-select {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: 2.75rem;
+}
+
+/* Issue 1b: on narrow viewports below 1024px, stack the hero
+   options instead of forcing them side-by-side, so each card
+   gets full width and the placeholder text isn't squeezed. */
+@media (max-width: 1023px) {
+  .hero-options {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-options {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Issue 2: Most Popular badge gets clipped by overflow:hidden
+   on the Pro card. Remove the clipping. The gradient top stripe
+   is set on a pseudo-element that we can keep visible without
+   needing overflow:hidden — we'll just clip it via border-radius. */
+.price-card-pro {
+  overflow: visible;
+}
+
+/* Re-anchor the gradient line to use the card's own border-radius.
+   The pseudo-element sits at the top edge with rounded corners. */
+.price-card-pro::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
+  background: linear-gradient(to right, transparent, var(--accent), transparent);
+  pointer-events: none;
+}
+
+/* Make sure the badge sits above the card's border on top. */
+.price-badge {
+  z-index: 1;
+}
