@@ -1323,3 +1323,54 @@ svg:not([width]):not([height]):not(.hero-illustration) {
     grid-template-columns: 1fr;
   }
 }
+
+
+
+/* ============================================================
+   FAQ ACCORDION (used on pricing.html)
+   ============================================================ */
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+.faq-item:first-child { border-top: 1px solid var(--border); }
+
+.faq-item details {
+  padding: 0;
+}
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.25rem 0;
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: color 200ms ease;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--primary);
+  flex-shrink: 0;
+  line-height: 1;
+  transition: transform 200ms ease;
+}
+.faq-item details[open] summary::after {
+  content: '−';
+}
+.faq-item summary:hover { color: var(--primary); }
+.faq-item details[open] summary { color: var(--primary); }
+.faq-item details > p {
+  padding: 0 0 1.25rem 0;
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
