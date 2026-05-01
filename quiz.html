@@ -121,4 +121,294 @@
 <header class="nav" id="nav">
 <div class="nav-inner">
 <a href="/" class="nav-brand" aria-label="NextRoutine home">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 L13.6 10.4 L22 12
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 L13.6 10.4 L22 12 L13.6 13.6 L12 22 L10.4 13.6 L2 12 L10.4 10.4 Z"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/></svg>
+<span>NextRoutine</span>
+</a>
+<nav class="nav-links" aria-label="Main navigation">
+<a href="/new-dad.html" class="nav-link">For Fathers</a>
+<a href="/morning-routine.html" class="nav-link">Morning</a>
+<a href="/sleep-better.html" class="nav-link">Sleep</a>
+<a href="/screen-time.html" class="nav-link">Screen Time</a>
+<a href="/blog/" class="nav-link">Blog</a>
+<a href="/pricing.html" class="nav-link">Pricing</a>
+</nav>
+<div class="nav-actions">
+<a href="/#cta" class="btn btn-primary btn-sm">Get Started Free <span class="btn-arrow">→</span></a>
+<button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay" id="nav-toggle"><span></span><span></span><span></span></button>
+</div>
+</div>
+</header>
+<div class="nav-overlay-backdrop" id="nav-backdrop"></div>
+<aside class="nav-overlay" id="nav-overlay" aria-hidden="true">
+<button class="nav-overlay-close" aria-label="Close menu" id="nav-close">✕</button>
+<nav aria-label="Mobile navigation" style="display:flex;flex-direction:column;gap:0.25rem;">
+<a href="/new-dad.html" class="nav-overlay-link">For Fathers</a>
+<a href="/morning-routine.html" class="nav-overlay-link">Morning</a>
+<a href="/sleep-better.html" class="nav-overlay-link">Sleep</a>
+<a href="/screen-time.html" class="nav-overlay-link">Screen Time</a>
+<a href="/blog/" class="nav-overlay-link">Blog</a>
+<a href="/pricing.html" class="nav-overlay-link">Pricing</a>
+<a href="/#cta" class="btn btn-primary btn-full" style="margin-top:1rem;">Get Started Free <span class="btn-arrow">→</span></a>
+</nav>
+</aside>
+
+<!-- HERO -->
+<section class="hero" id="top">
+<div class="hero-bg" aria-hidden="true">
+<div class="hero-bg-1"></div>
+<div class="hero-bg-2"></div>
+</div>
+<div class="container">
+<div class="reveal" style="max-width:48rem;margin:0 auto;text-align:center;">
+<div class="pill pill-accent" style="margin-bottom:2rem;">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 L13.6 10.4 L22 12 L13.6 13.6 L12 22 L10.4 13.6 L2 12 L10.4 10.4 Z"/></svg>
+Find Your Track
+</div>
+<h1 style="font-family:'Fraunces',Georgia,serif; font-weight:500; font-size:clamp(2.25rem,5vw,4rem); line-height:1.1; letter-spacing:-0.02em; text-wrap:balance; color:hsl(150, 5%, 96%);">Three questions. <span style="color:hsl(155, 45%, 38%);">One starting point.</span></h1>
+<p style="font-size:1.125rem; line-height:1.625; color:hsl(150, 8%, 65%); max-width:36rem; margin:1.5rem auto 0; text-wrap:balance;">Tell us where you are, what feels broken, and how much time you actually have. We'll point you to the protocol that matches.</p>
+</div>
+</div>
+</section>
+
+<!-- QUIZ -->
+<section class="section" style="padding-top:2rem;">
+<div class="container">
+<div class="reveal" style="max-width:42rem; margin:0 auto;">
+
+<!-- PROGRESS -->
+<div class="quiz-progress">
+<div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quiz-progress-fill" style="width:33.33%;"></div></div>
+<div class="quiz-progress-label" id="quiz-progress-label">Question 1 of 3</div>
+</div>
+
+<!-- QUESTION 1 -->
+<div class="quiz-step active" data-step="1">
+<h2 class="quiz-question">Where are you in the journey?</h2>
+<p class="quiz-question-sub">This helps us recommend the right starting point.</p>
+<div class="quiz-options">
+<button type="button" class="quiz-option" data-stage="exploring" data-next="2">Not a dad yet — just exploring</button>
+<button type="button" class="quiz-option" data-stage="expecting" data-next="2">Expecting — baby hasn't arrived yet</button>
+<button type="button" class="quiz-option" data-stage="newborn" data-next="2">Newborn — first 8 weeks</button>
+<button type="button" class="quiz-option" data-stage="infant" data-next="2">Infant — 3 to 12 months</button>
+<button type="button" class="quiz-option" data-stage="toddler" data-next="2">Toddler or older — 1 year+</button>
+</div>
+</div>
+
+<!-- QUESTION 2 -->
+<div class="quiz-step" data-step="2">
+<h2 class="quiz-question">What feels most broken right now?</h2>
+<p class="quiz-question-sub">Pick the one that resonates most.</p>
+<div class="quiz-options">
+<button type="button" class="quiz-option" data-issue="morning" data-next="3">My mornings — I have no routine and I'm reactive from the moment I wake up</button>
+<button type="button" class="quiz-option" data-issue="sleep" data-next="3">My sleep — I'm exhausted even when I get the hours</button>
+<button type="button" class="quiz-option" data-issue="screen-time" data-next="3">My phone — I'm scrolling when I should be present</button>
+<button type="button" class="quiz-option" data-issue="all" data-next="3">Honestly? All of it.</button>
+</div>
+<button type="button" class="quiz-back" data-back="1">← Back</button>
+</div>
+
+<!-- QUESTION 3 -->
+<div class="quiz-step" data-step="3">
+<h2 class="quiz-question">How much time can you realistically commit?</h2>
+<p class="quiz-question-sub">Be honest — not aspirational.</p>
+<div class="quiz-options">
+<button type="button" class="quiz-option" data-time="2" data-next="result">2 minutes — bare minimum</button>
+<button type="button" class="quiz-option" data-time="5" data-next="result">5 minutes — I can find this</button>
+<button type="button" class="quiz-option" data-time="15" data-next="result">15 minutes — if I wake up earlier</button>
+<button type="button" class="quiz-option" data-time="30" data-next="result">30+ minutes — I have the time</button>
+</div>
+<button type="button" class="quiz-back" data-back="2">← Back</button>
+</div>
+
+<!-- RESULT -->
+<div class="quiz-step" data-step="result">
+<div class="quiz-result-card">
+<div class="pill pill-accent" style="margin-bottom:1.5rem;">Your recommended track</div>
+<h2 id="result-title" style="font-family:'Fraunces',Georgia,serif; font-weight:500; font-size:clamp(1.75rem,4vw,2.5rem); line-height:1.15; letter-spacing:-0.02em; color:hsl(150, 5%, 96%); margin-bottom:1rem;">The Morning Track</h2>
+<p id="result-description" style="font-size:1.0625rem; line-height:1.625; color:hsl(150, 8%, 65%); margin-bottom:2rem;">Start with the 10-minute survival protocol. The first 23 minutes of your day decide the rest.</p>
+<div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+<a id="result-primary" href="/morning-routine.html" class="btn btn-primary btn-lg">Read the Protocol <span class="btn-arrow">→</span></a>
+<a href="/#cta" class="btn btn-outline btn-lg">Get Free Newsletter <span class="btn-arrow">→</span></a>
+</div>
+<button type="button" class="quiz-back" data-back="1" style="margin-top:1.5rem;">← Take it again</button>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+<div class="container footer-inner">
+<div class="footer-grid">
+<div>
+<a href="/" class="footer-brand">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 L13.6 10.4 L22 12 L13.6 13.6 L12 22 L10.4 13.6 L2 12 L10.4 10.4 Z"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/></svg>
+<span>NextRoutine</span>
+</a>
+<p class="footer-tagline">Build the routine. Build the life.</p>
+</div>
+<div>
+<div class="footer-col-label">Tracks</div>
+<nav class="footer-links" aria-label="Tracks">
+<a href="/new-dad.html" class="footer-link">For Fathers</a>
+<a href="/morning-routine.html" class="footer-link">Morning Routine</a>
+<a href="/sleep-better.html" class="footer-link">Sleep Better</a>
+<a href="/screen-time.html" class="footer-link">Screen Time</a>
+<span class="footer-link-muted">Midlife Reset <span class="soon-tag">Coming Soon</span></span>
+</nav>
+</div>
+<div>
+<div class="footer-col-label">Platform</div>
+<nav class="footer-links" aria-label="Platform">
+<a href="/newsletter.html" class="footer-link">Newsletter</a>
+<a href="/pricing.html" class="footer-link">Pricing</a>
+<a href="/blog/" class="footer-link">Blog</a>
+<a href="/about.html" class="footer-link">About</a>
+<a href="/how-this-works.html" class="footer-link">How This Works</a>
+</nav>
+</div>
+<div>
+<div class="footer-col-label">Legal</div>
+<nav class="footer-links" aria-label="Legal">
+<a href="/privacy.html" class="footer-link">Privacy Policy</a>
+<a href="/terms.html" class="footer-link">Terms of Service</a>
+<button class="footer-link-button" data-cc-open>Cookie Settings</button>
+</nav>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© <span id="year"></span> NextRoutine. All rights reserved.</span>
+<span class="footer-bottom-italic">Made for fathers who refuse to wing it.</span>
+</div>
+</div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+const nav = document.getElementById('nav');
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+onScroll();
+window.addEventListener('scroll', onScroll, { passive: true });
+const navToggle = document.getElementById('nav-toggle');
+const navOverlay = document.getElementById('nav-overlay');
+const navBackdrop = document.getElementById('nav-backdrop');
+const navClose = document.getElementById('nav-close');
+const openMenu = () => {
+  navOverlay.classList.add('open');
+  navBackdrop.classList.add('open');
+  navToggle.setAttribute('aria-expanded', 'true');
+  navOverlay.setAttribute('aria-hidden', 'false');
+};
+const closeMenu = () => {
+  navOverlay.classList.remove('open');
+  navBackdrop.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', 'false');
+  navOverlay.setAttribute('aria-hidden', 'true');
+};
+navToggle.addEventListener('click', openMenu);
+navClose.addEventListener('click', closeMenu);
+navBackdrop.addEventListener('click', closeMenu);
+navOverlay.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+const revealEls = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('is-visible');
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+revealEls.forEach(el => revealObserver.observe(el));
+
+// QUIZ LOGIC
+const answers = { stage: null, issue: null, time: null };
+const steps = document.querySelectorAll('.quiz-step');
+const progressFill = document.getElementById('quiz-progress-fill');
+const progressLabel = document.getElementById('quiz-progress-label');
+
+const goToStep = (stepName) => {
+  steps.forEach(s => {
+    if (s.dataset.step === stepName) {
+      s.classList.add('active');
+    } else {
+      s.classList.remove('active');
+    }
+  });
+  if (stepName === 'result') {
+    progressFill.style.width = '100%';
+    progressLabel.textContent = 'Your result';
+    showResult();
+  } else {
+    const stepNum = parseInt(stepName);
+    progressFill.style.width = (stepNum * 33.33) + '%';
+    progressLabel.textContent = 'Question ' + stepNum + ' of 3';
+  }
+  const progressEl = document.querySelector('.quiz-progress');
+  if (progressEl) {
+    window.scrollTo({ top: progressEl.offsetTop - 80, behavior: 'smooth' });
+  }
+};
+
+document.querySelectorAll('.quiz-option').forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (btn.dataset.stage) answers.stage = btn.dataset.stage;
+    if (btn.dataset.issue) answers.issue = btn.dataset.issue;
+    if (btn.dataset.time) answers.time = btn.dataset.time;
+    goToStep(btn.dataset.next);
+  });
+});
+
+document.querySelectorAll('.quiz-back').forEach(btn => {
+  btn.addEventListener('click', () => goToStep(btn.dataset.back));
+});
+
+function showResult() {
+  const titleEl = document.getElementById('result-title');
+  const descEl = document.getElementById('result-description');
+  const primaryEl = document.getElementById('result-primary');
+
+  let track;
+  if (answers.stage === 'exploring' || answers.stage === 'expecting') {
+    track = 'fatherhood';
+  } else if (answers.issue === 'all') {
+    track = (answers.stage === 'newborn') ? 'sleep' : 'morning';
+  } else {
+    track = answers.issue;
+  }
+
+  const tracks = {
+    fatherhood: {
+      title: 'The Fatherhood Track',
+      description: 'You have time to build the routine before the chaos starts. Most fathers waste this window. The four-stage track shows you how to use it.',
+      href: '/new-dad.html'
+    },
+    morning: {
+      title: 'The Morning Track',
+      description: 'The first 23 minutes of your day decide the rest. Start with the 10-minute survival protocol — designed for the morning after three hours of sleep.',
+      href: '/morning-routine.html'
+    },
+    sleep: {
+      title: 'The Sleep Track',
+      description: 'The problem is not how long you sleep. It is when you wake up inside the cycle. Start with the 3-2-1 rule and the three things destroying your sleep.',
+      href: '/sleep-better.html'
+    },
+    'screen-time': {
+      title: 'The Screen Time Track',
+      description: 'Your phone is not a bad habit. It is a system designed to be picked up. Start with the 7-day reset — built on mechanism, not willpower.',
+      href: '/screen-time.html'
+    }
+  };
+
+  const result = tracks[track] || tracks.fatherhood;
+  titleEl.textContent = result.title;
+  descEl.textContent = result.description;
+  primaryEl.href = result.href;
+}
+</script>
+<script src="js/main.js" defer></script>
+<script src="js/cookie-consent.js" defer></script>
+</body>
+</html>
