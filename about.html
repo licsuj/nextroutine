@@ -10,9 +10,11 @@
 <link rel="canonical" href="https://www.nextroutine.com/about.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/cookie-consent.css">
 <meta property="og:title" content="About — NextRoutine">
 <meta property="og:description" content="Built by Justin in Malta. Becoming a first-time father, building this in real time.">
 <meta property="og:type" content="website">
@@ -25,97 +27,199 @@
 </script>
 </head>
 <body>
-<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+
+<!-- NAVIGATION -->
+<header class="nav" id="nav">
 <div class="nav-inner">
-<a href="/" class="nav-brand" aria-label="NextRoutine home"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="5" r="1.5" fill="#D4A853"/></svg>NextRoutine</a>
-<div class="nav-links" role="list">
-<a href="/new-dad.html" class="nav-link" role="listitem">For Fathers</a>
-<a href="/morning-routine.html" class="nav-link" role="listitem">Morning</a>
-<a href="/sleep-better.html" class="nav-link" role="listitem">Sleep</a>
-<a href="/screen-time.html" class="nav-link" role="listitem">Screen Time</a>
-<a href="/blog/" class="nav-link" role="listitem">Blog</a>
-<a href="/pricing.html" class="nav-link" role="listitem">Pricing</a>
-<a href="/quiz.html" class="nav-link" role="listitem">Quiz</a>
-</div>
-<div class="nav-actions">
-<a href="/#free-signup" class="btn btn-primary btn-sm">Get Started Free →</a>
-</div>
-<button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay"><span></span><span></span><span></span></button>
-</div>
+<a href="/" class="nav-brand" aria-label="NextRoutine home">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 L13.6 10.4 L22 12 L13.6 13.6 L12 22 L10.4 13.6 L2 12 L10.4 10.4 Z"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/></svg>
+<span>NextRoutine</span>
+</a>
+<nav class="nav-links" aria-label="Main navigation">
+<a href="/new-dad.html" class="nav-link">For Fathers</a>
+<a href="/morning-routine.html" class="nav-link">Morning</a>
+<a href="/sleep-better.html" class="nav-link">Sleep</a>
+<a href="/screen-time.html" class="nav-link">Screen Time</a>
+<a href="/blog/" class="nav-link">Blog</a>
+<a href="/pricing.html" class="nav-link">Pricing</a>
 </nav>
-<div class="nav-overlay" id="nav-overlay" aria-hidden="true">
-<button class="nav-overlay-close" aria-label="Close menu">✕</button>
-<nav class="nav-overlay-links" aria-label="Mobile navigation">
+<div class="nav-actions">
+<a href="/#cta" class="btn btn-primary btn-sm">Get Started Free <span class="btn-arrow">→</span></a>
+<button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay" id="nav-toggle"><span></span><span></span><span></span></button>
+</div>
+</div>
+</header>
+<div class="nav-overlay-backdrop" id="nav-backdrop"></div>
+<aside class="nav-overlay" id="nav-overlay" aria-hidden="true">
+<button class="nav-overlay-close" aria-label="Close menu" id="nav-close">✕</button>
+<nav aria-label="Mobile navigation" style="display:flex;flex-direction:column;gap:0.25rem;">
 <a href="/new-dad.html" class="nav-overlay-link">For Fathers</a>
 <a href="/morning-routine.html" class="nav-overlay-link">Morning</a>
 <a href="/sleep-better.html" class="nav-overlay-link">Sleep</a>
 <a href="/screen-time.html" class="nav-overlay-link">Screen Time</a>
 <a href="/blog/" class="nav-overlay-link">Blog</a>
 <a href="/pricing.html" class="nav-overlay-link">Pricing</a>
-<a href="/quiz.html" class="nav-overlay-link">Quiz</a>
-<a href="/pre-fatherhood.html" class="nav-overlay-link">14-Day Challenge</a>
-<a href="/#free-signup" class="btn btn-primary btn-full" style="margin-top:24px;">Get Started Free →</a>
+<a href="/#cta" class="btn btn-primary btn-full" style="margin-top:1rem;">Get Started Free <span class="btn-arrow">→</span></a>
+</nav>
+</aside>
+
+<!-- ABOUT HERO -->
+<section class="hero" id="top">
+<div class="hero-bg" aria-hidden="true">
+<div class="hero-bg-1"></div>
+<div class="hero-bg-2"></div>
+</div>
+<div class="container">
+<div class="reveal" style="max-width:48rem;margin:0 auto;text-align:center;">
+<div class="pill pill-accent" style="margin-bottom:2rem;">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 L13.6 10.4 L22 12 L13.6 13.6 L12 22 L10.4 13.6 L2 12 L10.4 10.4 Z"/></svg>
+About
+</div>
+<h1 style="font-family:var(--font-serif); font-weight:500; font-size:clamp(2.25rem,5vw,4rem); line-height:1.1; letter-spacing:-0.02em; text-wrap:balance; color:var(--text-primary);">I'm building the routine system I needed.</h1>
+<p style="font-size:1.125rem; line-height:1.625; color:var(--text-secondary); max-width:36rem; margin:1.5rem auto 0; text-wrap:balance;">My partner is pregnant with our first child. NextRoutine is what I went looking for and couldn't find — a fatherhood routine system grounded in research, tested in real time, written by someone going through it.</p>
+</div>
+</div>
+</section>
+
+<!-- AUTHOR CARD (single section, full focus on Justin) -->
+<section class="section" style="padding-top:2rem;">
+<div class="container">
+<div class="author-card reveal">
+<div class="author-inner">
+<div class="author-avatar" aria-hidden="true">J</div>
+<div style="flex:1;">
+<div class="author-meta">
+<h3>Justin</h3>
+<span class="author-meta-sub">Software engineer · First-time father</span>
+</div>
+<div class="author-location">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+Malta
+</div>
+<div class="author-body">
+<p>I'm not a parenting expert. I'm a software engineer becoming a father for the first time, building the system I needed because nobody else had built it.</p>
+<p>Where research is cited, the source is linked. Where I've personally tested something, I say so. I don't claim community size or experience I don't have. Some protocols come from research synthesis. Others I'm testing on myself as my partner's pregnancy progresses. When something doesn't work, I'll say so. When it does, I'll say why.</p>
+<p>If this helps one father show up better for his family because he showed up for himself first — even for fifteen minutes a day — then building it will have been worth it.</p>
+</div>
+<a href="mailto:hello@nextroutine.com" class="author-contact">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+<span>hello@nextroutine.com — I read every reply</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section" id="cta">
+<div class="container">
+<div class="final-cta reveal">
+<div class="final-cta-bg" aria-hidden="true"></div>
+<div class="section-heading">
+<h2>Ready to build your routine?</h2>
+<p>Start with the free weekly newsletter. Stage-specific template on signup. No card needed.</p>
+</div>
+<div style="margin-top:2rem;">
+<a href="/#cta" class="btn btn-primary btn-lg">Get Started Free <span class="btn-arrow">→</span></a>
+</div>
+<p class="final-cta-microcopy">Or <a href="/how-this-works.html" style="color:var(--primary);">read how NextRoutine actually works</a> first.</p>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+<div class="container footer-inner">
+<div class="footer-grid">
+<div>
+<a href="/" class="footer-brand">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 L13.6 10.4 L22 12 L13.6 13.6 L12 22 L10.4 13.6 L2 12 L10.4 10.4 Z"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/></svg>
+<span>NextRoutine</span>
+</a>
+<p class="footer-tagline">Build the routine. Build the life.</p>
+</div>
+<div>
+<div class="footer-col-label">Tracks</div>
+<nav class="footer-links" aria-label="Tracks">
+<a href="/new-dad.html" class="footer-link">For Fathers</a>
+<a href="/morning-routine.html" class="footer-link">Morning Routine</a>
+<a href="/sleep-better.html" class="footer-link">Sleep Better</a>
+<a href="/screen-time.html" class="footer-link">Screen Time</a>
+<span class="footer-link-muted">Midlife Reset <span class="soon-tag">Coming Soon</span></span>
 </nav>
 </div>
-
-<header class="about-hero"><div class="container"><h1>I'm building the routine system I needed.</h1><p class="about-hero-sub">My partner is pregnant with our first child. NextRoutine is what I went looking for and couldn't find — a fatherhood routine system grounded in research, tested in real time, written by someone going through it.</p></div></header>
-
-<main><div class="container"><div class="about-body">
-
-<h2>Why this exists</h2>
-
-<p>The internet has thousands of morning routine guides, sleep optimisation articles, and habit-building frameworks. None of them are written for a father running on four hours of sleep with a newborn who has no respect for circadian rhythms.</p>
-
-<p>I went looking for the version that should exist. It didn't. So I'm building it.</p>
-
-<h2>Who this is for</h2>
-
-<p>NextRoutine is for expectant and new fathers who want a system — not just motivation — for the biggest transition of their adult life. Expectant dads with nine months to prepare. New dads in the first eight weeks who need protocols that survive on no sleep. Fathers in the rebuild phase who are ready to reclaim their mornings, sleep, and identity.</p>
-
-<p>If you want a guru telling you the answer, this isn't the site for you. If you want someone working through this honestly — research-grounded, openly tested, updated when something doesn't work — you're in the right place.</p>
-
-<h2>What makes this different</h2>
-
-<div class="about-values">
-
-<div class="about-value"><h3>Mechanism first</h3><p>Every protocol explains why it works before telling you to do it. Once you understand the cortisol awakening response, you'll never check your phone first thing again.</p></div>
-
-<div class="about-value"><h3>Built for the worst day</h3><p>Every protocol has a full version, a 5-minute fallback, and a 2-minute minimum. Because the morning your baby was up three times is the morning your routine matters most.</p></div>
-
-<div class="about-value"><h3>Honest about the source</h3><p>Where I cite research, the source is linked. Where I share what I've tested, I say so. I don't claim community size or experience I don't have.</p></div>
-
-</div>
-
-<h2>The mission</h2>
-
-<p>There are thousands of resources for mothers — and they deserve every one of them. But fathers get a pamphlet and a pat on the back. NextRoutine is here to close that gap.</p>
-
-<p>The goal is to make fatherhood the most prepared-for transition in a man's life, not the least.</p>
-
-<h2>A note from me</h2>
-
-<div class="about-founder">
-
-<div class="about-founder-avatar" aria-hidden="true">J</div>
-
 <div>
-
-<div class="about-founder-name">Justin</div>
-
-<div class="about-founder-title">Founder · Malta</div>
-
-<p>I'm not a parenting expert. I'm a software engineer becoming a father for the first time, building the system I needed because nobody else had built it.</p>
-
-<p>Some protocols here come from research synthesis. Others I'm testing on myself as my partner's pregnancy progresses. When something doesn't work, I'll say so. When it does, I'll say why.</p>
-
-<p>If this helps one father show up better for his family because he showed up for himself first — even for fifteen minutes a day — then building it will have been worth it.</p>
-
-<p>I read every reply. <a href="mailto:hello@nextroutine.com">hello@nextroutine.com</a></p>
-
+<div class="footer-col-label">Platform</div>
+<nav class="footer-links" aria-label="Platform">
+<a href="/newsletter.html" class="footer-link">Newsletter</a>
+<a href="/pricing.html" class="footer-link">Pricing</a>
+<a href="/blog/" class="footer-link">Blog</a>
+<a href="/about.html" class="footer-link">About</a>
+<a href="/how-this-works.html" class="footer-link">How This Works</a>
+</nav>
 </div>
-
+<div>
+<div class="footer-col-label">Legal</div>
+<nav class="footer-links" aria-label="Legal">
+<a href="/privacy.html" class="footer-link">Privacy Policy</a>
+<a href="/terms.html" class="footer-link">Terms of Service</a>
+<button class="footer-link-button" data-cc-open>Cookie Settings</button>
+</nav>
 </div>
+</div>
+<div class="footer-bottom">
+<span>© <span id="year"></span> NextRoutine. All rights reserved.</span>
+<span class="footer-bottom-italic">Made for fathers who refuse to wing it.</span>
+</div>
+</div>
+</footer>
 
-</div></div></main>
+<script>
+// Year stamp
+document.getElementById('year').textContent = new Date().getFullYear();
 
-<section class="about-cta section-green"><div class="container"><h2>Ready to build your routine?</h2><p style="font-size:18px;
+// Nav scroll effect
+const nav = document.getElementById('nav');
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+onScroll();
+window.addEventListener('scroll', onScroll, { passive: true });
+
+// Mobile menu
+const navToggle = document.getElementById('nav-toggle');
+const navOverlay = document.getElementById('nav-overlay');
+const navBackdrop = document.getElementById('nav-backdrop');
+const navClose = document.getElementById('nav-close');
+const openMenu = () => {
+  navOverlay.classList.add('open');
+  navBackdrop.classList.add('open');
+  navToggle.setAttribute('aria-expanded', 'true');
+  navOverlay.setAttribute('aria-hidden', 'false');
+};
+const closeMenu = () => {
+  navOverlay.classList.remove('open');
+  navBackdrop.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', 'false');
+  navOverlay.setAttribute('aria-hidden', 'true');
+};
+navToggle.addEventListener('click', openMenu);
+navClose.addEventListener('click', closeMenu);
+navBackdrop.addEventListener('click', closeMenu);
+navOverlay.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+// Reveal animations
+const revealEls = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('is-visible');
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+revealEls.forEach(el => revealObserver.observe(el));
+</script>
+<script src="js/main.js" defer></script>
+<script src="js/cookie-consent.js" defer></script>
+</body>
+</html>
