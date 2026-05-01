@@ -1300,3 +1300,26 @@ svg:not([width]):not([height]):not(.hero-illustration) {
 .price-badge {
   z-index: 1;
 }
+
+
+/* ============================================================
+   FIX: stack hero free/pro options vertically at all sizes
+   so the Free signup card has full width for the stage selector
+   ============================================================ */
+
+.hero-options {
+  grid-template-columns: 1fr;
+  max-width: 32rem;
+}
+
+@media (min-width: 768px) {
+  .hero-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-options {
+    grid-template-columns: 1fr;
+  }
+}
