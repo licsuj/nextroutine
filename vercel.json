@@ -55,7 +55,12 @@
     { "source": "/morning",        "destination": "/morning-routine", "permanent": true },
     { "source": "/screen",         "destination": "/screen-time",     "permanent": true },
     { "source": "/subscribe",      "destination": "/newsletter",      "permanent": true },
-    { "source": "/pro",            "destination": "/pricing",         "permanent": false }
+    { "source": "/pro",            "destination": "/pricing",         "permanent": false },
+    { "source": "/blog/newborn-tips-for-dads",         "destination": "/blog/newborn-week-1-dad-guide",   "permanent": true },
+    { "source": "/blog/how-to-support-pregnant-partner", "destination": "/blog/pregnancy-dad-next-steps",   "permanent": true },
+    { "source": "/blog/first-time-dad-checklist",      "destination": "/blog/how-to-prepare-for-fatherhood", "permanent": true },
+    { "source": "/blog/pregnancy-guide-for-dads",      "destination": "/blog/pregnancy-dad-next-steps",   "permanent": true },
+    { "source": "/blog/template",                       "destination": "/blog/morning-routine-new-dad",    "permanent": true }
   ],
   "rewrites": [
     { "source": "/blog",          "destination": "/blog/index.html" },
