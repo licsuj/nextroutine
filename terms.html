@@ -6,189 +6,225 @@
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#0F1117">
 <title>Terms of Service — NextRoutine</title>
-<meta name="description" content="Terms governing your use of NextRoutine, including the free newsletter, Pro subscription, 7-day trial, and affiliate links. Malta/EU jurisdiction.">
+<meta name="description" content="The terms under which NextRoutine is offered. Plain language, written for actual humans.">
 <link rel="canonical" href="https://www.nextroutine.com/terms.html">
-<meta property="og:title" content="Terms of Service — NextRoutine">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.nextroutine.com/terms.html">
-<meta property="og:site_name" content="NextRoutine">
+<meta name="robots" content="index,follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/cookie-consent.css">
 </head>
 <body>
-<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
-  <div class="nav-inner">
-    <a href="/" class="nav-brand" aria-label="NextRoutine home"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="5" r="1.5" fill="#D4A853"/></svg>NextRoutine</a>
-    <div class="nav-links" role="list">
-      <a href="/new-dad.html" class="nav-link" role="listitem">For Fathers</a>
-      <a href="/morning-routine.html" class="nav-link" role="listitem">Morning</a>
-      <a href="/sleep-better.html" class="nav-link" role="listitem">Sleep</a>
-      <a href="/screen-time.html" class="nav-link" role="listitem">Screen Time</a>
-      <a href="/blog/" class="nav-link" role="listitem">Blog</a>
-      <a href="/pricing.html" class="nav-link" role="listitem">Pricing</a>
-      <a href="/quiz.html" class="nav-link" role="listitem">Quiz</a>
-    </div>
-    <div class="nav-actions">
-      <a href="/#free-signup" class="btn btn-primary btn-sm">Get Started Free →</a>
-    </div>
-    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay"><span></span><span></span><span></span></button>
-  </div>
+
+<!-- NAVIGATION -->
+<header class="nav" id="nav">
+<div class="nav-inner">
+<a href="/" class="nav-brand" aria-label="NextRoutine home">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 L13.6 10.4 L22 12 L13.6 13.6 L12 22 L10.4 13.6 L2 12 L10.4 10.4 Z"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/></svg>
+<span>NextRoutine</span>
+</a>
+<nav class="nav-links" aria-label="Main navigation">
+<a href="/new-dad.html" class="nav-link">For Fathers</a>
+<a href="/morning-routine.html" class="nav-link">Morning</a>
+<a href="/sleep-better.html" class="nav-link">Sleep</a>
+<a href="/screen-time.html" class="nav-link">Screen Time</a>
+<a href="/blog/" class="nav-link">Blog</a>
+<a href="/pricing.html" class="nav-link">Pricing</a>
 </nav>
-<div class="nav-overlay" id="nav-overlay" aria-hidden="true">
-  <button class="nav-overlay-close" aria-label="Close menu">✕</button>
-  <nav class="nav-overlay-links" aria-label="Mobile navigation">
-    <a href="/new-dad.html" class="nav-overlay-link">For Fathers</a>
-    <a href="/morning-routine.html" class="nav-overlay-link">Morning</a>
-    <a href="/sleep-better.html" class="nav-overlay-link">Sleep</a>
-    <a href="/screen-time.html" class="nav-overlay-link">Screen Time</a>
-    <a href="/blog/" class="nav-overlay-link">Blog</a>
-    <a href="/pricing.html" class="nav-overlay-link">Pricing</a>
-    <a href="/quiz.html" class="nav-overlay-link">Quiz</a>
-    <a href="/pre-fatherhood.html" class="nav-overlay-link">14-Day Challenge</a>
-    <a href="/#free-signup" class="btn btn-primary btn-full" style="margin-top:24px;">Get Started Free →</a>
-  </nav>
+<div class="nav-actions">
+<a href="/#cta" class="btn btn-primary btn-sm">Get Started Free <span class="btn-arrow">→</span></a>
+<button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay" id="nav-toggle"><span></span><span></span><span></span></button>
+</div>
+</div>
+</header>
+<div class="nav-overlay-backdrop" id="nav-backdrop"></div>
+<aside class="nav-overlay" id="nav-overlay" aria-hidden="true">
+<button class="nav-overlay-close" aria-label="Close menu" id="nav-close">✕</button>
+<nav aria-label="Mobile navigation" style="display:flex;flex-direction:column;gap:0.25rem;">
+<a href="/new-dad.html" class="nav-overlay-link">For Fathers</a>
+<a href="/morning-routine.html" class="nav-overlay-link">Morning</a>
+<a href="/sleep-better.html" class="nav-overlay-link">Sleep</a>
+<a href="/screen-time.html" class="nav-overlay-link">Screen Time</a>
+<a href="/blog/" class="nav-overlay-link">Blog</a>
+<a href="/pricing.html" class="nav-overlay-link">Pricing</a>
+<a href="/#cta" class="btn btn-primary btn-full" style="margin-top:1rem;">Get Started Free <span class="btn-arrow">→</span></a>
+</nav>
+</aside>
+
+<!-- ARTICLE -->
+<article class="section" style="padding-top:5rem;">
+<div class="post-wrap">
+
+<a href="/" class="post-back">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+Back to Home
+</a>
+
+<h1 class="post-title">Terms of Service</h1>
+
+<p class="post-standfirst">These are the terms under which NextRoutine is offered. They are short on purpose. Read them once, and you will not need to read them again unless something here changes.</p>
+
+<p class="post-reviewed" style="text-align:left;margin:0 0 2.5rem;">Last updated: 2 May 2026</p>
+
+<div class="post-body">
+
+<h2>1. Who we are</h2>
+
+<p>NextRoutine is operated by Justin, an individual based in the European Union. The website, blog, and free newsletter are made available at <a href="https://www.nextroutine.com">nextroutine.com</a>. You can reach us at <a href="mailto:hello@nextroutine.com">hello@nextroutine.com</a>.</p>
+
+<h2>2. What you agree to by using the site</h2>
+
+<p>By visiting nextroutine.com, subscribing to our newsletter, or otherwise using the service, you agree to these terms. If you do not agree, please do not use the service. Continued use after these terms change means you accept the updated version.</p>
+
+<h2>3. What the service is</h2>
+
+<p>Right now, NextRoutine is a free weekly newsletter and a public blog with practical content for new and expectant fathers. There is no paid tier today.</p>
+
+<p>A paid tier ("NextRoutine Pro") is in development and will be offered in the future. The first 100 people on the Pro waitlist are intended to receive lifetime free access when Pro launches. The exact features, price, and launch date of Pro are not yet finalised, and we reserve the right to change scope, timing, or pricing before launch — except for the lifetime-free commitment to the founding 100, which we intend to honour as written.</p>
+
+<h2>4. What you agree to do</h2>
+
+<p>You agree to:</p>
+
+<ul>
+<li>Provide an accurate email address if you subscribe.</li>
+<li>Use the site lawfully and not attempt to disrupt, attack, or scrape it at scale.</li>
+<li>Respect the unsubscribe link if you no longer want emails — and not abuse our systems by signing up other people's email addresses without their permission.</li>
+</ul>
+
+<h2>5. What we agree to do</h2>
+
+<p>We agree to:</p>
+
+<ul>
+<li>Send you the newsletter you subscribed to, on a roughly weekly cadence.</li>
+<li>Honour unsubscribe requests immediately. Every email contains a one-click unsubscribe link.</li>
+<li>Treat your data according to our <a href="/privacy.html">Privacy Policy</a>.</li>
+<li>Honour the founding-100 lifetime free commitment for Pro, as currently described on our pricing page, when Pro launches.</li>
+</ul>
+
+<h2>6. What this is not</h2>
+
+<p>Content on NextRoutine is general information based on research and personal experience. <strong>It is not medical, psychological, legal, or financial advice.</strong> Becoming a father involves real health decisions for you, your partner, and your child, and real financial decisions for your family. For any decision that genuinely matters, consult a qualified professional — a doctor, midwife, mental-health professional, lawyer, financial adviser, or whoever is appropriate.</p>
+
+<p>If you or someone you know is in mental-health crisis, please contact emergency services or a crisis helpline in your country immediately. NextRoutine is not a substitute for emergency care.</p>
+
+<h2>7. Limits of liability</h2>
+
+<p>We try hard to make NextRoutine accurate, useful, and reliable. We cannot, however, guarantee that the site or newsletter will always be available, free of errors, or fit for any specific purpose. To the maximum extent allowed by applicable law:</p>
+
+<ul>
+<li>The service is provided "as is" without warranties of any kind.</li>
+<li>We are not liable for indirect, incidental, or consequential losses arising from your use of the service.</li>
+<li>None of these limitations affect your statutory rights as a consumer under EU or local law, which we do not attempt to exclude.</li>
+</ul>
+
+<h2>8. Intellectual property</h2>
+
+<p>The text, design, and original artwork on NextRoutine are owned by us and made available for personal reading. You may share links freely. You may not republish substantial portions of our content elsewhere without permission. If you want to quote, share, or translate something, just <a href="mailto:hello@nextroutine.com">email us</a> — we are usually happy to say yes.</p>
+
+<h2>9. Third-party links and services</h2>
+
+<p>Our site sometimes links to third-party websites or research sources. We do not control these and are not responsible for their content, accuracy, or privacy practices. Linking to a source is not an endorsement of everything else on that site.</p>
+
+<h2>10. Termination</h2>
+
+<p>You can end your relationship with NextRoutine at any time by unsubscribing from the newsletter and ceasing to visit the site. We can stop offering the service, suspend access, or terminate a subscriber's access if we reasonably believe the service is being misused. We will not normally do this without warning.</p>
+
+<h2>11. Changes to these terms</h2>
+
+<p>If we materially change these terms, we will update the "last updated" date above and, where the change is significant, notify newsletter subscribers by email. Older versions are not maintained, but you can ask us what an earlier version said.</p>
+
+<h2>12. Governing law</h2>
+
+<p>These terms are governed by the laws of the European Union member state in which the operator is based. If you are a consumer resident in the EU, you also benefit from the protections of the consumer law of your own country, which we do not attempt to override.</p>
+
+<h2>13. Contact</h2>
+
+<p>Questions, complaints, or anything that is not working as it should: <a href="mailto:hello@nextroutine.com">hello@nextroutine.com</a>. A real person reads these.</p>
+
 </div>
 
-<header class="legal-header">
-  <div class="container">
-    <h1>Terms of Service</h1>
-    <p class="legal-updated">Last updated: January 2025 · NextRoutine Ltd, Malta</p>
-  </div>
-</header>
+</div>
+</article>
 
-<main>
-  <div class="container">
-    <div class="legal-body">
-
-      <div class="legal-toc">
-        <div class="legal-toc-title">Contents</div>
-        <a href="#acceptance">1. Acceptance of terms</a>
-        <a href="#service">2. What NextRoutine is</a>
-        <a href="#free">3. Free newsletter</a>
-        <a href="#pro">4. Pro and Pro+ subscriptions</a>
-        <a href="#trial">5. 7-day free trial</a>
-        <a href="#billing">6. Billing and cancellation</a>
-        <a href="#refunds">7. Refunds</a>
-        <a href="#withdrawal">8. EU right of withdrawal</a>
-        <a href="#use">9. Acceptable use</a>
-        <a href="#ip">10. Intellectual property</a>
-        <a href="#affiliates">11. Affiliate links</a>
-        <a href="#disclaimer">12. Disclaimer of warranties</a>
-        <a href="#liability">13. Limitation of liability</a>
-        <a href="#changes">14. Changes to terms and service</a>
-        <a href="#law">15. Governing law</a>
-        <a href="#contact">16. Contact</a>
-      </div>
-
-      <h2 id="acceptance">1. Acceptance of Terms</h2>
-      <p>By accessing nextroutine.com, subscribing to our newsletter, or purchasing a subscription, you agree to these Terms of Service. If you do not agree, please do not use the service.</p>
-
-      <h2 id="service">2. What NextRoutine Is</h2>
-      <p>NextRoutine is operated by NextRoutine Ltd, registered in Malta. We provide daily routine plans, habit guides, email content, and downloadable templates for new and expectant fathers. The service is available as a free newsletter and as paid subscriptions (Pro and Pro+).</p>
-      <p>Contact: <a href="mailto:hello@nextroutine.com">hello@nextroutine.com</a></p>
-
-      <h2 id="free">3. Free Newsletter</h2>
-      <p>The free NextRoutine newsletter is provided at no cost. By subscribing you agree to receive:</p>
-      <ul>
-        <li>A weekly email with routine and habit content</li>
-        <li>The Fatherhood Starter Pack (PDF, delivered once upon signup)</li>
-        <li>Occasional product updates (no more than once per month)</li>
-      </ul>
-      <p>You may unsubscribe at any time using the link at the bottom of any email. We may discontinue the free newsletter with 30 days' notice to subscribers.</p>
-
-      <h2 id="pro">4. Pro and Pro+ Subscriptions</h2>
-      <p>Pro and Pro+ are paid subscriptions providing access to additional content, templates, and features. By subscribing you agree to the following pricing:</p>
-      <ul>
-        <li><strong>Pro:</strong> €7.99/month or €59.99/year</li>
-        <li><strong>Pro+:</strong> Pricing to be announced at launch</li>
-      </ul>
-      <p>All prices are in EUR. VAT is included where applicable under EU VAT rules. Prices may change with 30 days' notice to active subscribers. Any price change takes effect at the start of your next billing period, not mid-cycle.</p>
-
-      <h2 id="trial">5. 7-Day Free Trial</h2>
-      <p>Pro and Pro+ subscriptions include a 7-day free trial. During the trial you have full access to all features of your chosen plan. You will not be charged until the trial ends.</p>
-      <p>You may cancel at any time during the trial without being charged. If you do not cancel before the trial ends, your subscription will begin and you will be billed according to the plan you selected.</p>
-      <p>Each person is eligible for one free trial. If you have previously used a trial on the same email address, a new trial may not be available.</p>
-
-      <h2 id="billing">6. Billing and Cancellation</h2>
-      <p>All payments are processed by Stripe, Inc. By completing a purchase you also agree to <a href="https://stripe.com/legal" target="_blank" rel="noopener noreferrer">Stripe's terms of service</a>. NextRoutine does not see or store your payment card details.</p>
-      <p>Subscriptions renew automatically at the end of each billing period (monthly or annually) unless cancelled. You can cancel your subscription at any time from your account settings or by emailing <a href="mailto:hello@nextroutine.com">hello@nextroutine.com</a>.</p>
-      <p>When you cancel, you retain access to Pro or Pro+ content until the end of your current billing period. After that, your account reverts to the free plan.</p>
-
-      <h2 id="refunds">7. Refunds</h2>
-      <p>If you are not satisfied within 30 days of your first payment, email us and we will refund you in full. No questions asked.</p>
-      <p>After the initial 30-day window, we do not offer refunds for partial billing periods. You can cancel at any time and your access continues until the end of the period you have already paid for.</p>
-      <p>Refunds for annual plans within the 30-day window are for the full annual amount. After 30 days, annual subscriptions are non-refundable but can be cancelled to prevent renewal.</p>
-
-      <h2 id="withdrawal">8. EU Right of Withdrawal</h2>
-      <p>Under EU Directive 2011/83/EU, EU consumers have the right to withdraw from a distance contract within 14 days without giving any reason.</p>
-      <p>However, by accessing Pro or Pro+ content immediately after subscribing, you expressly request that performance begins during the withdrawal period. You acknowledge that the right of withdrawal may be lost once you begin accessing digital content.</p>
-      <p>To exercise withdrawal before accessing any Pro content, email <a href="mailto:hello@nextroutine.com">hello@nextroutine.com</a> within 14 days of purchase.</p>
-
-      <h2 id="use">9. Acceptable Use</h2>
-      <p>You agree not to:</p>
-      <ul>
-        <li>Share your Pro login credentials with others</li>
-        <li>Reproduce, distribute, or resell NextRoutine content (templates, articles, email content, PDFs)</li>
-        <li>Scrape, crawl, or automate access to the site</li>
-        <li>Use the service for any unlawful purpose</li>
-        <li>Interfere with the operation or security of the site</li>
-      </ul>
-      <p>Personal use of our content for your own routine practice is permitted and encouraged. Sharing a specific article link with a friend is fine. Copying the content of an article and reposting it is not.</p>
-
-      <h2 id="ip">10. Intellectual Property</h2>
-      <p>All content on nextroutine.com — including routine plans, templates, written copy, illustrations, and design — is owned by NextRoutine Ltd or its licensors. This content is protected by copyright and other intellectual property laws.</p>
-      <p>Your subscription (free or paid) grants you a personal, non-transferable, non-exclusive licence to access and use the content for your own private, non-commercial purposes.</p>
-
-      <h2 id="affiliates">11. Affiliate Links</h2>
-      <p>Some pages contain affiliate links to third-party products. When you click an affiliate link and make a purchase, we may earn a commission at no additional cost to you.</p>
-      <p>Affiliate relationships do not influence our editorial recommendations. All affiliate links are disclosed. We are not responsible for the products, services, or privacy practices of third-party merchants.</p>
-
-      <h2 id="disclaimer">12. Disclaimer of Warranties</h2>
-      <p>NextRoutine content is for informational and educational purposes only. It is not medical, psychological, financial, or professional advice. Always consult a qualified professional for health, parenting, or mental health concerns.</p>
-      <p>The service is provided "as is" and "as available" without warranties of any kind, express or implied. We do not guarantee that any routine, habit system, or protocol will produce specific results. Individual outcomes vary.</p>
-
-      <h2 id="liability">13. Limitation of Liability</h2>
-      <p>To the maximum extent permitted by applicable law, NextRoutine Ltd shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the service.</p>
-      <p>Our total aggregate liability for any claim arising from or relating to the service shall not exceed the total amount you paid to NextRoutine in the 12 months preceding the event giving rise to the claim.</p>
-      <p>Nothing in these terms limits liability for fraud, death, or personal injury caused by negligence, or any other liability that cannot be excluded under applicable law.</p>
-
-      <h2 id="changes">14. Changes to Terms and Service</h2>
-      <p>We may modify these terms or any part of the service at any time. Significant changes will be communicated by email to Pro and Pro+ subscribers at least 30 days before they take effect.</p>
-      <p>We may modify, suspend, or discontinue any feature of the free or paid service. For paid subscribers, we will provide reasonable notice of changes that materially reduce the value of their subscription.</p>
-      <p>Your continued use of the service after changes take effect constitutes acceptance of the updated terms.</p>
-
-      <h2 id="law">15. Governing Law</h2>
-      <p>These terms are governed by the laws of Malta and the European Union. Any disputes shall be subject to the exclusive jurisdiction of the courts of Malta.</p>
-      <p>If you are a consumer in the EU, you retain the benefit of any mandatory consumer protection provisions of the law of the country in which you reside. Nothing in these terms overrides your statutory consumer rights under EU law.</p>
-
-      <h2 id="contact">16. Contact</h2>
-      <p>Questions about these terms:<br>
-      <a href="mailto:hello@nextroutine.com">hello@nextroutine.com</a></p>
-      <p>NextRoutine Ltd<br>
-      [YOUR REGISTERED ADDRESS], Malta<br>
-      Company number: [YOUR COMPANY NUMBER]</p>
-
-    </div>
-  </div>
-</main>
-
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-brand"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2C10 2 6 5 6 10C6 12.2 7.8 14 10 14C12.2 14 14 12.2 14 10" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M10 14V18" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><path d="M7 17H13" stroke="#40916C" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="5" r="1.5" fill="#D4A853"/></svg>NextRoutine</div>
-        <p class="footer-tagline">Build the routine. Build the life.</p>
-      </div>
-      <div><div class="footer-col-label">Tracks</div><nav class="footer-links" aria-label="Tracks"><a href="/new-dad.html" class="footer-link">For Fathers</a><a href="/morning-routine.html" class="footer-link">Morning Routine</a><a href="/sleep-better.html" class="footer-link">Sleep Better</a><a href="/screen-time.html" class="footer-link">Screen Time</a></nav></div>
-      <div><div class="footer-col-label">Platform</div><nav class="footer-links" aria-label="Platform"><a href="/newsletter.html" class="footer-link">Newsletter</a><a href="/pricing.html" class="footer-link">Pricing</a><a href="/blog/" class="footer-link">Blog</a><a href="/about.html" class="footer-link">About</a></nav></div>
-      <div><div class="footer-col-label">Legal</div><nav class="footer-links" aria-label="Legal"><a href="/privacy.html" class="footer-link">Privacy Policy</a><a href="/terms.html" class="footer-link">Terms of Service</a></nav></div>
-    </div>
-  </div>
-  <div class="footer-bottom"><span>© <span data-year></span> NextRoutine. All rights reserved.</span><span>Made for fathers who refuse to wing it.</span></div>
+<!-- FOOTER -->
+<footer class="footer">
+<div class="container footer-inner">
+<div class="footer-grid">
+<div>
+<a href="/" class="footer-brand">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 L13.6 10.4 L22 12 L13.6 13.6 L12 22 L10.4 13.6 L2 12 L10.4 10.4 Z"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/></svg>
+<span>NextRoutine</span>
+</a>
+<p class="footer-tagline">Build the routine. Build the life.</p>
+</div>
+<div>
+<div class="footer-col-label">Tracks</div>
+<nav class="footer-links" aria-label="Tracks">
+<a href="/new-dad.html" class="footer-link">For Fathers</a>
+<a href="/morning-routine.html" class="footer-link">Morning Routine</a>
+<a href="/sleep-better.html" class="footer-link">Sleep Better</a>
+<a href="/screen-time.html" class="footer-link">Screen Time</a>
+<span class="footer-link-muted">Midlife Reset <span class="soon-tag">Coming Soon</span></span>
+</nav>
+</div>
+<div>
+<div class="footer-col-label">Platform</div>
+<nav class="footer-links" aria-label="Platform">
+<a href="/newsletter.html" class="footer-link">Newsletter</a>
+<a href="/pricing.html" class="footer-link">Pricing</a>
+<a href="/blog/" class="footer-link">Blog</a>
+<a href="/about.html" class="footer-link">About</a>
+<a href="/how-this-works.html" class="footer-link">How This Works</a>
+</nav>
+</div>
+<div>
+<div class="footer-col-label">Legal</div>
+<nav class="footer-links" aria-label="Legal">
+<a href="/privacy.html" class="footer-link">Privacy Policy</a>
+<a href="/terms.html" class="footer-link">Terms of Service</a>
+<button class="footer-link-button" data-cc-open>Cookie Settings</button>
+</nav>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© <span id="year"></span> NextRoutine. All rights reserved.</span>
+<span class="footer-bottom-italic">Made for fathers who refuse to wing it.</span>
+</div>
+</div>
 </footer>
-<script src="js/main.js" defer></script>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+const nav = document.getElementById('nav');
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+onScroll();
+window.addEventListener('scroll', onScroll, { passive: true });
+const navToggle = document.getElementById('nav-toggle');
+const navOverlay = document.getElementById('nav-overlay');
+const navBackdrop = document.getElementById('nav-backdrop');
+const navClose = document.getElementById('nav-close');
+const openMenu = () => {
+  navOverlay.classList.add('open');
+  navBackdrop.classList.add('open');
+  navToggle.setAttribute('aria-expanded', 'true');
+  navOverlay.setAttribute('aria-hidden', 'false');
+};
+const closeMenu = () => {
+  navOverlay.classList.remove('open');
+  navBackdrop.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', 'false');
+  navOverlay.setAttribute('aria-hidden', 'true');
+};
+navToggle.addEventListener('click', openMenu);
+navClose.addEventListener('click', closeMenu);
+navBackdrop.addEventListener('click', closeMenu);
+navOverlay.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+</script>
+<script src="/js/cookie-consent.js" defer></script>
 </body>
 </html>
