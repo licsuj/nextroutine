@@ -42,10 +42,20 @@ export default async function handler(req, res) {
     // Step 1: Check if subscriber already exists
     const existing = await findSubscriber(apiKey, publicationId, normalizedEmail);
 
+
     if (existing) {
+      // DIAGNOSTIC — log full subscriber shape to debug tag detection
+      console.log('=== EXISTING SUBSCRIBER ===');
+      console.log(JSON.stringify(existing, null, 2));
+      console.log('===========================');
+
       // Subscriber exists. Check if they already have the tag we'd apply.
       const existingTags = (existing.tags || []).map(t => typeof t === 'string' ? t : t?.tag).filter(Boolean);
       const hasTag = existingTags.includes(tagToApply);
+
+      console.log('Detected existing tags:', existingTags);
+      console.log('Looking for tag:', tagToApply);
+      console.log('hasTag:', hasTag);
 
       if (hasTag) {
         // Already subscribed AND already has this tag — pure duplicate
