@@ -1815,3 +1815,40 @@ svg:not([width]):not([height]):not(.hero-illustration) {
     padding: 1.5rem;
   }
 }
+
+
+/* ============================================================
+   V3 — PRICING CARD HIERARCHY
+   Free card primary, Pro card secondary.
+   Layout unchanged; visual treatment only. Reversible —
+   delete this block to restore equal-weight cards.
+   ============================================================ */
+
+/* Free card: subtle primary-green emphasis.
+   The pricing-grid has TWO direct .price-card children;
+   the second one has .price-card-pro modifier, so we target
+   the one WITHOUT that modifier as the Free card. */
+.pricing-grid .price-card:not(.price-card-pro) {
+  border-color: hsl(155, 45%, 32%, 0.35);
+  box-shadow: 0 4px 24px -8px hsl(155, 45%, 25%, 0.25);
+}
+
+/* Pro card: drop the amber glow, soften the border.
+   Keep the gradient top stripe + Coming Soon badge
+   (these are functional brand markers, not emphasis). */
+.pricing-grid .price-card-pro {
+  border-color: hsl(40, 60%, 58%, 0.2);
+  box-shadow: none;
+}
+
+/* Pro card heading: slightly muted serif color so
+   "NextRoutine Pro" doesn't visually outweigh
+   "The NextRoutine Letter" on the Free card. */
+.pricing-grid .price-card-pro h3 {
+  color: hsl(40, 15%, 92%, 0.85);
+}
+
+/* Pro card tagline: also slightly muted. */
+.pricing-grid .price-card-pro .price-tagline {
+  color: hsl(40, 8%, 60%, 0.85);
+}
