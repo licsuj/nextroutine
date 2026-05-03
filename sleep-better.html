@@ -13,8 +13,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/cookie-consent.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/cookie-consent.css">
 <meta property="og:title" content="Sleep Better — NextRoutine">
 <meta property="og:description" content="The 3-2-1 sleep protocol for fathers. Three numbers. One wind-down sequence.">
 <meta property="og:type" content="website">
@@ -180,8 +180,8 @@ Sleep Track
 <input type="email" id="track-email" name="email" class="field" placeholder="you@email.com" autocomplete="email" required>
 <button type="submit" class="btn btn-primary btn-full">Get the Free Sleep Protocol <span class="btn-arrow">→</span></button>
 </form>
-<div class="form-error" id="track-error" role="alert" aria-live="polite">Please select your stage and enter a valid email.</div>
-<div class="form-success" id="track-success" aria-live="polite"><strong>You're in.</strong> Check your inbox for the protocol.</div>
+<div class="form-error" id="track-signup-form-error" role="alert" aria-live="polite">Please select your stage and enter a valid email.</div>
+<div class="form-success" id="track-signup-form-success" aria-live="polite"><strong>You're in.</strong> Check your inbox for the protocol.</div>
 <p class="field-microcopy" style="margin-top:1.25rem; text-align:center;">Free forever. No card. One click to unsubscribe.</p>
 </div>
 </div>
@@ -226,8 +226,8 @@ Sleep Track
 <input type="email" id="waitlist-email" name="email" class="field" placeholder="you@email.com" autocomplete="email" required>
 <button type="submit" class="btn btn-accent btn-full">Join the Waitlist <span class="btn-arrow">→</span></button>
 </form>
-<div class="form-error" id="waitlist-error" role="alert" aria-live="polite">Please enter a valid email.</div>
-<div class="form-success" id="waitlist-success" aria-live="polite"><strong>You're on the list.</strong> I'll email you when Pro is ready.</div>
+<div class="form-error" id="waitlist-form-error" role="alert" aria-live="polite">Please enter a valid email.</div>
+<div class="form-success" id="waitlist-form-success" aria-live="polite"><strong>You're on the list.</strong> I'll email you when Pro is ready.</div>
 
 <p class="price-cta-sub">No card. No charge. Just early access.</p>
 </div>
@@ -337,26 +337,8 @@ const revealObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 revealEls.forEach(el => revealObserver.observe(el));
-['track-signup-form', 'waitlist-form'].forEach(id => {
-  const form = document.getElementById(id);
-  if (!form) return;
-  form.addEventListener('submit', (e) => {
-    const errorEl = document.getElementById(id.replace('-form', '-error'));
-    const successEl = document.getElementById(id.replace('-form', '-success'));
-    const stageInput = form.querySelector('select');
-    const emailInput = form.querySelector('input[type=email]');
-    const stage = stageInput ? stageInput.value : 'waitlist';
-    const email = emailInput.value;
-    if ((stageInput && !stage) || !email) {
-      e.preventDefault();
-      errorEl.classList.add('show');
-      successEl.classList.remove('show');
-      return;
-    }
-  });
-});
 </script>
-<script src="js/main.js" defer></script>
-<script src="js/cookie-consent.js" defer></script>
+<script src="/js/forms.js" defer></script>
+<script src="/js/cookie-consent.js" defer></script>
 </body>
 </html>
