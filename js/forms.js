@@ -5,11 +5,6 @@
 (function () {
   'use strict';
 
-  // Selectors:
-  // Newsletter forms: have both a <select name="stage"> and <input type="email">
-  // Waitlist forms: have only <input type="email"> (no select)
-  // Each form has matching #<id>-error and #<id>-success siblings outside the form
-
   function init() {
     var forms = document.querySelectorAll('form.hero-form, form.final-cta-form, form[data-nr-form]');
     forms.forEach(wireForm);
@@ -69,12 +64,17 @@
       .then(function (result) {
         setLoading(submitBtn, false);
         if (result.data && result.data.ok) {
-          showSuccess(errorEl, successEl);
-          form.style.display = 'none';
-          // Optional: track conversion in GA if loaded
-          if (typeof gtag === 'function') {
-            gtag('event', 'sign_up', { method: type });
+          // Distinct message for already-subscribed users
+          if (result.data.alreadySubscribed) {
+            showAlreadySubscribed(errorEl, successEl, type);
+          } else {
+            showSuccess(errorEl, successEl);
+            // Track conversion in GA only for genuine new subscriptions
+            if (typeof gtag === 'function') {
+              gtag('event', 'sign_up', { method: type });
+            }
           }
+          form.style.display = 'none';
         } else {
           var msg = (result.data && result.data.error) || 'Something went wrong. Please try again.';
           showError(errorEl, successEl, msg);
@@ -114,6 +114,20 @@
   function showSuccess(errorEl, successEl) {
     if (errorEl) errorEl.classList.remove('show');
     if (successEl) successEl.classList.add('show');
+  }
+
+  function showAlreadySubscribed(errorEl, successEl, type) {
+    if (errorEl) errorEl.classList.remove('show');
+    if (successEl) {
+      var message;
+      if (type === 'waitlist') {
+        message = "<strong>You're already on the list.</strong> I'll email you when Pro is ready.";
+      } else {
+        message = "<strong>You're already subscribed.</strong> Check your inbox for the latest newsletter, or look in your spam folder if you can't find it.";
+      }
+      successEl.innerHTML = message;
+      successEl.classList.add('show');
+    }
   }
 
   function hideMessages(errorEl, successEl) {
