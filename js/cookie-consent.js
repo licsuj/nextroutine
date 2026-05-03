@@ -29,14 +29,27 @@
   function loadGA4() {
     if (gaLoaded) return;
     gaLoaded = true;
-    var s = document.createElement('script');
-    s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-    document.head.appendChild(s);
+
+    // Set up dataLayer and global gtag function BEFORE loading the script.
+    // gtag must live on window so it persists after this function returns,
+    // and so that gtag.js can find it when it loads asynchronously.
     window.dataLayer = window.dataLayer || [];
-    function gtag() { window.dataLayer.push(arguments); }
-    gtag('js', new Date()); gtag('config', GA_ID, { anonymize_ip: true });
+    window.gtag = function () { window.dataLayer.push(arguments); };
+
+    // Inject the gtag script
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+
+    // Initialize GA4. These calls populate dataLayer; gtag.js processes them on load.
+    window.gtag('js', new Date());
+    window.gtag('config', GA_ID, { anonymize_ip: true });
   }
-  function removeGA4() { window['ga-disable-' + GA_ID] = true; }
+
+  function removeGA4() {
+    window['ga-disable-' + GA_ID] = true;
+  }
 
   function createUI() {
     var d = document.createElement('div');
