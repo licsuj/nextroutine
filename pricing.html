@@ -13,8 +13,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/cookie-consent.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/cookie-consent.css">
 <meta property="og:title" content="Pricing — NextRoutine">
 <meta property="og:description" content="Free newsletter today. Pro launching soon. First 100 waitlist members get lifetime free access.">
 <meta property="og:type" content="website">
@@ -135,8 +135,8 @@ Pricing
 <input type="email" id="pricing-waitlist-email" name="email" class="field" placeholder="you@email.com" autocomplete="email" required>
 <button type="submit" class="btn btn-accent btn-full">Join the Waitlist <span class="btn-arrow">→</span></button>
 </form>
-<div class="form-error" id="pricing-waitlist-error" role="alert" aria-live="polite">Please enter a valid email.</div>
-<div class="form-success" id="pricing-waitlist-success" aria-live="polite"><strong>You're on the list.</strong> I'll email you when Pro is ready.</div>
+<div class="form-error" id="pricing-waitlist-form-error" role="alert" aria-live="polite">Please enter a valid email.</div>
+<div class="form-success" id="pricing-waitlist-form-success" aria-live="polite"><strong>You're on the list.</strong> I'll email you when Pro is ready.</div>
 
 <p class="price-cta-sub">No card. No charge. Just early access.</p>
 </div>
@@ -349,22 +349,8 @@ const revealObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 revealEls.forEach(el => revealObserver.observe(el));
-
-const waitlistForm = document.getElementById('pricing-waitlist-form');
-if (waitlistForm) {
-  waitlistForm.addEventListener('submit', (e) => {
-    const errorEl = document.getElementById('pricing-waitlist-error');
-    const successEl = document.getElementById('pricing-waitlist-success');
-    const email = waitlistForm.querySelector('input[type=email]').value;
-    if (!email) {
-      e.preventDefault();
-      errorEl.classList.add('show');
-      successEl.classList.remove('show');
-    }
-  });
-}
 </script>
-<script src="js/main.js" defer></script>
-<script src="js/cookie-consent.js" defer></script>
+<script src="/js/forms.js" defer></script>
+<script src="/js/cookie-consent.js" defer></script>
 </body>
 </html>
