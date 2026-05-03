@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nextroutine.com/sitemap.xml
+# Block infrastructure paths from being indexed
+Disallow: /api/
+
+Sitemap: https://www.nextroutine.com/sitemap.xml
