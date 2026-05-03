@@ -38,10 +38,17 @@ export default async function handler(req, res) {
   const tagToApply = type === 'newsletter' ? 'newsletter' : 'pro-waitlist';
   const customFields = type === 'newsletter' ? [{ name: 'stage', value: stage }] : [];
 
+  console.log('=== INCOMING REQUEST ===');
+  console.log('Email:', normalizedEmail);
+  console.log('Type:', type);
+  console.log('Tag to apply:', tagToApply);
+  console.log('========================');
+
   try {
     // Step 1: Check if subscriber already exists
     const existing = await findSubscriber(apiKey, publicationId, normalizedEmail);
 
+    console.log('Lookup result:', existing ? 'FOUND' : 'NOT FOUND');
 
     if (existing) {
       // DIAGNOSTIC — log full subscriber shape to debug tag detection
@@ -75,6 +82,8 @@ export default async function handler(req, res) {
     }
 
     // Step 2: New subscriber — create
+    console.log('Creating new subscriber...');
+
     const subRes = await fetch(
       `https://api.beehiiv.com/v2/publications/${publicationId}/subscriptions`,
       {
@@ -94,22 +103,31 @@ export default async function handler(req, res) {
       }
     );
 
+    const responseBody = await safeJson(subRes);
+
+    console.log('=== NEW SUBSCRIBER CREATE RESPONSE ===');
+    console.log('HTTP Status:', subRes.status);
+    console.log('Body:', JSON.stringify(responseBody, null, 2));
+    console.log('======================================');
+
     if (!subRes.ok) {
-      const errorBody = await safeJson(subRes);
-      console.error('Beehiiv subscribe failed:', subRes.status, errorBody);
+      console.error('Beehiiv subscribe failed:', subRes.status, responseBody);
       return res.status(502).json({ error: 'Subscription service unavailable. Please try again.' });
     }
 
-    const subData = await subRes.json();
-    const subscriptionId = subData?.data?.id;
+    const subscriptionId = responseBody?.data?.id;
+    console.log('Extracted subscription ID:', subscriptionId);
 
     // Step 3: Apply tag
     if (subscriptionId) {
       try {
-        await applyTag(apiKey, publicationId, subscriptionId, tagToApply);
+        const tagRes = await applyTag(apiKey, publicationId, subscriptionId, tagToApply);
+        console.log('Tag application status:', tagRes.status);
       } catch (tagErr) {
         console.error('Tag application failed for new subscriber:', tagErr);
       }
+    } else {
+      console.error('No subscription ID extracted — tag will not be applied');
     }
 
     return res.status(200).json({ ok: true });
@@ -130,6 +148,8 @@ async function findSubscriber(apiKey, publicationId, email) {
       },
     });
 
+    console.log('findSubscriber HTTP status:', response.status);
+
     if (response.status === 404) {
       return null;
     }
@@ -139,6 +159,7 @@ async function findSubscriber(apiKey, publicationId, email) {
     }
 
     const body = await response.json();
+    console.log('findSubscriber body:', JSON.stringify(body, null, 2));
     return body?.data || null;
   } catch (err) {
     console.error('Subscriber lookup error:', err);
