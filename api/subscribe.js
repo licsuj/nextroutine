@@ -51,12 +51,10 @@ export default async function handler(req, res) {
     console.log('Lookup result:', existing ? 'FOUND' : 'NOT FOUND');
 
     if (existing) {
-      // DIAGNOSTIC — log full subscriber shape to debug tag detection
       console.log('=== EXISTING SUBSCRIBER ===');
       console.log(JSON.stringify(existing, null, 2));
       console.log('===========================');
 
-      // Subscriber exists. Check if they already have the tag we'd apply.
       const existingTags = (existing.tags || []).map(t => typeof t === 'string' ? t : t?.tag).filter(Boolean);
       const hasTag = existingTags.includes(tagToApply);
 
@@ -65,19 +63,15 @@ export default async function handler(req, res) {
       console.log('hasTag:', hasTag);
 
       if (hasTag) {
-        // Already subscribed AND already has this tag — pure duplicate
         return res.status(200).json({ ok: true, alreadySubscribed: true });
       }
 
-      // Subscriber exists but doesn't have THIS form's tag — add the tag
-      // (e.g. user signed up for newsletter, now joining waitlist)
       try {
         await applyTag(apiKey, publicationId, existing.id, tagToApply);
       } catch (tagErr) {
         console.error('Tag application failed for existing subscriber:', tagErr);
       }
 
-      // From the user's perspective they're newly added to this list
       return res.status(200).json({ ok: true });
     }
 
@@ -96,6 +90,7 @@ export default async function handler(req, res) {
           email: normalizedEmail,
           reactivate_existing: false,
           send_welcome_email: true,
+          double_opt_override: 'off',
           utm_source: 'nextroutine.com',
           utm_medium: type === 'newsletter' ? 'newsletter-form' : 'waitlist-form',
           custom_fields: customFields,
@@ -118,7 +113,6 @@ export default async function handler(req, res) {
     const subscriptionId = responseBody?.data?.id;
     console.log('Extracted subscription ID:', subscriptionId);
 
-    // Step 3: Apply tag
     if (subscriptionId) {
       try {
         const tagRes = await applyTag(apiKey, publicationId, subscriptionId, tagToApply);
@@ -137,7 +131,6 @@ export default async function handler(req, res) {
   }
 }
 
-// Look up a subscriber by email. Returns subscriber object if found, null otherwise.
 async function findSubscriber(apiKey, publicationId, email) {
   try {
     const url = `https://api.beehiiv.com/v2/publications/${publicationId}/subscriptions/by_email/${encodeURIComponent(email)}?expand=tags`;
@@ -159,7 +152,6 @@ async function findSubscriber(apiKey, publicationId, email) {
     }
 
     const body = await response.json();
-    console.log('findSubscriber body:', JSON.stringify(body, null, 2));
     return body?.data || null;
   } catch (err) {
     console.error('Subscriber lookup error:', err);
