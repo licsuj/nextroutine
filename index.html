@@ -31,8 +31,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/cookie-consent.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/cookie-consent.css">
 </head>
 <body>
 
@@ -105,8 +105,8 @@ Built for Fathers
 <input type="email" id="hero-email" name="email" class="field" placeholder="you@email.com" autocomplete="email" required>
 <button type="submit" class="btn btn-primary btn-full">Get My Free Plan <span class="btn-arrow">→</span></button>
 </form>
-<div class="form-error" id="hero-error" role="alert" aria-live="polite">Please select your stage and enter a valid email.</div>
-<div class="form-success" id="hero-success" aria-live="polite"><strong>You're in.</strong> Check your inbox — your stage-specific template is on the way.</div>
+<div class="form-error" id="hero-form-error" role="alert" aria-live="polite">Please select your stage and enter a valid email.</div>
+<div class="form-success" id="hero-form-success" aria-live="polite"><strong>You're in.</strong> Check your inbox — your stage-specific template is on the way.</div>
 <p class="field-microcopy">Stage-specific template + weekly newsletter. Free forever. No card needed.</p>
 </div>
 
@@ -369,8 +369,8 @@ Europe
 <input type="email" id="home-waitlist-email" name="email" class="field" placeholder="you@email.com" autocomplete="email" required>
 <button type="submit" class="btn btn-accent btn-full">Join the Waitlist <span class="btn-arrow">→</span></button>
 </form>
-<div class="form-error" id="home-waitlist-error" role="alert" aria-live="polite">Please enter a valid email.</div>
-<div class="form-success" id="home-waitlist-success" aria-live="polite"><strong>You're on the list.</strong> I'll email you when Pro is ready.</div>
+<div class="form-error" id="home-waitlist-form-error" role="alert" aria-live="polite">Please enter a valid email.</div>
+<div class="form-success" id="home-waitlist-form-success" aria-live="polite"><strong>You're on the list.</strong> I'll email you when Pro is ready.</div>
 
 <p class="price-cta-sub">No card. No charge. Just early access.</p>
 </div>
@@ -402,8 +402,8 @@ Europe
 <input type="email" id="final-email" name="email" class="field" placeholder="you@email.com" autocomplete="email" required>
 <button type="submit" class="btn btn-primary btn-full">Start My Free Routine <span class="btn-arrow">→</span></button>
 </form>
-<div class="form-error" id="final-error" role="alert" aria-live="polite">Please select your stage and enter a valid email.</div>
-<div class="form-success" id="final-success" aria-live="polite"><strong>You're in.</strong> Check your inbox.</div>
+<div class="form-error" id="final-form-error" role="alert" aria-live="polite">Please select your stage and enter a valid email.</div>
+<div class="form-success" id="final-form-success" aria-live="polite"><strong>You're in.</strong> Check your inbox.</div>
 <p class="final-cta-microcopy">No credit card. No commitment. One click to unsubscribe.</p>
 </div>
 </div>
@@ -499,42 +499,8 @@ const revealObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 revealEls.forEach(el => revealObserver.observe(el));
-
-// Waitlist form validation (Pro Coming Soon)
-const waitlistForm = document.getElementById('home-waitlist-form');
-if (waitlistForm) {
-  waitlistForm.addEventListener('submit', (e) => {
-    const errorEl = document.getElementById('home-waitlist-error');
-    const successEl = document.getElementById('home-waitlist-success');
-    const email = waitlistForm.querySelector('input[type=email]').value;
-    if (!email) {
-      e.preventDefault();
-      errorEl.classList.add('show');
-      successEl.classList.remove('show');
-    }
-  });
-}
-
-// Free signup form handling — your existing main.js should handle Beehiiv submission
-['hero-form', 'final-form'].forEach(id => {
-  const form = document.getElementById(id);
-  if (!form) return;
-  form.addEventListener('submit', (e) => {
-    const errorEl = document.getElementById(id.replace('form', 'error'));
-    const successEl = document.getElementById(id.replace('form', 'success'));
-    const stage = form.querySelector('select').value;
-    const email = form.querySelector('input[type=email]').value;
-    if (!stage || !email) {
-      e.preventDefault();
-      errorEl.classList.add('show');
-      successEl.classList.remove('show');
-      return;
-    }
-    // Allow your existing Beehiiv handler in main.js to take over
-  });
-});
 </script>
-<script src="js/main.js" defer></script>
-<script src="js/cookie-consent.js" defer></script>
+<script src="/js/forms.js" defer></script>
+<script src="/js/cookie-consent.js" defer></script>
 </body>
 </html>
