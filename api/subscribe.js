@@ -40,7 +40,6 @@ export default async function handler(req, res) {
 
   // Build Beehiiv subscription request
   const tags = type === 'newsletter' ? ['newsletter'] : ['pro-waitlist'];
-
   const customFields = type === 'newsletter' ? [{ name: 'stage', value: stage }] : [];
 
   const beehiivPayload = {
@@ -53,7 +52,6 @@ export default async function handler(req, res) {
   };
 
   try {
-    // Step 1: Subscribe to publication
     const subRes = await fetch(
       `https://api.beehiiv.com/v2/publications/${publicationId}/subscriptions`,
       {
@@ -66,21 +64,30 @@ export default async function handler(req, res) {
       }
     );
 
+    const responseBody = await safeJson(subRes);
+
+    // DIAGNOSTIC: log everything Beehiiv returns
+    console.log('=== BEEHIIV RESPONSE ===');
+    console.log('Status:', subRes.status);
+    console.log('Body:', JSON.stringify(responseBody, null, 2));
+    console.log('========================');
+
     if (!subRes.ok) {
-      const errorBody = await safeJson(subRes);
-      console.error('Beehiiv subscribe failed:', subRes.status, errorBody);
-      // Map common Beehiiv errors to user-friendly messages
-      if (subRes.status === 409 || (errorBody?.errors && JSON.stringify(errorBody.errors).includes('already'))) {
-        // Already subscribed — treat as success from the user's perspective
+      console.error('Beehiiv subscribe failed:', subRes.status, responseBody);
+      if (subRes.status === 409 || (responseBody?.errors && JSON.stringify(responseBody.errors).includes('already'))) {
         return res.status(200).json({ ok: true, alreadySubscribed: true });
       }
       return res.status(502).json({ error: 'Subscription service unavailable. Please try again.' });
     }
 
-    const subData = await subRes.json();
-    const subscriptionId = subData?.data?.id;
+    // Check the response shape — Beehiiv may signal duplicates via the response body
+    const subscriptionId = responseBody?.data?.id;
+    const subscriberStatus = responseBody?.data?.status;
+    
+    console.log('Subscription ID:', subscriptionId);
+    console.log('Subscriber status:', subscriberStatus);
 
-    // Step 2: Apply tags (Beehiiv tags are applied via a separate endpoint)
+    // Apply tags
     if (subscriptionId && tags.length > 0) {
       try {
         await fetch(
@@ -95,7 +102,6 @@ export default async function handler(req, res) {
           }
         );
       } catch (tagErr) {
-        // Tag failure is not fatal — subscriber is created
         console.error('Tag application failed:', tagErr);
       }
     }
