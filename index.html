@@ -4,58 +4,78 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#FAFAF8">
-<title>NextRoutine — Weekly Systems for Real Life</title>
-<meta name="description" content="Your next routine depends on where you are in life. Choose the path that fits your current stage and get a practical, step-by-step system delivered weekly.">
+<title>NextRoutine — Self-Improvement Systems for Men | Fatherhood & Dating</title>
+<meta name="description" content="Practical weekly systems for men navigating real transitions. Dad Prep: routines for new and expectant fathers. Dating Reset: fitness, style, confidence, and social skills to become more dateable. Free.">
 <link rel="canonical" href="https://www.nextroutine.com/">
-<meta property="og:title" content="NextRoutine — Weekly Systems for Real Life">
-<meta property="og:description" content="Choose the path that fits your current stage. Practical systems delivered weekly.">
+<meta property="og:title" content="NextRoutine — Self-Improvement Systems for Men">
+<meta property="og:description" content="Practical weekly systems for men navigating real transitions. Fatherhood prep and dating improvement — no fluff, no gurus.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.nextroutine.com/">
 <meta property="og:site_name" content="NextRoutine">
+<meta property="og:image" content="https://www.nextroutine.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NextRoutine — Self-Improvement Systems for Men">
+<meta name="twitter:description" content="Weekly systems for fatherhood and dating. Built by Justin in Europe. Free to start.">
+<meta name="twitter:image" content="https://www.nextroutine.com/assets/og-image.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"NextRoutine","url":"https://www.nextroutine.com/","description":"Practical weekly self-improvement systems for men. Fatherhood preparation and dating improvement programs."}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"NextRoutine","url":"https://www.nextroutine.com/","logo":"https://www.nextroutine.com/assets/favicon.svg","description":"Weekly self-improvement systems for men navigating real life transitions.","founder":{"@type":"Person","name":"Justin","url":"https://www.nextroutine.com/about"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ItemList","name":"NextRoutine Systems","itemListElement":[{"@type":"ListItem","position":1,"name":"Dad Prep","url":"https://dad.nextroutine.com","description":"Weekly routines and systems for new and expectant fathers. Hospital preparation, partner support, newborn logistics, and practical fatherhood protocols."},{"@type":"ListItem","position":2,"name":"Dating Reset","url":"https://dateable.nextroutine.com","description":"A systematic self-improvement program for men. Fitness, style, confidence, communication, and weekly action plans to become more dateable."}]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/site.webmanifest">
 <style>
 /* ============================================================
-   NEXTROUTINE UMBRELLA — DESIGN SYSTEM
-   Light editorial / magazine aesthetic
-   Instrument Serif display + DM Sans body
+   NEXTROUTINE — UMBRELLA LANDING PAGE
+   Editorial / magazine aesthetic
+   Instrument Serif + DM Sans + DM Mono
    ============================================================ */
 
 :root {
+  /* Surfaces */
   --bg: #FAFAF8;
-  --bg-warm: #F5F3EF;
+  --bg-warm: #F3F1EC;
   --bg-card: #FFFFFF;
   --bg-dark: #1A1A18;
-  --bg-dark-card: #242422;
 
-  --text: #1A1A18;
-  --text-secondary: #6B6B63;
-  --text-muted: #9C9C94;
+  /* Text — WCAG AA compliant on --bg */
+  --text: #1A1A18;              /* 16.5:1 — primary */
+  --text-secondary: #555550;    /* 6.8:1 — body text, descriptions */
+  --text-tertiary: #7A7A72;     /* 4.5:1 — AA minimum, labels */
+  --text-muted: #8E8E86;        /* 3.7:1 — decorative only, not for reading */
   --text-inverse: #FAFAF8;
 
-  --accent: #3D3D3A;
-  --accent-warm: #8B7355;
-  --border: #E5E3DE;
-  --border-light: #EDEBE7;
+  /* Accent */
+  --accent: #6B5B45;            /* warm brown, 5.5:1 on bg */
 
+  /* Borders */
+  --border: #DDDBD5;
+  --border-light: #E8E6E1;
+
+  /* Type */
   --font-display: 'Instrument Serif', Georgia, serif;
   --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
   --font-mono: 'DM Mono', 'SF Mono', monospace;
 
-  --container: 1320px;
-  --gap: 2rem;
-  --radius: 0px;
+  /* Layout */
+  --container: 1280px;
 }
 
+/* RESET */
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
   font-family: var(--font-body);
   font-size: 16px;
-  line-height: 1.55;
+  line-height: 1.6;
   color: var(--text);
   background-color: var(--bg);
   -webkit-font-smoothing: antialiased;
@@ -64,6 +84,12 @@ body {
 img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; cursor: pointer; background: none; border: none; }
+input { font: inherit; }
+
+::selection {
+  background: rgba(107,91,69,0.15);
+  color: var(--text);
+}
 
 .container {
   width: 100%;
@@ -79,11 +105,15 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  height: 60px;
-  background: rgba(250, 250, 248, 0.92);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  height: 56px;
+  background: rgba(250,250,248,0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-light);
+  transition: box-shadow 300ms;
+}
+.nav.scrolled {
+  box-shadow: 0 1px 12px rgba(0,0,0,0.04);
 }
 .nav-inner {
   max-width: var(--container);
@@ -100,267 +130,432 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   gap: 0.625rem;
 }
 .nav-logo {
-  width: 28px; height: 28px;
-  border: 2px solid var(--text);
+  width: 26px; height: 26px;
+  border: 1.5px solid var(--text);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: transform 300ms;
 }
+.nav-brand:hover .nav-logo { transform: rotate(90deg); }
 .nav-logo-dot {
-  width: 8px; height: 8px;
+  width: 7px; height: 7px;
   background: var(--text);
   border-radius: 50%;
 }
-.nav-brand-text {
+.nav-wordmark {
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  display: none;
+}
+@media (min-width: 768px) { .nav-center { display: block; } }
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.75rem;
 }
-.nav-issue {
+.nav-link {
   font-family: var(--font-mono);
   font-size: 0.6875rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text-secondary);
-  display: none;
-}
-@media (min-width: 768px) { .nav-issue { display: block; } }
-.nav-link-about {
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-secondary);
+  color: var(--text-tertiary);
   transition: color 200ms;
+  position: relative;
 }
-.nav-link-about:hover { color: var(--text); }
+.nav-link:hover { color: var(--text); }
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0;
+  width: 0; height: 1px;
+  background: var(--text);
+  transition: width 250ms;
+}
+.nav-link:hover::after { width: 100%; }
 
 /* ============================================================
    HERO
    ============================================================ */
 .hero {
-  padding: 140px 0 80px;
-}
-.hero-headline {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(3rem, 7.5vw, 6.5rem);
-  line-height: 0.95;
-  letter-spacing: -0.025em;
-  max-width: 1100px;
-}
-.hero-headline em {
-  font-style: italic;
-  color: var(--text-muted);
-}
-.hero-sub {
-  margin-top: 2.5rem;
+  padding: 130px 0 0;
+  min-height: 50vh;
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-end;
-  justify-content: space-between;
-  gap: 1.5rem;
 }
-.hero-desc {
-  font-size: 1.0625rem;
-  line-height: 1.6;
-  color: var(--text-secondary);
-  max-width: 480px;
+.hero-inner {
+  width: 100%;
+  padding-bottom: 60px;
+  border-bottom: 1px solid var(--border);
 }
-.hero-cta-label {
+.hero-eyebrow {
   font-family: var(--font-mono);
   font-size: 0.6875rem;
-  letter-spacing: 0.18em;
+  font-weight: 500;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--text-muted);
-  padding-bottom: 0.25rem;
+  color: var(--accent);
+  margin-bottom: 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 24px; height: 1px;
+  background: var(--accent);
+}
+h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.75rem, 7vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  max-width: 1000px;
+}
+h1 em {
+  font-style: italic;
+}
+.hero-bottom {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: end;
+}
+@media (min-width: 768px) {
+  .hero-bottom {
+    grid-template-columns: 1fr auto;
+  }
+}
+.hero-desc {
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 520px;
+}
+.hero-scroll-cue {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  white-space: nowrap;
+}
+.hero-scroll-cue .arrow {
+  display: inline-block;
+  animation: bounceDown 2s ease-in-out infinite;
+}
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
 }
 
 /* ============================================================
-   SYSTEMS GRID — TWO PATHS
+   SYSTEMS — TWO PATHS
    ============================================================ */
 .systems {
-  padding: 60px 0 0;
+  padding: 80px 0 0;
 }
+.systems-header {
+  margin-bottom: 3.5rem;
+}
+.systems-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 1rem;
+}
+.systems-headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-weight: 400;
+  line-height: 1.15;
+  max-width: 500px;
+}
+
 .systems-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
 }
 @media (min-width: 768px) {
-  .systems-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+  .systems-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
 }
 
-.system-card {
+/* Card */
+.card {
   display: flex;
   flex-direction: column;
+  transition: transform 300ms;
 }
+.card:hover { transform: translateY(-3px); }
 
-/* Card header with label + arrow */
-.system-header {
+.card-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 1.25rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid var(--border);
-  margin-bottom: 0;
 }
-.system-label {
+.card-system {
   font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  letter-spacing: 0.18em;
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--text-secondary);
+  color: var(--text-tertiary);
 }
-.system-arrow {
-  width: 44px; height: 44px;
+.card-arrow {
+  width: 40px; height: 40px;
   border: 1px solid var(--border);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 250ms, border-color 250ms, transform 250ms;
+  transition: all 250ms;
 }
-.system-card:hover .system-arrow {
-  background-color: var(--text);
+.card:hover .card-arrow {
+  background: var(--text);
   border-color: var(--text);
   transform: rotate(-45deg);
 }
-.system-card:hover .system-arrow svg { stroke: var(--bg); }
+.card:hover .card-arrow svg { stroke: var(--bg); }
 
 /* Card image */
-.system-image {
+.card-image {
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 3/2;
   overflow: hidden;
-  margin-top: 1.25rem;
+  margin-top: 1rem;
   position: relative;
 }
-.system-image img {
+.card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 700ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-.system-card:hover .system-image img {
-  transform: scale(1.04);
+.card:hover .card-image img {
+  transform: scale(1.05);
 }
-
-/* Text overlay on image */
-.system-image-overlay {
+.card-overlay {
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  padding: 2.5rem 2rem;
-  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 70%, transparent 100%);
+  padding: 2.5rem 1.75rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
   color: white;
 }
-.system-image-tag {
+.card-overlay-tag {
   font-family: var(--font-mono);
-  font-size: 0.625rem;
-  letter-spacing: 0.18em;
+  font-size: 0.5625rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  opacity: 0.8;
+  opacity: 0.85;
   margin-bottom: 0.5rem;
 }
-.system-image-title {
+.card-overlay-title {
   font-family: var(--font-display);
-  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-size: clamp(2rem, 3.5vw, 3rem);
   font-weight: 400;
   line-height: 1;
-  letter-spacing: -0.02em;
 }
 
 /* Card body */
-.system-body {
+.card-body {
   padding-top: 1.5rem;
+  flex: 1;
 }
-.system-desc {
+.card-desc {
   font-size: 0.9375rem;
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--text-secondary);
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
 }
-
-/* Numbered list */
-.system-topics {
+.card-topics {
   list-style: none;
 }
-.system-topic {
+.card-topic {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
-  padding: 1rem 0;
+  gap: 1rem;
+  padding: 0.875rem 0;
   border-top: 1px solid var(--border-light);
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
 }
-.system-topic:last-child {
-  border-bottom: 1px solid var(--border-light);
-}
-.system-topic-num {
+.card-topic:last-child { border-bottom: 1px solid var(--border-light); }
+.card-topic-num {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   font-weight: 500;
   color: var(--text-muted);
-  min-width: 2rem;
+  min-width: 1.75rem;
 }
 
 /* Card footer */
-.system-footer {
-  margin-top: 2rem;
+.card-foot {
+  margin-top: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.75rem;
 }
-.system-start {
+.card-cta {
+  font-size: 0.875rem;
+  font-weight: 500;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.9375rem;
-  font-weight: 500;
-  padding-bottom: 2px;
   border-bottom: 1.5px solid var(--text);
+  padding-bottom: 2px;
   transition: gap 200ms;
 }
-.system-start:hover { gap: 0.75rem; }
-.system-url {
+.card:hover .card-cta { gap: 0.75rem; }
+.card-url {
   font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  letter-spacing: 0.04em;
+  font-size: 0.625rem;
+  letter-spacing: 0.06em;
   color: var(--text-muted);
-  display: flex;
-  align-items: center;
-  gap: 0.375rem;
-}
-.system-url::before {
-  content: '›';
-  font-size: 0.875rem;
 }
 
 /* ============================================================
-   BOTTOM STATEMENT
+   MANIFESTO — "NO FLUFF" BAND
    ============================================================ */
-.statement {
-  padding: 120px 0 100px;
-  border-top: 1px solid var(--border);
+.manifesto {
+  padding: 80px 0;
   margin-top: 80px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-warm);
 }
-.statement-text {
+.manifesto-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+@media (min-width: 768px) {
+  .manifesto-inner { grid-template-columns: 1fr 1fr; gap: 4rem; }
+}
+.manifesto-quote {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: clamp(1.75rem, 4vw, 3rem);
-  line-height: 1.2;
-  max-width: 600px;
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  line-height: 1.25;
   letter-spacing: -0.01em;
+}
+.manifesto-points {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.manifesto-point {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+.manifesto-point:first-child { border-top: 1px solid var(--border); }
+.manifesto-point-icon {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  min-width: 1rem;
+  padding-top: 0.15rem;
+}
+
+/* ============================================================
+   NEWSLETTER CAPTURE
+   ============================================================ */
+.capture {
+  padding: 80px 0;
+}
+.capture-inner {
+  max-width: 560px;
+}
+.capture-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 1rem;
+}
+.capture-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.capture-desc {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 1.75rem;
+}
+.capture-form {
+  display: flex;
+  gap: 0;
+  margin-bottom: 0.75rem;
+}
+@media (max-width: 500px) {
+  .capture-form { flex-direction: column; gap: 0.75rem; }
+}
+.capture-input {
+  flex: 1;
+  height: 48px;
+  padding: 0 1rem;
+  border: 1.5px solid var(--border);
+  background: var(--bg-card);
+  font-size: 0.9375rem;
+  color: var(--text);
+  outline: none;
+  transition: border-color 200ms;
+}
+.capture-input:focus { border-color: var(--text); }
+.capture-input::placeholder { color: var(--text-muted); }
+.capture-btn {
+  height: 48px;
+  padding: 0 1.5rem;
+  background: var(--text);
+  color: var(--text-inverse);
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  transition: background 200ms;
+}
+.capture-btn:hover { background: #333330; }
+.capture-micro {
+  font-size: 0.75rem;
+  color: var(--text-muted);
 }
 
 /* ============================================================
@@ -377,9 +572,19 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
   flex-wrap: wrap;
   gap: 1rem;
 }
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
 .footer-copy {
   font-size: 0.8125rem;
   color: var(--text-muted);
+}
+.footer-credit {
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
 }
 .footer-links {
   display: flex;
@@ -387,7 +592,7 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
 }
 .footer-link {
   font-size: 0.8125rem;
-  color: var(--text-muted);
+  color: var(--text-tertiary);
   transition: color 200ms;
 }
 .footer-link:hover { color: var(--text); }
@@ -396,131 +601,179 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
    RESPONSIVE
    ============================================================ */
 @media (max-width: 767px) {
-  .hero { padding: 110px 0 50px; }
-  .hero-sub { flex-direction: column; align-items: flex-start; }
-  .systems { padding: 40px 0 0; }
-  .system-image-overlay { padding: 1.5rem 1.25rem; }
-  .statement { padding: 80px 0 60px; margin-top: 60px; }
+  .hero { padding: 100px 0 0; min-height: auto; }
+  .hero-inner { padding-bottom: 40px; }
+  .systems { padding: 50px 0 0; }
+  .card-overlay { padding: 1.5rem 1.25rem; }
+  .manifesto { padding: 50px 0; margin-top: 50px; }
+  .capture { padding: 50px 0; }
 }
 
 /* ============================================================
    ANIMATIONS
    ============================================================ */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(24px); }
+  from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.fade-up {
-  animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.22,1,0.36,1), transform 0.6s cubic-bezier(0.22,1,0.36,1);
 }
-.fade-up-d1 { animation-delay: 0.1s; }
-.fade-up-d2 { animation-delay: 0.2s; }
-.fade-up-d3 { animation-delay: 0.35s; }
-.fade-up-d4 { animation-delay: 0.5s; }
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-in-d1 { transition-delay: 0.1s; }
+.fade-in-d2 { transition-delay: 0.2s; }
+.fade-in-d3 { transition-delay: 0.3s; }
+.fade-in-d4 { transition-delay: 0.4s; }
 </style>
 </head>
 <body>
 
 <!-- NAVIGATION -->
-<header class="nav">
+<header class="nav" id="nav">
 <div class="nav-inner">
-  <a href="/" class="nav-brand">
+  <a href="/" class="nav-brand" aria-label="NextRoutine home">
     <div class="nav-logo"><div class="nav-logo-dot"></div></div>
-    <span class="nav-brand-text">NextRoutine</span>
+    <span class="nav-wordmark">NextRoutine</span>
   </a>
+  <span class="nav-center">Issue 01 — Two Paths</span>
   <div class="nav-right">
-    <span class="nav-issue">Issue 01 — Two Paths</span>
-    <a href="/about" class="nav-link-about">About</a>
+    <a href="#systems" class="nav-link">Systems</a>
+    <a href="/about" class="nav-link">About</a>
   </div>
 </div>
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="top">
 <div class="container">
-  <h1 class="hero-headline fade-up">Your next routine<br>depends on <em>where you are<br>in life.</em></h1>
-  <div class="hero-sub fade-up fade-up-d2">
-    <p class="hero-desc">Choose the path that fits your current stage and get a practical, step-by-step system delivered weekly.</p>
-    <span class="hero-cta-label">Pick a path below</span>
+  <div class="hero-inner">
+    <div class="hero-eyebrow fade-in">Self-improvement systems for men</div>
+    <h1 class="fade-in fade-in-d1">Your next routine depends on <em>where you are in life.</em></h1>
+    <div class="hero-bottom fade-in fade-in-d2">
+      <p class="hero-desc">Two paths. One for new fathers who need structure. One for single men who want to become more dateable. Pick the one that fits — get a free weekly system delivered every Tuesday.</p>
+      <span class="hero-scroll-cue"><span class="arrow">↓</span> Choose your path</span>
+    </div>
   </div>
 </div>
 </section>
 
 <!-- SYSTEMS -->
-<section class="systems">
+<section class="systems" id="systems">
 <div class="container">
+  <div class="systems-header fade-in">
+    <div class="systems-label">Available systems</div>
+    <h2 class="systems-headline">Two stages. Two systems.<br>Both free to start.</h2>
+  </div>
+
   <div class="systems-grid">
 
     <!-- SYSTEM 01 — DAD PREP -->
-    <a href="https://dad.nextroutine.com" class="system-card fade-up fade-up-d3">
-      <div class="system-header">
-        <span class="system-label">System 01</span>
-        <div class="system-arrow">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+    <a href="https://dad.nextroutine.com" class="card fade-in fade-in-d2" aria-label="Start Dad Prep — routines for new and expectant fathers">
+      <div class="card-top">
+        <span class="card-system">System 01 · Fatherhood</span>
+        <div class="card-arrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
         </div>
       </div>
-      <div class="system-image">
-        <img src="/assets/dad-hero.jpg" alt="Father gently holding his newborn baby" loading="lazy">
-        <div class="system-image-overlay">
-          <div class="system-image-tag">Preparing for fatherhood?</div>
-          <div class="system-image-title">Dad Prep</div>
+      <div class="card-image">
+        <img src="/assets/dad-hero.jpg" alt="Father gently holding his newborn baby in warm natural light" loading="lazy">
+        <div class="card-overlay">
+          <div class="card-overlay-tag">New or expectant father?</div>
+          <div class="card-overlay-title">Dad Prep</div>
         </div>
       </div>
-      <div class="system-body">
-        <p class="system-desc">Build the systems your family will depend on. Be ready for what actually matters.</p>
-        <ul class="system-topics">
-          <li class="system-topic"><span class="system-topic-num">01</span> First-week &amp; hospital preparation</li>
-          <li class="system-topic"><span class="system-topic-num">02</span> Partner support &amp; communication</li>
-          <li class="system-topic"><span class="system-topic-num">03</span> Home systems and routines</li>
-          <li class="system-topic"><span class="system-topic-num">04</span> Baby logistics &amp; checklists</li>
-          <li class="system-topic"><span class="system-topic-num">05</span> Practical weekly routines</li>
+      <div class="card-body">
+        <p class="card-desc">Weekly protocols for the fatherhood transition — from the hospital bag to month three. Built by a first-time dad in real time, not a parenting expert.</p>
+        <ul class="card-topics">
+          <li class="card-topic"><span class="card-topic-num">01</span> Hospital bag &amp; birth-week plan</li>
+          <li class="card-topic"><span class="card-topic-num">02</span> Partner support during recovery</li>
+          <li class="card-topic"><span class="card-topic-num">03</span> Newborn sleep &amp; feeding rhythms</li>
+          <li class="card-topic"><span class="card-topic-num">04</span> Morning routines that survive a baby</li>
+          <li class="card-topic"><span class="card-topic-num">05</span> Screen time &amp; energy management</li>
         </ul>
       </div>
-      <div class="system-footer">
-        <span class="system-start">Start Dad Prep <span>↗</span></span>
-        <span class="system-url">dad.nextroutine.com</span>
+      <div class="card-foot">
+        <span class="card-cta">Start Dad Prep <span>↗</span></span>
+        <span class="card-url">dad.nextroutine.com</span>
       </div>
     </a>
 
     <!-- SYSTEM 02 — DATING RESET -->
-    <a href="https://dateable.nextroutine.com" class="system-card fade-up fade-up-d4">
-      <div class="system-header">
-        <span class="system-label">System 02</span>
-        <div class="system-arrow">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+    <a href="https://dateable.nextroutine.com" class="card fade-in fade-in-d3" aria-label="Start Dating Reset — fitness, style, confidence and social skills for men">
+      <div class="card-top">
+        <span class="card-system">System 02 · Dating</span>
+        <div class="card-arrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
         </div>
       </div>
-      <div class="system-image">
-        <img src="/assets/dating-hero.jpg" alt="Man walking confidently through a city street" loading="lazy">
-        <div class="system-image-overlay">
-          <div class="system-image-tag">Want to become more dateable?</div>
-          <div class="system-image-title">Dating Reset</div>
+      <div class="card-image">
+        <img src="/assets/dating-hero.jpg" alt="Man walking confidently through a city street in casual style" loading="lazy">
+        <div class="card-overlay">
+          <div class="card-overlay-tag">Single and want to improve?</div>
+          <div class="card-overlay-title">Dating Reset</div>
         </div>
       </div>
-      <div class="system-body">
-        <p class="system-desc">Improve the foundations that make you more attractive, confident, and socially prepared.</p>
-        <ul class="system-topics">
-          <li class="system-topic"><span class="system-topic-num">01</span> Fitness &amp; health routines</li>
-          <li class="system-topic"><span class="system-topic-num">02</span> Style &amp; grooming systems</li>
-          <li class="system-topic"><span class="system-topic-num">03</span> Confidence &amp; mindset</li>
-          <li class="system-topic"><span class="system-topic-num">04</span> Communication &amp; social skills</li>
-          <li class="system-topic"><span class="system-topic-num">05</span> Weekly action plans</li>
+      <div class="card-body">
+        <p class="card-desc">Dating apps are designed to take your money. This system fixes what they can't — fitness, style, confidence, and conversation. No pickup tricks. Real foundations.</p>
+        <ul class="card-topics">
+          <li class="card-topic"><span class="card-topic-num">01</span> Minimum-dose fitness &amp; health</li>
+          <li class="card-topic"><span class="card-topic-num">02</span> Wardrobe audit &amp; grooming system</li>
+          <li class="card-topic"><span class="card-topic-num">03</span> Progressive confidence challenges</li>
+          <li class="card-topic"><span class="card-topic-num">04</span> Conversation &amp; first-date frameworks</li>
+          <li class="card-topic"><span class="card-topic-num">05</span> Weekly action plans with tracking</li>
         </ul>
       </div>
-      <div class="system-footer">
-        <span class="system-start">Start Dating Reset <span>↗</span></span>
-        <span class="system-url">dateable.nextroutine.com</span>
+      <div class="card-foot">
+        <span class="card-cta">Start Dating Reset <span>↗</span></span>
+        <span class="card-url">dateable.nextroutine.com</span>
       </div>
     </a>
 
-  </div><!-- /systems-grid -->
+  </div>
 </div>
 </section>
 
-<!-- STATEMENT -->
-<section class="statement">
+<!-- MANIFESTO -->
+<section class="manifesto">
 <div class="container">
-  <p class="statement-text fade-up">No fluff. No gurus.<br>Just practical systems for real life.</p>
+  <div class="manifesto-inner">
+    <p class="manifesto-quote fade-in">No fluff. No gurus.<br>Just practical systems<br>for real life.</p>
+    <div class="manifesto-points fade-in fade-in-d2">
+      <div class="manifesto-point">
+        <span class="manifesto-point-icon">→</span>
+        <span>One email per week. One focused protocol. Something you can actually do this week — not a 5,000-word essay.</span>
+      </div>
+      <div class="manifesto-point">
+        <span class="manifesto-point-icon">→</span>
+        <span>Built by Justin, a software engineer in Europe. No credentials. No staff. Every system is tested in real life before it ships.</span>
+      </div>
+      <div class="manifesto-point">
+        <span class="manifesto-point-icon">→</span>
+        <span>Free to start. If something isn't useful, unsubscribe in one click. No guilt trips, no "are you sure?" loops.</span>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- NEWSLETTER CAPTURE -->
+<section class="capture" id="newsletter">
+<div class="container">
+  <div class="capture-inner fade-in">
+    <div class="capture-label">Stay in the loop</div>
+    <h2 class="capture-title">Not sure which path yet?</h2>
+    <p class="capture-desc">Get the NextRoutine newsletter — updates on both systems, new launches, and the occasional behind-the-scenes look at how this is built.</p>
+    <div class="capture-form">
+      <input type="email" id="email-input" class="capture-input" placeholder="Your email" aria-label="Email address" required>
+      <button type="button" id="email-submit" class="capture-btn">Subscribe →</button>
+    </div>
+    <p class="capture-micro">Free. Weekly. Unsubscribe anytime. GDPR-compliant — your data is never sold.</p>
+  </div>
 </div>
 </section>
 
@@ -528,7 +781,10 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
 <footer class="footer">
 <div class="container">
   <div class="footer-inner">
-    <span class="footer-copy">&copy; 2026 NextRoutine</span>
+    <div class="footer-left">
+      <span class="footer-copy">&copy; 2026 NextRoutine</span>
+      <span class="footer-credit">Built by Justin in Europe</span>
+    </div>
     <div class="footer-links">
       <a href="/about" class="footer-link">About</a>
       <a href="/privacy" class="footer-link">Privacy</a>
@@ -539,20 +795,67 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
 </footer>
 
 <script>
-// Intersection Observer for scroll-triggered fade-ups
-const faders = document.querySelectorAll('.fade-up');
-const obs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.style.animationPlayState = 'running';
-      obs.unobserve(e.target);
+(function() {
+  'use strict';
+
+  // Nav scroll effect
+  const nav = document.getElementById('nav');
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        nav.classList.toggle('scrolled', window.scrollY > 20);
+        ticking = false;
+      });
+      ticking = true;
     }
   });
-}, { threshold: 0.15 });
-faders.forEach(f => {
-  f.style.animationPlayState = 'paused';
-  obs.observe(f);
-});
+
+  // Intersection Observer for scroll-triggered animations
+  const els = document.querySelectorAll('.fade-in');
+  if (els.length && 'IntersectionObserver' in window) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(el => obs.observe(el));
+  } else {
+    els.forEach(el => el.classList.add('visible'));
+  }
+
+  // Email capture
+  const input = document.getElementById('email-input');
+  const btn = document.getElementById('email-submit');
+  if (btn && input) {
+    btn.addEventListener('click', () => {
+      const email = input.value.trim();
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        input.style.borderColor = '#B5544A';
+        input.focus();
+        return;
+      }
+      // TODO: Connect to Beehiiv
+      btn.textContent = 'You\'re in ✓';
+      btn.disabled = true;
+      btn.style.opacity = '0.6';
+      input.disabled = true;
+    });
+    input.addEventListener('input', () => { input.style.borderColor = ''; });
+    input.addEventListener('keydown', (e) => { if (e.key === 'Enter') btn.click(); });
+  }
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+    });
+  });
+})();
 </script>
 
 </body>
