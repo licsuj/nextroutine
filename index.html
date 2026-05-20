@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#FAFAF8">
 <title>NextRoutine — Self-Improvement Systems for Men | Fatherhood & Dating</title>
-<meta name="description" content="Practical weekly systems for men navigating real transitions. Dad Prep: routines for new and expectant fathers. Dating Reset: fitness, style, confidence, and social skills to become more dateable. Free.">
+<meta name="description" content="Practical weekly systems for men navigating real transitions. Dad Prep: routines for new and expectant fathers. Dating Reset: fitness, style, confidence, and social skills to become more dateable. Free to start.">
 <link rel="canonical" href="https://www.nextroutine.com/">
 <meta property="og:title" content="NextRoutine — Self-Improvement Systems for Men">
 <meta property="og:description" content="Practical weekly systems for men navigating real transitions. Fatherhood prep and dating improvement — no fluff, no gurus.">
@@ -15,16 +15,16 @@
 <meta property="og:image" content="https://www.nextroutine.com/assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="NextRoutine — Self-Improvement Systems for Men">
-<meta name="twitter:description" content="Weekly systems for fatherhood and dating. Built by Justin in Europe. Free to start.">
+<meta name="twitter:description" content="Weekly systems for fatherhood and dating. Free to start.">
 <meta name="twitter:image" content="https://www.nextroutine.com/assets/og-image.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"NextRoutine","url":"https://www.nextroutine.com/","description":"Practical weekly self-improvement systems for men. Fatherhood preparation and dating improvement programs."}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"NextRoutine","url":"https://www.nextroutine.com/","logo":"https://www.nextroutine.com/assets/favicon.svg","description":"Weekly self-improvement systems for men navigating real life transitions.","founder":{"@type":"Person","name":"Justin","url":"https://www.nextroutine.com/about"}}
+{"@context":"https://schema.org","@type":"Organization","name":"NextRoutine","url":"https://www.nextroutine.com/","logo":"https://www.nextroutine.com/assets/favicon.svg","description":"Weekly self-improvement systems for men navigating real life transitions."}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ItemList","name":"NextRoutine Systems","itemListElement":[{"@type":"ListItem","position":1,"name":"Dad Prep","url":"https://dad.nextroutine.com","description":"Weekly routines and systems for new and expectant fathers. Hospital preparation, partner support, newborn logistics, and practical fatherhood protocols."},{"@type":"ListItem","position":2,"name":"Dating Reset","url":"https://dateable.nextroutine.com","description":"A systematic self-improvement program for men. Fitness, style, confidence, communication, and weekly action plans to become more dateable."}]}
+{"@context":"https://schema.org","@type":"ItemList","name":"NextRoutine Systems","itemListElement":[{"@type":"ListItem","position":1,"name":"Dad Prep","url":"https://dad.nextroutine.com","description":"Weekly routines and systems for new and expectant fathers. Hospital preparation, partner support, newborn logistics, and practical fatherhood protocols."},{"@type":"ListItem","position":2,"name":"Dating Reset","url":"https://dateable.nextroutine.com","description":"A systematic self-improvement program for single men. Fitness, style, confidence, communication, and weekly action plans to become more dateable."}]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,32 +39,26 @@
    ============================================================ */
 
 :root {
-  /* Surfaces */
   --bg: #FAFAF8;
   --bg-warm: #F3F1EC;
   --bg-card: #FFFFFF;
   --bg-dark: #1A1A18;
 
-  /* Text — WCAG AA compliant on --bg */
-  --text: #1A1A18;              /* 16.5:1 — primary */
-  --text-secondary: #555550;    /* 6.8:1 — body text, descriptions */
-  --text-tertiary: #7A7A72;     /* 4.5:1 — AA minimum, labels */
-  --text-muted: #8E8E86;        /* 3.7:1 — decorative only, not for reading */
+  /* WCAG AA compliant on --bg */
+  --text: #1A1A18;
+  --text-secondary: #555550;
+  --text-tertiary: #7A7A72;
+  --text-muted: #8E8E86;
   --text-inverse: #FAFAF8;
 
-  /* Accent */
-  --accent: #6B5B45;            /* warm brown, 5.5:1 on bg */
-
-  /* Borders */
+  --accent: #6B5B45;
   --border: #DDDBD5;
   --border-light: #E8E6E1;
 
-  /* Type */
   --font-display: 'Instrument Serif', Georgia, serif;
   --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
   --font-mono: 'DM Mono', 'SF Mono', monospace;
 
-  /* Layout */
   --container: 1280px;
 }
 
@@ -84,12 +78,8 @@ body {
 img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; cursor: pointer; background: none; border: none; }
-input { font: inherit; }
 
-::selection {
-  background: rgba(107,91,69,0.15);
-  color: var(--text);
-}
+::selection { background: rgba(107,91,69,0.15); color: var(--text); }
 
 .container {
   width: 100%;
@@ -112,9 +102,7 @@ input { font: inherit; }
   border-bottom: 1px solid var(--border-light);
   transition: box-shadow 300ms;
 }
-.nav.scrolled {
-  box-shadow: 0 1px 12px rgba(0,0,0,0.04);
-}
+.nav.scrolled { box-shadow: 0 1px 12px rgba(0,0,0,0.04); }
 .nav-inner {
   max-width: var(--container);
   margin: 0 auto;
@@ -151,18 +139,6 @@ input { font: inherit; }
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
-.nav-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: var(--font-mono);
-  font-size: 0.625rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--text-tertiary);
-  display: none;
-}
-@media (min-width: 768px) { .nav-center { display: block; } }
 .nav-right {
   display: flex;
   align-items: center;
@@ -193,12 +169,8 @@ input { font: inherit; }
    ============================================================ */
 .hero {
   padding: 130px 0 0;
-  min-height: 50vh;
-  display: flex;
-  align-items: flex-end;
 }
 .hero-inner {
-  width: 100%;
   padding-bottom: 60px;
   border-bottom: 1px solid var(--border);
 }
@@ -227,9 +199,7 @@ h1 {
   letter-spacing: -0.03em;
   max-width: 1000px;
 }
-h1 em {
-  font-style: italic;
-}
+h1 em { font-style: italic; }
 .hero-bottom {
   margin-top: 3rem;
   display: grid;
@@ -238,9 +208,7 @@ h1 em {
   align-items: end;
 }
 @media (min-width: 768px) {
-  .hero-bottom {
-    grid-template-columns: 1fr auto;
-  }
+  .hero-bottom { grid-template-columns: 1fr auto; }
 }
 .hero-desc {
   font-size: 1.125rem;
@@ -269,14 +237,10 @@ h1 em {
 }
 
 /* ============================================================
-   SYSTEMS — TWO PATHS
+   SYSTEMS
    ============================================================ */
-.systems {
-  padding: 80px 0 0;
-}
-.systems-header {
-  margin-bottom: 3.5rem;
-}
+.systems { padding: 80px 0 0; }
+.systems-header { margin-bottom: 3.5rem; }
 .systems-label {
   font-family: var(--font-mono);
   font-size: 0.6875rem;
@@ -296,13 +260,13 @@ h1 em {
 .systems-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 4rem;
 }
 @media (min-width: 768px) {
   .systems-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
 }
 
-/* Card */
+/* CARD */
 .card {
   display: flex;
   flex-direction: column;
@@ -341,7 +305,6 @@ h1 em {
 }
 .card:hover .card-arrow svg { stroke: var(--bg); }
 
-/* Card image */
 .card-image {
   width: 100%;
   aspect-ratio: 3/2;
@@ -355,9 +318,7 @@ h1 em {
   object-fit: cover;
   transition: transform 700ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-.card:hover .card-image img {
-  transform: scale(1.05);
-}
+.card:hover .card-image img { transform: scale(1.05); }
 .card-overlay {
   position: absolute;
   bottom: 0; left: 0; right: 0;
@@ -381,9 +342,32 @@ h1 em {
   line-height: 1;
 }
 
-/* Card body */
+/* Card data strip — research stats */
+.card-data {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 1px solid var(--border-light);
+}
+.card-stat {
+  padding: 1rem 0;
+  text-align: center;
+  border-right: 1px solid var(--border-light);
+}
+.card-stat:last-child { border-right: none; }
+.card-stat-number {
+  font-family: var(--font-display);
+  font-size: 1.625rem;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+.card-stat-label {
+  font-size: 0.6875rem;
+  color: var(--text-tertiary);
+  line-height: 1.3;
+}
+
 .card-body {
-  padding-top: 1.5rem;
+  padding-top: 1.25rem;
   flex: 1;
 }
 .card-desc {
@@ -392,9 +376,7 @@ h1 em {
   color: var(--text-secondary);
   margin-bottom: 1.5rem;
 }
-.card-topics {
-  list-style: none;
-}
+.card-topics { list-style: none; }
 .card-topic {
   display: flex;
   align-items: center;
@@ -413,7 +395,6 @@ h1 em {
   min-width: 1.75rem;
 }
 
-/* Card footer */
 .card-foot {
   margin-top: 1.5rem;
   display: flex;
@@ -441,7 +422,7 @@ h1 em {
 }
 
 /* ============================================================
-   MANIFESTO — "NO FLUFF" BAND
+   MANIFESTO
    ============================================================ */
 .manifesto {
   padding: 80px 0;
@@ -464,12 +445,10 @@ h1 em {
   font-style: italic;
   font-size: clamp(1.75rem, 3.5vw, 2.5rem);
   line-height: 1.25;
-  letter-spacing: -0.01em;
 }
 .manifesto-points {
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 .manifesto-point {
   display: flex;
@@ -490,75 +469,6 @@ h1 em {
 }
 
 /* ============================================================
-   NEWSLETTER CAPTURE
-   ============================================================ */
-.capture {
-  padding: 80px 0;
-}
-.capture-inner {
-  max-width: 560px;
-}
-.capture-label {
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--text-tertiary);
-  margin-bottom: 1rem;
-}
-.capture-title {
-  font-family: var(--font-display);
-  font-size: clamp(1.75rem, 3vw, 2.25rem);
-  font-weight: 400;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-.capture-desc {
-  font-size: 0.9375rem;
-  color: var(--text-secondary);
-  line-height: 1.65;
-  margin-bottom: 1.75rem;
-}
-.capture-form {
-  display: flex;
-  gap: 0;
-  margin-bottom: 0.75rem;
-}
-@media (max-width: 500px) {
-  .capture-form { flex-direction: column; gap: 0.75rem; }
-}
-.capture-input {
-  flex: 1;
-  height: 48px;
-  padding: 0 1rem;
-  border: 1.5px solid var(--border);
-  background: var(--bg-card);
-  font-size: 0.9375rem;
-  color: var(--text);
-  outline: none;
-  transition: border-color 200ms;
-}
-.capture-input:focus { border-color: var(--text); }
-.capture-input::placeholder { color: var(--text-muted); }
-.capture-btn {
-  height: 48px;
-  padding: 0 1.5rem;
-  background: var(--text);
-  color: var(--text-inverse);
-  font-size: 0.875rem;
-  font-weight: 500;
-  white-space: nowrap;
-  border: none;
-  cursor: pointer;
-  transition: background 200ms;
-}
-.capture-btn:hover { background: #333330; }
-.capture-micro {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-}
-
-/* ============================================================
    FOOTER
    ============================================================ */
 .footer {
@@ -572,19 +482,9 @@ h1 em {
   flex-wrap: wrap;
   gap: 1rem;
 }
-.footer-left {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
 .footer-copy {
   font-size: 0.8125rem;
   color: var(--text-muted);
-}
-.footer-credit {
-  font-size: 0.8125rem;
-  color: var(--text-tertiary);
 }
 .footer-links {
   display: flex;
@@ -601,21 +501,19 @@ h1 em {
    RESPONSIVE
    ============================================================ */
 @media (max-width: 767px) {
-  .hero { padding: 100px 0 0; min-height: auto; }
+  .hero { padding: 100px 0 0; }
   .hero-inner { padding-bottom: 40px; }
   .systems { padding: 50px 0 0; }
   .card-overlay { padding: 1.5rem 1.25rem; }
+  .card-stat { padding: 0.75rem 0.25rem; }
+  .card-stat-number { font-size: 1.375rem; }
+  .card-stat-label { font-size: 0.625rem; }
   .manifesto { padding: 50px 0; margin-top: 50px; }
-  .capture { padding: 50px 0; }
 }
 
 /* ============================================================
    ANIMATIONS
    ============================================================ */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -640,7 +538,6 @@ h1 em {
     <div class="nav-logo"><div class="nav-logo-dot"></div></div>
     <span class="nav-wordmark">NextRoutine</span>
   </a>
-  <span class="nav-center">Issue 01 — Two Paths</span>
   <div class="nav-right">
     <a href="#systems" class="nav-link">Systems</a>
     <a href="/about" class="nav-link">About</a>
@@ -649,7 +546,7 @@ h1 em {
 </header>
 
 <!-- HERO -->
-<section class="hero" id="top">
+<section class="hero">
 <div class="container">
   <div class="hero-inner">
     <div class="hero-eyebrow fade-in">Self-improvement systems for men</div>
@@ -687,10 +584,24 @@ h1 em {
           <div class="card-overlay-title">Dad Prep</div>
         </div>
       </div>
+      <div class="card-data">
+        <div class="card-stat">
+          <div class="card-stat-number">1 in 10</div>
+          <div class="card-stat-label">fathers experience<br>postnatal depression</div>
+        </div>
+        <div class="card-stat">
+          <div class="card-stat-number">67%</div>
+          <div class="card-stat-label">of couples report a drop<br>in relationship quality</div>
+        </div>
+        <div class="card-stat">
+          <div class="card-stat-number">109 min</div>
+          <div class="card-stat-label">of sleep lost<br>every night</div>
+        </div>
+      </div>
       <div class="card-body">
-        <p class="card-desc">Weekly protocols for the fatherhood transition — from the hospital bag to month three. Built by a first-time dad in real time, not a parenting expert.</p>
+        <p class="card-desc">Nobody prepares men for fatherhood. Not the hospital, not the books, not your own dad. This system gives you week-by-week protocols — from the hospital bag to month three — built in real time, not by a parenting expert.</p>
         <ul class="card-topics">
-          <li class="card-topic"><span class="card-topic-num">01</span> Hospital bag &amp; birth-week plan</li>
+          <li class="card-topic"><span class="card-topic-num">01</span> Hospital bag &amp; birth-week survival plan</li>
           <li class="card-topic"><span class="card-topic-num">02</span> Partner support during recovery</li>
           <li class="card-topic"><span class="card-topic-num">03</span> Newborn sleep &amp; feeding rhythms</li>
           <li class="card-topic"><span class="card-topic-num">04</span> Morning routines that survive a baby</li>
@@ -718,8 +629,22 @@ h1 em {
           <div class="card-overlay-title">Dating Reset</div>
         </div>
       </div>
+      <div class="card-data">
+        <div class="card-stat">
+          <div class="card-stat-number">5%</div>
+          <div class="card-stat-label">average male<br>match rate on apps</div>
+        </div>
+        <div class="card-stat">
+          <div class="card-stat-number">51%</div>
+          <div class="card-stat-label">of men had zero<br>dates in 2025</div>
+        </div>
+        <div class="card-stat">
+          <div class="card-stat-number">$30/mo</div>
+          <div class="card-stat-label">spent on features<br>that change nothing</div>
+        </div>
+      </div>
       <div class="card-body">
-        <p class="card-desc">Dating apps are designed to take your money. This system fixes what they can't — fitness, style, confidence, and conversation. No pickup tricks. Real foundations.</p>
+        <p class="card-desc">Dating apps are designed to take your money. This system fixes what they can't — fitness, style, confidence, and conversation. No pickup tricks. No AI message writers. Real foundations, one week at a time.</p>
         <ul class="card-topics">
           <li class="card-topic"><span class="card-topic-num">01</span> Minimum-dose fitness &amp; health</li>
           <li class="card-topic"><span class="card-topic-num">02</span> Wardrobe audit &amp; grooming system</li>
@@ -746,33 +671,17 @@ h1 em {
     <div class="manifesto-points fade-in fade-in-d2">
       <div class="manifesto-point">
         <span class="manifesto-point-icon">→</span>
-        <span>One email per week. One focused protocol. Something you can actually do this week — not a 5,000-word essay.</span>
+        <span>One email per week. One focused protocol. Something you can actually do this week — not a 5,000-word essay or a motivational quote.</span>
       </div>
       <div class="manifesto-point">
         <span class="manifesto-point-icon">→</span>
-        <span>Built by Justin, a software engineer in Europe. No credentials. No staff. Every system is tested in real life before it ships.</span>
+        <span>Every system is tested in real life before it ships. If a protocol doesn't survive contact with reality, it gets cut.</span>
       </div>
       <div class="manifesto-point">
         <span class="manifesto-point-icon">→</span>
-        <span>Free to start. If something isn't useful, unsubscribe in one click. No guilt trips, no "are you sure?" loops.</span>
+        <span>Free to start. Unsubscribe in one click. No guilt trips, no "are you sure?" loops, no spam.</span>
       </div>
     </div>
-  </div>
-</div>
-</section>
-
-<!-- NEWSLETTER CAPTURE -->
-<section class="capture" id="newsletter">
-<div class="container">
-  <div class="capture-inner fade-in">
-    <div class="capture-label">Stay in the loop</div>
-    <h2 class="capture-title">Not sure which path yet?</h2>
-    <p class="capture-desc">Get the NextRoutine newsletter — updates on both systems, new launches, and the occasional behind-the-scenes look at how this is built.</p>
-    <div class="capture-form">
-      <input type="email" id="email-input" class="capture-input" placeholder="Your email" aria-label="Email address" required>
-      <button type="button" id="email-submit" class="capture-btn">Subscribe →</button>
-    </div>
-    <p class="capture-micro">Free. Weekly. Unsubscribe anytime. GDPR-compliant — your data is never sold.</p>
   </div>
 </div>
 </section>
@@ -781,10 +690,7 @@ h1 em {
 <footer class="footer">
 <div class="container">
   <div class="footer-inner">
-    <div class="footer-left">
-      <span class="footer-copy">&copy; 2026 NextRoutine</span>
-      <span class="footer-credit">Built by Justin in Europe</span>
-    </div>
+    <span class="footer-copy">&copy; 2026 NextRoutine</span>
     <div class="footer-links">
       <a href="/about" class="footer-link">About</a>
       <a href="/privacy" class="footer-link">Privacy</a>
@@ -798,7 +704,7 @@ h1 em {
 (function() {
   'use strict';
 
-  // Nav scroll effect
+  // Nav scroll shadow
   const nav = document.getElementById('nav');
   let ticking = false;
   window.addEventListener('scroll', () => {
@@ -811,7 +717,7 @@ h1 em {
     }
   });
 
-  // Intersection Observer for scroll-triggered animations
+  // Scroll-triggered fade-in
   const els = document.querySelectorAll('.fade-in');
   if (els.length && 'IntersectionObserver' in window) {
     const obs = new IntersectionObserver((entries) => {
@@ -825,27 +731,6 @@ h1 em {
     els.forEach(el => obs.observe(el));
   } else {
     els.forEach(el => el.classList.add('visible'));
-  }
-
-  // Email capture
-  const input = document.getElementById('email-input');
-  const btn = document.getElementById('email-submit');
-  if (btn && input) {
-    btn.addEventListener('click', () => {
-      const email = input.value.trim();
-      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        input.style.borderColor = '#B5544A';
-        input.focus();
-        return;
-      }
-      // TODO: Connect to Beehiiv
-      btn.textContent = 'You\'re in ✓';
-      btn.disabled = true;
-      btn.style.opacity = '0.6';
-      input.disabled = true;
-    });
-    input.addEventListener('input', () => { input.style.borderColor = ''; });
-    input.addEventListener('keydown', (e) => { if (e.key === 'Enter') btn.click(); });
   }
 
   // Smooth scroll for anchor links
