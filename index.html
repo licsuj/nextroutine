@@ -3,548 +3,600 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#0F1117">
-<title>Newborn Routines for Dads | NextRoutine — Free Weekly Protocols</title>
-<meta name="description" content="A weekly newsletter for new and expectant fathers. One protocol every Tuesday — morning, sleep, or screen time — matched to your stage. Built honestly by a software engineer becoming a first-time dad. Free.">
+<meta name="theme-color" content="#FAFAF8">
+<title>NextRoutine — Weekly Systems for Real Life</title>
+<meta name="description" content="Your next routine depends on where you are in life. Choose the path that fits your current stage and get a practical, step-by-step system delivered weekly.">
 <link rel="canonical" href="https://www.nextroutine.com/">
-<meta property="og:title" content="NextRoutine — Newborn Routines for Dads">
-<meta property="og:description" content="A weekly newsletter for new and expectant fathers. One protocol every Tuesday — matched to your stage. Free.">
+<meta property="og:title" content="NextRoutine — Weekly Systems for Real Life">
+<meta property="og:description" content="Choose the path that fits your current stage. Practical systems delivered weekly.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.nextroutine.com/">
 <meta property="og:site_name" content="NextRoutine">
-<meta property="og:image" content="https://www.nextroutine.com/assets/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="NextRoutine — Newborn Routines for Dads">
-<meta name="twitter:description" content="A weekly newsletter for new and expectant fathers. One protocol every Tuesday — matched to your stage. Free.">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"NextRoutine","url":"https://www.nextroutine.com/","description":"Weekly fatherhood routines for new and expectant dads. Morning, sleep, and screen time protocols, matched to your stage."}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"NextRoutine","url":"https://www.nextroutine.com/","logo":"https://www.nextroutine.com/assets/favicon.svg","description":"A weekly newsletter for new and expectant fathers, built by Justin in Europe.","founder":{"@type":"Person","name":"Justin","url":"https://www.nextroutine.com/about.html"}}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Justin","jobTitle":"Founder, NextRoutine","description":"Software engineer based in Europe. Building NextRoutine as he becomes a first-time father, in real time.","url":"https://www.nextroutine.com/about.html"}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What will I actually get?","acceptedAnswer":{"@type":"Answer","text":"One email per week, every Tuesday. Each one has a single protocol — something you can run tomorrow morning, that night, or this weekend. No 5,000-word essays. No book recommendations. Just the protocol."}},{"@type":"Question","name":"Who is this for?","acceptedAnswer":{"@type":"Answer","text":"First-time fathers, expecting fathers, and dads in the first year. Specifically built for the kind of dad who'd subscribe to Naval, James Clear, or Huberman Lab — but for the fatherhood transition."}},{"@type":"Question","name":"Is the author qualified?","acceptedAnswer":{"@type":"Answer","text":"No medical or parenting credentials. Justin is a software engineer becoming a first-time dad, applying research to his own life in real time. If a protocol does not survive contact with the routine he is running today, it does not ship."}},{"@type":"Question","name":"How is my email used?","acceptedAnswer":{"@type":"Answer","text":"Stored in Beehiiv (newsletter platform, GDPR-compliant). Never sold, shared, or rented. Unsubscribe is one click and instant — link in every email."}}]}
-</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/cookie-consent.css">
+<style>
+/* ============================================================
+   NEXTROUTINE UMBRELLA — DESIGN SYSTEM
+   Light editorial / magazine aesthetic
+   Instrument Serif display + DM Sans body
+   ============================================================ */
+
+:root {
+  --bg: #FAFAF8;
+  --bg-warm: #F5F3EF;
+  --bg-card: #FFFFFF;
+  --bg-dark: #1A1A18;
+  --bg-dark-card: #242422;
+
+  --text: #1A1A18;
+  --text-secondary: #6B6B63;
+  --text-muted: #9C9C94;
+  --text-inverse: #FAFAF8;
+
+  --accent: #3D3D3A;
+  --accent-warm: #8B7355;
+  --border: #E5E3DE;
+  --border-light: #EDEBE7;
+
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'DM Mono', 'SF Mono', monospace;
+
+  --container: 1320px;
+  --gap: 2rem;
+  --radius: 0px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--text);
+  background-color: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; background: none; border: none; }
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  height: 60px;
+  background: rgba(250, 250, 248, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-light);
+}
+.nav-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.nav-logo {
+  width: 28px; height: 28px;
+  border: 2px solid var(--text);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-logo-dot {
+  width: 8px; height: 8px;
+  background: var(--text);
+  border-radius: 50%;
+}
+.nav-brand-text {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.nav-issue {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  display: none;
+}
+@media (min-width: 768px) { .nav-issue { display: block; } }
+.nav-link-about {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  transition: color 200ms;
+}
+.nav-link-about:hover { color: var(--text); }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  padding: 140px 0 80px;
+}
+.hero-headline {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(3rem, 7.5vw, 6.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  max-width: 1100px;
+}
+.hero-headline em {
+  font-style: italic;
+  color: var(--text-muted);
+}
+.hero-sub {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.hero-desc {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 480px;
+}
+.hero-cta-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding-bottom: 0.25rem;
+}
+
+/* ============================================================
+   SYSTEMS GRID — TWO PATHS
+   ============================================================ */
+.systems {
+  padding: 60px 0 0;
+}
+.systems-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .systems-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+
+.system-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card header with label + arrow */
+.system-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0;
+}
+.system-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+.system-arrow {
+  width: 44px; height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms, border-color 250ms, transform 250ms;
+}
+.system-card:hover .system-arrow {
+  background-color: var(--text);
+  border-color: var(--text);
+  transform: rotate(-45deg);
+}
+.system-card:hover .system-arrow svg { stroke: var(--bg); }
+
+/* Card image */
+.system-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  margin-top: 1.25rem;
+  position: relative;
+}
+.system-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.system-card:hover .system-image img {
+  transform: scale(1.04);
+}
+
+/* Text overlay on image */
+.system-image-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 70%, transparent 100%);
+  color: white;
+}
+.system-image-tag {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+.system-image-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* Card body */
+.system-body {
+  padding-top: 1.5rem;
+}
+.system-desc {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 1.75rem;
+}
+
+/* Numbered list */
+.system-topics {
+  list-style: none;
+}
+.system-topic {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border-light);
+  font-size: 0.9375rem;
+}
+.system-topic:last-child {
+  border-bottom: 1px solid var(--border-light);
+}
+.system-topic-num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  min-width: 2rem;
+}
+
+/* Card footer */
+.system-footer {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.system-start {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  padding-bottom: 2px;
+  border-bottom: 1.5px solid var(--text);
+  transition: gap 200ms;
+}
+.system-start:hover { gap: 0.75rem; }
+.system-url {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+.system-url::before {
+  content: '›';
+  font-size: 0.875rem;
+}
+
+/* ============================================================
+   BOTTOM STATEMENT
+   ============================================================ */
+.statement {
+  padding: 120px 0 100px;
+  border-top: 1px solid var(--border);
+  margin-top: 80px;
+}
+.statement-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  line-height: 1.2;
+  max-width: 600px;
+  letter-spacing: -0.01em;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+}
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-copy {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+.footer-link {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  transition: color 200ms;
+}
+.footer-link:hover { color: var(--text); }
+
+/* ============================================================
+   IMAGE PLACEHOLDERS (until real photos added)
+   ============================================================ */
+.img-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--bg-warm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+  text-align: center;
+  padding: 1rem;
+}
+.img-placeholder-icon {
+  width: 48px; height: 48px;
+  border: 1.5px dashed var(--border);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 767px) {
+  .hero { padding: 110px 0 50px; }
+  .hero-sub { flex-direction: column; align-items: flex-start; }
+  .systems { padding: 40px 0 0; }
+  .system-image-overlay { padding: 1.5rem 1.25rem; }
+  .statement { padding: 80px 0 60px; margin-top: 60px; }
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.fade-up-d1 { animation-delay: 0.1s; }
+.fade-up-d2 { animation-delay: 0.2s; }
+.fade-up-d3 { animation-delay: 0.35s; }
+.fade-up-d4 { animation-delay: 0.5s; }
+</style>
 </head>
 <body>
 
 <!-- NAVIGATION -->
-<header class="nav" id="nav">
+<header class="nav">
 <div class="nav-inner">
-<a href="/" class="nav-brand" aria-label="NextRoutine home">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 L13.6 10.4 L22 12 L13.6 13.6 L12 22 L10.4 13.6 L2 12 L10.4 10.4 Z"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/></svg>
-<span>NextRoutine</span>
-</a>
-<nav class="nav-links" aria-label="Main navigation">
-<a href="/new-dad.html" class="nav-link">For Fathers</a>
-<a href="/morning-routine.html" class="nav-link">Morning</a>
-<a href="/sleep-better.html" class="nav-link">Sleep</a>
-<a href="/screen-time.html" class="nav-link">Screen Time</a>
-<a href="/blog/" class="nav-link">Blog</a>
-<a href="/pricing.html" class="nav-link">Pricing</a>
-</nav>
-<div class="nav-actions">
-<a href="#cta" class="btn btn-primary btn-sm">Get Started Free <span class="btn-arrow">→</span></a>
-<button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-overlay" id="nav-toggle"><span></span><span></span><span></span></button>
-</div>
+  <a href="/" class="nav-brand">
+    <div class="nav-logo"><div class="nav-logo-dot"></div></div>
+    <span class="nav-brand-text">NextRoutine</span>
+  </a>
+  <div class="nav-right">
+    <span class="nav-issue">Issue 01 — Two Paths</span>
+    <a href="/about" class="nav-link-about">About</a>
+  </div>
 </div>
 </header>
-<div class="nav-overlay-backdrop" id="nav-backdrop"></div>
-<aside class="nav-overlay" id="nav-overlay" aria-hidden="true">
-<button class="nav-overlay-close" aria-label="Close menu" id="nav-close">✕</button>
-<nav aria-label="Mobile navigation" style="display:flex;flex-direction:column;gap:0.25rem;">
-<a href="/new-dad.html" class="nav-overlay-link">For Fathers</a>
-<a href="/morning-routine.html" class="nav-overlay-link">Morning</a>
-<a href="/sleep-better.html" class="nav-overlay-link">Sleep</a>
-<a href="/screen-time.html" class="nav-overlay-link">Screen Time</a>
-<a href="/blog/" class="nav-overlay-link">Blog</a>
-<a href="/pricing.html" class="nav-overlay-link">Pricing</a>
-<a href="#cta" class="btn btn-primary btn-full" style="margin-top:1rem;">Get Started Free <span class="btn-arrow">→</span></a>
-</nav>
-</aside>
 
 <!-- HERO -->
-<section class="hero" id="top">
-<div class="hero-bg" aria-hidden="true">
-<div class="hero-bg-1"></div>
-<div class="hero-bg-2"></div>
-</div>
+<section class="hero">
 <div class="container">
-<div class="hero-grid">
-<div class="reveal">
-<div class="pill pill-accent">
-<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 L13.6 10.4 L22 12 L13.6 13.6 L12 22 L10.4 13.6 L2 12 L10.4 10.4 Z"/></svg>
-For new and expectant dads
-</div>
-<h1>The fatherhood routine,<br><span class="accent">built honestly.</span></h1>
-<p class="hero-sub">A weekly newsletter for new and expectant fathers.<br>One protocol every Tuesday — matched to your stage. Free.</p>
-
-<div class="hero-options">
-<!-- FREE PATH -->
-<div class="hero-option">
-<div class="option-label">Start free</div>
-<form class="hero-form" id="hero-form" novalidate>
-<label for="hero-stage" class="sr-only">Your fatherhood stage</label>
-<select id="hero-stage" name="stage" class="field field-select" required>
-<option value="" disabled selected>Where are you in the journey?</option>
-<option value="exploring">Not a dad yet — just exploring</option>
-<option value="got-the-news">Just got the news (expecting)</option>
-<option value="9-month-journey">During the 9-month journey</option>
-<option value="first-weeks">First weeks after birth</option>
-<option value="months-after">Months after birth (3–12)</option>
-</select>
-<label for="hero-email" class="sr-only">Email address</label>
-<input type="email" id="hero-email" name="email" class="field" placeholder="you@email.com" autocomplete="email" required>
-<button type="submit" class="btn btn-primary btn-full">Get the Free Newsletter <span class="btn-arrow">→</span></button>
-</form>
-<div class="form-error" id="hero-form-error" role="alert" aria-live="polite">Please select your stage and enter a valid email.</div>
-<div class="form-success" id="hero-form-success" aria-live="polite"><strong>You're in.</strong> First newsletter arrives next Tuesday. Reply to any email — it comes to me.</div>
-<p class="field-microcopy">Weekly newsletter, matched to your stage. Free forever. No card needed.</p>
-</div>
-
-<!-- PRO PATH (waitlist) -->
-<div class="hero-option hero-option-pro">
-<div class="option-label option-label-accent">Pro — Coming Soon</div>
-<p class="option-blurb">The full system — every track, template, and briefing. Launching when ready.</p>
-<a href="#pricing" class="btn btn-accent btn-full" style="margin-top:1rem;">Join Pro Waitlist <span class="btn-arrow">→</span></a>
-<p class="field-microcopy" style="margin-top:0.75rem;">First 100 members get lifetime free access.</p>
-</div>
-</div>
-
-<p class="hero-tagline">Join fathers building their routine before the chaos starts.</p>
-</div>
-
-<div class="hero-illustration-wrap reveal" style="transition-delay:150ms;">
-<svg class="hero-illustration" viewBox="0 0 480 420" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Line illustration of a desk at dawn">
-<defs>
-<radialGradient id="lampGlow" cx="50%" cy="50%" r="50%">
-<stop offset="0%" stop-color="hsl(155 45% 32%)" stop-opacity="0.55"/>
-<stop offset="60%" stop-color="hsl(155 45% 32%)" stop-opacity="0.12"/>
-<stop offset="100%" stop-color="hsl(155 45% 32%)" stop-opacity="0"/>
-</radialGradient>
-<radialGradient id="dawnGlow" cx="50%" cy="100%" r="80%">
-<stop offset="0%" stop-color="hsl(40 60% 58%)" stop-opacity="0.35"/>
-<stop offset="100%" stop-color="hsl(40 60% 58%)" stop-opacity="0"/>
-</radialGradient>
-</defs>
-<rect x="40" y="40" width="180" height="170" rx="2" stroke="currentColor" opacity="0.5"/>
-<rect x="44" y="44" width="172" height="162" fill="url(#dawnGlow)" stroke="none"/>
-<line x1="40" y1="150" x2="220" y2="150" stroke="hsl(40 60% 58%)" opacity="0.7"/>
-<line x1="130" y1="40" x2="130" y2="210" stroke="currentColor" opacity="0.4"/>
-<line x1="40" y1="125" x2="220" y2="125" stroke="currentColor" opacity="0.25"/>
-<line x1="20" y1="280" x2="460" y2="280"/>
-<line x1="20" y1="284" x2="460" y2="284" opacity="0.4"/>
-<circle cx="380" cy="240" r="120" fill="url(#lampGlow)" stroke="none"/>
-<line x1="380" y1="280" x2="380" y2="180"/>
-<ellipse cx="380" cy="280" rx="28" ry="6"/>
-<path d="M340 180 L420 180 L408 130 L352 130 Z"/>
-<rect x="120" y="240" width="170" height="40" rx="3"/>
-<line x1="120" y1="252" x2="290" y2="252" opacity="0.35"/>
-<line x1="135" y1="262" x2="270" y2="262" opacity="0.35"/>
-<line x1="135" y1="270" x2="240" y2="270" opacity="0.35"/>
-<line x1="295" y1="270" x2="345" y2="245"/>
-<line x1="295" y1="272" x2="345" y2="247"/>
-<path d="M343 244 L350 240 L347 248 Z" fill="currentColor" stroke="none" opacity="0.7"/>
-<path d="M55 240 L55 275 Q55 282 62 282 L98 282 Q105 282 105 275 L105 240 Z"/>
-<path d="M105 248 Q120 248 120 260 Q120 272 105 272"/>
-<ellipse cx="80" cy="240" rx="25" ry="5"/>
-<path d="M70 225 Q66 218 72 212 Q78 206 74 198" stroke="hsl(40 60% 58%)" opacity="0.85"/>
-<path d="M86 225 Q82 218 88 212 Q94 206 90 198" stroke="hsl(40 60% 58%)" opacity="0.55"/>
-<path d="M425 280 L425 255 Q420 245 415 255 M425 260 Q432 250 438 258" stroke="hsl(155 45% 38%)"/>
-<path d="M414 280 L436 280 L433 295 L417 295 Z"/>
-</svg>
-</div>
-</div>
+  <h1 class="hero-headline fade-up">Your next routine<br>depends on <em>where you are<br>in life.</em></h1>
+  <div class="hero-sub fade-up fade-up-d2">
+    <p class="hero-desc">Choose the path that fits your current stage and get a practical, step-by-step system delivered weekly.</p>
+    <span class="hero-cta-label">Pick a path below</span>
+  </div>
 </div>
 </section>
 
-<!-- PROBLEM -->
-<section class="section" id="problem">
+<!-- SYSTEMS -->
+<section class="systems">
 <div class="container">
-<div class="section-heading reveal">
-<h2>Nobody prepares fathers for this.</h2>
-<p>There are thousands of resources for mothers. Fathers get a pamphlet and a pat on the back. I'm building the thing that should exist.</p>
-</div>
-<div class="cards-3">
-<div class="card reveal">
-<div class="card-icon-wrap">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
-</div>
-<h3>You don't know what you don't know</h3>
-<p>There's no curriculum for fatherhood. The blind spots are the ones that hurt your kid and your marriage.</p>
-</div>
-<div class="card reveal" style="transition-delay:100ms;">
-<div class="card-icon-wrap">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.88 9.88a3 3 0 104.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0112 5c7 0 10 7 10 7a13.16 13.16 0 01-1.67 2.68"/><path d="M6.61 6.61A13.526 13.526 0 002 12s3 7 10 7a9.74 9.74 0 005.39-1.61"/><line x1="2" y1="2" x2="22" y2="22"/></svg>
-</div>
-<h3>You're invisible during the pregnancy</h3>
-<p>Every appointment, every class, every book — built around the mother. You're a supporting actor in your own story.</p>
-</div>
-<div class="card reveal" style="transition-delay:200ms;">
-<div class="card-icon-wrap">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-4 10-4 10 4 10 4-3 4-10 4-10-4-10-4z"/><path d="M2 16s3-4 10-4 10 4 10 4"/><path d="M2 8s3-4 10-4 10 4 10 4"/></svg>
-</div>
-<h3>Intention without routine fades by week three</h3>
-<p>Sleep deprivation strips willpower. The dad you want to be only survives if it's already a system, not a promise.</p>
-</div>
-</div>
+  <div class="systems-grid">
+
+    <!-- SYSTEM 01 — DAD PREP -->
+    <a href="https://dad.nextroutine.com" class="system-card fade-up fade-up-d3">
+      <div class="system-header">
+        <span class="system-label">System 01</span>
+        <div class="system-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </div>
+      </div>
+      <div class="system-image">
+        <!-- REPLACE: Add real image — father holding baby, warm lighting, candid moment -->
+        <!-- Recommended: Unsplash search "father holding newborn" or "dad with baby warm light" -->
+        <!-- Image size: 800x600px minimum, landscape orientation -->
+        <div class="img-placeholder">
+          <div class="img-placeholder-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+          </div>
+          Add image: father holding baby<br>800×600px · warm, candid
+        </div>
+        <div class="system-image-overlay">
+          <div class="system-image-tag">Preparing for fatherhood?</div>
+          <div class="system-image-title">Dad Prep</div>
+        </div>
+      </div>
+      <div class="system-body">
+        <p class="system-desc">Build the systems your family will depend on. Be ready for what actually matters.</p>
+        <ul class="system-topics">
+          <li class="system-topic"><span class="system-topic-num">01</span> First-week &amp; hospital preparation</li>
+          <li class="system-topic"><span class="system-topic-num">02</span> Partner support &amp; communication</li>
+          <li class="system-topic"><span class="system-topic-num">03</span> Home systems and routines</li>
+          <li class="system-topic"><span class="system-topic-num">04</span> Baby logistics &amp; checklists</li>
+          <li class="system-topic"><span class="system-topic-num">05</span> Practical weekly routines</li>
+        </ul>
+      </div>
+      <div class="system-footer">
+        <span class="system-start">Start Dad Prep <span>↗</span></span>
+        <span class="system-url">dad.nextroutine.com</span>
+      </div>
+    </a>
+
+    <!-- SYSTEM 02 — DATING RESET -->
+    <a href="https://dateable.nextroutine.com" class="system-card fade-up fade-up-d4">
+      <div class="system-header">
+        <span class="system-label">System 02</span>
+        <div class="system-arrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </div>
+      </div>
+      <div class="system-image">
+        <!-- REPLACE: Add real image — confident man, urban setting, natural smile -->
+        <!-- Recommended: Unsplash search "confident man city" or "man smiling urban" -->
+        <!-- Avoid: stock-y poses, gym selfies, dating app screenshots -->
+        <!-- Image size: 800x600px minimum, landscape orientation -->
+        <div class="img-placeholder">
+          <div class="img-placeholder-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+          </div>
+          Add image: confident man, urban<br>800×600px · natural, not posed
+        </div>
+        <div class="system-image-overlay">
+          <div class="system-image-tag">Want to become more dateable?</div>
+          <div class="system-image-title">Dating Reset</div>
+        </div>
+      </div>
+      <div class="system-body">
+        <p class="system-desc">Improve the foundations that make you more attractive, confident, and socially prepared.</p>
+        <ul class="system-topics">
+          <li class="system-topic"><span class="system-topic-num">01</span> Fitness &amp; health routines</li>
+          <li class="system-topic"><span class="system-topic-num">02</span> Style &amp; grooming systems</li>
+          <li class="system-topic"><span class="system-topic-num">03</span> Confidence &amp; mindset</li>
+          <li class="system-topic"><span class="system-topic-num">04</span> Communication &amp; social skills</li>
+          <li class="system-topic"><span class="system-topic-num">05</span> Weekly action plans</li>
+        </ul>
+      </div>
+      <div class="system-footer">
+        <span class="system-start">Start Dating Reset <span>↗</span></span>
+        <span class="system-url">dateable.nextroutine.com</span>
+      </div>
+    </a>
+
+  </div><!-- /systems-grid -->
 </div>
 </section>
 
-<!-- STAGES -->
-<section class="section section-alt" id="stages">
+<!-- STATEMENT -->
+<section class="statement">
 <div class="container">
-<div class="section-heading reveal">
-<h2>What you'll get at every stage — from the positive test to the first birthday.</h2>
-<p>From the moment you find out to the first night you all sleep through.</p>
-</div>
-<div class="cards-4">
-<div class="card reveal">
-<div class="pill pill-accent card-stage-pill">Months 1–9</div>
-<svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 00-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg>
-<h3>Build before the storm</h3>
-<p>Lock in the rituals — sleep, fitness, headspace — while you still have time to make them automatic.</p>
-</div>
-<div class="card reveal" style="transition-delay:80ms;">
-<div class="pill pill-accent card-stage-pill">Weeks 1–8</div>
-<svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-<h3>Survive and stay present</h3>
-<p>Triage protocols for the newborn fog. Eat, move, rest in 15-minute windows. No heroics, just continuity.</p>
-</div>
-<div class="card reveal" style="transition-delay:160ms;">
-<div class="pill pill-accent card-stage-pill">Months 3–12</div>
-<svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M6.34 17.66l-1.41 1.41"/><path d="M19.07 4.93l-1.41 1.41"/></svg>
-<h3>Rebuild your routine</h3>
-<p>Reconstruct the morning, the gym, the deep work — around a sleeping schedule that finally has a shape.</p>
-</div>
-<div class="card reveal" style="transition-delay:240ms;">
-<div class="pill pill-accent card-stage-pill">Year 1+</div>
-<svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
-<h3>Become the model</h3>
-<p>Your kid is watching how you handle screens, stress, and Sundays. Make the routine worth copying.</p>
-</div>
-</div>
-
-<div style="margin-top:3.5rem;text-align:center;" class="reveal">
-<a href="#cta" class="btn btn-primary btn-lg">Get the version for your stage <span class="btn-arrow">→</span></a>
-</div>
-</div>
-</section>
-
-<!-- AUTHOR -->
-<section class="section" id="author">
-<div class="container">
-<div class="section-heading reveal">
-<div class="section-eyebrow">Who's behind this</div>
-<h2>One engineer. One first child on the way. One protocol at a time.</h2>
-<p>No media company. No ghostwriters. No invented expertise.</p>
-</div>
-<div class="author-card reveal" style="transition-delay:120ms;">
-<div class="author-inner">
-<div class="author-avatar" aria-hidden="true">J</div>
-<div style="flex:1;">
-<div class="author-meta">
-<h3>Justin</h3>
-<span class="author-meta-sub">Software engineer · First-time father</span>
-</div>
-<div class="author-location">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-Europe
-</div>
-<div class="author-body">
-<p>I'm becoming a father for the first time, and I couldn't find a serious resource built for the dad's side of the equation — so I'm writing one in public.</p>
-<p>NextRoutine is me synthesizing academic research on sleep, habits, and routine science into protocols I'm actually running myself. If a protocol doesn't survive contact with the routine I'm running today, it doesn't ship. When the baby arrives, the bar gets higher.</p>
-<p>This is early. It's one person. That's the whole point.</p>
-</div>
-<a href="mailto:hello@nextroutine.com" class="author-contact">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-<span>Reply to any newsletter — it comes to me</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- RECENT FROM BLOG -->
-<section class="section" id="recent-blog">
-<div class="container">
-<div class="section-heading reveal">
-<div class="section-eyebrow">Recent from the blog</div>
-<h2>Read what's already published.</h2>
-<p>The newsletter goes deeper. Start here to see how I write and what I research.</p>
-</div>
-<div class="cards-3" style="margin-top:3rem;">
-
-<a href="/blog/how-to-prepare-for-fatherhood" class="card reveal" style="text-decoration:none; color:inherit; display:block; cursor:pointer;">
-<div class="pill pill-muted card-stage-pill">Pre-baby</div>
-<h3 style="margin-top:0.75rem;">How to prepare for fatherhood</h3>
-<p style="margin-top:0.75rem; font-size:0.9375rem; line-height:1.625;">The 14-day pre-baby checklist. What to set up, what to let go, what your future self will thank you for.</p>
-<span style="display:inline-block; margin-top:1.25rem; font-size:0.875rem; color:var(--primary); font-weight:500;">Read →</span>
-</a>
-
-<a href="/blog/morning-routine-new-dad" class="card reveal" style="text-decoration:none; color:inherit; display:block; cursor:pointer; transition-delay:100ms;">
-<div class="pill pill-muted card-stage-pill">Morning</div>
-<h3 style="margin-top:0.75rem;">The morning routine for new dads</h3>
-<p style="margin-top:0.75rem; font-size:0.9375rem; line-height:1.625;">Why the first 23 minutes after waking decide your day — and what to do with them when you've barely slept.</p>
-<span style="display:inline-block; margin-top:1.25rem; font-size:0.875rem; color:var(--primary); font-weight:500;">Read →</span>
-</a>
-
-<a href="/blog/new-dad-sleep-tips" class="card reveal" style="text-decoration:none; color:inherit; display:block; cursor:pointer; transition-delay:200ms;">
-<div class="pill pill-muted card-stage-pill">Sleep</div>
-<h3 style="margin-top:0.75rem;">Sleep tips for new dads</h3>
-<p style="margin-top:0.75rem; font-size:0.9375rem; line-height:1.625;">The three habits silently destroying your sleep, plus the 3-2-1 wind-down rule. Start tonight.</p>
-<span style="display:inline-block; margin-top:1.25rem; font-size:0.875rem; color:var(--primary); font-weight:500;">Read →</span>
-</a>
-
-</div>
-<div style="margin-top:3rem; text-align:center;" class="reveal">
-<a href="/blog/" class="btn btn-outline">Read all posts <span class="btn-arrow">→</span></a>
-</div>
-</div>
-</section>
-
-<!-- PRICING (waitlist edition) -->
-<section class="section section-alt" id="pricing">
-<div class="container">
-<div class="section-heading reveal">
-<h2>Two ways in. One clear difference.</h2>
-<p>Start free today. Join the Pro waitlist for lifetime access when it ships.</p>
-</div>
-<div class="pricing-grid">
-
-<!-- FREE -->
-<div class="price-card reveal">
-<div class="pill pill-muted">Free</div>
-<h3>The NextRoutine Letter</h3>
-<p class="price-tagline">Weekly. Practical. Free forever.</p>
-<div class="price-divider"></div>
-<ul class="price-features">
-<li class="price-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Weekly newsletter, every Tuesday</span></li>
-<li class="price-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>One protocol per week, matched to your stage</span></li>
-<li class="price-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Research notes and what I'm testing</span></li>
-<li class="price-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Reply directly to me — I read every email</span></li>
-</ul>
-<p class="price-excluded">Full tracks, Pro templates, priority newsletter, monthly briefings — these need Pro.</p>
-<a href="#cta" class="btn btn-outline btn-full price-cta">Subscribe Free <span class="btn-arrow">→</span></a>
-<p class="price-cta-sub">No card. Just your email.</p>
-</div>
-
-<!-- PRO (waitlist) -->
-<div class="price-card price-card-pro reveal" style="transition-delay:120ms; overflow:visible;">
-<div class="price-badge">Coming Soon</div>
-<div class="pill pill-accent">Pro</div>
-<h3>NextRoutine Pro</h3>
-<p class="price-tagline">The full fatherhood routine system. Launching when ready.</p>
-
-<div class="price-display" style="align-items:baseline;">
-<span style="font-family:var(--font-serif); font-size:1.5rem; color:var(--text-secondary); text-decoration:line-through; text-decoration-color:var(--text-muted);">€7.99/mo</span>
-<span style="font-size:1rem; color:var(--accent); font-weight:500; margin-left:0.5rem;">→ Free for first 100 members</span>
-</div>
-<p class="price-sub" style="margin-top:0.5rem;">Lifetime access. Forever. No card now or ever.</p>
-
-<div class="price-divider"></div>
-
-<p style="font-size:0.875rem; color:var(--text-secondary); margin-bottom:1rem; line-height:1.6;"><strong style="color:var(--text-primary);">When Pro launches, founding members get:</strong></p>
-
-<ul class="price-features">
-<li class="price-feature accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Full fatherhood track — all 4 stages, week-by-week</span></li>
-<li class="price-feature accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Morning, sleep, and screen-time protocols</span></li>
-<li class="price-feature accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Pro-only templates as they ship</span></li>
-<li class="price-feature accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Priority newsletter — Monday, 24h early</span></li>
-<li class="price-feature accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Monthly research briefings</span></li>
-<li class="price-feature accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Lifetime access for first 100 — locked in forever</span></li>
-</ul>
-
-<form class="hero-form" id="home-waitlist-form" novalidate style="margin-top:1.75rem;">
-<label for="home-waitlist-email" class="sr-only">Email for waitlist</label>
-<input type="email" id="home-waitlist-email" name="email" class="field" placeholder="you@email.com" autocomplete="email" required>
-<button type="submit" class="btn btn-accent btn-full">Join the Waitlist <span class="btn-arrow">→</span></button>
-</form>
-<div class="form-error" id="home-waitlist-form-error" role="alert" aria-live="polite">Please enter a valid email.</div>
-<div class="form-success" id="home-waitlist-form-success" aria-live="polite"><strong>You're on the list.</strong> I'll email you when Pro is ready.</div>
-
-<p class="price-cta-sub">No card. No charge. Just early access.</p>
-</div>
-</div>
-<p class="pricing-tagline reveal" style="transition-delay:250ms;">The newsletter is genuinely useful. Pro launches when the full system is built.</p>
-</div>
-</section>
-
-<!-- FAQ -->
-<section class="section" id="faq">
-<div class="container">
-<div class="section-heading reveal">
-<h2>Honest answers.</h2>
-<p>What you'll get, who it's for, and whether the guy writing it is qualified.</p>
-</div>
-<div class="reveal" style="max-width:48rem; margin:3rem auto 0;">
-
-<div class="faq-item">
-<details>
-<summary>What will I actually get?</summary>
-<p>One email per week, every Tuesday. Each one has a single protocol — something you can run tomorrow morning, that night, or this weekend. No 5,000-word essays. No book recommendations. Just the protocol.</p>
-</details>
-</div>
-
-<div class="faq-item">
-<details>
-<summary>Who is this for?</summary>
-<p>First-time fathers, expecting fathers, and dads in the first year. Specifically built for the kind of dad who'd subscribe to Naval, James Clear, or Huberman Lab — but for the fatherhood transition. If you're past the first year, you can still subscribe, but the early stages are where the protocols hit hardest.</p>
-</details>
-</div>
-
-<div class="faq-item">
-<details>
-<summary>Is the author qualified?</summary>
-<p>No. I'm not a doctor, a child psychologist, or a parenting expert. I'm a software engineer becoming a first-time dad, applying research to my own life in real time. If a protocol doesn't survive contact with the routine I'm running today, it doesn't ship. When the baby arrives, the bar gets higher. That's the whole credential.</p>
-</details>
-</div>
-
-<div class="faq-item">
-<details>
-<summary>How is my email used?</summary>
-<p>Stored in Beehiiv (newsletter platform, GDPR-compliant). I never sell, share, or rent it. Unsubscribe is one click and instant — link in every email. Full details in the <a href="/privacy.html" style="color:var(--primary);">Privacy Policy</a>.</p>
-</details>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="section" id="cta">
-<div class="container">
-<div class="final-cta reveal">
-<div class="final-cta-bg" aria-hidden="true"></div>
-<div class="section-heading">
-<h2>Your first newsletter arrives Tuesday.</h2>
-<p>Pick your stage. Get the version that fits where you are. Free, no card, one click to unsubscribe.</p>
-</div>
-<form class="final-cta-form hero-form" id="final-form" novalidate>
-<label for="final-stage" class="sr-only">Your fatherhood stage</label>
-<select id="final-stage" name="stage" class="field field-select" required>
-<option value="" disabled selected>Where are you in the journey?</option>
-<option value="exploring">Not a dad yet — just exploring</option>
-<option value="got-the-news">Just got the news</option>
-<option value="9-month-journey">During the 9-month journey</option>
-<option value="first-weeks">First weeks after birth</option>
-<option value="months-after">Months after birth</option>
-</select>
-<label for="final-email" class="sr-only">Email address</label>
-<input type="email" id="final-email" name="email" class="field" placeholder="you@email.com" autocomplete="email" required>
-<button type="submit" class="btn btn-primary btn-full">Get the Free Newsletter <span class="btn-arrow">→</span></button>
-</form>
-<div class="form-error" id="final-form-error" role="alert" aria-live="polite">Please select your stage and enter a valid email.</div>
-<div class="form-success" id="final-form-success" aria-live="polite"><strong>You're in.</strong> Check your inbox.</div>
-<p class="final-cta-microcopy">No credit card. No commitment. Reply to any email — it comes to me.</p>
-</div>
+  <p class="statement-text fade-up">No fluff. No gurus.<br>Just practical systems for real life.</p>
 </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
-<div class="container footer-inner">
-<div class="footer-grid">
-<div>
-<a href="/" class="footer-brand">
-<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 L13.6 10.4 L22 12 L13.6 13.6 L12 22 L10.4 13.6 L2 12 L10.4 10.4 Z"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/></svg>
-<span>NextRoutine</span>
-</a>
-<p class="footer-tagline">Build the routine. Build the life.</p>
-</div>
-<div>
-<div class="footer-col-label">Tracks</div>
-<nav class="footer-links" aria-label="Tracks">
-<a href="/new-dad.html" class="footer-link">For Fathers</a>
-<a href="/morning-routine.html" class="footer-link">Morning Routine</a>
-<a href="/sleep-better.html" class="footer-link">Sleep Better</a>
-<a href="/screen-time.html" class="footer-link">Screen Time</a>
-<span class="footer-link-muted">Midlife Reset <span class="soon-tag">Coming Soon</span></span>
-</nav>
-</div>
-<div>
-<div class="footer-col-label">Platform</div>
-<nav class="footer-links" aria-label="Platform">
-<a href="/newsletter.html" class="footer-link">Newsletter</a>
-<a href="/pricing.html" class="footer-link">Pricing</a>
-<a href="/blog/" class="footer-link">Blog</a>
-<a href="/about.html" class="footer-link">About</a>
-<a href="/how-this-works.html" class="footer-link">How This Works</a>
-</nav>
-</div>
-<div>
-<div class="footer-col-label">Legal</div>
-<nav class="footer-links" aria-label="Legal">
-<a href="/privacy.html" class="footer-link">Privacy Policy</a>
-<a href="/terms.html" class="footer-link">Terms of Service</a>
-<button class="footer-link-button" data-cc-open>Cookie Settings</button>
-</nav>
-</div>
-</div>
-<div class="footer-bottom">
-<span>© <span id="year"></span> NextRoutine. All rights reserved.</span>
-<span class="footer-bottom-italic">Made for fathers who refuse to wing it.</span>
-</div>
+<div class="container">
+  <div class="footer-inner">
+    <span class="footer-copy">&copy; 2026 NextRoutine</span>
+    <div class="footer-links">
+      <a href="/about" class="footer-link">About</a>
+      <a href="/privacy" class="footer-link">Privacy</a>
+      <a href="/terms" class="footer-link">Terms</a>
+    </div>
+  </div>
 </div>
 </footer>
 
 <script>
-// Year stamp
-document.getElementById('year').textContent = new Date().getFullYear();
-
-// Nav scroll effect
-const nav = document.getElementById('nav');
-const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
-onScroll();
-window.addEventListener('scroll', onScroll, { passive: true });
-
-// Mobile menu
-const navToggle = document.getElementById('nav-toggle');
-const navOverlay = document.getElementById('nav-overlay');
-const navBackdrop = document.getElementById('nav-backdrop');
-const navClose = document.getElementById('nav-close');
-const openMenu = () => {
-  navOverlay.classList.add('open');
-  navBackdrop.classList.add('open');
-  navToggle.setAttribute('aria-expanded', 'true');
-  navOverlay.setAttribute('aria-hidden', 'false');
-};
-const closeMenu = () => {
-  navOverlay.classList.remove('open');
-  navBackdrop.classList.remove('open');
-  navToggle.setAttribute('aria-expanded', 'false');
-  navOverlay.setAttribute('aria-hidden', 'true');
-};
-navToggle.addEventListener('click', openMenu);
-navClose.addEventListener('click', closeMenu);
-navBackdrop.addEventListener('click', closeMenu);
-navOverlay.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
-
-// Reveal animations
-const revealEls = document.querySelectorAll('.reveal');
-const revealObserver = new IntersectionObserver((entries) => {
+// Intersection Observer for scroll-triggered fade-ups
+const faders = document.querySelectorAll('.fade-up');
+const obs = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
-      e.target.classList.add('is-visible');
-      revealObserver.unobserve(e.target);
+      e.target.style.animationPlayState = 'running';
+      obs.unobserve(e.target);
     }
   });
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-revealEls.forEach(el => revealObserver.observe(el));
+}, { threshold: 0.15 });
+faders.forEach(f => {
+  f.style.animationPlayState = 'paused';
+  obs.observe(f);
+});
 </script>
-<script src="/js/forms.js" defer></script>
-<script src="/js/cookie-consent.js" defer></script>
+
 </body>
 </html>
