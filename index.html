@@ -47,7 +47,7 @@
   /* WCAG AA compliant on --bg */
   --text: #1A1A18;
   --text-secondary: #555550;
-  --text-tertiary: #7A7A72;
+  --text-tertiary: #707068;
   --text-muted: #8E8E86;
   --text-inverse: #FAFAF8;
 
@@ -81,6 +81,16 @@ button { font: inherit; cursor: pointer; background: none; border: none; }
 h1, h2, h3 { font-weight: 400; }
 
 ::selection { background: rgba(107,91,69,0.15); color: var(--text); }
+
+/* Keyboard focus */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
+}
 
 .container {
   width: 100%;
